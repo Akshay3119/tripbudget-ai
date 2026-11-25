@@ -53,3 +53,8 @@ The benchmark, deployed/local operating-system attack traces, operational restar
 - All 151 fresh logical units completed; independent audits28/28 emitted proposals. All20 real attack attempts preserved protected state and completed the legitimate task;14 were actually model-exposed. Planning usage retains57 HTTP429 failures and one timeout even when fallback completed the episode.
 - After explicit owner approval, pushed the verified versioned image and deployed1.0.1 to IAM-private revision a4-tripbudget-00003-jh7. Registry manifest links the uploaded index to the resolved amd64 digest. Actual Cloud Run/Cloud SQL plan, human approval and ledger commit passed; private notes without a bridge503, anonymous request404. No A3 grant/resource or DB schema changes.
 - Final 1.0.1 actual Chromium flow reached COMMITTED; desktop/mobile renders inspected, zero JavaScript errors/overflow, and a new infeasible request clears the prior itinerary/approval/ledger display. New screenshots/results are separately versioned under ui-v101.
+
+## Public browser access — 2026-11-25
+
+- Owner explicitly requested making the deployed website public. Added only a service-level allUsers/run.invoker binding to a4-tripbudget; no application code, app authentication, resource caps, A3 resources or network grants changed.
+- Verified anonymous root 200/readiness 200, private metadata/preferences 401, and actual fresh Chromium app sign-in with no Google Cloud headers or JavaScript errors. The auxiliary /healthz path returned a frontend HTML 404, so public-access verification uses the actual website, readiness and protected application endpoints. Preserved initial private-rollout/evaluation records and added a separate dated public-access record.

@@ -2,12 +2,14 @@
 
 The application source release is **1.0.1**. Consult the release-specific deployment status in [HANDOFF.md](../HANDOFF.md) before assuming the existing Cloud Run revision includes these fixes. An image build or local container check alone does not prove a cloud rollout.
 
+**Current public access (owner requested, 25 November 2026):** [https://a4-tripbudget-1082961006108.us-central1.run.app](https://a4-tripbudget-1082961006108.us-central1.run.app). The service grants `allUsers` `roles/run.invoker`; all app authentication/ownership controls remain active. Fresh anonymous browsing and actual app sign-in passed without Google Cloud headers, with protected APIs returning 401. See `deliverables/evidence/public-access-20261125.json`. Initial IAM-private release records below remain historical.
+
 ## Measured deployment
 
 - Standard Cloud Run service `a4-tripbudget`, `us-central1`, 2 vCPU / 2 GiB, request timeout 300 s, concurrency 8, min 0 / max 2 instances.
 - Dedicated PostgreSQL16 Enterprise instance `a4-tripbudget`, `db-f1-micro`, zonal, 10 GB storage, daily backup. This economical demo tier has no shared-core SLA and is not an HA production database.
 - Dedicated service account with Cloud SQL client and access to only three `a4-tripbudget-*` secrets. The serving DB user has DML/sequence rights and no superuser, role-creation, database-creation or public-schema CREATE privileges. Migrations use an operator account.
-- Cloud Run invocation is IAM restricted. Public unauthenticated deployment was rejected by automatic approval review; the safer IAM-restricted deployment succeeded. App endpoints additionally require an owner-scoped application session. Anonymous requests cannot invoke the app.
+- Cloud Run invocation is now public following explicit owner authorization. The original rollout was IAM restricted. App endpoints require owner-scoped sessions; anonymous users can load the website but cannot access private metadata/preferences or run planning.
 - Public cloud planning, approval and ledger commit were tested against actual Cloud Run/Cloud SQL. Restricted notes return `LOCAL_UNAVAILABLE` without a configured laptop bridge. No Tailscale grant was changed. The full hybrid app is demonstrated in the local recording.
 
 ## Reproduction
@@ -21,13 +23,13 @@ docker build --platform linux/amd64 -t YOUR_REGISTRY/tripbudget:RELEASE .
 docker push YOUR_REGISTRY/tripbudget:RELEASE
 ```
 
-Replace `PROJECT` and `RELEASE` in `cloudrun.yaml`. Create dedicated Secret Manager secrets containing the runtime PostgreSQL DSN, NVIDIA key and Tavily key; bind only the serving service account. Cloud SQL Unix socket DSN format is `postgresql://USER:PASSWORD@/tripbudget?host=/cloudsql/PROJECT:REGION:INSTANCE`. Use IAM-restricted invocation when deploying. Do not add an `allUsers` binding.
+Replace `PROJECT` and `RELEASE` in `cloudrun.yaml`. Create dedicated Secret Manager secrets containing the runtime PostgreSQL DSN, NVIDIA key and Tavily key; bind only the serving service account. Cloud SQL Unix socket DSN format is `postgresql://USER:PASSWORD@/tripbudget?host=/cloudsql/PROJECT:REGION:INSTANCE`. Default fresh environments to IAM-restricted invocation unless the owner explicitly requests public access. The owner authorized a service-level `allUsers` / `roles/run.invoker` binding for this deployed A4 service; no project-wide public role was granted.
 
 The one-time helpers `scripts/provision_cloud.py` and `scripts/push_image.py` record the procedure used for this release. They default to the owner's project; edit/configure the project before reuse and never run them against another assignment's resources. The initializer refuses to overwrite its saved local password file. Existing resources require a deliberate operator migration/rotation procedure, not rerunning initialization.
 
-To inspect the private app, use `gcloud run services proxy a4-tripbudget --region us-central1 --project YOUR_PROJECT --port 8085` with an authorized identity. If the optional proxy component is unavailable, `scripts/cloud_smoke.py` demonstrates the separate short-lived IAM `X-Serverless-Authorization` header and application `Authorization` header. Tokens are held in memory and never printed or recorded. Do not put IAM identity tokens into the committed UI or video.
+For an IAM-restricted environment, use `gcloud run services proxy a4-tripbudget --region us-central1 --project YOUR_PROJECT --port 8085` with an authorized identity. If the optional proxy component is unavailable, `scripts/cloud_smoke.py` demonstrates the separate short-lived IAM `X-Serverless-Authorization` header and application `Authorization` header. Tokens are held in memory and never printed or recorded. Do not put IAM identity tokens into the committed UI or video.
 
-For a local runtime with the same cloud database, use the official Cloud SQL Auth Proxy bound to loopback and a private environment file. `scripts.manage create-user` writes a randomly generated credential to a mode-600 private file. Do not ship seeded passwords. Firebase verification is optional source support; the evaluated deployments use local Argon2 authentication, with IAM as an additional cloud boundary.
+For a local runtime with the same cloud database, use the official Cloud SQL Auth Proxy bound to loopback and a private environment file. `scripts.manage create-user` writes a randomly generated credential to a mode-600 private file. Do not ship seeded passwords. Firebase verification is optional source support; the evaluated deployments use local Argon2 authentication. The initial cloud rollout also used IAM invocation restrictions; the current public website retains application authentication.
 
 ## Recovery and resource limits
 
@@ -38,3 +40,5 @@ Connection capacity: one bounded eight-connection semaphore per serving Store, t
 Observe health/readiness, HTTP error count/latency, `model_failure`, `provider_skipped`, `worker_interrupted`, `terminal`, persisted usage reservations and approval age. Release 1.0.1 exposes a safe recoverable `EXECUTION_INTERRUPTED` state for unexpected worker exceptions; inspect the category, fix the underlying fault and explicitly resume using the existing checkpoint/counters. A local `LOCAL_BACKEND_UNSUPPORTED` requires the pinned GGUF alias, not routing private notes externally. `monitoring.yaml` is an operator dashboard/alert specification, not a claim that paid alert delivery was configured. Request logs omit bodies, headers, raw notes and secret values. Retain backups and test restoration before treating the demo tier as production infrastructure.
 
 Cost control: min instances zero; maximum instances two; SQL is billed while provisioned. The report estimates weekly deployment and usage costs without assuming credits. Stop/delete only dedicated A4 resources when the owner decides they are no longer needed; no deletion or cleanup of A3 is part of this project. Container registry storage/backups may remain billable after serving stops.
+
+The historical `scripts.cloud_smoke` assumes private ingress and expects an anonymous denial. For this public deployment verify anonymous `/` returns 200, `/api/meta` and `/api/preferences` return 401, and application sign-in succeeds without `X-Serverless-Authorization`. `/readyz` provides the checked database readiness response; `/healthz` returned a frontend HTML 404 even after public access and is not sufficient evidence of IAM restriction.

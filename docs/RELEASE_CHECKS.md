@@ -2,6 +2,8 @@
 
 Current provider/operational release: **1.0.1**. See [the separately measured follow-up](../deliverables/EVALUATION_FOLLOWUP_1.0.1.md) and [contributor handoff](../HANDOFF.md). Original failures below remain historical evidence.
 
+**Subsequent access change — 25 November 2026:** the owner requested public invocation. Anonymous website/readiness 200, protected metadata/preferences 401, and actual browser application sign-in passed without Google Cloud headers. See `deliverables/evidence/public-access-20261125.json`. The private-ingress checks below describe the initial rollout.
+
 ## Current 1.0.1 checks
 
 | Layer | Observed result | Evidence |

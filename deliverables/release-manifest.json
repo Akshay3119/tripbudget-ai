@@ -46,8 +46,8 @@
     },
     {
       "path": "HANDOFF.md",
-      "bytes": 37168,
-      "sha256": "fd8066ae4da66a018a2a267d7f38b30d5642f6cff841a5a91235029f0cac5b01"
+      "bytes": 38483,
+      "sha256": "aee2d951d7cfb37d111c2dcdf451cc418f0fc27765c57010e3e0381ee3e3addf"
     },
     {
       "path": "Makefile",
@@ -61,8 +61,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 20047,
-      "sha256": "e4412a93e1cd0b2e244bc19336015f383e8c3b4331bc48a2e51927667c12b973"
+      "bytes": 20325,
+      "sha256": "107747ae14115e3d4e7198a77a8247bc554955727b2e4cd682294fcf39ebf152"
     },
     {
       "path": "compose.yaml",
@@ -520,6 +520,11 @@
       "sha256": "1794ea7c7c4cd3c29d878f4fcf2fb56d554b941319ad18bad0198248f1d90769"
     },
     {
+      "path": "deliverables/evidence/public-access-20261125.json",
+      "bytes": 1282,
+      "sha256": "8351a83e342a78dd04e24bee9d28fbefb51a1d1ed791bc68b0b80cfb347008d8"
+    },
+    {
       "path": "deliverables/evidence/pytest-v101.txt",
       "bytes": 179,
       "sha256": "9b7557008b72a4bc8a61fbf5893ce7c0243ca87b953793334a0229556874320f"
@@ -821,18 +826,18 @@
     },
     {
       "path": "docs/IMPLEMENTATION_LOG.md",
-      "bytes": 9453,
-      "sha256": "51a04449d72ce2ca63435b8c300ae6716c6c39b0d06390965545dfbe64d0710c"
+      "bytes": 10160,
+      "sha256": "4622840feaf8b353df87d49adf8e0ac81d31847994687b0aadf50fb6a15ee060"
     },
     {
       "path": "docs/PLAN_RECONCILIATION.md",
-      "bytes": 4711,
-      "sha256": "6cb38bf1f233575e47322293a7c84de52b8a834a7c1feb5e140bd0e3c83d0616"
+      "bytes": 5386,
+      "sha256": "5cbfdcef1fab73d24eb78176909d1134ea4cca6acf44dadcb1a931c9e7fca25a"
     },
     {
       "path": "docs/RELEASE_CHECKS.md",
-      "bytes": 4883,
-      "sha256": "3af0728bba83238b167914e9e4891e69a1a003b9f5375d3e2584fbdcf10861d9"
+      "bytes": 5239,
+      "sha256": "0c4cdd75789f6c9a07d976859bd0b34922ba4d1363f01d8857870bbba75ba327"
     },
     {
       "path": "docs/THREAT_MODEL.md",
@@ -946,8 +951,8 @@
     },
     {
       "path": "infra/README.md",
-      "bytes": 6046,
-      "sha256": "28a27f9362c7d5770ff9645eb3327cd7eb71534cce960554bdf3f46cabe6f48a"
+      "bytes": 7276,
+      "sha256": "dc61857f083bc25c75b32172b29eac6abd3f7ba487fd4f7cdf30296593484b5c"
     },
     {
       "path": "infra/cloudrun.yaml",

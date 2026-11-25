@@ -1,0 +1,41 @@
+{
+  "checked_at": "2026-11-25T21:32:52.055946+00:00",
+  "url": "https://a4-tripbudget-1082961006108.us-central1.run.app",
+  "google_cloud_authentication_sent": false,
+  "anonymous_requests": {
+    "/": {
+      "status": 200,
+      "content_type": "text/html; charset=utf-8"
+    },
+    "/readyz": {
+      "status": 200,
+      "content_type": "application/json"
+    },
+    "/api/meta": {
+      "status": 401,
+      "content_type": "application/json"
+    },
+    "/api/preferences": {
+      "status": 401,
+      "content_type": "application/json"
+    }
+  },
+  "browser": {
+    "http_status": 200,
+    "title": "TripBudgetAI \u2014 Plan together, within reach",
+    "application_sign_in_passed": true,
+    "javascript_errors": []
+  },
+  "checks": {
+    "anonymous_website_opens": true,
+    "database_readiness": true,
+    "private_meta_requires_sign_in": true,
+    "private_preferences_require_sign_in": true,
+    "fresh_browser_application_login": true
+  },
+  "auxiliary_observation": "The /healthz path returned a Google frontend HTML404 in separate probes; the public root, database readiness, and app sign-in are checked independently.",
+  "success": true,
+  "iam_public_invoker_binding_verified": true,
+  "application_code_changed": false,
+  "revision": "a4-tripbudget-00003-jh7"
+}
