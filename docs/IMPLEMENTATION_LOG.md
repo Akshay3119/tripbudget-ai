@@ -37,3 +37,5 @@ The benchmark, deployed/local operating-system attack traces, operational restar
 - Final verification adds an admission replay regression after saved preferences normalize an active request:71/71 automated tests pass. Actual final MP4 is425 seconds, H.264/AAC,7.2MB, successfully seeks/plays in Chromium; mean audio-19.4dB/max-1.5dB. Final UI browser flow passes with zero JS errors and explicit clearing of old results after an infeasible new request.
 
 - Clean Ubuntu CI caught a test collection configuration issue: the standalone pytest entry point omitted the repository root, so evaluation helpers were not importable. Added explicit pytest pythonpath, pinned the reproducible default toPython3.12.14, and used python-mpytest in CI/Makefile. This does not change runtime algorithms or the measured benchmark.
+
+- CI bootstrap explicitly installs the exact Python patch with actions/setup-python before invoking the pinned uv version; the older uv binary does not bundle a download definition forPython3.12.14. Dependency versions and runtime algorithms remain unchanged.
