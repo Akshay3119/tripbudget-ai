@@ -1,5 +1,7 @@
 # TripBudgetAI
 
+**New contributor:** start with the [project handoff](HANDOFF.md) for implementation context, access/setup, evidence, limitations and contribution tasks.
+
 An original CSCI599 Assignment 4 capstone by Akshay Mathur: evidence-aware, budget-constrained group travel planning with durable human approval. Built from scratch for this assignment. It does not extend the Assignment 3 assistant.
 
 ![Trip planning studio](deliverables/evidence/ui/desktop-pending.png)

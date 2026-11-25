@@ -45,6 +45,11 @@
       "sha256": "12aad0fd87aa0a03c2c44bddeb59e78eb1ae16934f1dc6c320308178cb7ba8d9"
     },
     {
+      "path": "HANDOFF.md",
+      "bytes": 27597,
+      "sha256": "4638557f12696db8435efb1a12e2e419fbb5cf3cbf4d2c95cdc8565cc99b1bee"
+    },
+    {
       "path": "Makefile",
       "bytes": 418,
       "sha256": "31ee701cc0a765bdab948d05ec2ad27c85e48ae42f9a8bce3fe21c3476bcca5c"
@@ -56,8 +61,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 17452,
-      "sha256": "fbbadabee4264abef0b0cf13bd1b5e77f748fc448406bc269699c2ae612ac290"
+      "bytes": 17607,
+      "sha256": "951ae2b7fa6114d39525e3c054d2cd2c23df277f7d1af9fc5a99ced6cb71b2b0"
     },
     {
       "path": "compose.yaml",
