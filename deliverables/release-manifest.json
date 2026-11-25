@@ -2,7 +2,7 @@
   "version": "1.0.0",
   "date": "2026-11-25",
   "source_revision": "The Git commit containing this manifest identifies the release; a content inventory avoids self-referential hashes. Evaluation release IDs and cloud image digests are recorded separately.",
-  "code_inventory_sha256": "4bdea3961ed23a70bf64584b71bae5297bba4b36458fcbdb609850128da1592c",
+  "code_inventory_sha256": "f4b977aa7409dbce7ab19c3e2d0876b426343449537c937f7469f3d7e77f73e4",
   "files": [
     {
       "path": ".dockerignore",
@@ -26,13 +26,18 @@
     },
     {
       "path": ".github/workflows/ci.yml",
-      "bytes": 780,
-      "sha256": "145e0528cab7092b886d351fd8fccfb6f119b9ba7f4c70d8dae126e8106b67c4"
+      "bytes": 790,
+      "sha256": "a7a2a4c14b25bec84e80a44d71e42f3d2e51940bf0b6b751133d9e899cf8f47f"
     },
     {
       "path": ".gitignore",
       "bytes": 187,
       "sha256": "458e974c0c81b7a7c9a0ad00ccfbbaa11133d3cbb319e855b8b0055e1a1e8a7a"
+    },
+    {
+      "path": ".python-version",
+      "bytes": 8,
+      "sha256": "f50159fad3f4319868eb38717b91d55843c41e9803014c8de05e116a6d0bcfdc"
     },
     {
       "path": "Dockerfile",
@@ -41,8 +46,8 @@
     },
     {
       "path": "Makefile",
-      "bytes": 408,
-      "sha256": "aa0a30af12d24106a5955a3152528bd2e103bc05704ae3718f6b0ef9d310c10d"
+      "bytes": 418,
+      "sha256": "31ee701cc0a765bdab948d05ec2ad27c85e48ae42f9a8bce3fe21c3476bcca5c"
     },
     {
       "path": "PROCESS_LOG.md",
@@ -491,8 +496,8 @@
     },
     {
       "path": "docs/IMPLEMENTATION_LOG.md",
-      "bytes": 5411,
-      "sha256": "188e927203f8b657b056819a3cec73e20e805f70eb3a64d5e4dd3e5099de39f5"
+      "bytes": 5772,
+      "sha256": "7d844faacdd661a0429e22ca7fc87c3de8298a3e180a71b9742ac601fcb7254d"
     },
     {
       "path": "docs/PLAN_RECONCILIATION.md",
@@ -611,8 +616,8 @@
     },
     {
       "path": "pyproject.toml",
-      "bytes": 1282,
-      "sha256": "44abfc5a285abea9b1aa4c1f4d52775312199b8d7a511535ca76d84827edc3ba"
+      "bytes": 1301,
+      "sha256": "8f8cfa91b4003c14c8b0f3a7afd051023a4d1796db234ed1a4eea17bd20d08a4"
     },
     {
       "path": "scripts/audit_witnesses.py",

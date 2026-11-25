@@ -18,5 +18,5 @@ jobs:
     - run: uv sync --frozen
     - run: uv run python -m scripts.manage migrate
     - run: uv run ruff check src scripts evaluation tests
-    - run: uv run pytest -q
+    - run: uv run python -m pytest -q
     - run: uv run python -m scripts.verify_package --source-only
