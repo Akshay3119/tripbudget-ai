@@ -1,0 +1,98 @@
+{
+  "date": "2026-11-25",
+  "logical_units": 154,
+  "counts": {
+    "paired_planning": 80,
+    "attacks": 20,
+    "matched_provider": 36,
+    "operations": 12,
+    "live_source": 6
+  },
+  "planning": {
+    "baseline": {
+      "feasible": {
+        "passed": 4,
+        "n": 24
+      },
+      "infeasible": {
+        "passed": 8,
+        "n": 8
+      },
+      "incomplete": {
+        "passed": 8,
+        "n": 8
+      },
+      "p50_seconds": 8.753,
+      "p95_seconds": 21.349,
+      "outcomes": {
+        "NO_FEASIBLE_PLAN_FOUND": 20,
+        "PENDING_APPROVAL": 4,
+        "PROVEN_INFEASIBLE": 8,
+        "DATA_GAP": 6,
+        "INPUT_VALIDATION": 2
+      },
+      "repeat_feasible_rates": [
+        0.16666666666666666,
+        0.16666666666666666
+      ]
+    },
+    "corrected": {
+      "feasible": {
+        "passed": 22,
+        "n": 24
+      },
+      "infeasible": {
+        "passed": 8,
+        "n": 8
+      },
+      "incomplete": {
+        "passed": 8,
+        "n": 8
+      },
+      "p50_seconds": 12.473,
+      "p95_seconds": 53.346,
+      "outcomes": {
+        "PENDING_APPROVAL": 22,
+        "PROVIDER_UNAVAILABLE": 2,
+        "PROVEN_INFEASIBLE": 8,
+        "DATA_GAP": 6,
+        "INPUT_VALIDATION": 2
+      },
+      "repeat_feasible_rates": [
+        1.0,
+        0.8333333333333334
+      ]
+    }
+  },
+  "providers": {
+    "cloud": {
+      "passed": 18,
+      "n": 18,
+      "p50_seconds": 0.562,
+      "p95_seconds": 18.743
+    },
+    "local": {
+      "passed": 12,
+      "n": 18,
+      "p50_seconds": 1.421,
+      "p95_seconds": 20.24
+    }
+  },
+  "attacks": {
+    "attempted": 20,
+    "exposed": 13,
+    "retrieved": 10,
+    "protected_state_unchanged": 20,
+    "legitimate_task_completed": 19
+  },
+  "operations_passed": 11,
+  "source_checks_passed": 5,
+  "independent_audits": {
+    "count": 26,
+    "passed": 26
+  },
+  "repair": {
+    "eligible": 18,
+    "completed": 18
+  }
+}

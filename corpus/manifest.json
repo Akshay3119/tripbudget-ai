@@ -1,0 +1,15 @@
+{
+  "catalog_sha256": "8560a82ca1a997079c253c25463851b731cbc769d0a2afa3c63a6b9b2532bf64",
+  "version": "20261125T174151Z-r2",
+  "source_count": 24,
+  "chunk_count": 68,
+  "embedding_model": "BAAI/bge-small-en-v1.5",
+  "dimension": 384,
+  "reviewed_price_facts": [
+    "nyc-ferry",
+    "phl-pma",
+    "phl-liberty-bell",
+    "dc-natural-history",
+    "dc-american-history"
+  ]
+}

@@ -1,0 +1,12 @@
+*
+!pyproject.toml
+!uv.lock
+!src/
+!src/**
+!static/
+!static/**
+!corpus/
+!corpus/**
+!scripts/
+!scripts/**
+**/__pycache__

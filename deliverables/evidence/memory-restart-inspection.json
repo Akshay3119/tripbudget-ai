@@ -1,0 +1,33 @@
+{
+  "episode": "78ecc2eaf69840f0a4e2fed0250d9ee3",
+  "status": "PROVIDER_UNAVAILABLE",
+  "travelers": [
+    {
+      "id": "t1",
+      "diet": "vegetarian",
+      "budget_cents": 150000,
+      "maximum_walk_meters": 6000
+    },
+    {
+      "id": "t2",
+      "diet": "vegetarian",
+      "budget_cents": 150000,
+      "maximum_walk_meters": 6000
+    }
+  ],
+  "memory_events": [
+    {
+      "kind": "preferences_loaded",
+      "data": {
+        "values": {
+          "diet": "vegetarian",
+          "maximum_walk_meters": 6000,
+          "preferred_categories": []
+        },
+        "applied": true,
+        "version": 1
+      }
+    }
+  ],
+  "interpretation": "Preference application persisted in later request; O12 end-to-end planning still failed on a provider."
+}

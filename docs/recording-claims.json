@@ -1,0 +1,42 @@
+[
+  {
+    "feature": "Long-term memory",
+    "start_seconds": 65,
+    "end_seconds": 255,
+    "status": "demonstrated",
+    "evidence": "Confirmed preference saved; actual new boot + fresh login restores vegetarian/6000m values",
+    "episode": "268c5558d33f4d81ab6d31e5b70911c8"
+  },
+  {
+    "feature": "Planning and self-correction",
+    "start_seconds": 95,
+    "end_seconds": 195,
+    "status": "demonstrated",
+    "evidence": "Actual model proposal, failed cost critic, repair selection and successful recheck",
+    "episode": "268c5558d33f4d81ab6d31e5b70911c8"
+  },
+  {
+    "feature": "Durable human-in-the-loop",
+    "start_seconds": 170,
+    "end_seconds": 285,
+    "status": "demonstrated",
+    "evidence": "Hash-bound pending approval survives actual process replacement; human approval commits one ledger",
+    "episode": "268c5558d33f4d81ab6d31e5b70911c8"
+  },
+  {
+    "feature": "Iterative RAG/source verification",
+    "start_seconds": 95,
+    "end_seconds": 320,
+    "status": "demonstrated",
+    "evidence": "Real retrieval/query rewrite events and evidence library; estimates visibly separate",
+    "episode": "268c5558d33f4d81ab6d31e5b70911c8"
+  },
+  {
+    "feature": "Hybrid cloud/local inference",
+    "start_seconds": 25,
+    "end_seconds": 170,
+    "status": "demonstrated",
+    "evidence": "Actual local-only note extraction and local query rewrite, cloud model selection/completions",
+    "episode": "268c5558d33f4d81ab6d31e5b70911c8"
+  }
+]

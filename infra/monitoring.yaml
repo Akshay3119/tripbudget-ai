@@ -1,0 +1,9 @@
+# Operator specification; no external alert recipient has been configured.
+service: a4-tripbudget
+region: us-central1
+signals:
+  - {metric: run.googleapis.com/request_count, filter: 'response_code_class=5xx', threshold: '5 in 5 minutes', action: inspect_cloud_logs}
+  - {metric: run.googleapis.com/request_latencies, statistic: p95, threshold: 240s, action: inspect_provider_timeouts}
+  - {query: 'SELECT count(*) FROM episodes WHERE status = ''RESOURCE_LIMIT'' AND created_at > now() - interval ''1 hour''', threshold: 3}
+  - {query: 'SELECT count(*) FROM approvals WHERE status = ''PENDING'' AND expires_at < now()', action: require_new_plan}
+  - {metric: cloudsql.googleapis.com/database/disk/utilization, threshold: 0.8, action: operator_storage_review}

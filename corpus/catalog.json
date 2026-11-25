@@ -1,0 +1,1204 @@
+{
+  "version": "20261125T174151Z-r2",
+  "as_of": "2026-11-25T17:41:51.587175+00:00",
+  "activities": [
+    {
+      "id": "nyc-met",
+      "city": "NYC",
+      "title": "Metropolitan Museum of Art",
+      "category": "museum",
+      "price_cents": 3000,
+      "duration_minutes": 120,
+      "walk_meters": 1800,
+      "closed_weekdays": [
+        2
+      ],
+      "open_hour": 10,
+      "close_hour": 17,
+      "source_id": "met",
+      "evidence_state": "USER_ESTIMATE",
+      "observed_at": "2026-11-25T17:41:51.587175+00:00",
+      "expires_at": "2026-12-02T17:41:51.587175+00:00",
+      "price_note": "Explicit all-in planning amount; organizer confirmation required",
+      "schedule_state": "USER_ESTIMATE",
+      "reviewed_fields": [],
+      "closed_dates": [
+        "12-25",
+        "01-01"
+      ]
+    },
+    {
+      "id": "nyc-central-park",
+      "city": "NYC",
+      "title": "Central Park walk",
+      "category": "park",
+      "price_cents": 0,
+      "duration_minutes": 90,
+      "walk_meters": 2400,
+      "closed_weekdays": [],
+      "open_hour": 10,
+      "close_hour": 17,
+      "source_id": "central-park",
+      "evidence_state": "USER_ESTIMATE",
+      "observed_at": "2026-11-25T17:41:51.587175+00:00",
+      "expires_at": "2026-12-02T17:41:51.587175+00:00",
+      "price_note": "Explicit all-in planning amount; organizer confirmation required",
+      "schedule_state": "USER_ESTIMATE",
+      "reviewed_fields": [],
+      "closed_dates": []
+    },
+    {
+      "id": "nyc-high-line",
+      "city": "NYC",
+      "title": "High Line gardens",
+      "category": "park",
+      "price_cents": 0,
+      "duration_minutes": 60,
+      "walk_meters": 1800,
+      "closed_weekdays": [],
+      "open_hour": 10,
+      "close_hour": 17,
+      "source_id": "high-line",
+      "evidence_state": "USER_ESTIMATE",
+      "observed_at": "2026-11-25T17:41:51.587175+00:00",
+      "expires_at": "2026-12-02T17:41:51.587175+00:00",
+      "price_note": "Explicit all-in planning amount; organizer confirmation required",
+      "schedule_state": "USER_ESTIMATE",
+      "reviewed_fields": [],
+      "closed_dates": []
+    },
+    {
+      "id": "nyc-ferry",
+      "city": "NYC",
+      "title": "Staten Island Ferry round trip",
+      "category": "viewpoint",
+      "price_cents": 0,
+      "duration_minutes": 90,
+      "walk_meters": 800,
+      "closed_weekdays": [],
+      "open_hour": 10,
+      "close_hour": 17,
+      "source_id": "ferry",
+      "evidence_state": "VERIFIED_SNAPSHOT",
+      "observed_at": "2026-11-25T17:41:51.587175+00:00",
+      "expires_at": "2026-12-02T17:41:51.587175+00:00",
+      "price_note": "Posted adult/general admission or ferry service charge; extra services excluded. Any unquoted mandatory checkout fees remain a planning assumption.",
+      "schedule_state": "USER_ESTIMATE",
+      "reviewed_fields": [
+        "price_cents"
+      ],
+      "closed_dates": [],
+      "review_quote": "free service between Staten Island and Lower Manhattan",
+      "reviewed_by": "Codex-assisted explicit source-span inspection",
+      "reviewed_at": "2026-11-25T17:57:43.563756+00:00",
+      "review_source_sha256": "95ece33fc11bc10073be4f5554f312cdcd2c7c505c0db8e2d21a7ee277b6fe5c"
+    },
+    {
+      "id": "phl-pma",
+      "city": "PHL",
+      "title": "Philadelphia Museum of Art",
+      "category": "museum",
+      "price_cents": 3000,
+      "duration_minutes": 120,
+      "walk_meters": 1800,
+      "closed_weekdays": [
+        1,
+        2
+      ],
+      "open_hour": 10,
+      "close_hour": 17,
+      "source_id": "pma",
+      "evidence_state": "VERIFIED_SNAPSHOT",
+      "observed_at": "2026-11-25T17:41:51.587175+00:00",
+      "expires_at": "2026-12-02T17:41:51.587175+00:00",
+      "price_note": "Posted adult/general admission or ferry service charge; extra services excluded. Any unquoted mandatory checkout fees remain a planning assumption.",
+      "schedule_state": "USER_ESTIMATE",
+      "reviewed_fields": [
+        "price_cents"
+      ],
+      "closed_dates": [
+        "12-25",
+        "01-01"
+      ],
+      "review_quote": "Adults $30",
+      "reviewed_by": "Codex-assisted explicit source-span inspection",
+      "reviewed_at": "2026-11-25T17:57:43.563973+00:00",
+      "review_source_sha256": "be452cd26f60a4213af54986037439c0aff78af97e926213b783385c75064239"
+    },
+    {
+      "id": "phl-liberty-bell",
+      "city": "PHL",
+      "title": "Liberty Bell Center",
+      "category": "history",
+      "price_cents": 0,
+      "duration_minutes": 60,
+      "walk_meters": 700,
+      "closed_weekdays": [],
+      "open_hour": 10,
+      "close_hour": 17,
+      "source_id": "liberty-bell",
+      "evidence_state": "VERIFIED_SNAPSHOT",
+      "observed_at": "2026-11-25T17:41:51.587175+00:00",
+      "expires_at": "2026-12-02T17:41:51.587175+00:00",
+      "price_note": "Posted adult/general admission or ferry service charge; extra services excluded. Any unquoted mandatory checkout fees remain a planning assumption.",
+      "schedule_state": "USER_ESTIMATE",
+      "reviewed_fields": [
+        "price_cents"
+      ],
+      "closed_dates": [],
+      "review_quote": "Admission is FREE .",
+      "reviewed_by": "Codex-assisted explicit source-span inspection",
+      "reviewed_at": "2026-11-25T17:57:43.565443+00:00",
+      "review_source_sha256": "b35c742a5a6ce2dca4a6ea0779beb3aa512f34ca08a35ba50a88b54f80e5f75d"
+    },
+    {
+      "id": "phl-independence",
+      "city": "PHL",
+      "title": "Independence Hall exterior and grounds",
+      "category": "history",
+      "price_cents": 0,
+      "duration_minutes": 60,
+      "walk_meters": 1000,
+      "closed_weekdays": [],
+      "open_hour": 10,
+      "close_hour": 17,
+      "source_id": "independence",
+      "evidence_state": "USER_ESTIMATE",
+      "observed_at": "2026-11-25T17:41:51.587175+00:00",
+      "expires_at": "2026-12-02T17:41:51.587175+00:00",
+      "price_note": "Explicit all-in planning amount; organizer confirmation required",
+      "schedule_state": "USER_ESTIMATE",
+      "reviewed_fields": [],
+      "closed_dates": []
+    },
+    {
+      "id": "phl-visitor-center",
+      "city": "PHL",
+      "title": "Independence Visitor Center",
+      "category": "history",
+      "price_cents": 0,
+      "duration_minutes": 60,
+      "walk_meters": 600,
+      "closed_weekdays": [],
+      "open_hour": 10,
+      "close_hour": 17,
+      "source_id": "visitor-center",
+      "evidence_state": "USER_ESTIMATE",
+      "observed_at": "2026-11-25T17:41:51.587175+00:00",
+      "expires_at": "2026-12-02T17:41:51.587175+00:00",
+      "price_note": "Explicit all-in planning amount; organizer confirmation required",
+      "schedule_state": "USER_ESTIMATE",
+      "reviewed_fields": [],
+      "closed_dates": []
+    },
+    {
+      "id": "dc-natural-history",
+      "city": "DC",
+      "title": "National Museum of Natural History",
+      "category": "museum",
+      "price_cents": 0,
+      "duration_minutes": 120,
+      "walk_meters": 1800,
+      "closed_weekdays": [],
+      "open_hour": 10,
+      "close_hour": 17,
+      "source_id": "natural-history",
+      "evidence_state": "VERIFIED_SNAPSHOT",
+      "observed_at": "2026-11-25T17:41:51.587175+00:00",
+      "expires_at": "2026-12-02T17:41:51.587175+00:00",
+      "price_note": "Posted adult/general admission or ferry service charge; extra services excluded. Any unquoted mandatory checkout fees remain a planning assumption.",
+      "schedule_state": "USER_ESTIMATE",
+      "reviewed_fields": [
+        "price_cents"
+      ],
+      "closed_dates": [
+        "12-25",
+        "01-01"
+      ],
+      "review_quote": "Admission is free .",
+      "reviewed_by": "Codex-assisted explicit source-span inspection",
+      "reviewed_at": "2026-11-25T17:57:43.565612+00:00",
+      "review_source_sha256": "08dbb2815d87fe1c7f13ba316533c499551bf41fb5975771e0a72f10465f16ff"
+    },
+    {
+      "id": "dc-american-history",
+      "city": "DC",
+      "title": "National Museum of American History",
+      "category": "history",
+      "price_cents": 0,
+      "duration_minutes": 120,
+      "walk_meters": 1600,
+      "closed_weekdays": [],
+      "open_hour": 10,
+      "close_hour": 17,
+      "source_id": "american-history",
+      "evidence_state": "VERIFIED_SNAPSHOT",
+      "observed_at": "2026-11-25T17:41:51.587175+00:00",
+      "expires_at": "2026-12-02T17:41:51.587175+00:00",
+      "price_note": "Posted adult/general admission or ferry service charge; extra services excluded. Any unquoted mandatory checkout fees remain a planning assumption.",
+      "schedule_state": "USER_ESTIMATE",
+      "reviewed_fields": [
+        "price_cents"
+      ],
+      "closed_dates": [],
+      "review_quote": "Free admission",
+      "reviewed_by": "Codex-assisted explicit source-span inspection",
+      "reviewed_at": "2026-11-25T17:57:43.565749+00:00",
+      "review_source_sha256": "dd963ab12c24d9d5a2a08bf463bad39f647c958d210e61490a999767a1cdf4c1"
+    },
+    {
+      "id": "dc-national-gallery",
+      "city": "DC",
+      "title": "National Gallery of Art",
+      "category": "museum",
+      "price_cents": 0,
+      "duration_minutes": 120,
+      "walk_meters": 1500,
+      "closed_weekdays": [],
+      "open_hour": 10,
+      "close_hour": 17,
+      "source_id": "national-gallery",
+      "evidence_state": "USER_ESTIMATE",
+      "observed_at": "2026-11-25T17:41:51.587175+00:00",
+      "expires_at": "2026-12-02T17:41:51.587175+00:00",
+      "price_note": "Explicit all-in planning amount; organizer confirmation required",
+      "schedule_state": "USER_ESTIMATE",
+      "reviewed_fields": [],
+      "closed_dates": [
+        "12-25",
+        "01-01"
+      ]
+    },
+    {
+      "id": "dc-spy",
+      "city": "DC",
+      "title": "International Spy Museum",
+      "category": "museum",
+      "price_cents": 5000,
+      "duration_minutes": 120,
+      "walk_meters": 1500,
+      "closed_weekdays": [],
+      "open_hour": 10,
+      "close_hour": 17,
+      "source_id": "spy",
+      "evidence_state": "USER_ESTIMATE",
+      "observed_at": "2026-11-25T17:41:51.587175+00:00",
+      "expires_at": "2026-12-02T17:41:51.587175+00:00",
+      "price_note": "Explicit all-in planning amount; organizer confirmation required",
+      "schedule_state": "USER_ESTIMATE",
+      "reviewed_fields": [],
+      "closed_dates": [
+        "12-25",
+        "01-01"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "met",
+      "url": "https://www.metmuseum.org/plan-your-visit",
+      "publisher": "Metropolitan Museum of Art",
+      "fetch_status": "UNAVAILABLE",
+      "error": "HTTPStatusError",
+      "fetched_at": "2026-11-25T17:41:51.587175+00:00",
+      "expires_at": "2026-11-25T17:41:51.587175+00:00",
+      "sha256": "",
+      "excerpt": "",
+      "review": "not verified"
+    },
+    {
+      "source_id": "central-park",
+      "url": "https://www.centralparknyc.org/visit",
+      "publisher": "Central Park Conservancy",
+      "fetched_at": "2026-11-25T17:41:51.587175+00:00",
+      "expires_at": "2026-12-02T17:41:51.587175+00:00",
+      "sha256": "b77d015ac6f09ef75603848c6013961910e923faf587cc5ace052e6ca0b8acaa",
+      "excerpt": "Hours Visitor Centers Fall Foliage Tracker Learn to Skate The Ramble Central",
+      "fetch_status": "OK",
+      "review": "machine-fetched; individual facts separately reviewed"
+    },
+    {
+      "source_id": "high-line",
+      "url": "https://www.thehighline.org/visit/",
+      "publisher": "Friends of the High Line",
+      "fetched_at": "2026-11-25T17:41:51.587175+00:00",
+      "expires_at": "2026-12-02T17:41:51.587175+00:00",
+      "sha256": "370d1a0878cb765a882cc3b8b7b92f980fd171b685379cf1513069847123effc",
+      "excerpt": "hours vary by season: April 1 \u2013 November 30: 7am to 10pm",
+      "fetch_status": "OK",
+      "review": "machine-fetched; individual facts separately reviewed"
+    },
+    {
+      "source_id": "ferry",
+      "url": "https://www.nyc.gov/html/dot/html/ferrybus/staten-island-ferry.shtml",
+      "publisher": "NYC Department of Transportation",
+      "fetched_at": "2026-11-25T17:41:51.587175+00:00",
+      "expires_at": "2026-12-02T17:41:51.587175+00:00",
+      "sha256": "95ece33fc11bc10073be4f5554f312cdcd2c7c505c0db8e2d21a7ee277b6fe5c",
+      "excerpt": "free service between Staten Island and Lower Manhattan every day of the",
+      "fetch_status": "OK",
+      "review": "machine-fetched; individual facts separately reviewed"
+    },
+    {
+      "source_id": "pma",
+      "url": "https://www.philamuseum.org/main-building",
+      "publisher": "Philadelphia Museum of Art",
+      "fetched_at": "2026-11-25T17:41:51.587175+00:00",
+      "expires_at": "2026-12-02T17:41:51.587175+00:00",
+      "sha256": "be452cd26f60a4213af54986037439c0aff78af97e926213b783385c75064239",
+      "excerpt": "Hours Monday 10am - 5pm Tuesday Closed Wednesday Closed Thursday 10am -",
+      "fetch_status": "OK",
+      "review": "machine-fetched; individual facts separately reviewed"
+    },
+    {
+      "source_id": "liberty-bell",
+      "url": "https://www.nps.gov/inde/planyourvisit/libertybellcenter.htm",
+      "publisher": "National Park Service",
+      "fetched_at": "2026-11-25T17:41:51.587175+00:00",
+      "expires_at": "2026-12-02T17:41:51.587175+00:00",
+      "sha256": "b35c742a5a6ce2dca4a6ea0779beb3aa512f34ca08a35ba50a88b54f80e5f75d",
+      "excerpt": "Hours and Fees Open daily 9 am\u20135 pm The security screening area",
+      "fetch_status": "OK",
+      "review": "machine-fetched; individual facts separately reviewed"
+    },
+    {
+      "source_id": "independence",
+      "url": "https://www.nps.gov/inde/planyourvisit/independencehall.htm",
+      "publisher": "National Park Service",
+      "fetched_at": "2026-11-25T17:41:51.587175+00:00",
+      "expires_at": "2026-12-02T17:41:51.587175+00:00",
+      "sha256": "9991fe8cf84e1559f0daa8aee22349be5a4eaf47f01cf6a21dd9f9cedbbefe43",
+      "excerpt": "Hours and Fees 9 am\u201310:30 am: Open house (no tickets required) 10:40",
+      "fetch_status": "OK",
+      "review": "machine-fetched; individual facts separately reviewed"
+    },
+    {
+      "source_id": "visitor-center",
+      "url": "https://www.phlvisitorcenter.com/independence-visitor-center",
+      "publisher": "Philadelphia Visitor Center",
+      "fetch_status": "UNAVAILABLE",
+      "error": "HTTPStatusError",
+      "fetched_at": "2026-11-25T17:41:51.587175+00:00",
+      "expires_at": "2026-11-25T17:41:51.587175+00:00",
+      "sha256": "",
+      "excerpt": "",
+      "review": "not verified"
+    },
+    {
+      "source_id": "natural-history",
+      "url": "https://naturalhistory.si.edu/visit",
+      "publisher": "Smithsonian",
+      "fetched_at": "2026-11-25T17:41:51.587175+00:00",
+      "expires_at": "2026-12-02T17:41:51.587175+00:00",
+      "sha256": "08dbb2815d87fe1c7f13ba316533c499551bf41fb5975771e0a72f10465f16ff",
+      "excerpt": "Hours Open seven days a week. 10:00 a.m - 5:30 p.m., including",
+      "fetch_status": "OK",
+      "review": "machine-fetched; individual facts separately reviewed"
+    },
+    {
+      "source_id": "american-history",
+      "url": "https://americanhistory.si.edu/visit",
+      "publisher": "Smithsonian",
+      "fetched_at": "2026-11-25T17:41:51.587175+00:00",
+      "expires_at": "2026-12-02T17:41:51.587175+00:00",
+      "sha256": "dd963ab12c24d9d5a2a08bf463bad39f647c958d210e61490a999767a1cdf4c1",
+      "excerpt": "Hours Monday 10:00am - 5:30pm Tuesday 10:00am - 5:30pm Wednesday 10:00am -",
+      "fetch_status": "OK",
+      "review": "machine-fetched; individual facts separately reviewed"
+    },
+    {
+      "source_id": "national-gallery",
+      "url": "https://www.nga.gov/visit",
+      "publisher": "National Gallery of Art",
+      "fetch_status": "UNAVAILABLE",
+      "error": "HTTPStatusError",
+      "fetched_at": "2026-11-25T17:41:51.587175+00:00",
+      "expires_at": "2026-11-25T17:41:51.587175+00:00",
+      "sha256": "",
+      "excerpt": "",
+      "review": "not verified"
+    },
+    {
+      "source_id": "spy",
+      "url": "https://www.spymuseum.org/visit/",
+      "publisher": "International Spy Museum",
+      "fetched_at": "2026-11-25T17:41:51.587175+00:00",
+      "expires_at": "2026-12-02T17:41:51.587175+00:00",
+      "sha256": "148feb0e32f44e6a57cb2fe1b041c003adde525946b9f2e6bdfd8896d3d0f8e0",
+      "excerpt": "Hours Wednesday 9:00 am - 7:00 pm Thursday Closed Friday 8:30 am",
+      "fetch_status": "OK",
+      "review": "machine-fetched; individual facts separately reviewed"
+    },
+    {
+      "source_id": "omny",
+      "url": "https://omny.info/fares",
+      "publisher": "OMNY",
+      "fetched_at": "2026-11-25T17:41:51.587175+00:00",
+      "expires_at": "2026-12-02T17:41:51.587175+00:00",
+      "sha256": "e1d5e14a05dec3a0b94b1195c9844a4bfbc2b241b82af560c324ea2dbebb7071",
+      "excerpt": "free for the rest of the seven-day cap period. If you are",
+      "fetch_status": "OK",
+      "review": "machine-fetched; individual facts separately reviewed"
+    },
+    {
+      "source_id": "omny-cap",
+      "url": "https://omny.info/faq/fare-cap",
+      "publisher": "OMNY",
+      "fetched_at": "2026-11-25T17:41:51.587175+00:00",
+      "expires_at": "2026-12-02T17:41:51.587175+00:00",
+      "sha256": "ef6bc71698466146b409e799478ceadbacd955881e689c690985281cfa4f2d79",
+      "excerpt": "free transfer, use the same payment method for each part of your",
+      "fetch_status": "OK",
+      "review": "machine-fetched; individual facts separately reviewed"
+    },
+    {
+      "source_id": "septa",
+      "url": "https://www.septa.org/fares/",
+      "publisher": "SEPTA",
+      "fetched_at": "2026-11-25T17:41:51.587175+00:00",
+      "expires_at": "2026-12-02T17:41:51.587175+00:00",
+      "sha256": "2a4ce835442c2eb5671554841e3a7fd6869ea4e5520b544ba8b9db8f16f0588d",
+      "excerpt": "Southeastern Pennsylvania Transportation Authority | Serving Bucks, Chester, Delaware, Montgomery, and Philadelphia",
+      "fetch_status": "OK",
+      "review": "machine-fetched; individual facts separately reviewed"
+    },
+    {
+      "source_id": "wmata",
+      "url": "https://www.wmata.com/pay.html",
+      "publisher": "WMATA",
+      "fetched_at": "2026-11-25T17:41:51.587175+00:00",
+      "expires_at": "2026-12-02T17:41:51.587175+00:00",
+      "sha256": "34adba86611c7538218589c687fa0bece79b97252ad06fd4214c31bbfc00368d",
+      "excerpt": "free with each fare-paying adult. Children age 5 and older pay the",
+      "fetch_status": "OK",
+      "review": "machine-fetched; individual facts separately reviewed"
+    },
+    {
+      "source_id": "wmata-passes",
+      "url": "https://www.wmata.com/pay/pay-passes.html",
+      "publisher": "WMATA",
+      "fetched_at": "2026-11-25T17:41:51.587175+00:00",
+      "expires_at": "2026-12-02T17:41:51.587175+00:00",
+      "sha256": "5e23c0cc2e2ed462dd691ded1f6cdde0556c686b5ea46ff3c4a3f92b9b82af74",
+      "excerpt": "freedom to travel. Enjoy your rides! How to buy a pass Online:",
+      "fetch_status": "OK",
+      "review": "machine-fetched; individual facts separately reviewed"
+    },
+    {
+      "source_id": "inde-fees",
+      "url": "https://www.nps.gov/inde/planyourvisit/fees.htm",
+      "publisher": "National Park Service",
+      "fetched_at": "2026-11-25T17:41:51.587175+00:00",
+      "expires_at": "2026-12-02T17:41:51.587175+00:00",
+      "sha256": "c2452455cd55dae9afeaa09787636d7c3fefca5850b4fd496c44eb88908b6050",
+      "excerpt": "free. NPS photo General Information About Fees and Passes Admission to most",
+      "fetch_status": "OK",
+      "review": "machine-fetched; individual facts separately reviewed"
+    },
+    {
+      "source_id": "mall-fees",
+      "url": "https://www.nps.gov/nama/planyourvisit/fees.htm",
+      "publisher": "National Park Service",
+      "fetched_at": "2026-11-25T17:41:51.587175+00:00",
+      "expires_at": "2026-12-02T17:41:51.587175+00:00",
+      "sha256": "43c447f47ebf4a512b6ee53bbf99d829ccf677149cd068eac720c63c4d72b6c1",
+      "excerpt": "Free Entrance Days in the National Parks Come experience the national parks!",
+      "fetch_status": "OK",
+      "review": "machine-fetched; individual facts separately reviewed"
+    },
+    {
+      "source_id": "lincoln",
+      "url": "https://www.nps.gov/linc/planyourvisit/hours.htm",
+      "publisher": "National Park Service",
+      "fetched_at": "2026-11-25T17:41:51.587175+00:00",
+      "expires_at": "2026-12-02T17:41:51.587175+00:00",
+      "sha256": "54a223b37b28bb0f24558c823ae003a0321b983a13d117d3c4ab1b47be32cbf2",
+      "excerpt": "Hours & Seasons - Lincoln Memorial (U.S. National Park Service) Official websites",
+      "fetch_status": "OK",
+      "review": "machine-fetched; individual facts separately reviewed"
+    },
+    {
+      "source_id": "met-access",
+      "url": "https://www.metmuseum.org/plan-your-visit/accessibility",
+      "publisher": "Metropolitan Museum of Art",
+      "fetch_status": "UNAVAILABLE",
+      "error": "HTTPStatusError",
+      "fetched_at": "2026-11-25T17:41:51.587175+00:00",
+      "expires_at": "2026-11-25T17:41:51.587175+00:00",
+      "sha256": "",
+      "excerpt": "",
+      "review": "not verified"
+    },
+    {
+      "source_id": "natural-tips",
+      "url": "https://naturalhistory.si.edu/visit/visitor-tips",
+      "publisher": "Smithsonian",
+      "fetched_at": "2026-11-25T17:41:51.587175+00:00",
+      "expires_at": "2026-12-02T17:41:51.587175+00:00",
+      "sha256": "d0d668637f34fd98145eb38c7b4508ed5442bb80d8a71bc80dedbdbbe68e8741",
+      "excerpt": "free Wi-Fi access; choose the \"si-visitor\" network on your device. No password",
+      "fetch_status": "OK",
+      "review": "machine-fetched; individual facts separately reviewed"
+    },
+    {
+      "source_id": "stli-fees",
+      "url": "https://www.nps.gov/stli/planyourvisit/fees.htm",
+      "publisher": "National Park Service",
+      "fetched_at": "2026-11-25T17:41:51.587175+00:00",
+      "expires_at": "2026-12-02T17:41:51.587175+00:00",
+      "sha256": "5c96157fe63a74b45065289ee97e80ebe05188e90b7fd2f656e09281406da2ec",
+      "excerpt": "Free Days. Statue City Cruises is the ONLY NPS-authorized ferry transportation provider",
+      "fetch_status": "OK",
+      "review": "machine-fetched; individual facts separately reviewed"
+    },
+    {
+      "source_id": "inde-hours",
+      "url": "https://www.nps.gov/inde/planyourvisit/hours.htm",
+      "publisher": "National Park Service",
+      "fetched_at": "2026-11-25T17:41:51.587175+00:00",
+      "expires_at": "2026-12-02T17:41:51.587175+00:00",
+      "sha256": "becc15bb3df189abbf063d60b4ecd9d2666cb36524536b5a0e64ae899a31d059",
+      "excerpt": "Hours & Seasons - Independence National Historical Park (U.S. National Park Service)",
+      "fetch_status": "OK",
+      "review": "machine-fetched; individual facts separately reviewed"
+    }
+  ],
+  "documents": [
+    {
+      "id": "nyc-met:overview",
+      "source_id": "met",
+      "activity_id": "nyc-met",
+      "city": "NYC",
+      "text": "Metropolitan Museum of Art is a museum option in NYC. Its catalog ID is nyc-met. The proposed visit lasts 120 minutes and includes an estimated 1800 meters of walking. This is a scoped group travel option, not a reservation or an accessible-route guarantee.",
+      "kind": "overview",
+      "trusted_numeric_source": false
+    },
+    {
+      "id": "nyc-met:price",
+      "source_id": "met",
+      "activity_id": "nyc-met",
+      "city": "NYC",
+      "text": "Admission planning value for Metropolitan Museum of Art in NYC is 3000 USD cents per adult participant. Unless a reviewed fact explicitly marks it verified, this is a confirmed user estimate. The broker supplies this value by ID; a model cannot change it by citing different text.",
+      "kind": "price",
+      "trusted_numeric_source": false
+    },
+    {
+      "id": "nyc-met:schedule",
+      "source_id": "met",
+      "activity_id": "nyc-met",
+      "city": "NYC",
+      "text": "The planning window for Metropolitan Museum of Art in NYC is 10:00 to 17:00 America/New_York. Proposed duration is 120 minutes. Closed weekday indices are [2]. This conservative planning assumption still requires date and holiday checking; it does not guarantee entry or tickets.",
+      "kind": "schedule",
+      "trusted_numeric_source": false
+    },
+    {
+      "id": "nyc-central-park:overview",
+      "source_id": "central-park",
+      "activity_id": "nyc-central-park",
+      "city": "NYC",
+      "text": "Central Park walk is a park option in NYC. Its catalog ID is nyc-central-park. The proposed visit lasts 90 minutes and includes an estimated 2400 meters of walking. This is a scoped group travel option, not a reservation or an accessible-route guarantee.",
+      "kind": "overview",
+      "trusted_numeric_source": false
+    },
+    {
+      "id": "nyc-central-park:price",
+      "source_id": "central-park",
+      "activity_id": "nyc-central-park",
+      "city": "NYC",
+      "text": "Admission planning value for Central Park walk in NYC is 0 USD cents per adult participant. Unless a reviewed fact explicitly marks it verified, this is a confirmed user estimate. The broker supplies this value by ID; a model cannot change it by citing different text.",
+      "kind": "price",
+      "trusted_numeric_source": false
+    },
+    {
+      "id": "nyc-central-park:schedule",
+      "source_id": "central-park",
+      "activity_id": "nyc-central-park",
+      "city": "NYC",
+      "text": "The planning window for Central Park walk in NYC is 10:00 to 17:00 America/New_York. Proposed duration is 90 minutes. Closed weekday indices are []. This conservative planning assumption still requires date and holiday checking; it does not guarantee entry or tickets.",
+      "kind": "schedule",
+      "trusted_numeric_source": false
+    },
+    {
+      "id": "nyc-high-line:overview",
+      "source_id": "high-line",
+      "activity_id": "nyc-high-line",
+      "city": "NYC",
+      "text": "High Line gardens is a park option in NYC. Its catalog ID is nyc-high-line. The proposed visit lasts 60 minutes and includes an estimated 1800 meters of walking. This is a scoped group travel option, not a reservation or an accessible-route guarantee.",
+      "kind": "overview",
+      "trusted_numeric_source": false
+    },
+    {
+      "id": "nyc-high-line:price",
+      "source_id": "high-line",
+      "activity_id": "nyc-high-line",
+      "city": "NYC",
+      "text": "Admission planning value for High Line gardens in NYC is 0 USD cents per adult participant. Unless a reviewed fact explicitly marks it verified, this is a confirmed user estimate. The broker supplies this value by ID; a model cannot change it by citing different text.",
+      "kind": "price",
+      "trusted_numeric_source": false
+    },
+    {
+      "id": "nyc-high-line:schedule",
+      "source_id": "high-line",
+      "activity_id": "nyc-high-line",
+      "city": "NYC",
+      "text": "The planning window for High Line gardens in NYC is 10:00 to 17:00 America/New_York. Proposed duration is 60 minutes. Closed weekday indices are []. This conservative planning assumption still requires date and holiday checking; it does not guarantee entry or tickets.",
+      "kind": "schedule",
+      "trusted_numeric_source": false
+    },
+    {
+      "id": "nyc-ferry:overview",
+      "source_id": "ferry",
+      "activity_id": "nyc-ferry",
+      "city": "NYC",
+      "text": "Staten Island Ferry round trip is a viewpoint option in NYC. Its catalog ID is nyc-ferry. The proposed visit lasts 90 minutes and includes an estimated 800 meters of walking. This is a scoped group travel option, not a reservation or an accessible-route guarantee.",
+      "kind": "overview",
+      "trusted_numeric_source": false
+    },
+    {
+      "id": "nyc-ferry:price",
+      "source_id": "ferry",
+      "activity_id": "nyc-ferry",
+      "city": "NYC",
+      "text": "Admission planning value for Staten Island Ferry round trip in NYC is 0 USD cents per adult participant. Unless a reviewed fact explicitly marks it verified, this is a confirmed user estimate. The broker supplies this value by ID; a model cannot change it by citing different text.",
+      "kind": "price",
+      "trusted_numeric_source": false
+    },
+    {
+      "id": "nyc-ferry:schedule",
+      "source_id": "ferry",
+      "activity_id": "nyc-ferry",
+      "city": "NYC",
+      "text": "The planning window for Staten Island Ferry round trip in NYC is 10:00 to 17:00 America/New_York. Proposed duration is 90 minutes. Closed weekday indices are []. This conservative planning assumption still requires date and holiday checking; it does not guarantee entry or tickets.",
+      "kind": "schedule",
+      "trusted_numeric_source": false
+    },
+    {
+      "id": "phl-pma:overview",
+      "source_id": "pma",
+      "activity_id": "phl-pma",
+      "city": "PHL",
+      "text": "Philadelphia Museum of Art is a museum option in PHL. Its catalog ID is phl-pma. The proposed visit lasts 120 minutes and includes an estimated 1800 meters of walking. This is a scoped group travel option, not a reservation or an accessible-route guarantee.",
+      "kind": "overview",
+      "trusted_numeric_source": false
+    },
+    {
+      "id": "phl-pma:price",
+      "source_id": "pma",
+      "activity_id": "phl-pma",
+      "city": "PHL",
+      "text": "Admission planning value for Philadelphia Museum of Art in PHL is 3000 USD cents per adult participant. Unless a reviewed fact explicitly marks it verified, this is a confirmed user estimate. The broker supplies this value by ID; a model cannot change it by citing different text.",
+      "kind": "price",
+      "trusted_numeric_source": false
+    },
+    {
+      "id": "phl-pma:schedule",
+      "source_id": "pma",
+      "activity_id": "phl-pma",
+      "city": "PHL",
+      "text": "The planning window for Philadelphia Museum of Art in PHL is 10:00 to 17:00 America/New_York. Proposed duration is 120 minutes. Closed weekday indices are [1, 2]. This conservative planning assumption still requires date and holiday checking; it does not guarantee entry or tickets.",
+      "kind": "schedule",
+      "trusted_numeric_source": false
+    },
+    {
+      "id": "phl-liberty-bell:overview",
+      "source_id": "liberty-bell",
+      "activity_id": "phl-liberty-bell",
+      "city": "PHL",
+      "text": "Liberty Bell Center is a history option in PHL. Its catalog ID is phl-liberty-bell. The proposed visit lasts 60 minutes and includes an estimated 700 meters of walking. This is a scoped group travel option, not a reservation or an accessible-route guarantee.",
+      "kind": "overview",
+      "trusted_numeric_source": false
+    },
+    {
+      "id": "phl-liberty-bell:price",
+      "source_id": "liberty-bell",
+      "activity_id": "phl-liberty-bell",
+      "city": "PHL",
+      "text": "Admission planning value for Liberty Bell Center in PHL is 0 USD cents per adult participant. Unless a reviewed fact explicitly marks it verified, this is a confirmed user estimate. The broker supplies this value by ID; a model cannot change it by citing different text.",
+      "kind": "price",
+      "trusted_numeric_source": false
+    },
+    {
+      "id": "phl-liberty-bell:schedule",
+      "source_id": "liberty-bell",
+      "activity_id": "phl-liberty-bell",
+      "city": "PHL",
+      "text": "The planning window for Liberty Bell Center in PHL is 10:00 to 17:00 America/New_York. Proposed duration is 60 minutes. Closed weekday indices are []. This conservative planning assumption still requires date and holiday checking; it does not guarantee entry or tickets.",
+      "kind": "schedule",
+      "trusted_numeric_source": false
+    },
+    {
+      "id": "phl-independence:overview",
+      "source_id": "independence",
+      "activity_id": "phl-independence",
+      "city": "PHL",
+      "text": "Independence Hall exterior and grounds is a history option in PHL. Its catalog ID is phl-independence. The proposed visit lasts 60 minutes and includes an estimated 1000 meters of walking. This is a scoped group travel option, not a reservation or an accessible-route guarantee.",
+      "kind": "overview",
+      "trusted_numeric_source": false
+    },
+    {
+      "id": "phl-independence:price",
+      "source_id": "independence",
+      "activity_id": "phl-independence",
+      "city": "PHL",
+      "text": "Admission planning value for Independence Hall exterior and grounds in PHL is 0 USD cents per adult participant. Unless a reviewed fact explicitly marks it verified, this is a confirmed user estimate. The broker supplies this value by ID; a model cannot change it by citing different text.",
+      "kind": "price",
+      "trusted_numeric_source": false
+    },
+    {
+      "id": "phl-independence:schedule",
+      "source_id": "independence",
+      "activity_id": "phl-independence",
+      "city": "PHL",
+      "text": "The planning window for Independence Hall exterior and grounds in PHL is 10:00 to 17:00 America/New_York. Proposed duration is 60 minutes. Closed weekday indices are []. This conservative planning assumption still requires date and holiday checking; it does not guarantee entry or tickets.",
+      "kind": "schedule",
+      "trusted_numeric_source": false
+    },
+    {
+      "id": "phl-visitor-center:overview",
+      "source_id": "visitor-center",
+      "activity_id": "phl-visitor-center",
+      "city": "PHL",
+      "text": "Independence Visitor Center is a history option in PHL. Its catalog ID is phl-visitor-center. The proposed visit lasts 60 minutes and includes an estimated 600 meters of walking. This is a scoped group travel option, not a reservation or an accessible-route guarantee.",
+      "kind": "overview",
+      "trusted_numeric_source": false
+    },
+    {
+      "id": "phl-visitor-center:price",
+      "source_id": "visitor-center",
+      "activity_id": "phl-visitor-center",
+      "city": "PHL",
+      "text": "Admission planning value for Independence Visitor Center in PHL is 0 USD cents per adult participant. Unless a reviewed fact explicitly marks it verified, this is a confirmed user estimate. The broker supplies this value by ID; a model cannot change it by citing different text.",
+      "kind": "price",
+      "trusted_numeric_source": false
+    },
+    {
+      "id": "phl-visitor-center:schedule",
+      "source_id": "visitor-center",
+      "activity_id": "phl-visitor-center",
+      "city": "PHL",
+      "text": "The planning window for Independence Visitor Center in PHL is 10:00 to 17:00 America/New_York. Proposed duration is 60 minutes. Closed weekday indices are []. This conservative planning assumption still requires date and holiday checking; it does not guarantee entry or tickets.",
+      "kind": "schedule",
+      "trusted_numeric_source": false
+    },
+    {
+      "id": "dc-natural-history:overview",
+      "source_id": "natural-history",
+      "activity_id": "dc-natural-history",
+      "city": "DC",
+      "text": "National Museum of Natural History is a museum option in DC. Its catalog ID is dc-natural-history. The proposed visit lasts 120 minutes and includes an estimated 1800 meters of walking. This is a scoped group travel option, not a reservation or an accessible-route guarantee.",
+      "kind": "overview",
+      "trusted_numeric_source": false
+    },
+    {
+      "id": "dc-natural-history:price",
+      "source_id": "natural-history",
+      "activity_id": "dc-natural-history",
+      "city": "DC",
+      "text": "Admission planning value for National Museum of Natural History in DC is 0 USD cents per adult participant. Unless a reviewed fact explicitly marks it verified, this is a confirmed user estimate. The broker supplies this value by ID; a model cannot change it by citing different text.",
+      "kind": "price",
+      "trusted_numeric_source": false
+    },
+    {
+      "id": "dc-natural-history:schedule",
+      "source_id": "natural-history",
+      "activity_id": "dc-natural-history",
+      "city": "DC",
+      "text": "The planning window for National Museum of Natural History in DC is 10:00 to 17:00 America/New_York. Proposed duration is 120 minutes. Closed weekday indices are []. This conservative planning assumption still requires date and holiday checking; it does not guarantee entry or tickets.",
+      "kind": "schedule",
+      "trusted_numeric_source": false
+    },
+    {
+      "id": "dc-american-history:overview",
+      "source_id": "american-history",
+      "activity_id": "dc-american-history",
+      "city": "DC",
+      "text": "National Museum of American History is a history option in DC. Its catalog ID is dc-american-history. The proposed visit lasts 120 minutes and includes an estimated 1600 meters of walking. This is a scoped group travel option, not a reservation or an accessible-route guarantee.",
+      "kind": "overview",
+      "trusted_numeric_source": false
+    },
+    {
+      "id": "dc-american-history:price",
+      "source_id": "american-history",
+      "activity_id": "dc-american-history",
+      "city": "DC",
+      "text": "Admission planning value for National Museum of American History in DC is 0 USD cents per adult participant. Unless a reviewed fact explicitly marks it verified, this is a confirmed user estimate. The broker supplies this value by ID; a model cannot change it by citing different text.",
+      "kind": "price",
+      "trusted_numeric_source": false
+    },
+    {
+      "id": "dc-american-history:schedule",
+      "source_id": "american-history",
+      "activity_id": "dc-american-history",
+      "city": "DC",
+      "text": "The planning window for National Museum of American History in DC is 10:00 to 17:00 America/New_York. Proposed duration is 120 minutes. Closed weekday indices are []. This conservative planning assumption still requires date and holiday checking; it does not guarantee entry or tickets.",
+      "kind": "schedule",
+      "trusted_numeric_source": false
+    },
+    {
+      "id": "dc-national-gallery:overview",
+      "source_id": "national-gallery",
+      "activity_id": "dc-national-gallery",
+      "city": "DC",
+      "text": "National Gallery of Art is a museum option in DC. Its catalog ID is dc-national-gallery. The proposed visit lasts 120 minutes and includes an estimated 1500 meters of walking. This is a scoped group travel option, not a reservation or an accessible-route guarantee.",
+      "kind": "overview",
+      "trusted_numeric_source": false
+    },
+    {
+      "id": "dc-national-gallery:price",
+      "source_id": "national-gallery",
+      "activity_id": "dc-national-gallery",
+      "city": "DC",
+      "text": "Admission planning value for National Gallery of Art in DC is 0 USD cents per adult participant. Unless a reviewed fact explicitly marks it verified, this is a confirmed user estimate. The broker supplies this value by ID; a model cannot change it by citing different text.",
+      "kind": "price",
+      "trusted_numeric_source": false
+    },
+    {
+      "id": "dc-national-gallery:schedule",
+      "source_id": "national-gallery",
+      "activity_id": "dc-national-gallery",
+      "city": "DC",
+      "text": "The planning window for National Gallery of Art in DC is 10:00 to 17:00 America/New_York. Proposed duration is 120 minutes. Closed weekday indices are []. This conservative planning assumption still requires date and holiday checking; it does not guarantee entry or tickets.",
+      "kind": "schedule",
+      "trusted_numeric_source": false
+    },
+    {
+      "id": "dc-spy:overview",
+      "source_id": "spy",
+      "activity_id": "dc-spy",
+      "city": "DC",
+      "text": "International Spy Museum is a museum option in DC. Its catalog ID is dc-spy. The proposed visit lasts 120 minutes and includes an estimated 1500 meters of walking. This is a scoped group travel option, not a reservation or an accessible-route guarantee.",
+      "kind": "overview",
+      "trusted_numeric_source": false
+    },
+    {
+      "id": "dc-spy:price",
+      "source_id": "spy",
+      "activity_id": "dc-spy",
+      "city": "DC",
+      "text": "Admission planning value for International Spy Museum in DC is 5000 USD cents per adult participant. Unless a reviewed fact explicitly marks it verified, this is a confirmed user estimate. The broker supplies this value by ID; a model cannot change it by citing different text.",
+      "kind": "price",
+      "trusted_numeric_source": false
+    },
+    {
+      "id": "dc-spy:schedule",
+      "source_id": "spy",
+      "activity_id": "dc-spy",
+      "city": "DC",
+      "text": "The planning window for International Spy Museum in DC is 10:00 to 17:00 America/New_York. Proposed duration is 120 minutes. Closed weekday indices are []. This conservative planning assumption still requires date and holiday checking; it does not guarantee entry or tickets.",
+      "kind": "schedule",
+      "trusted_numeric_source": false
+    },
+    {
+      "id": "source:met",
+      "source_id": "met",
+      "activity_id": "",
+      "city": "ALL",
+      "kind": "source_metadata",
+      "text": "Official publisher Metropolitan Museum of Art has reference URL https://www.metmuseum.org/plan-your-visit. Fetch status is UNAVAILABLE. This record establishes source provenance only; numerical facts require separate field verification and current applicability.",
+      "trusted_numeric_source": false
+    },
+    {
+      "id": "source:central-park",
+      "source_id": "central-park",
+      "activity_id": "",
+      "city": "ALL",
+      "kind": "source_metadata",
+      "text": "Official publisher Central Park Conservancy has reference URL https://www.centralparknyc.org/visit. Fetch status is OK. This record establishes source provenance only; numerical facts require separate field verification and current applicability.",
+      "trusted_numeric_source": false
+    },
+    {
+      "id": "source:high-line",
+      "source_id": "high-line",
+      "activity_id": "",
+      "city": "ALL",
+      "kind": "source_metadata",
+      "text": "Official publisher Friends of the High Line has reference URL https://www.thehighline.org/visit/. Fetch status is OK. This record establishes source provenance only; numerical facts require separate field verification and current applicability.",
+      "trusted_numeric_source": false
+    },
+    {
+      "id": "source:ferry",
+      "source_id": "ferry",
+      "activity_id": "",
+      "city": "ALL",
+      "kind": "source_metadata",
+      "text": "Official publisher NYC Department of Transportation has reference URL https://www.nyc.gov/html/dot/html/ferrybus/staten-island-ferry.shtml. Fetch status is OK. This record establishes source provenance only; numerical facts require separate field verification and current applicability.",
+      "trusted_numeric_source": false
+    },
+    {
+      "id": "source:pma",
+      "source_id": "pma",
+      "activity_id": "",
+      "city": "ALL",
+      "kind": "source_metadata",
+      "text": "Official publisher Philadelphia Museum of Art has reference URL https://www.philamuseum.org/main-building. Fetch status is OK. This record establishes source provenance only; numerical facts require separate field verification and current applicability.",
+      "trusted_numeric_source": false
+    },
+    {
+      "id": "source:liberty-bell",
+      "source_id": "liberty-bell",
+      "activity_id": "",
+      "city": "ALL",
+      "kind": "source_metadata",
+      "text": "Official publisher National Park Service has reference URL https://www.nps.gov/inde/planyourvisit/libertybellcenter.htm. Fetch status is OK. This record establishes source provenance only; numerical facts require separate field verification and current applicability.",
+      "trusted_numeric_source": false
+    },
+    {
+      "id": "source:independence",
+      "source_id": "independence",
+      "activity_id": "",
+      "city": "ALL",
+      "kind": "source_metadata",
+      "text": "Official publisher National Park Service has reference URL https://www.nps.gov/inde/planyourvisit/independencehall.htm. Fetch status is OK. This record establishes source provenance only; numerical facts require separate field verification and current applicability.",
+      "trusted_numeric_source": false
+    },
+    {
+      "id": "source:visitor-center",
+      "source_id": "visitor-center",
+      "activity_id": "",
+      "city": "ALL",
+      "kind": "source_metadata",
+      "text": "Official publisher Philadelphia Visitor Center has reference URL https://www.phlvisitorcenter.com/independence-visitor-center. Fetch status is UNAVAILABLE. This record establishes source provenance only; numerical facts require separate field verification and current applicability.",
+      "trusted_numeric_source": false
+    },
+    {
+      "id": "source:natural-history",
+      "source_id": "natural-history",
+      "activity_id": "",
+      "city": "ALL",
+      "kind": "source_metadata",
+      "text": "Official publisher Smithsonian has reference URL https://naturalhistory.si.edu/visit. Fetch status is OK. This record establishes source provenance only; numerical facts require separate field verification and current applicability.",
+      "trusted_numeric_source": false
+    },
+    {
+      "id": "source:american-history",
+      "source_id": "american-history",
+      "activity_id": "",
+      "city": "ALL",
+      "kind": "source_metadata",
+      "text": "Official publisher Smithsonian has reference URL https://americanhistory.si.edu/visit. Fetch status is OK. This record establishes source provenance only; numerical facts require separate field verification and current applicability.",
+      "trusted_numeric_source": false
+    },
+    {
+      "id": "source:national-gallery",
+      "source_id": "national-gallery",
+      "activity_id": "",
+      "city": "ALL",
+      "kind": "source_metadata",
+      "text": "Official publisher National Gallery of Art has reference URL https://www.nga.gov/visit. Fetch status is UNAVAILABLE. This record establishes source provenance only; numerical facts require separate field verification and current applicability.",
+      "trusted_numeric_source": false
+    },
+    {
+      "id": "source:spy",
+      "source_id": "spy",
+      "activity_id": "",
+      "city": "ALL",
+      "kind": "source_metadata",
+      "text": "Official publisher International Spy Museum has reference URL https://www.spymuseum.org/visit/. Fetch status is OK. This record establishes source provenance only; numerical facts require separate field verification and current applicability.",
+      "trusted_numeric_source": false
+    },
+    {
+      "id": "source:omny",
+      "source_id": "omny",
+      "activity_id": "",
+      "city": "ALL",
+      "kind": "source_metadata",
+      "text": "Official publisher OMNY has reference URL https://omny.info/fares. Fetch status is OK. This record establishes source provenance only; numerical facts require separate field verification and current applicability.",
+      "trusted_numeric_source": false
+    },
+    {
+      "id": "source:omny-cap",
+      "source_id": "omny-cap",
+      "activity_id": "",
+      "city": "ALL",
+      "kind": "source_metadata",
+      "text": "Official publisher OMNY has reference URL https://omny.info/faq/fare-cap. Fetch status is OK. This record establishes source provenance only; numerical facts require separate field verification and current applicability.",
+      "trusted_numeric_source": false
+    },
+    {
+      "id": "source:septa",
+      "source_id": "septa",
+      "activity_id": "",
+      "city": "ALL",
+      "kind": "source_metadata",
+      "text": "Official publisher SEPTA has reference URL https://www.septa.org/fares/. Fetch status is OK. This record establishes source provenance only; numerical facts require separate field verification and current applicability.",
+      "trusted_numeric_source": false
+    },
+    {
+      "id": "source:wmata",
+      "source_id": "wmata",
+      "activity_id": "",
+      "city": "ALL",
+      "kind": "source_metadata",
+      "text": "Official publisher WMATA has reference URL https://www.wmata.com/pay.html. Fetch status is OK. This record establishes source provenance only; numerical facts require separate field verification and current applicability.",
+      "trusted_numeric_source": false
+    },
+    {
+      "id": "source:wmata-passes",
+      "source_id": "wmata-passes",
+      "activity_id": "",
+      "city": "ALL",
+      "kind": "source_metadata",
+      "text": "Official publisher WMATA has reference URL https://www.wmata.com/pay/pay-passes.html. Fetch status is OK. This record establishes source provenance only; numerical facts require separate field verification and current applicability.",
+      "trusted_numeric_source": false
+    },
+    {
+      "id": "source:inde-fees",
+      "source_id": "inde-fees",
+      "activity_id": "",
+      "city": "ALL",
+      "kind": "source_metadata",
+      "text": "Official publisher National Park Service has reference URL https://www.nps.gov/inde/planyourvisit/fees.htm. Fetch status is OK. This record establishes source provenance only; numerical facts require separate field verification and current applicability.",
+      "trusted_numeric_source": false
+    },
+    {
+      "id": "source:mall-fees",
+      "source_id": "mall-fees",
+      "activity_id": "",
+      "city": "ALL",
+      "kind": "source_metadata",
+      "text": "Official publisher National Park Service has reference URL https://www.nps.gov/nama/planyourvisit/fees.htm. Fetch status is OK. This record establishes source provenance only; numerical facts require separate field verification and current applicability.",
+      "trusted_numeric_source": false
+    },
+    {
+      "id": "source:lincoln",
+      "source_id": "lincoln",
+      "activity_id": "",
+      "city": "ALL",
+      "kind": "source_metadata",
+      "text": "Official publisher National Park Service has reference URL https://www.nps.gov/linc/planyourvisit/hours.htm. Fetch status is OK. This record establishes source provenance only; numerical facts require separate field verification and current applicability.",
+      "trusted_numeric_source": false
+    },
+    {
+      "id": "source:met-access",
+      "source_id": "met-access",
+      "activity_id": "",
+      "city": "ALL",
+      "kind": "source_metadata",
+      "text": "Official publisher Metropolitan Museum of Art has reference URL https://www.metmuseum.org/plan-your-visit/accessibility. Fetch status is UNAVAILABLE. This record establishes source provenance only; numerical facts require separate field verification and current applicability.",
+      "trusted_numeric_source": false
+    },
+    {
+      "id": "source:natural-tips",
+      "source_id": "natural-tips",
+      "activity_id": "",
+      "city": "ALL",
+      "kind": "source_metadata",
+      "text": "Official publisher Smithsonian has reference URL https://naturalhistory.si.edu/visit/visitor-tips. Fetch status is OK. This record establishes source provenance only; numerical facts require separate field verification and current applicability.",
+      "trusted_numeric_source": false
+    },
+    {
+      "id": "source:stli-fees",
+      "source_id": "stli-fees",
+      "activity_id": "",
+      "city": "ALL",
+      "kind": "source_metadata",
+      "text": "Official publisher National Park Service has reference URL https://www.nps.gov/stli/planyourvisit/fees.htm. Fetch status is OK. This record establishes source provenance only; numerical facts require separate field verification and current applicability.",
+      "trusted_numeric_source": false
+    },
+    {
+      "id": "source:inde-hours",
+      "source_id": "inde-hours",
+      "activity_id": "",
+      "city": "ALL",
+      "kind": "source_metadata",
+      "text": "Official publisher National Park Service has reference URL https://www.nps.gov/inde/planyourvisit/hours.htm. Fetch status is OK. This record establishes source provenance only; numerical facts require separate field verification and current applicability.",
+      "trusted_numeric_source": false
+    },
+    {
+      "id": "policy:budget-scope",
+      "source_id": "project-policy",
+      "activity_id": "",
+      "city": "ALL",
+      "kind": "project_policy",
+      "text": "Costs cover selected city gateways, intercity travel, local transfers, all lodging nights, three daily meal allowances per traveler, selected admissions and a ten percent contingency. Home travel and flights are excluded. Estimates are not purchases or quotes.",
+      "trusted_numeric_source": false
+    },
+    {
+      "id": "policy:lodging",
+      "source_id": "project-policy",
+      "activity_id": "",
+      "city": "ALL",
+      "kind": "project_policy",
+      "text": "Lodging is a synthetic planning estimate per room per night, including declared taxes and mandatory fees. Capacity determines room count with upward rounding. Economy and standard options share the same supported city coverage. Actual availability is not asserted.",
+      "trusted_numeric_source": false
+    },
+    {
+      "id": "policy:meals",
+      "source_id": "project-policy",
+      "activity_id": "",
+      "city": "ALL",
+      "kind": "project_policy",
+      "text": "Every traveler receives three daily meal allowances, including arrival and departure days. The allowance is an explicit organizer-approved estimate. Dietary constraints determine compatible catalog tags. Financial calculation is deterministic and not delegated to language models.",
+      "trusted_numeric_source": false
+    },
+    {
+      "id": "policy:transfers",
+      "source_id": "project-policy",
+      "activity_id": "",
+      "city": "ALL",
+      "kind": "project_policy",
+      "text": "Station and attraction transfers use a conservative synthetic planning matrix. Local transitions include fifteen minutes of buffer; intercity station arrival and departure each include thirty minutes. No real-time disruption or accessible-route guarantee is asserted.",
+      "trusted_numeric_source": false
+    },
+    {
+      "id": "policy:memory",
+      "source_id": "project-policy",
+      "activity_id": "",
+      "city": "ALL",
+      "kind": "project_policy",
+      "text": "Only explicitly confirmed typed preferences persist across sessions. Imported notes remain untrusted and cannot add recipients, payment instructions, model policies or automatic approval rules. Saving a trip does not save a preference automatically.",
+      "trusted_numeric_source": false
+    },
+    {
+      "id": "policy:approval",
+      "source_id": "project-policy",
+      "activity_id": "",
+      "city": "ALL",
+      "kind": "project_policy",
+      "text": "A pending proposal pauses durably before a ledger write. The organizer approves the exact version and evidence digest. Edits invalidate the preceding request. Replays cannot create another ledger; a later process resumes the same stored workflow.",
+      "trusted_numeric_source": false
+    },
+    {
+      "id": "policy:source-verification",
+      "source_id": "project-policy",
+      "activity_id": "",
+      "city": "ALL",
+      "kind": "project_policy",
+      "text": "A source identifier is insufficient by itself. The selected value must match a reviewed field, unit and applicable date. Unknown or expired mandatory facts cause a data gap. A retrieved instruction cannot rewrite the reviewed numerical catalog.",
+      "trusted_numeric_source": false
+    },
+    {
+      "id": "policy:fare-caps",
+      "source_id": "project-policy",
+      "activity_id": "",
+      "city": "ALL",
+      "kind": "project_policy",
+      "text": "Transit caps and discounts depend on payment medium, traveler eligibility, travel mode and current operator policy. This catalog uses an explicit daily planning allowance unless an applicable fare rule has been reviewed. Group taps are never assumed to share individual cap eligibility.",
+      "trusted_numeric_source": false
+    }
+  ],
+  "rights": "Original summaries and brief source excerpts. Source copyrights retained by publishers.",
+  "routes": {
+    "NYC-PHL": {
+      "price_cents": 6500,
+      "duration_minutes": 150,
+      "evidence_state": "USER_ESTIMATE",
+      "expires_at": "2026-12-02T17:41:51.587175+00:00",
+      "note": "Synthetic all-in station-to-station planning assumption; no live inventory"
+    },
+    "DC-PHL": {
+      "price_cents": 7000,
+      "duration_minutes": 180,
+      "evidence_state": "USER_ESTIMATE",
+      "expires_at": "2026-12-02T17:41:51.587175+00:00",
+      "note": "Synthetic all-in station-to-station planning assumption; no live inventory"
+    },
+    "DC-NYC": {
+      "price_cents": 11500,
+      "duration_minutes": 270,
+      "evidence_state": "USER_ESTIMATE",
+      "expires_at": "2026-12-02T17:41:51.587175+00:00",
+      "note": "Synthetic all-in station-to-station planning assumption; no live inventory"
+    }
+  }
+}

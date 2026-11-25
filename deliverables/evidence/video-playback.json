@@ -1,0 +1,16 @@
+{
+  "actual_browser_playback": true,
+  "metadata": {
+    "duration": 425,
+    "width": 1440,
+    "height": 1000,
+    "readyState": 4,
+    "error": null
+  },
+  "after_seek_and_play": {
+    "time": 201.931374,
+    "paused": false,
+    "error": null
+  },
+  "media": "H.264/AAC actual capture with synthesized narration"
+}

@@ -1,0 +1,16 @@
+{
+  "actual_browser_run": true,
+  "episode": "ba69e4418ade4a19bd3852770a0d08b0",
+  "end_state": "COMMITTED",
+  "javascript_errors": [],
+  "desktop": [
+    1440,
+    1100
+  ],
+  "mobile": [
+    390,
+    844
+  ],
+  "mobile_horizontal_overflow": false,
+  "infeasible_new_request_clears_previous_result": true
+}

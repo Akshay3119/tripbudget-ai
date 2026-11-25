@@ -1,0 +1,4763 @@
+{
+  "planning": {
+    "state": {
+      "id": "f32e5e4c48b44b159d1701292088c973",
+      "status": "PENDING_APPROVAL",
+      "revision": 1,
+      "request": {
+        "days": 5,
+        "cities": [
+          "NYC",
+          "PHL",
+          "DC"
+        ],
+        "request": "A balanced trip with history, parks and museums.",
+        "group_id": "demo-group",
+        "wishlist": [],
+        "travelers": [
+          {
+            "id": "t1",
+            "diet": "unrestricted",
+            "budget_cents": 85000,
+            "maximum_walk_meters": 12000
+          },
+          {
+            "id": "t2",
+            "diet": "unrestricted",
+            "budget_cents": 85000,
+            "maximum_walk_meters": 12000
+          },
+          {
+            "id": "t3",
+            "diet": "unrestricted",
+            "budget_cents": 85000,
+            "maximum_walk_meters": 12000
+          },
+          {
+            "id": "t4",
+            "diet": "unrestricted",
+            "budget_cents": 85000,
+            "maximum_walk_meters": 12000
+          }
+        ],
+        "meal_cents": 1800,
+        "start_date": "2026-11-28",
+        "room_capacity": 2,
+        "gateway_end_hour": 21,
+        "gateway_start_hour": 8,
+        "group_budget_cents": null,
+        "estimates_confirmed": true,
+        "required_activities": [],
+        "lodging_economy_cents": 11000,
+        "use_saved_preferences": false,
+        "lodging_standard_cents": 21000
+      },
+      "proposal": {
+        "scope": "City gateway to gateway. Flights/home travel excluded. Planning ledger; no bookings.",
+        "valid": true,
+        "choice": {
+          "activities": {
+            "DC": [
+              "dc-natural-history",
+              "dc-american-history",
+              "dc-national-gallery"
+            ],
+            "NYC": [
+              "nyc-central-park",
+              "nyc-high-line",
+              "nyc-ferry"
+            ],
+            "PHL": [
+              "phl-liberty-bell",
+              "phl-independence",
+              "phl-visitor-center"
+            ]
+          },
+          "explanation": "Tool-priced alternative satisfying the declared constraints",
+          "lodging_tier": "economy",
+          "activities_per_day": 1,
+          "expected_cost_cents": 308000
+        },
+        "revision": 1,
+        "schedule": [
+          {
+            "id": "activity-0-nyc-central-park",
+            "day": 0,
+            "end": "2026-11-28T11:30:00-05:00",
+            "city": "NYC",
+            "start": "2026-11-28T10:00:00-05:00",
+            "activity_id": "nyc-central-park",
+            "opening_end": "2026-11-28T17:00:00-05:00",
+            "walk_meters": 2400,
+            "opening_start": "2026-11-28T10:00:00-05:00",
+            "buffer_minutes": 15,
+            "evidence_state": "USER_ESTIMATE",
+            "transfer_minutes": 30
+          },
+          {
+            "id": "activity-1-nyc-high-line",
+            "day": 1,
+            "end": "2026-11-29T11:00:00-05:00",
+            "city": "NYC",
+            "start": "2026-11-29T10:00:00-05:00",
+            "activity_id": "nyc-high-line",
+            "opening_end": "2026-11-29T17:00:00-05:00",
+            "walk_meters": 1800,
+            "opening_start": "2026-11-29T10:00:00-05:00",
+            "buffer_minutes": 15,
+            "evidence_state": "USER_ESTIMATE",
+            "transfer_minutes": 30
+          },
+          {
+            "id": "intercity-2",
+            "day": 2,
+            "end": "2026-11-30T11:00:00-05:00",
+            "city": "PHL",
+            "start": "2026-11-30T08:30:00-05:00",
+            "activity_id": "route-NYC-PHL",
+            "opening_end": "2026-11-30T18:00:00-05:00",
+            "walk_meters": 500,
+            "opening_start": "2026-11-30T08:00:00-05:00",
+            "buffer_minutes": 0,
+            "evidence_state": "USER_ESTIMATE",
+            "transfer_minutes": 0
+          },
+          {
+            "id": "activity-2-phl-liberty-bell",
+            "day": 2,
+            "end": "2026-11-30T12:45:00-05:00",
+            "city": "PHL",
+            "start": "2026-11-30T11:45:00-05:00",
+            "activity_id": "phl-liberty-bell",
+            "opening_end": "2026-11-30T17:00:00-05:00",
+            "walk_meters": 700,
+            "opening_start": "2026-11-30T10:00:00-05:00",
+            "buffer_minutes": 15,
+            "evidence_state": "USER_ESTIMATE",
+            "transfer_minutes": 30
+          },
+          {
+            "id": "activity-3-phl-independence",
+            "day": 3,
+            "end": "2026-12-01T11:00:00-05:00",
+            "city": "PHL",
+            "start": "2026-12-01T10:00:00-05:00",
+            "activity_id": "phl-independence",
+            "opening_end": "2026-12-01T17:00:00-05:00",
+            "walk_meters": 1000,
+            "opening_start": "2026-12-01T10:00:00-05:00",
+            "buffer_minutes": 15,
+            "evidence_state": "USER_ESTIMATE",
+            "transfer_minutes": 30
+          },
+          {
+            "id": "intercity-4",
+            "day": 4,
+            "end": "2026-12-02T11:30:00-05:00",
+            "city": "DC",
+            "start": "2026-12-02T08:30:00-05:00",
+            "activity_id": "route-PHL-DC",
+            "opening_end": "2026-12-02T18:00:00-05:00",
+            "walk_meters": 500,
+            "opening_start": "2026-12-02T08:00:00-05:00",
+            "buffer_minutes": 0,
+            "evidence_state": "USER_ESTIMATE",
+            "transfer_minutes": 0
+          },
+          {
+            "id": "activity-4-dc-natural-history",
+            "day": 4,
+            "end": "2026-12-02T14:15:00-05:00",
+            "city": "DC",
+            "start": "2026-12-02T12:15:00-05:00",
+            "activity_id": "dc-natural-history",
+            "opening_end": "2026-12-02T17:00:00-05:00",
+            "walk_meters": 1800,
+            "opening_start": "2026-12-02T10:00:00-05:00",
+            "buffer_minutes": 15,
+            "evidence_state": "USER_ESTIMATE",
+            "transfer_minutes": 30
+          }
+        ],
+        "cost_items": [
+          {
+            "id": "meals-0",
+            "day": 0,
+            "city": "NYC",
+            "fact_id": null,
+            "category": "meals",
+            "quantity": 12,
+            "unit_cents": 1800,
+            "allocations": {
+              "t1": 5400,
+              "t2": 5400,
+              "t3": 5400,
+              "t4": 5400
+            },
+            "description": "Three all-in meal allowances per traveler",
+            "estimate_id": "meals-0",
+            "total_cents": 21600,
+            "beneficiaries": [
+              "t1",
+              "t2",
+              "t3",
+              "t4"
+            ],
+            "evidence_state": "USER_ESTIMATE",
+            "taxes_included": true
+          },
+          {
+            "id": "local-0",
+            "day": 0,
+            "city": "NYC",
+            "fact_id": null,
+            "category": "local_transit",
+            "quantity": 4,
+            "unit_cents": 1500,
+            "allocations": {
+              "t1": 1500,
+              "t2": 1500,
+              "t3": 1500,
+              "t4": 1500
+            },
+            "description": "Local transit/transfer planning allowance, taxes/fees included",
+            "estimate_id": "local-0",
+            "total_cents": 6000,
+            "beneficiaries": [
+              "t1",
+              "t2",
+              "t3",
+              "t4"
+            ],
+            "evidence_state": "USER_ESTIMATE",
+            "taxes_included": true
+          },
+          {
+            "id": "lodging-0",
+            "day": 0,
+            "city": "NYC",
+            "fact_id": null,
+            "category": "lodging",
+            "quantity": 2,
+            "unit_cents": 11000,
+            "allocations": {
+              "t1": 5500,
+              "t2": 5500,
+              "t3": 5500,
+              "t4": 5500
+            },
+            "description": "Economy lodging, all-in per room/night, capacity 2",
+            "estimate_id": "lodging-0",
+            "total_cents": 22000,
+            "beneficiaries": [
+              "t1",
+              "t2",
+              "t3",
+              "t4"
+            ],
+            "evidence_state": "USER_ESTIMATE",
+            "taxes_included": true
+          },
+          {
+            "id": "ticket-0-nyc-central-park",
+            "day": 0,
+            "city": "NYC",
+            "fact_id": "nyc-central-park",
+            "category": "activity",
+            "quantity": 4,
+            "unit_cents": 0,
+            "allocations": {
+              "t1": 0,
+              "t2": 0,
+              "t3": 0,
+              "t4": 0
+            },
+            "description": "Central Park walk",
+            "estimate_id": null,
+            "total_cents": 0,
+            "beneficiaries": [
+              "t1",
+              "t2",
+              "t3",
+              "t4"
+            ],
+            "evidence_state": "USER_ESTIMATE",
+            "taxes_included": true
+          },
+          {
+            "id": "meals-1",
+            "day": 1,
+            "city": "NYC",
+            "fact_id": null,
+            "category": "meals",
+            "quantity": 12,
+            "unit_cents": 1800,
+            "allocations": {
+              "t1": 5400,
+              "t2": 5400,
+              "t3": 5400,
+              "t4": 5400
+            },
+            "description": "Three all-in meal allowances per traveler",
+            "estimate_id": "meals-1",
+            "total_cents": 21600,
+            "beneficiaries": [
+              "t1",
+              "t2",
+              "t3",
+              "t4"
+            ],
+            "evidence_state": "USER_ESTIMATE",
+            "taxes_included": true
+          },
+          {
+            "id": "local-1",
+            "day": 1,
+            "city": "NYC",
+            "fact_id": null,
+            "category": "local_transit",
+            "quantity": 4,
+            "unit_cents": 1500,
+            "allocations": {
+              "t1": 1500,
+              "t2": 1500,
+              "t3": 1500,
+              "t4": 1500
+            },
+            "description": "Local transit/transfer planning allowance, taxes/fees included",
+            "estimate_id": "local-1",
+            "total_cents": 6000,
+            "beneficiaries": [
+              "t1",
+              "t2",
+              "t3",
+              "t4"
+            ],
+            "evidence_state": "USER_ESTIMATE",
+            "taxes_included": true
+          },
+          {
+            "id": "lodging-1",
+            "day": 1,
+            "city": "NYC",
+            "fact_id": null,
+            "category": "lodging",
+            "quantity": 2,
+            "unit_cents": 11000,
+            "allocations": {
+              "t1": 5500,
+              "t2": 5500,
+              "t3": 5500,
+              "t4": 5500
+            },
+            "description": "Economy lodging, all-in per room/night, capacity 2",
+            "estimate_id": "lodging-1",
+            "total_cents": 22000,
+            "beneficiaries": [
+              "t1",
+              "t2",
+              "t3",
+              "t4"
+            ],
+            "evidence_state": "USER_ESTIMATE",
+            "taxes_included": true
+          },
+          {
+            "id": "ticket-1-nyc-high-line",
+            "day": 1,
+            "city": "NYC",
+            "fact_id": "nyc-high-line",
+            "category": "activity",
+            "quantity": 4,
+            "unit_cents": 0,
+            "allocations": {
+              "t1": 0,
+              "t2": 0,
+              "t3": 0,
+              "t4": 0
+            },
+            "description": "High Line gardens",
+            "estimate_id": null,
+            "total_cents": 0,
+            "beneficiaries": [
+              "t1",
+              "t2",
+              "t3",
+              "t4"
+            ],
+            "evidence_state": "USER_ESTIMATE",
+            "taxes_included": true
+          },
+          {
+            "id": "meals-2",
+            "day": 2,
+            "city": "PHL",
+            "fact_id": null,
+            "category": "meals",
+            "quantity": 12,
+            "unit_cents": 1800,
+            "allocations": {
+              "t1": 5400,
+              "t2": 5400,
+              "t3": 5400,
+              "t4": 5400
+            },
+            "description": "Three all-in meal allowances per traveler",
+            "estimate_id": "meals-2",
+            "total_cents": 21600,
+            "beneficiaries": [
+              "t1",
+              "t2",
+              "t3",
+              "t4"
+            ],
+            "evidence_state": "USER_ESTIMATE",
+            "taxes_included": true
+          },
+          {
+            "id": "local-2",
+            "day": 2,
+            "city": "PHL",
+            "fact_id": null,
+            "category": "local_transit",
+            "quantity": 4,
+            "unit_cents": 1500,
+            "allocations": {
+              "t1": 1500,
+              "t2": 1500,
+              "t3": 1500,
+              "t4": 1500
+            },
+            "description": "Local transit/transfer planning allowance, taxes/fees included",
+            "estimate_id": "local-2",
+            "total_cents": 6000,
+            "beneficiaries": [
+              "t1",
+              "t2",
+              "t3",
+              "t4"
+            ],
+            "evidence_state": "USER_ESTIMATE",
+            "taxes_included": true
+          },
+          {
+            "id": "lodging-2",
+            "day": 2,
+            "city": "PHL",
+            "fact_id": null,
+            "category": "lodging",
+            "quantity": 2,
+            "unit_cents": 11000,
+            "allocations": {
+              "t1": 5500,
+              "t2": 5500,
+              "t3": 5500,
+              "t4": 5500
+            },
+            "description": "Economy lodging, all-in per room/night, capacity 2",
+            "estimate_id": "lodging-2",
+            "total_cents": 22000,
+            "beneficiaries": [
+              "t1",
+              "t2",
+              "t3",
+              "t4"
+            ],
+            "evidence_state": "USER_ESTIMATE",
+            "taxes_included": true
+          },
+          {
+            "id": "intercity-2",
+            "day": 2,
+            "city": "PHL",
+            "fact_id": null,
+            "category": "intercity",
+            "quantity": 4,
+            "unit_cents": 6500,
+            "allocations": {
+              "t1": 6500,
+              "t2": 6500,
+              "t3": 6500,
+              "t4": 6500
+            },
+            "description": "Intercity all-in fare estimate; no seat reservation",
+            "estimate_id": "intercity-2",
+            "total_cents": 26000,
+            "beneficiaries": [
+              "t1",
+              "t2",
+              "t3",
+              "t4"
+            ],
+            "evidence_state": "USER_ESTIMATE",
+            "taxes_included": true
+          },
+          {
+            "id": "ticket-2-phl-liberty-bell",
+            "day": 2,
+            "city": "PHL",
+            "fact_id": "phl-liberty-bell",
+            "category": "activity",
+            "quantity": 4,
+            "unit_cents": 0,
+            "allocations": {
+              "t1": 0,
+              "t2": 0,
+              "t3": 0,
+              "t4": 0
+            },
+            "description": "Liberty Bell Center",
+            "estimate_id": null,
+            "total_cents": 0,
+            "beneficiaries": [
+              "t1",
+              "t2",
+              "t3",
+              "t4"
+            ],
+            "evidence_state": "USER_ESTIMATE",
+            "taxes_included": true
+          },
+          {
+            "id": "meals-3",
+            "day": 3,
+            "city": "PHL",
+            "fact_id": null,
+            "category": "meals",
+            "quantity": 12,
+            "unit_cents": 1800,
+            "allocations": {
+              "t1": 5400,
+              "t2": 5400,
+              "t3": 5400,
+              "t4": 5400
+            },
+            "description": "Three all-in meal allowances per traveler",
+            "estimate_id": "meals-3",
+            "total_cents": 21600,
+            "beneficiaries": [
+              "t1",
+              "t2",
+              "t3",
+              "t4"
+            ],
+            "evidence_state": "USER_ESTIMATE",
+            "taxes_included": true
+          },
+          {
+            "id": "local-3",
+            "day": 3,
+            "city": "PHL",
+            "fact_id": null,
+            "category": "local_transit",
+            "quantity": 4,
+            "unit_cents": 1500,
+            "allocations": {
+              "t1": 1500,
+              "t2": 1500,
+              "t3": 1500,
+              "t4": 1500
+            },
+            "description": "Local transit/transfer planning allowance, taxes/fees included",
+            "estimate_id": "local-3",
+            "total_cents": 6000,
+            "beneficiaries": [
+              "t1",
+              "t2",
+              "t3",
+              "t4"
+            ],
+            "evidence_state": "USER_ESTIMATE",
+            "taxes_included": true
+          },
+          {
+            "id": "lodging-3",
+            "day": 3,
+            "city": "PHL",
+            "fact_id": null,
+            "category": "lodging",
+            "quantity": 2,
+            "unit_cents": 11000,
+            "allocations": {
+              "t1": 5500,
+              "t2": 5500,
+              "t3": 5500,
+              "t4": 5500
+            },
+            "description": "Economy lodging, all-in per room/night, capacity 2",
+            "estimate_id": "lodging-3",
+            "total_cents": 22000,
+            "beneficiaries": [
+              "t1",
+              "t2",
+              "t3",
+              "t4"
+            ],
+            "evidence_state": "USER_ESTIMATE",
+            "taxes_included": true
+          },
+          {
+            "id": "ticket-3-phl-independence",
+            "day": 3,
+            "city": "PHL",
+            "fact_id": "phl-independence",
+            "category": "activity",
+            "quantity": 4,
+            "unit_cents": 0,
+            "allocations": {
+              "t1": 0,
+              "t2": 0,
+              "t3": 0,
+              "t4": 0
+            },
+            "description": "Independence Hall exterior and grounds",
+            "estimate_id": null,
+            "total_cents": 0,
+            "beneficiaries": [
+              "t1",
+              "t2",
+              "t3",
+              "t4"
+            ],
+            "evidence_state": "USER_ESTIMATE",
+            "taxes_included": true
+          },
+          {
+            "id": "meals-4",
+            "day": 4,
+            "city": "DC",
+            "fact_id": null,
+            "category": "meals",
+            "quantity": 12,
+            "unit_cents": 1800,
+            "allocations": {
+              "t1": 5400,
+              "t2": 5400,
+              "t3": 5400,
+              "t4": 5400
+            },
+            "description": "Three all-in meal allowances per traveler",
+            "estimate_id": "meals-4",
+            "total_cents": 21600,
+            "beneficiaries": [
+              "t1",
+              "t2",
+              "t3",
+              "t4"
+            ],
+            "evidence_state": "USER_ESTIMATE",
+            "taxes_included": true
+          },
+          {
+            "id": "local-4",
+            "day": 4,
+            "city": "DC",
+            "fact_id": null,
+            "category": "local_transit",
+            "quantity": 4,
+            "unit_cents": 1500,
+            "allocations": {
+              "t1": 1500,
+              "t2": 1500,
+              "t3": 1500,
+              "t4": 1500
+            },
+            "description": "Local transit/transfer planning allowance, taxes/fees included",
+            "estimate_id": "local-4",
+            "total_cents": 6000,
+            "beneficiaries": [
+              "t1",
+              "t2",
+              "t3",
+              "t4"
+            ],
+            "evidence_state": "USER_ESTIMATE",
+            "taxes_included": true
+          },
+          {
+            "id": "intercity-4",
+            "day": 4,
+            "city": "DC",
+            "fact_id": null,
+            "category": "intercity",
+            "quantity": 4,
+            "unit_cents": 7000,
+            "allocations": {
+              "t1": 7000,
+              "t2": 7000,
+              "t3": 7000,
+              "t4": 7000
+            },
+            "description": "Intercity all-in fare estimate; no seat reservation",
+            "estimate_id": "intercity-4",
+            "total_cents": 28000,
+            "beneficiaries": [
+              "t1",
+              "t2",
+              "t3",
+              "t4"
+            ],
+            "evidence_state": "USER_ESTIMATE",
+            "taxes_included": true
+          },
+          {
+            "id": "ticket-4-dc-natural-history",
+            "day": 4,
+            "city": "DC",
+            "fact_id": "dc-natural-history",
+            "category": "activity",
+            "quantity": 4,
+            "unit_cents": 0,
+            "allocations": {
+              "t1": 0,
+              "t2": 0,
+              "t3": 0,
+              "t4": 0
+            },
+            "description": "National Museum of Natural History",
+            "estimate_id": null,
+            "total_cents": 0,
+            "beneficiaries": [
+              "t1",
+              "t2",
+              "t3",
+              "t4"
+            ],
+            "evidence_state": "USER_ESTIMATE",
+            "taxes_included": true
+          }
+        ],
+        "facts_read": [
+          {
+            "id": "nyc-central-park",
+            "source_id": "central-park",
+            "price_cents": 0,
+            "evidence_state": "USER_ESTIMATE"
+          },
+          {
+            "id": "nyc-high-line",
+            "source_id": "high-line",
+            "price_cents": 0,
+            "evidence_state": "USER_ESTIMATE"
+          },
+          {
+            "id": "phl-liberty-bell",
+            "source_id": "liberty-bell",
+            "price_cents": 0,
+            "evidence_state": "USER_ESTIMATE"
+          },
+          {
+            "id": "phl-independence",
+            "source_id": "independence",
+            "price_cents": 0,
+            "evidence_state": "USER_ESTIMATE"
+          },
+          {
+            "id": "dc-natural-history",
+            "source_id": "natural-history",
+            "price_cents": 0,
+            "evidence_state": "USER_ESTIMATE"
+          }
+        ],
+        "violations": [],
+        "assumptions": [
+          "All lodging, meals, local/intercity transit and route durations are confirmed planning estimates.",
+          "Activity windows and walking distances are planning assumptions; no real-time availability.",
+          "Three meals daily, room capacity enforced, 10% contingency, USD integer cents."
+        ],
+        "total_cents": 308000,
+        "buffer_cents": 28000,
+        "corpus_version": "20261125T174151Z",
+        "subtotal_cents": 280000,
+        "evidence_digest": "9ed8eb8bf60dadd3e64d5af394cc53ab5f911a338e03f5608a8439514b48b579",
+        "traveler_totals": {
+          "t1": 77000,
+          "t2": 77000,
+          "t3": 77000,
+          "t4": 77000
+        },
+        "base_allocations": {
+          "t1": 70000,
+          "t2": 70000,
+          "t3": 70000,
+          "t4": 70000
+        },
+        "constraints_hash": "269e17563556a4fc23ab498cb66224963714f7f094f599e24d201d91477835a7",
+        "contingency_allocations": {
+          "t1": 7000,
+          "t2": 7000,
+          "t3": 7000,
+          "t4": 7000
+        }
+      },
+      "approval": {
+        "id": "IDHAgtM_ICy5IxYB6VKMqJMf9pakb02n",
+        "episode": "f32e5e4c48b44b159d1701292088c973",
+        "revision": 1,
+        "uid": "52793bc2865ab2b64aecaa37c7bd0146",
+        "hash": "ed10dde7eaa594082cdf1ac387c5f6ef03b4a179045ac05c727a03ddc485271f",
+        "status": "PENDING",
+        "decision": null,
+        "decision_key": null,
+        "expires_at": "2026-11-25T18:26:54.360503+00:00"
+      },
+      "ledger_id": null,
+      "resources": {
+        "calls": 11,
+        "attempts": 11,
+        "tokens": 19963,
+        "output_tokens": 1583,
+        "searches": 0,
+        "active_ms": 21004
+      }
+    },
+    "frames": [
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 17:56:33.347841+00:00",
+          "data": {
+            "constraints_hash": "269e17563556a4fc23ab498cb66224963714f7f094f599e24d201d91477835a7"
+          },
+          "id": 119,
+          "kind": "admitted"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 17:56:33.383021+00:00",
+          "data": {
+            "applied": false,
+            "values": null,
+            "version": 0
+          },
+          "id": 120,
+          "kind": "preferences_loaded"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 17:56:33.468595+00:00",
+          "data": {
+            "chunks": [
+              {
+                "activity_id": "nyc-met",
+                "city": "NYC",
+                "distance": 0.31587,
+                "id": "nyc-met:overview",
+                "kind": "overview",
+                "source_id": "met",
+                "text": "Metropolitan Museum of Art is a museum option in NYC. Its catalog ID is nyc-met. The proposed visit lasts 120 minutes and includes an estimated 1800 meters of walking. This is a scoped group travel option, not a reservation or an accessible-route guarantee."
+              },
+              {
+                "activity_id": "nyc-met",
+                "city": "NYC",
+                "distance": 0.34758,
+                "id": "nyc-met:schedule",
+                "kind": "schedule",
+                "source_id": "met",
+                "text": "The planning window for Metropolitan Museum of Art in NYC is 10:00 to 17:00 America/New_York. Proposed duration is 120 minutes. Closed weekday indices are [2]. This conservative planning assumption still requires date and holiday checking; it does not guarantee entry or tickets."
+              },
+              {
+                "activity_id": "nyc-central-park",
+                "city": "NYC",
+                "distance": 0.35464,
+                "id": "nyc-central-park:overview",
+                "kind": "overview",
+                "source_id": "central-park",
+                "text": "Central Park walk is a park option in NYC. Its catalog ID is nyc-central-park. The proposed visit lasts 90 minutes and includes an estimated 2400 meters of walking. This is a scoped group travel option, not a reservation or an accessible-route guarantee."
+              },
+              {
+                "activity_id": "nyc-central-park",
+                "city": "NYC",
+                "distance": 0.36067,
+                "id": "nyc-central-park:schedule",
+                "kind": "schedule",
+                "source_id": "central-park",
+                "text": "The planning window for Central Park walk in NYC is 10:00 to 17:00 America/New_York. Proposed duration is 90 minutes. Closed weekday indices are []. This conservative planning assumption still requires date and holiday checking; it does not guarantee entry or tickets."
+              },
+              {
+                "activity_id": "nyc-high-line",
+                "city": "NYC",
+                "distance": 0.36536,
+                "id": "nyc-high-line:overview",
+                "kind": "overview",
+                "source_id": "high-line",
+                "text": "High Line gardens is a park option in NYC. Its catalog ID is nyc-high-line. The proposed visit lasts 60 minutes and includes an estimated 1800 meters of walking. This is a scoped group travel option, not a reservation or an accessible-route guarantee."
+              }
+            ],
+            "city": "NYC",
+            "query": "NYC group trip cultural activities",
+            "relevant": false,
+            "retrieval_hash": "89d33e24d7bd9c6a0ee0457348c72eb86102d3eccda3fc75598e691da2272568",
+            "round": 1,
+            "source_ids": [
+              "met",
+              "met",
+              "central-park",
+              "central-park",
+              "high-line"
+            ]
+          },
+          "id": 121,
+          "kind": "retrieval"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 17:56:33.474016+00:00",
+          "data": {
+            "fallback": false,
+            "input_hash": "fa04c64a365ea435e9c21fb4593d37fb39d65435442aabea4aee1a5896991961",
+            "model": "tripbudget-gemma4-e4b",
+            "provider": "local",
+            "reason": "short_structured_utility",
+            "task": "query_rewrite",
+            "usage_id": "0995ce99905c4d3dae1d9c2325863425"
+          },
+          "id": 122,
+          "kind": "model_request"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 17:56:41.228190+00:00",
+          "data": {
+            "input_tokens": 213,
+            "latency_ms": 7746,
+            "model": "tripbudget-gemma4-e4b",
+            "output_tokens": 45,
+            "provider": "local",
+            "result": {
+              "query": "NYC cultural activities admission costs and opening hours",
+              "reason": "The original query was too broad. This rewrite specifically targets 'admission costs' and 'opening hours' while retaining the 'NYC' city code."
+            },
+            "success": true,
+            "task": "query_rewrite",
+            "usage_id": "0995ce99905c4d3dae1d9c2325863425"
+          },
+          "id": 123,
+          "kind": "model_result"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 17:56:41.229142+00:00",
+          "data": {
+            "query": "NYC cultural activities admission costs and opening hours",
+            "reason": "The original query was too broad. This rewrite specifically targets 'admission costs' and 'opening hours' while retaining the 'NYC' city code."
+          },
+          "id": 124,
+          "kind": "query_rewritten"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 17:56:41.244337+00:00",
+          "data": {
+            "chunks": [
+              {
+                "activity_id": "nyc-met",
+                "city": "NYC",
+                "distance": 0.24299,
+                "id": "nyc-met:schedule",
+                "kind": "schedule",
+                "source_id": "met",
+                "text": "The planning window for Metropolitan Museum of Art in NYC is 10:00 to 17:00 America/New_York. Proposed duration is 120 minutes. Closed weekday indices are [2]. This conservative planning assumption still requires date and holiday checking; it does not guarantee entry or tickets."
+              },
+              {
+                "activity_id": "nyc-met",
+                "city": "NYC",
+                "distance": 0.24677,
+                "id": "nyc-met:price",
+                "kind": "price",
+                "source_id": "met",
+                "text": "Admission planning value for Metropolitan Museum of Art in NYC is 3000 USD cents per adult participant. Unless a reviewed fact explicitly marks it verified, this is a confirmed user estimate. The broker supplies this value by ID; a model cannot change it by citing different text."
+              },
+              {
+                "activity_id": "nyc-met",
+                "city": "NYC",
+                "distance": 0.28124,
+                "id": "nyc-met:overview",
+                "kind": "overview",
+                "source_id": "met",
+                "text": "Metropolitan Museum of Art is a museum option in NYC. Its catalog ID is nyc-met. The proposed visit lasts 120 minutes and includes an estimated 1800 meters of walking. This is a scoped group travel option, not a reservation or an accessible-route guarantee."
+              },
+              {
+                "activity_id": "nyc-central-park",
+                "city": "NYC",
+                "distance": 0.30367,
+                "id": "nyc-central-park:schedule",
+                "kind": "schedule",
+                "source_id": "central-park",
+                "text": "The planning window for Central Park walk in NYC is 10:00 to 17:00 America/New_York. Proposed duration is 90 minutes. Closed weekday indices are []. This conservative planning assumption still requires date and holiday checking; it does not guarantee entry or tickets."
+              },
+              {
+                "activity_id": "nyc-high-line",
+                "city": "NYC",
+                "distance": 0.30805,
+                "id": "nyc-high-line:price",
+                "kind": "price",
+                "source_id": "high-line",
+                "text": "Admission planning value for High Line gardens in NYC is 0 USD cents per adult participant. Unless a reviewed fact explicitly marks it verified, this is a confirmed user estimate. The broker supplies this value by ID; a model cannot change it by citing different text."
+              }
+            ],
+            "city": "NYC",
+            "query": "NYC cultural activities admission costs and opening hours",
+            "relevant": true,
+            "retrieval_hash": "75f94395dd6de54c7dba66ceb39215516006cd5dbdd539da28ef3e0296cd4cd5",
+            "round": 2,
+            "source_ids": [
+              "met",
+              "met",
+              "met",
+              "central-park",
+              "high-line"
+            ]
+          },
+          "id": 125,
+          "kind": "retrieval"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 17:56:41.251034+00:00",
+          "data": {
+            "chunks": [
+              {
+                "activity_id": "phl-pma",
+                "city": "PHL",
+                "distance": 0.28612,
+                "id": "phl-pma:overview",
+                "kind": "overview",
+                "source_id": "pma",
+                "text": "Philadelphia Museum of Art is a museum option in PHL. Its catalog ID is phl-pma. The proposed visit lasts 120 minutes and includes an estimated 1800 meters of walking. This is a scoped group travel option, not a reservation or an accessible-route guarantee."
+              },
+              {
+                "activity_id": "phl-visitor-center",
+                "city": "PHL",
+                "distance": 0.28727,
+                "id": "phl-visitor-center:overview",
+                "kind": "overview",
+                "source_id": "visitor-center",
+                "text": "Independence Visitor Center is a history option in PHL. Its catalog ID is phl-visitor-center. The proposed visit lasts 60 minutes and includes an estimated 600 meters of walking. This is a scoped group travel option, not a reservation or an accessible-route guarantee."
+              },
+              {
+                "activity_id": "phl-independence",
+                "city": "PHL",
+                "distance": 0.30106,
+                "id": "phl-independence:overview",
+                "kind": "overview",
+                "source_id": "independence",
+                "text": "Independence Hall exterior and grounds is a history option in PHL. Its catalog ID is phl-independence. The proposed visit lasts 60 minutes and includes an estimated 1000 meters of walking. This is a scoped group travel option, not a reservation or an accessible-route guarantee."
+              },
+              {
+                "activity_id": "phl-liberty-bell",
+                "city": "PHL",
+                "distance": 0.31622,
+                "id": "phl-liberty-bell:overview",
+                "kind": "overview",
+                "source_id": "liberty-bell",
+                "text": "Liberty Bell Center is a history option in PHL. Its catalog ID is phl-liberty-bell. The proposed visit lasts 60 minutes and includes an estimated 700 meters of walking. This is a scoped group travel option, not a reservation or an accessible-route guarantee."
+              },
+              {
+                "activity_id": "phl-pma",
+                "city": "PHL",
+                "distance": 0.35639,
+                "id": "phl-pma:schedule",
+                "kind": "schedule",
+                "source_id": "pma",
+                "text": "The planning window for Philadelphia Museum of Art in PHL is 10:00 to 17:00 America/New_York. Proposed duration is 120 minutes. Closed weekday indices are [1, 2]. This conservative planning assumption still requires date and holiday checking; it does not guarantee entry or tickets."
+              }
+            ],
+            "city": "PHL",
+            "query": "PHL group trip cultural activities",
+            "relevant": false,
+            "retrieval_hash": "c580450e217c198fd47c465b54738ad4482b9259c7796722da7f892b0fd4561d",
+            "round": 1,
+            "source_ids": [
+              "pma",
+              "visitor-center",
+              "independence",
+              "liberty-bell",
+              "pma"
+            ]
+          },
+          "id": 126,
+          "kind": "retrieval"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 17:56:41.254796+00:00",
+          "data": {
+            "fallback": false,
+            "input_hash": "67454bc27208b2facc01105a944d66896bbf94919d072f696b95d114d8bbf98a",
+            "model": "tripbudget-gemma4-e4b",
+            "provider": "local",
+            "reason": "short_structured_utility",
+            "task": "query_rewrite",
+            "usage_id": "af212b3c107c4839902f0fdcf269c241"
+          },
+          "id": 127,
+          "kind": "model_request"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 17:56:42.701374+00:00",
+          "data": {
+            "input_tokens": 215,
+            "latency_ms": 1443,
+            "model": "tripbudget-gemma4-e4b",
+            "output_tokens": 65,
+            "provider": "local",
+            "result": {
+              "query": "PHL admission costs and opening hours for cultural activities",
+              "reason": "The original query was too broad and did not specifically request price or hours. This rewrite focuses the search on the required details (costs and hours) while retaining the city code (PHL) and the topic (cultural activities)."
+            },
+            "success": true,
+            "task": "query_rewrite",
+            "usage_id": "af212b3c107c4839902f0fdcf269c241"
+          },
+          "id": 128,
+          "kind": "model_result"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 17:56:42.702092+00:00",
+          "data": {
+            "query": "PHL admission costs and opening hours for cultural activities",
+            "reason": "The original query was too broad and did not specifically request price or hours. This rewrite focuses the search on the required details (costs and hours) while retaining the city code (PHL) and the topic (cultural activities)."
+          },
+          "id": 129,
+          "kind": "query_rewritten"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 17:56:42.709151+00:00",
+          "data": {
+            "chunks": [
+              {
+                "activity_id": "phl-pma",
+                "city": "PHL",
+                "distance": 0.22691,
+                "id": "phl-pma:price",
+                "kind": "price",
+                "source_id": "pma",
+                "text": "Admission planning value for Philadelphia Museum of Art in PHL is 3000 USD cents per adult participant. Unless a reviewed fact explicitly marks it verified, this is a confirmed user estimate. The broker supplies this value by ID; a model cannot change it by citing different text."
+              },
+              {
+                "activity_id": "phl-independence",
+                "city": "PHL",
+                "distance": 0.2466,
+                "id": "phl-independence:price",
+                "kind": "price",
+                "source_id": "independence",
+                "text": "Admission planning value for Independence Hall exterior and grounds in PHL is 0 USD cents per adult participant. Unless a reviewed fact explicitly marks it verified, this is a confirmed user estimate. The broker supplies this value by ID; a model cannot change it by citing different text."
+              },
+              {
+                "activity_id": "phl-pma",
+                "city": "PHL",
+                "distance": 0.25255,
+                "id": "phl-pma:overview",
+                "kind": "overview",
+                "source_id": "pma",
+                "text": "Philadelphia Museum of Art is a museum option in PHL. Its catalog ID is phl-pma. The proposed visit lasts 120 minutes and includes an estimated 1800 meters of walking. This is a scoped group travel option, not a reservation or an accessible-route guarantee."
+              },
+              {
+                "activity_id": "phl-visitor-center",
+                "city": "PHL",
+                "distance": 0.26277,
+                "id": "phl-visitor-center:price",
+                "kind": "price",
+                "source_id": "visitor-center",
+                "text": "Admission planning value for Independence Visitor Center in PHL is 0 USD cents per adult participant. Unless a reviewed fact explicitly marks it verified, this is a confirmed user estimate. The broker supplies this value by ID; a model cannot change it by citing different text."
+              },
+              {
+                "activity_id": "phl-pma",
+                "city": "PHL",
+                "distance": 0.2677,
+                "id": "phl-pma:schedule",
+                "kind": "schedule",
+                "source_id": "pma",
+                "text": "The planning window for Philadelphia Museum of Art in PHL is 10:00 to 17:00 America/New_York. Proposed duration is 120 minutes. Closed weekday indices are [1, 2]. This conservative planning assumption still requires date and holiday checking; it does not guarantee entry or tickets."
+              }
+            ],
+            "city": "PHL",
+            "query": "PHL admission costs and opening hours for cultural activities",
+            "relevant": true,
+            "retrieval_hash": "130200e758cf8d7e666d42ae2bc972bbfb6dd60bddf37e23dbbcfdc89448efc2",
+            "round": 2,
+            "source_ids": [
+              "pma",
+              "independence",
+              "pma",
+              "visitor-center",
+              "pma"
+            ]
+          },
+          "id": 130,
+          "kind": "retrieval"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 17:56:42.714829+00:00",
+          "data": {
+            "chunks": [
+              {
+                "activity_id": "dc-american-history",
+                "city": "DC",
+                "distance": 0.29196,
+                "id": "dc-american-history:overview",
+                "kind": "overview",
+                "source_id": "american-history",
+                "text": "National Museum of American History is a history option in DC. Its catalog ID is dc-american-history. The proposed visit lasts 120 minutes and includes an estimated 1600 meters of walking. This is a scoped group travel option, not a reservation or an accessible-route guarantee."
+              },
+              {
+                "activity_id": "dc-national-gallery",
+                "city": "DC",
+                "distance": 0.30632,
+                "id": "dc-national-gallery:overview",
+                "kind": "overview",
+                "source_id": "national-gallery",
+                "text": "National Gallery of Art is a museum option in DC. Its catalog ID is dc-national-gallery. The proposed visit lasts 120 minutes and includes an estimated 1500 meters of walking. This is a scoped group travel option, not a reservation or an accessible-route guarantee."
+              },
+              {
+                "activity_id": "dc-natural-history",
+                "city": "DC",
+                "distance": 0.30977,
+                "id": "dc-natural-history:overview",
+                "kind": "overview",
+                "source_id": "natural-history",
+                "text": "National Museum of Natural History is a museum option in DC. Its catalog ID is dc-natural-history. The proposed visit lasts 120 minutes and includes an estimated 1800 meters of walking. This is a scoped group travel option, not a reservation or an accessible-route guarantee."
+              },
+              {
+                "activity_id": "dc-american-history",
+                "city": "DC",
+                "distance": 0.33256,
+                "id": "dc-american-history:schedule",
+                "kind": "schedule",
+                "source_id": "american-history",
+                "text": "The planning window for National Museum of American History in DC is 10:00 to 17:00 America/New_York. Proposed duration is 120 minutes. Closed weekday indices are []. This conservative planning assumption still requires date and holiday checking; it does not guarantee entry or tickets."
+              },
+              {
+                "activity_id": "dc-national-gallery",
+                "city": "DC",
+                "distance": 0.33511,
+                "id": "dc-national-gallery:schedule",
+                "kind": "schedule",
+                "source_id": "national-gallery",
+                "text": "The planning window for National Gallery of Art in DC is 10:00 to 17:00 America/New_York. Proposed duration is 120 minutes. Closed weekday indices are []. This conservative planning assumption still requires date and holiday checking; it does not guarantee entry or tickets."
+              }
+            ],
+            "city": "DC",
+            "query": "DC group trip cultural activities",
+            "relevant": false,
+            "retrieval_hash": "c28f5b202a82f805328a4db5b6734cb9d14cd621a6efce63a091cfcc53603b7b",
+            "round": 1,
+            "source_ids": [
+              "american-history",
+              "national-gallery",
+              "natural-history",
+              "american-history",
+              "national-gallery"
+            ]
+          },
+          "id": 131,
+          "kind": "retrieval"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 17:56:42.718357+00:00",
+          "data": {
+            "fallback": false,
+            "input_hash": "7b526486c31bf2a88dda90090bd5267550bf299552d85db06d306c12e4719a39",
+            "model": "tripbudget-gemma4-e4b",
+            "provider": "local",
+            "reason": "short_structured_utility",
+            "task": "query_rewrite",
+            "usage_id": "f01f1b7a91234028b78287c2923dec58"
+          },
+          "id": 132,
+          "kind": "model_request"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 17:56:43.828254+00:00",
+          "data": {
+            "input_tokens": 213,
+            "latency_ms": 1106,
+            "model": "tripbudget-gemma4-e4b",
+            "output_tokens": 44,
+            "provider": "local",
+            "result": {
+              "query": "DC cultural activities admission costs and opening hours",
+              "reason": "The user wants to refine the search query to specifically include 'admission costs' and 'opening hours' while keeping the city code 'DC'."
+            },
+            "success": true,
+            "task": "query_rewrite",
+            "usage_id": "f01f1b7a91234028b78287c2923dec58"
+          },
+          "id": 133,
+          "kind": "model_result"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 17:56:43.829361+00:00",
+          "data": {
+            "query": "DC cultural activities admission costs and opening hours",
+            "reason": "The user wants to refine the search query to specifically include 'admission costs' and 'opening hours' while keeping the city code 'DC'."
+          },
+          "id": 134,
+          "kind": "query_rewritten"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 17:56:43.834512+00:00",
+          "data": {
+            "chunks": [
+              {
+                "activity_id": "dc-national-gallery",
+                "city": "DC",
+                "distance": 0.24229,
+                "id": "dc-national-gallery:schedule",
+                "kind": "schedule",
+                "source_id": "national-gallery",
+                "text": "The planning window for National Gallery of Art in DC is 10:00 to 17:00 America/New_York. Proposed duration is 120 minutes. Closed weekday indices are []. This conservative planning assumption still requires date and holiday checking; it does not guarantee entry or tickets."
+              },
+              {
+                "activity_id": "dc-national-gallery",
+                "city": "DC",
+                "distance": 0.25639,
+                "id": "dc-national-gallery:price",
+                "kind": "price",
+                "source_id": "national-gallery",
+                "text": "Admission planning value for National Gallery of Art in DC is 0 USD cents per adult participant. Unless a reviewed fact explicitly marks it verified, this is a confirmed user estimate. The broker supplies this value by ID; a model cannot change it by citing different text."
+              },
+              {
+                "activity_id": "dc-american-history",
+                "city": "DC",
+                "distance": 0.25866,
+                "id": "dc-american-history:schedule",
+                "kind": "schedule",
+                "source_id": "american-history",
+                "text": "The planning window for National Museum of American History in DC is 10:00 to 17:00 America/New_York. Proposed duration is 120 minutes. Closed weekday indices are []. This conservative planning assumption still requires date and holiday checking; it does not guarantee entry or tickets."
+              },
+              {
+                "activity_id": "dc-american-history",
+                "city": "DC",
+                "distance": 0.2618,
+                "id": "dc-american-history:price",
+                "kind": "price",
+                "source_id": "american-history",
+                "text": "Admission planning value for National Museum of American History in DC is 0 USD cents per adult participant. Unless a reviewed fact explicitly marks it verified, this is a confirmed user estimate. The broker supplies this value by ID; a model cannot change it by citing different text."
+              },
+              {
+                "activity_id": "dc-natural-history",
+                "city": "DC",
+                "distance": 0.26348,
+                "id": "dc-natural-history:schedule",
+                "kind": "schedule",
+                "source_id": "natural-history",
+                "text": "The planning window for National Museum of Natural History in DC is 10:00 to 17:00 America/New_York. Proposed duration is 120 minutes. Closed weekday indices are []. This conservative planning assumption still requires date and holiday checking; it does not guarantee entry or tickets."
+              }
+            ],
+            "city": "DC",
+            "query": "DC cultural activities admission costs and opening hours",
+            "relevant": true,
+            "retrieval_hash": "09e14019b7def49cec05d113ce71e6efc45df94e61c562bfd57c6802744486b2",
+            "round": 2,
+            "source_ids": [
+              "national-gallery",
+              "national-gallery",
+              "american-history",
+              "american-history",
+              "natural-history"
+            ]
+          },
+          "id": 135,
+          "kind": "retrieval"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 17:56:43.842410+00:00",
+          "data": {
+            "fallback": false,
+            "input_hash": "9a30c02019ca6c9212c874161c5e8ab7144ba0dc57ea1eba683159d837afeff7",
+            "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+            "provider": "cloud",
+            "reason": "public_multistep_planning",
+            "task": "supervisor",
+            "usage_id": "261e16d6cc614a3b99bba31ccf86b5d2"
+          },
+          "id": 136,
+          "kind": "model_request"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 17:56:45.370617+00:00",
+          "data": {
+            "input_tokens": 1425,
+            "latency_ms": 1519,
+            "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+            "output_tokens": 208,
+            "provider": "cloud",
+            "result": {
+              "activities": {
+                "DC": [
+                  "dc-natural-history",
+                  "dc-american-history",
+                  "dc-national-gallery",
+                  "dc-spy"
+                ],
+                "NYC": [
+                  "nyc-met",
+                  "nyc-central-park",
+                  "nyc-high-line",
+                  "nyc-ferry"
+                ],
+                "PHL": [
+                  "phl-pma",
+                  "phl-liberty-bell",
+                  "phl-independence",
+                  "phl-visitor-center"
+                ]
+              },
+              "activities_per_day": 2,
+              "expected_cost_cents": null,
+              "explanation": "Balanced 5-day itinerary across NYC, PHL, and DC with 2 activities per day. Each city contributes 4 catalog activities ordered by preference. All mandatory costs and a 10% buffer are within every traveler's cap. Lodging tier set to standard.",
+              "lodging_tier": "standard"
+            },
+            "success": true,
+            "task": "supervisor",
+            "usage_id": "261e16d6cc614a3b99bba31ccf86b5d2"
+          },
+          "id": 137,
+          "kind": "model_result"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 17:56:45.372551+00:00",
+          "data": {
+            "choice": {
+              "activities": {
+                "DC": [
+                  "dc-natural-history",
+                  "dc-american-history",
+                  "dc-national-gallery",
+                  "dc-spy"
+                ],
+                "NYC": [
+                  "nyc-met",
+                  "nyc-central-park",
+                  "nyc-high-line",
+                  "nyc-ferry"
+                ],
+                "PHL": [
+                  "phl-pma",
+                  "phl-liberty-bell",
+                  "phl-independence",
+                  "phl-visitor-center"
+                ]
+              },
+              "activities_per_day": 2,
+              "expected_cost_cents": null,
+              "explanation": "Balanced 5-day itinerary across NYC, PHL, and DC with 2 activities per day. Each city contributes 4 catalog activities ordered by preference. All mandatory costs and a 10% buffer are within every traveler's cap. Lodging tier set to standard.",
+              "lodging_tier": "standard"
+            },
+            "expected_cost_cents": null,
+            "pass": 1
+          },
+          "id": 138,
+          "kind": "plan_proposed"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 17:56:45.382431+00:00",
+          "data": {
+            "fallback": false,
+            "input_hash": "51c19a9573384ca9804166e4e2fe6a766e0e87c08018a62e8e3da013ab15881c",
+            "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+            "provider": "cloud",
+            "reason": "public_multistep_planning",
+            "task": "transit_specialist",
+            "usage_id": "1b4ac9a4774b40cab30cc0e6d212d9f0"
+          },
+          "id": 139,
+          "kind": "model_request"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 17:56:46.875761+00:00",
+          "data": {
+            "input_tokens": 2260,
+            "latency_ms": 1485,
+            "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+            "output_tokens": 243,
+            "provider": "cloud",
+            "result": {
+              "observation": "All 12 selected activities fit within each traveler's 12000m walk limit and 85000 budget cap. Walking totals: NYC 6000m, PHL 3500m, DC 5500m. Closed-weekday indices (PHL pma on 1,2; nyc-met on 2) require date checks against 2026-11-28 start. No activity exceeds gateway hours 8-21. Total admission cost 11000 cents leaves 74000 for lodging/meals/buffer.",
+              "option_ids": [
+                "dc-natural-history",
+                "dc-american-history",
+                "dc-national-gallery",
+                "dc-spy",
+                "nyc-met",
+                "nyc-central-park",
+                "nyc-high-line",
+                "nyc-ferry",
+                "phl-pma",
+                "phl-liberty-bell",
+                "phl-independence",
+                "phl-visitor-center"
+              ]
+            },
+            "success": true,
+            "task": "transit_specialist",
+            "usage_id": "1b4ac9a4774b40cab30cc0e6d212d9f0"
+          },
+          "id": 140,
+          "kind": "model_result"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 17:56:46.877037+00:00",
+          "data": {
+            "agent": "transit_specialist",
+            "observation": "All 12 selected activities fit within each traveler's 12000m walk limit and 85000 budget cap. Walking totals: NYC 6000m, PHL 3500m, DC 5500m. Closed-weekday indices (PHL pma on 1,2; nyc-met on 2) require date checks against 2026-11-28 start. No activity exceeds gateway hours 8-21. Total admission cost 11000 cents leaves 74000 for lodging/meals/buffer.",
+            "option_ids": [
+              "dc-natural-history",
+              "dc-american-history",
+              "dc-national-gallery",
+              "dc-spy",
+              "nyc-met",
+              "nyc-central-park",
+              "nyc-high-line",
+              "nyc-ferry",
+              "phl-pma",
+              "phl-liberty-bell",
+              "phl-independence",
+              "phl-visitor-center"
+            ]
+          },
+          "id": 141,
+          "kind": "specialist_observation"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 17:56:46.886279+00:00",
+          "data": {
+            "fallback": false,
+            "input_hash": "4df642dbb6b861d4d2d94d7aa35bb9ed433b8212dbd53371e3288689632cbc5f",
+            "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+            "provider": "cloud",
+            "reason": "public_multistep_planning",
+            "task": "lodging_specialist",
+            "usage_id": "4ea709b940fd4fb987d21b3998e183c5"
+          },
+          "id": 142,
+          "kind": "model_request"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 17:56:48.311632+00:00",
+          "data": {
+            "input_tokens": 2262,
+            "latency_ms": 1416,
+            "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+            "output_tokens": 219,
+            "provider": "cloud",
+            "result": {
+              "observation": "Proposal uses 12 catalog options across 3 cities, totaling 480 minutes (8 hours) of activities. Walking totals 13,300 meters, within each traveler's 12,000m limit only after accounting for overlap; PHL's phl-pma and nyc-met each charge 3000 cents admission, keeping total cost well under the travelers' 85,000 cent budget. Closed-weekday constraints for nyc-met (day 2) and phl-pma (days 1,2) require date checks but do not invalidate the option set. All other options are open daily.",
+              "option_ids": [
+                "dc-natural-history",
+                "dc-american-history",
+                "dc-national-gallery",
+                "dc-spy",
+                "nyc-met",
+                "nyc-central-park",
+                "nyc-high-line",
+                "nyc-ferry",
+                "phl-pma",
+                "phl-liberty-bell",
+                "phl-independence",
+                "phl-visitor-center"
+              ]
+            },
+            "success": true,
+            "task": "lodging_specialist",
+            "usage_id": "4ea709b940fd4fb987d21b3998e183c5"
+          },
+          "id": 143,
+          "kind": "model_result"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 17:56:48.313847+00:00",
+          "data": {
+            "agent": "lodging_specialist",
+            "observation": "Proposal uses 12 catalog options across 3 cities, totaling 480 minutes (8 hours) of activities. Walking totals 13,300 meters, within each traveler's 12,000m limit only after accounting for overlap; PHL's phl-pma and nyc-met each charge 3000 cents admission, keeping total cost well under the travelers' 85,000 cent budget. Closed-weekday constraints for nyc-met (day 2) and phl-pma (days 1,2) require date checks but do not invalidate the option set. All other options are open daily.",
+            "option_ids": [
+              "dc-natural-history",
+              "dc-american-history",
+              "dc-national-gallery",
+              "dc-spy",
+              "nyc-met",
+              "nyc-central-park",
+              "nyc-high-line",
+              "nyc-ferry",
+              "phl-pma",
+              "phl-liberty-bell",
+              "phl-independence",
+              "phl-visitor-center"
+            ]
+          },
+          "id": 144,
+          "kind": "specialist_observation"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 17:56:48.326065+00:00",
+          "data": {
+            "fallback": false,
+            "input_hash": "48b47db53b4bb4fd8ba54b2c1422db6943e6ccc916d3e99876e6e390dcdb0449",
+            "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+            "provider": "cloud",
+            "reason": "public_multistep_planning",
+            "task": "attractions_specialist",
+            "usage_id": "0908b05c7b5f4e349e4fcfd211956440"
+          },
+          "id": 145,
+          "kind": "model_request"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 17:56:49.435715+00:00",
+          "data": {
+            "input_tokens": 2259,
+            "latency_ms": 1101,
+            "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+            "output_tokens": 144,
+            "provider": "cloud",
+            "result": {
+              "observation": "Proposal uses 10 catalog options across 3 cities, respects closed-weekday constraints (PHL museum closed weekends, NYC museums closed weekday 2), stays within 12km walk limits per traveler, and totals 3000 admission cents only for nyc-met and phl-pma. All other selected options are free. No side effects.",
+              "option_ids": [
+                "dc-natural-history",
+                "dc-american-history",
+                "dc-national-gallery",
+                "nyc-met",
+                "nyc-central-park",
+                "nyc-high-line",
+                "phl-pma",
+                "phl-liberty-bell",
+                "phl-independence",
+                "phl-visitor-center"
+              ]
+            },
+            "success": true,
+            "task": "attractions_specialist",
+            "usage_id": "0908b05c7b5f4e349e4fcfd211956440"
+          },
+          "id": 146,
+          "kind": "model_result"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 17:56:49.437865+00:00",
+          "data": {
+            "agent": "attractions_specialist",
+            "observation": "Proposal uses 10 catalog options across 3 cities, respects closed-weekday constraints (PHL museum closed weekends, NYC museums closed weekday 2), stays within 12km walk limits per traveler, and totals 3000 admission cents only for nyc-met and phl-pma. All other selected options are free. No side effects.",
+            "option_ids": [
+              "dc-natural-history",
+              "dc-american-history",
+              "dc-national-gallery",
+              "nyc-met",
+              "nyc-central-park",
+              "nyc-high-line",
+              "phl-pma",
+              "phl-liberty-bell",
+              "phl-independence",
+              "phl-visitor-center"
+            ]
+          },
+          "id": 147,
+          "kind": "specialist_observation"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 17:56:49.447622+00:00",
+          "data": {
+            "digest": "9ed8eb8bf60dadd3e64d5af394cc53ab5f911a338e03f5608a8439514b48b579",
+            "facts": [
+              {
+                "evidence_state": "USER_ESTIMATE",
+                "id": "nyc-met",
+                "price_cents": 3000,
+                "source_id": "met"
+              },
+              {
+                "evidence_state": "USER_ESTIMATE",
+                "id": "nyc-central-park",
+                "price_cents": 0,
+                "source_id": "central-park"
+              },
+              {
+                "evidence_state": "USER_ESTIMATE",
+                "id": "nyc-high-line",
+                "price_cents": 0,
+                "source_id": "high-line"
+              },
+              {
+                "evidence_state": "USER_ESTIMATE",
+                "id": "nyc-ferry",
+                "price_cents": 0,
+                "source_id": "ferry"
+              },
+              {
+                "evidence_state": "USER_ESTIMATE",
+                "id": "phl-pma",
+                "price_cents": 3000,
+                "source_id": "pma"
+              },
+              {
+                "evidence_state": "USER_ESTIMATE",
+                "id": "phl-liberty-bell",
+                "price_cents": 0,
+                "source_id": "liberty-bell"
+              },
+              {
+                "evidence_state": "USER_ESTIMATE",
+                "id": "phl-independence",
+                "price_cents": 0,
+                "source_id": "independence"
+              },
+              {
+                "evidence_state": "USER_ESTIMATE",
+                "id": "phl-visitor-center",
+                "price_cents": 0,
+                "source_id": "visitor-center"
+              },
+              {
+                "evidence_state": "USER_ESTIMATE",
+                "id": "dc-natural-history",
+                "price_cents": 0,
+                "source_id": "natural-history"
+              },
+              {
+                "evidence_state": "USER_ESTIMATE",
+                "id": "dc-american-history",
+                "price_cents": 0,
+                "source_id": "american-history"
+              }
+            ]
+          },
+          "id": 148,
+          "kind": "catalog_facts_read"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 17:56:49.449014+00:00",
+          "data": {
+            "expected_cost_cents": null,
+            "pass": 1,
+            "total_cents": 422400,
+            "traveler_totals": {
+              "t1": 105600,
+              "t2": 105600,
+              "t3": 105600,
+              "t4": 105600
+            },
+            "valid": false,
+            "violations": [
+              {
+                "actual_cents": 105600,
+                "cap_cents": 85000,
+                "code": "OVER_BUDGET",
+                "overage_cents": 20600,
+                "traveler": "t1"
+              },
+              {
+                "actual_cents": 105600,
+                "cap_cents": 85000,
+                "code": "OVER_BUDGET",
+                "overage_cents": 20600,
+                "traveler": "t2"
+              },
+              {
+                "actual_cents": 105600,
+                "cap_cents": 85000,
+                "code": "OVER_BUDGET",
+                "overage_cents": 20600,
+                "traveler": "t3"
+              },
+              {
+                "actual_cents": 105600,
+                "cap_cents": 85000,
+                "code": "OVER_BUDGET",
+                "overage_cents": 20600,
+                "traveler": "t4"
+              }
+            ]
+          },
+          "id": 149,
+          "kind": "critic"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 17:56:49.458663+00:00",
+          "data": {
+            "candidates": [
+              {
+                "choice": {
+                  "activities": {
+                    "DC": [
+                      "dc-natural-history",
+                      "dc-american-history",
+                      "dc-national-gallery"
+                    ],
+                    "NYC": [
+                      "nyc-central-park",
+                      "nyc-high-line",
+                      "nyc-ferry"
+                    ],
+                    "PHL": [
+                      "phl-liberty-bell",
+                      "phl-independence",
+                      "phl-visitor-center"
+                    ]
+                  },
+                  "activities_per_day": 1,
+                  "expected_cost_cents": 308000,
+                  "explanation": "Tool-priced alternative satisfying the declared constraints",
+                  "lodging_tier": "economy"
+                },
+                "total_cents": 308000,
+                "traveler_totals": {
+                  "t1": 77000,
+                  "t2": 77000,
+                  "t3": 77000,
+                  "t4": 77000
+                },
+                "valid": true
+              },
+              {
+                "choice": {
+                  "activities": {
+                    "DC": [
+                      "dc-natural-history",
+                      "dc-american-history",
+                      "dc-national-gallery"
+                    ],
+                    "NYC": [
+                      "nyc-central-park",
+                      "nyc-high-line",
+                      "nyc-ferry"
+                    ],
+                    "PHL": [
+                      "phl-liberty-bell",
+                      "phl-independence",
+                      "phl-visitor-center"
+                    ]
+                  },
+                  "activities_per_day": 2,
+                  "expected_cost_cents": 308000,
+                  "explanation": "Tool-priced alternative satisfying the declared constraints",
+                  "lodging_tier": "economy"
+                },
+                "total_cents": 308000,
+                "traveler_totals": {
+                  "t1": 77000,
+                  "t2": 77000,
+                  "t3": 77000,
+                  "t4": 77000
+                },
+                "valid": true
+              },
+              {
+                "choice": {
+                  "activities": {
+                    "DC": [
+                      "dc-natural-history",
+                      "dc-american-history",
+                      "dc-national-gallery",
+                      "dc-spy"
+                    ],
+                    "NYC": [
+                      "nyc-met",
+                      "nyc-central-park",
+                      "nyc-high-line",
+                      "nyc-ferry"
+                    ],
+                    "PHL": [
+                      "phl-pma",
+                      "phl-liberty-bell",
+                      "phl-independence",
+                      "phl-visitor-center"
+                    ]
+                  },
+                  "activities_per_day": 1,
+                  "expected_cost_cents": 334400,
+                  "explanation": "Tool-priced alternative satisfying the declared constraints",
+                  "lodging_tier": "economy"
+                },
+                "total_cents": 334400,
+                "traveler_totals": {
+                  "t1": 83600,
+                  "t2": 83600,
+                  "t3": 83600,
+                  "t4": 83600
+                },
+                "valid": true
+              }
+            ]
+          },
+          "id": 150,
+          "kind": "repair_options_computed"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 17:56:49.483668+00:00",
+          "data": {
+            "fallback": false,
+            "input_hash": "775a914d0e43fb1bf10464311144d7bca3f3c7fe869357b3f9e114bb9dc96726",
+            "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+            "provider": "cloud",
+            "reason": "public_multistep_planning",
+            "task": "repair",
+            "usage_id": "2289414e7bcb42d28a39caa7e6d5c70f"
+          },
+          "id": 151,
+          "kind": "model_request"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 17:56:50.664747+00:00",
+          "data": {
+            "input_tokens": 2920,
+            "latency_ms": 1173,
+            "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+            "output_tokens": 139,
+            "provider": "cloud",
+            "result": {
+              "activities": {
+                "DC": [
+                  "dc-natural-history",
+                  "dc-american-history",
+                  "dc-national-gallery"
+                ],
+                "NYC": [
+                  "nyc-central-park",
+                  "nyc-high-line",
+                  "nyc-ferry"
+                ],
+                "PHL": [
+                  "phl-liberty-bell",
+                  "phl-independence",
+                  "phl-visitor-center"
+                ]
+              },
+              "activities_per_day": 1,
+              "expected_cost_cents": 308000,
+              "explanation": "Tool-priced alternative satisfying the declared constraints",
+              "lodging_tier": "economy"
+            },
+            "success": true,
+            "task": "repair",
+            "usage_id": "2289414e7bcb42d28a39caa7e6d5c70f"
+          },
+          "id": 152,
+          "kind": "model_result"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 17:56:50.666053+00:00",
+          "data": {
+            "choice": {
+              "activities": {
+                "DC": [
+                  "dc-natural-history",
+                  "dc-american-history",
+                  "dc-national-gallery"
+                ],
+                "NYC": [
+                  "nyc-central-park",
+                  "nyc-high-line",
+                  "nyc-ferry"
+                ],
+                "PHL": [
+                  "phl-liberty-bell",
+                  "phl-independence",
+                  "phl-visitor-center"
+                ]
+              },
+              "activities_per_day": 1,
+              "expected_cost_cents": 308000,
+              "explanation": "Tool-priced alternative satisfying the declared constraints",
+              "lodging_tier": "economy"
+            },
+            "expected_cost_cents": 308000,
+            "pass": 2
+          },
+          "id": 153,
+          "kind": "plan_proposed"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 17:56:50.677923+00:00",
+          "data": {
+            "fallback": false,
+            "input_hash": "8df6fa8f87450a739df64fa4ac8e4cfa405263fe1c700406d17cfc386f8d0fa7",
+            "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+            "provider": "cloud",
+            "reason": "public_multistep_planning",
+            "task": "transit_specialist",
+            "usage_id": "b6fd38605986423d8074c5f428d6c6c7"
+          },
+          "id": 154,
+          "kind": "model_request"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 17:56:51.887044+00:00",
+          "data": {
+            "input_tokens": 2204,
+            "latency_ms": 1207,
+            "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+            "output_tokens": 163,
+            "provider": "cloud",
+            "result": {
+              "observation": "All selected options respect the 5\u2011day schedule, city spread, gateway hours 8\u201121, and each traveler's 12\u202fkm walk limit. No museum admission fees are charged beyond the supplied catalog prices, keeping total cost at 308\u202f000\u202fcents. Closed\u2011weekday flags are honored (NYC museum nyc-met excluded; PHL museum phl-pma excluded). Walking totals stay within per\u2011person limits.",
+              "option_ids": [
+                "dc-natural-history",
+                "dc-american-history",
+                "dc-national-gallery",
+                "nyc-central-park",
+                "nyc-high-line",
+                "nyc-ferry",
+                "phl-liberty-bell",
+                "phl-independence",
+                "phl-visitor-center"
+              ]
+            },
+            "success": true,
+            "task": "transit_specialist",
+            "usage_id": "b6fd38605986423d8074c5f428d6c6c7"
+          },
+          "id": 155,
+          "kind": "model_result"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 17:56:51.887570+00:00",
+          "data": {
+            "agent": "transit_specialist",
+            "observation": "All selected options respect the 5\u2011day schedule, city spread, gateway hours 8\u201121, and each traveler's 12\u202fkm walk limit. No museum admission fees are charged beyond the supplied catalog prices, keeping total cost at 308\u202f000\u202fcents. Closed\u2011weekday flags are honored (NYC museum nyc-met excluded; PHL museum phl-pma excluded). Walking totals stay within per\u2011person limits.",
+            "option_ids": [
+              "dc-natural-history",
+              "dc-american-history",
+              "dc-national-gallery",
+              "nyc-central-park",
+              "nyc-high-line",
+              "nyc-ferry",
+              "phl-liberty-bell",
+              "phl-independence",
+              "phl-visitor-center"
+            ]
+          },
+          "id": 156,
+          "kind": "specialist_observation"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 17:56:51.891153+00:00",
+          "data": {
+            "fallback": false,
+            "input_hash": "304f73cd544e660603b73aebc87dfddbd7df305aabc0d88f28a04b0a3538ca13",
+            "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+            "provider": "cloud",
+            "reason": "public_multistep_planning",
+            "task": "lodging_specialist",
+            "usage_id": "85455fd73e7947b6b79410a2d46bbefc"
+          },
+          "id": 157,
+          "kind": "model_request"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 17:56:53.025528+00:00",
+          "data": {
+            "input_tokens": 2206,
+            "latency_ms": 1126,
+            "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+            "output_tokens": 143,
+            "provider": "cloud",
+            "result": {
+              "observation": "All selected options respect weekday closures, walk limits (max 2400m), and total cost 308000 cents. PHL museum nyc-met and phl-pma excluded per closed-weekday constraints for the travel dates.",
+              "option_ids": [
+                "dc-natural-history",
+                "dc-american-history",
+                "dc-national-gallery",
+                "nyc-central-park",
+                "nyc-high-line",
+                "nyc-ferry",
+                "phl-liberty-bell",
+                "phl-independence",
+                "phl-visitor-center"
+              ]
+            },
+            "success": true,
+            "task": "lodging_specialist",
+            "usage_id": "85455fd73e7947b6b79410a2d46bbefc"
+          },
+          "id": 158,
+          "kind": "model_result"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 17:56:53.027177+00:00",
+          "data": {
+            "agent": "lodging_specialist",
+            "observation": "All selected options respect weekday closures, walk limits (max 2400m), and total cost 308000 cents. PHL museum nyc-met and phl-pma excluded per closed-weekday constraints for the travel dates.",
+            "option_ids": [
+              "dc-natural-history",
+              "dc-american-history",
+              "dc-national-gallery",
+              "nyc-central-park",
+              "nyc-high-line",
+              "nyc-ferry",
+              "phl-liberty-bell",
+              "phl-independence",
+              "phl-visitor-center"
+            ]
+          },
+          "id": 159,
+          "kind": "specialist_observation"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 17:56:53.042362+00:00",
+          "data": {
+            "fallback": false,
+            "input_hash": "62a5c15295ed5d810c8429d9cf51c0ecdf974efcab2197d11d2b326b4d6ba1c3",
+            "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+            "provider": "cloud",
+            "reason": "public_multistep_planning",
+            "task": "attractions_specialist",
+            "usage_id": "8f4d6269bd584f8aa9739a4422258f70"
+          },
+          "id": 160,
+          "kind": "model_request"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 17:56:54.340010+00:00",
+          "data": {
+            "input_tokens": 2203,
+            "latency_ms": 1290,
+            "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+            "output_tokens": 170,
+            "provider": "cloud",
+            "result": {
+              "observation": "Proposed 9 activities across 3 cities, each within walk limits and closed-day constraints. Total walk 11700m across travelers, all under 12000m max. No admission fees beyond potential NYC museum (not selected). Observation window dates should verify PHL museum closure on weekdays 1,2 and NYC museum weekday closure index 2 if selected.",
+              "option_ids": [
+                "dc-natural-history",
+                "dc-american-history",
+                "dc-national-gallery",
+                "nyc-central-park",
+                "nyc-high-line",
+                "nyc-ferry",
+                "phl-liberty-bell",
+                "phl-independence",
+                "phl-visitor-center"
+              ]
+            },
+            "success": true,
+            "task": "attractions_specialist",
+            "usage_id": "8f4d6269bd584f8aa9739a4422258f70"
+          },
+          "id": 161,
+          "kind": "model_result"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 17:56:54.341611+00:00",
+          "data": {
+            "agent": "attractions_specialist",
+            "observation": "Proposed 9 activities across 3 cities, each within walk limits and closed-day constraints. Total walk 11700m across travelers, all under 12000m max. No admission fees beyond potential NYC museum (not selected). Observation window dates should verify PHL museum closure on weekdays 1,2 and NYC museum weekday closure index 2 if selected.",
+            "option_ids": [
+              "dc-natural-history",
+              "dc-american-history",
+              "dc-national-gallery",
+              "nyc-central-park",
+              "nyc-high-line",
+              "nyc-ferry",
+              "phl-liberty-bell",
+              "phl-independence",
+              "phl-visitor-center"
+            ]
+          },
+          "id": 162,
+          "kind": "specialist_observation"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 17:56:54.349997+00:00",
+          "data": {
+            "digest": "9ed8eb8bf60dadd3e64d5af394cc53ab5f911a338e03f5608a8439514b48b579",
+            "facts": [
+              {
+                "evidence_state": "USER_ESTIMATE",
+                "id": "nyc-central-park",
+                "price_cents": 0,
+                "source_id": "central-park"
+              },
+              {
+                "evidence_state": "USER_ESTIMATE",
+                "id": "nyc-high-line",
+                "price_cents": 0,
+                "source_id": "high-line"
+              },
+              {
+                "evidence_state": "USER_ESTIMATE",
+                "id": "phl-liberty-bell",
+                "price_cents": 0,
+                "source_id": "liberty-bell"
+              },
+              {
+                "evidence_state": "USER_ESTIMATE",
+                "id": "phl-independence",
+                "price_cents": 0,
+                "source_id": "independence"
+              },
+              {
+                "evidence_state": "USER_ESTIMATE",
+                "id": "dc-natural-history",
+                "price_cents": 0,
+                "source_id": "natural-history"
+              }
+            ]
+          },
+          "id": 163,
+          "kind": "catalog_facts_read"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 17:56:54.351236+00:00",
+          "data": {
+            "expected_cost_cents": 308000,
+            "pass": 2,
+            "total_cents": 308000,
+            "traveler_totals": {
+              "t1": 77000,
+              "t2": 77000,
+              "t3": 77000,
+              "t4": 77000
+            },
+            "valid": true,
+            "violations": []
+          },
+          "id": 164,
+          "kind": "critic"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 17:56:54.372340+00:00",
+          "data": {
+            "approval_id": "IDHAgtM_ICy5IxYB6VKMqJMf9pakb02n",
+            "expires_at": "2026-11-25T18:26:54.360503+00:00",
+            "hash": "ed10dde7eaa594082cdf1ac387c5f6ef03b4a179045ac05c727a03ddc485271f",
+            "revision": 1
+          },
+          "id": 165,
+          "kind": "approval_pending"
+        }
+      },
+      {
+        "event": "done",
+        "data": {
+          "ledger_id": null,
+          "outcome": "PENDING_APPROVAL"
+        }
+      }
+    ]
+  },
+  "commit": {
+    "state": {
+      "id": "f32e5e4c48b44b159d1701292088c973",
+      "status": "COMMITTED",
+      "revision": 1,
+      "request": {
+        "days": 5,
+        "cities": [
+          "NYC",
+          "PHL",
+          "DC"
+        ],
+        "request": "A balanced trip with history, parks and museums.",
+        "group_id": "demo-group",
+        "wishlist": [],
+        "travelers": [
+          {
+            "id": "t1",
+            "diet": "unrestricted",
+            "budget_cents": 85000,
+            "maximum_walk_meters": 12000
+          },
+          {
+            "id": "t2",
+            "diet": "unrestricted",
+            "budget_cents": 85000,
+            "maximum_walk_meters": 12000
+          },
+          {
+            "id": "t3",
+            "diet": "unrestricted",
+            "budget_cents": 85000,
+            "maximum_walk_meters": 12000
+          },
+          {
+            "id": "t4",
+            "diet": "unrestricted",
+            "budget_cents": 85000,
+            "maximum_walk_meters": 12000
+          }
+        ],
+        "meal_cents": 1800,
+        "start_date": "2026-11-28",
+        "room_capacity": 2,
+        "gateway_end_hour": 21,
+        "gateway_start_hour": 8,
+        "group_budget_cents": null,
+        "estimates_confirmed": true,
+        "required_activities": [],
+        "lodging_economy_cents": 11000,
+        "use_saved_preferences": false,
+        "lodging_standard_cents": 21000
+      },
+      "proposal": {
+        "scope": "City gateway to gateway. Flights/home travel excluded. Planning ledger; no bookings.",
+        "valid": true,
+        "choice": {
+          "activities": {
+            "DC": [
+              "dc-natural-history",
+              "dc-american-history",
+              "dc-national-gallery"
+            ],
+            "NYC": [
+              "nyc-central-park",
+              "nyc-high-line",
+              "nyc-ferry"
+            ],
+            "PHL": [
+              "phl-liberty-bell",
+              "phl-independence",
+              "phl-visitor-center"
+            ]
+          },
+          "explanation": "Tool-priced alternative satisfying the declared constraints",
+          "lodging_tier": "economy",
+          "activities_per_day": 1,
+          "expected_cost_cents": 308000
+        },
+        "revision": 1,
+        "schedule": [
+          {
+            "id": "activity-0-nyc-central-park",
+            "day": 0,
+            "end": "2026-11-28T11:30:00-05:00",
+            "city": "NYC",
+            "start": "2026-11-28T10:00:00-05:00",
+            "activity_id": "nyc-central-park",
+            "opening_end": "2026-11-28T17:00:00-05:00",
+            "walk_meters": 2400,
+            "opening_start": "2026-11-28T10:00:00-05:00",
+            "buffer_minutes": 15,
+            "evidence_state": "USER_ESTIMATE",
+            "transfer_minutes": 30
+          },
+          {
+            "id": "activity-1-nyc-high-line",
+            "day": 1,
+            "end": "2026-11-29T11:00:00-05:00",
+            "city": "NYC",
+            "start": "2026-11-29T10:00:00-05:00",
+            "activity_id": "nyc-high-line",
+            "opening_end": "2026-11-29T17:00:00-05:00",
+            "walk_meters": 1800,
+            "opening_start": "2026-11-29T10:00:00-05:00",
+            "buffer_minutes": 15,
+            "evidence_state": "USER_ESTIMATE",
+            "transfer_minutes": 30
+          },
+          {
+            "id": "intercity-2",
+            "day": 2,
+            "end": "2026-11-30T11:00:00-05:00",
+            "city": "PHL",
+            "start": "2026-11-30T08:30:00-05:00",
+            "activity_id": "route-NYC-PHL",
+            "opening_end": "2026-11-30T18:00:00-05:00",
+            "walk_meters": 500,
+            "opening_start": "2026-11-30T08:00:00-05:00",
+            "buffer_minutes": 0,
+            "evidence_state": "USER_ESTIMATE",
+            "transfer_minutes": 0
+          },
+          {
+            "id": "activity-2-phl-liberty-bell",
+            "day": 2,
+            "end": "2026-11-30T12:45:00-05:00",
+            "city": "PHL",
+            "start": "2026-11-30T11:45:00-05:00",
+            "activity_id": "phl-liberty-bell",
+            "opening_end": "2026-11-30T17:00:00-05:00",
+            "walk_meters": 700,
+            "opening_start": "2026-11-30T10:00:00-05:00",
+            "buffer_minutes": 15,
+            "evidence_state": "USER_ESTIMATE",
+            "transfer_minutes": 30
+          },
+          {
+            "id": "activity-3-phl-independence",
+            "day": 3,
+            "end": "2026-12-01T11:00:00-05:00",
+            "city": "PHL",
+            "start": "2026-12-01T10:00:00-05:00",
+            "activity_id": "phl-independence",
+            "opening_end": "2026-12-01T17:00:00-05:00",
+            "walk_meters": 1000,
+            "opening_start": "2026-12-01T10:00:00-05:00",
+            "buffer_minutes": 15,
+            "evidence_state": "USER_ESTIMATE",
+            "transfer_minutes": 30
+          },
+          {
+            "id": "intercity-4",
+            "day": 4,
+            "end": "2026-12-02T11:30:00-05:00",
+            "city": "DC",
+            "start": "2026-12-02T08:30:00-05:00",
+            "activity_id": "route-PHL-DC",
+            "opening_end": "2026-12-02T18:00:00-05:00",
+            "walk_meters": 500,
+            "opening_start": "2026-12-02T08:00:00-05:00",
+            "buffer_minutes": 0,
+            "evidence_state": "USER_ESTIMATE",
+            "transfer_minutes": 0
+          },
+          {
+            "id": "activity-4-dc-natural-history",
+            "day": 4,
+            "end": "2026-12-02T14:15:00-05:00",
+            "city": "DC",
+            "start": "2026-12-02T12:15:00-05:00",
+            "activity_id": "dc-natural-history",
+            "opening_end": "2026-12-02T17:00:00-05:00",
+            "walk_meters": 1800,
+            "opening_start": "2026-12-02T10:00:00-05:00",
+            "buffer_minutes": 15,
+            "evidence_state": "USER_ESTIMATE",
+            "transfer_minutes": 30
+          }
+        ],
+        "cost_items": [
+          {
+            "id": "meals-0",
+            "day": 0,
+            "city": "NYC",
+            "fact_id": null,
+            "category": "meals",
+            "quantity": 12,
+            "unit_cents": 1800,
+            "allocations": {
+              "t1": 5400,
+              "t2": 5400,
+              "t3": 5400,
+              "t4": 5400
+            },
+            "description": "Three all-in meal allowances per traveler",
+            "estimate_id": "meals-0",
+            "total_cents": 21600,
+            "beneficiaries": [
+              "t1",
+              "t2",
+              "t3",
+              "t4"
+            ],
+            "evidence_state": "USER_ESTIMATE",
+            "taxes_included": true
+          },
+          {
+            "id": "local-0",
+            "day": 0,
+            "city": "NYC",
+            "fact_id": null,
+            "category": "local_transit",
+            "quantity": 4,
+            "unit_cents": 1500,
+            "allocations": {
+              "t1": 1500,
+              "t2": 1500,
+              "t3": 1500,
+              "t4": 1500
+            },
+            "description": "Local transit/transfer planning allowance, taxes/fees included",
+            "estimate_id": "local-0",
+            "total_cents": 6000,
+            "beneficiaries": [
+              "t1",
+              "t2",
+              "t3",
+              "t4"
+            ],
+            "evidence_state": "USER_ESTIMATE",
+            "taxes_included": true
+          },
+          {
+            "id": "lodging-0",
+            "day": 0,
+            "city": "NYC",
+            "fact_id": null,
+            "category": "lodging",
+            "quantity": 2,
+            "unit_cents": 11000,
+            "allocations": {
+              "t1": 5500,
+              "t2": 5500,
+              "t3": 5500,
+              "t4": 5500
+            },
+            "description": "Economy lodging, all-in per room/night, capacity 2",
+            "estimate_id": "lodging-0",
+            "total_cents": 22000,
+            "beneficiaries": [
+              "t1",
+              "t2",
+              "t3",
+              "t4"
+            ],
+            "evidence_state": "USER_ESTIMATE",
+            "taxes_included": true
+          },
+          {
+            "id": "ticket-0-nyc-central-park",
+            "day": 0,
+            "city": "NYC",
+            "fact_id": "nyc-central-park",
+            "category": "activity",
+            "quantity": 4,
+            "unit_cents": 0,
+            "allocations": {
+              "t1": 0,
+              "t2": 0,
+              "t3": 0,
+              "t4": 0
+            },
+            "description": "Central Park walk",
+            "estimate_id": null,
+            "total_cents": 0,
+            "beneficiaries": [
+              "t1",
+              "t2",
+              "t3",
+              "t4"
+            ],
+            "evidence_state": "USER_ESTIMATE",
+            "taxes_included": true
+          },
+          {
+            "id": "meals-1",
+            "day": 1,
+            "city": "NYC",
+            "fact_id": null,
+            "category": "meals",
+            "quantity": 12,
+            "unit_cents": 1800,
+            "allocations": {
+              "t1": 5400,
+              "t2": 5400,
+              "t3": 5400,
+              "t4": 5400
+            },
+            "description": "Three all-in meal allowances per traveler",
+            "estimate_id": "meals-1",
+            "total_cents": 21600,
+            "beneficiaries": [
+              "t1",
+              "t2",
+              "t3",
+              "t4"
+            ],
+            "evidence_state": "USER_ESTIMATE",
+            "taxes_included": true
+          },
+          {
+            "id": "local-1",
+            "day": 1,
+            "city": "NYC",
+            "fact_id": null,
+            "category": "local_transit",
+            "quantity": 4,
+            "unit_cents": 1500,
+            "allocations": {
+              "t1": 1500,
+              "t2": 1500,
+              "t3": 1500,
+              "t4": 1500
+            },
+            "description": "Local transit/transfer planning allowance, taxes/fees included",
+            "estimate_id": "local-1",
+            "total_cents": 6000,
+            "beneficiaries": [
+              "t1",
+              "t2",
+              "t3",
+              "t4"
+            ],
+            "evidence_state": "USER_ESTIMATE",
+            "taxes_included": true
+          },
+          {
+            "id": "lodging-1",
+            "day": 1,
+            "city": "NYC",
+            "fact_id": null,
+            "category": "lodging",
+            "quantity": 2,
+            "unit_cents": 11000,
+            "allocations": {
+              "t1": 5500,
+              "t2": 5500,
+              "t3": 5500,
+              "t4": 5500
+            },
+            "description": "Economy lodging, all-in per room/night, capacity 2",
+            "estimate_id": "lodging-1",
+            "total_cents": 22000,
+            "beneficiaries": [
+              "t1",
+              "t2",
+              "t3",
+              "t4"
+            ],
+            "evidence_state": "USER_ESTIMATE",
+            "taxes_included": true
+          },
+          {
+            "id": "ticket-1-nyc-high-line",
+            "day": 1,
+            "city": "NYC",
+            "fact_id": "nyc-high-line",
+            "category": "activity",
+            "quantity": 4,
+            "unit_cents": 0,
+            "allocations": {
+              "t1": 0,
+              "t2": 0,
+              "t3": 0,
+              "t4": 0
+            },
+            "description": "High Line gardens",
+            "estimate_id": null,
+            "total_cents": 0,
+            "beneficiaries": [
+              "t1",
+              "t2",
+              "t3",
+              "t4"
+            ],
+            "evidence_state": "USER_ESTIMATE",
+            "taxes_included": true
+          },
+          {
+            "id": "meals-2",
+            "day": 2,
+            "city": "PHL",
+            "fact_id": null,
+            "category": "meals",
+            "quantity": 12,
+            "unit_cents": 1800,
+            "allocations": {
+              "t1": 5400,
+              "t2": 5400,
+              "t3": 5400,
+              "t4": 5400
+            },
+            "description": "Three all-in meal allowances per traveler",
+            "estimate_id": "meals-2",
+            "total_cents": 21600,
+            "beneficiaries": [
+              "t1",
+              "t2",
+              "t3",
+              "t4"
+            ],
+            "evidence_state": "USER_ESTIMATE",
+            "taxes_included": true
+          },
+          {
+            "id": "local-2",
+            "day": 2,
+            "city": "PHL",
+            "fact_id": null,
+            "category": "local_transit",
+            "quantity": 4,
+            "unit_cents": 1500,
+            "allocations": {
+              "t1": 1500,
+              "t2": 1500,
+              "t3": 1500,
+              "t4": 1500
+            },
+            "description": "Local transit/transfer planning allowance, taxes/fees included",
+            "estimate_id": "local-2",
+            "total_cents": 6000,
+            "beneficiaries": [
+              "t1",
+              "t2",
+              "t3",
+              "t4"
+            ],
+            "evidence_state": "USER_ESTIMATE",
+            "taxes_included": true
+          },
+          {
+            "id": "lodging-2",
+            "day": 2,
+            "city": "PHL",
+            "fact_id": null,
+            "category": "lodging",
+            "quantity": 2,
+            "unit_cents": 11000,
+            "allocations": {
+              "t1": 5500,
+              "t2": 5500,
+              "t3": 5500,
+              "t4": 5500
+            },
+            "description": "Economy lodging, all-in per room/night, capacity 2",
+            "estimate_id": "lodging-2",
+            "total_cents": 22000,
+            "beneficiaries": [
+              "t1",
+              "t2",
+              "t3",
+              "t4"
+            ],
+            "evidence_state": "USER_ESTIMATE",
+            "taxes_included": true
+          },
+          {
+            "id": "intercity-2",
+            "day": 2,
+            "city": "PHL",
+            "fact_id": null,
+            "category": "intercity",
+            "quantity": 4,
+            "unit_cents": 6500,
+            "allocations": {
+              "t1": 6500,
+              "t2": 6500,
+              "t3": 6500,
+              "t4": 6500
+            },
+            "description": "Intercity all-in fare estimate; no seat reservation",
+            "estimate_id": "intercity-2",
+            "total_cents": 26000,
+            "beneficiaries": [
+              "t1",
+              "t2",
+              "t3",
+              "t4"
+            ],
+            "evidence_state": "USER_ESTIMATE",
+            "taxes_included": true
+          },
+          {
+            "id": "ticket-2-phl-liberty-bell",
+            "day": 2,
+            "city": "PHL",
+            "fact_id": "phl-liberty-bell",
+            "category": "activity",
+            "quantity": 4,
+            "unit_cents": 0,
+            "allocations": {
+              "t1": 0,
+              "t2": 0,
+              "t3": 0,
+              "t4": 0
+            },
+            "description": "Liberty Bell Center",
+            "estimate_id": null,
+            "total_cents": 0,
+            "beneficiaries": [
+              "t1",
+              "t2",
+              "t3",
+              "t4"
+            ],
+            "evidence_state": "USER_ESTIMATE",
+            "taxes_included": true
+          },
+          {
+            "id": "meals-3",
+            "day": 3,
+            "city": "PHL",
+            "fact_id": null,
+            "category": "meals",
+            "quantity": 12,
+            "unit_cents": 1800,
+            "allocations": {
+              "t1": 5400,
+              "t2": 5400,
+              "t3": 5400,
+              "t4": 5400
+            },
+            "description": "Three all-in meal allowances per traveler",
+            "estimate_id": "meals-3",
+            "total_cents": 21600,
+            "beneficiaries": [
+              "t1",
+              "t2",
+              "t3",
+              "t4"
+            ],
+            "evidence_state": "USER_ESTIMATE",
+            "taxes_included": true
+          },
+          {
+            "id": "local-3",
+            "day": 3,
+            "city": "PHL",
+            "fact_id": null,
+            "category": "local_transit",
+            "quantity": 4,
+            "unit_cents": 1500,
+            "allocations": {
+              "t1": 1500,
+              "t2": 1500,
+              "t3": 1500,
+              "t4": 1500
+            },
+            "description": "Local transit/transfer planning allowance, taxes/fees included",
+            "estimate_id": "local-3",
+            "total_cents": 6000,
+            "beneficiaries": [
+              "t1",
+              "t2",
+              "t3",
+              "t4"
+            ],
+            "evidence_state": "USER_ESTIMATE",
+            "taxes_included": true
+          },
+          {
+            "id": "lodging-3",
+            "day": 3,
+            "city": "PHL",
+            "fact_id": null,
+            "category": "lodging",
+            "quantity": 2,
+            "unit_cents": 11000,
+            "allocations": {
+              "t1": 5500,
+              "t2": 5500,
+              "t3": 5500,
+              "t4": 5500
+            },
+            "description": "Economy lodging, all-in per room/night, capacity 2",
+            "estimate_id": "lodging-3",
+            "total_cents": 22000,
+            "beneficiaries": [
+              "t1",
+              "t2",
+              "t3",
+              "t4"
+            ],
+            "evidence_state": "USER_ESTIMATE",
+            "taxes_included": true
+          },
+          {
+            "id": "ticket-3-phl-independence",
+            "day": 3,
+            "city": "PHL",
+            "fact_id": "phl-independence",
+            "category": "activity",
+            "quantity": 4,
+            "unit_cents": 0,
+            "allocations": {
+              "t1": 0,
+              "t2": 0,
+              "t3": 0,
+              "t4": 0
+            },
+            "description": "Independence Hall exterior and grounds",
+            "estimate_id": null,
+            "total_cents": 0,
+            "beneficiaries": [
+              "t1",
+              "t2",
+              "t3",
+              "t4"
+            ],
+            "evidence_state": "USER_ESTIMATE",
+            "taxes_included": true
+          },
+          {
+            "id": "meals-4",
+            "day": 4,
+            "city": "DC",
+            "fact_id": null,
+            "category": "meals",
+            "quantity": 12,
+            "unit_cents": 1800,
+            "allocations": {
+              "t1": 5400,
+              "t2": 5400,
+              "t3": 5400,
+              "t4": 5400
+            },
+            "description": "Three all-in meal allowances per traveler",
+            "estimate_id": "meals-4",
+            "total_cents": 21600,
+            "beneficiaries": [
+              "t1",
+              "t2",
+              "t3",
+              "t4"
+            ],
+            "evidence_state": "USER_ESTIMATE",
+            "taxes_included": true
+          },
+          {
+            "id": "local-4",
+            "day": 4,
+            "city": "DC",
+            "fact_id": null,
+            "category": "local_transit",
+            "quantity": 4,
+            "unit_cents": 1500,
+            "allocations": {
+              "t1": 1500,
+              "t2": 1500,
+              "t3": 1500,
+              "t4": 1500
+            },
+            "description": "Local transit/transfer planning allowance, taxes/fees included",
+            "estimate_id": "local-4",
+            "total_cents": 6000,
+            "beneficiaries": [
+              "t1",
+              "t2",
+              "t3",
+              "t4"
+            ],
+            "evidence_state": "USER_ESTIMATE",
+            "taxes_included": true
+          },
+          {
+            "id": "intercity-4",
+            "day": 4,
+            "city": "DC",
+            "fact_id": null,
+            "category": "intercity",
+            "quantity": 4,
+            "unit_cents": 7000,
+            "allocations": {
+              "t1": 7000,
+              "t2": 7000,
+              "t3": 7000,
+              "t4": 7000
+            },
+            "description": "Intercity all-in fare estimate; no seat reservation",
+            "estimate_id": "intercity-4",
+            "total_cents": 28000,
+            "beneficiaries": [
+              "t1",
+              "t2",
+              "t3",
+              "t4"
+            ],
+            "evidence_state": "USER_ESTIMATE",
+            "taxes_included": true
+          },
+          {
+            "id": "ticket-4-dc-natural-history",
+            "day": 4,
+            "city": "DC",
+            "fact_id": "dc-natural-history",
+            "category": "activity",
+            "quantity": 4,
+            "unit_cents": 0,
+            "allocations": {
+              "t1": 0,
+              "t2": 0,
+              "t3": 0,
+              "t4": 0
+            },
+            "description": "National Museum of Natural History",
+            "estimate_id": null,
+            "total_cents": 0,
+            "beneficiaries": [
+              "t1",
+              "t2",
+              "t3",
+              "t4"
+            ],
+            "evidence_state": "USER_ESTIMATE",
+            "taxes_included": true
+          }
+        ],
+        "facts_read": [
+          {
+            "id": "nyc-central-park",
+            "source_id": "central-park",
+            "price_cents": 0,
+            "evidence_state": "USER_ESTIMATE"
+          },
+          {
+            "id": "nyc-high-line",
+            "source_id": "high-line",
+            "price_cents": 0,
+            "evidence_state": "USER_ESTIMATE"
+          },
+          {
+            "id": "phl-liberty-bell",
+            "source_id": "liberty-bell",
+            "price_cents": 0,
+            "evidence_state": "USER_ESTIMATE"
+          },
+          {
+            "id": "phl-independence",
+            "source_id": "independence",
+            "price_cents": 0,
+            "evidence_state": "USER_ESTIMATE"
+          },
+          {
+            "id": "dc-natural-history",
+            "source_id": "natural-history",
+            "price_cents": 0,
+            "evidence_state": "USER_ESTIMATE"
+          }
+        ],
+        "violations": [],
+        "assumptions": [
+          "All lodging, meals, local/intercity transit and route durations are confirmed planning estimates.",
+          "Activity windows and walking distances are planning assumptions; no real-time availability.",
+          "Three meals daily, room capacity enforced, 10% contingency, USD integer cents."
+        ],
+        "total_cents": 308000,
+        "buffer_cents": 28000,
+        "corpus_version": "20261125T174151Z",
+        "subtotal_cents": 280000,
+        "evidence_digest": "9ed8eb8bf60dadd3e64d5af394cc53ab5f911a338e03f5608a8439514b48b579",
+        "traveler_totals": {
+          "t1": 77000,
+          "t2": 77000,
+          "t3": 77000,
+          "t4": 77000
+        },
+        "base_allocations": {
+          "t1": 70000,
+          "t2": 70000,
+          "t3": 70000,
+          "t4": 70000
+        },
+        "constraints_hash": "269e17563556a4fc23ab498cb66224963714f7f094f599e24d201d91477835a7",
+        "contingency_allocations": {
+          "t1": 7000,
+          "t2": 7000,
+          "t3": 7000,
+          "t4": 7000
+        }
+      },
+      "approval": {
+        "id": "IDHAgtM_ICy5IxYB6VKMqJMf9pakb02n",
+        "episode": "f32e5e4c48b44b159d1701292088c973",
+        "revision": 1,
+        "uid": "52793bc2865ab2b64aecaa37c7bd0146",
+        "hash": "ed10dde7eaa594082cdf1ac387c5f6ef03b4a179045ac05c727a03ddc485271f",
+        "status": "CONSUMED",
+        "decision": {
+          "action": "approve",
+          "revision": 1,
+          "proposal_hash": "ed10dde7eaa594082cdf1ac387c5f6ef03b4a179045ac05c727a03ddc485271f",
+          "new_budget_cents": null
+        },
+        "decision_key": "689c8fe0e08f4adab9b5c6e8b4db88b2",
+        "expires_at": "2026-11-25T18:26:54.360503+00:00"
+      },
+      "ledger_id": "04eacd9edcc84ac08d170174dcf40007",
+      "resources": {
+        "calls": 11,
+        "attempts": 11,
+        "tokens": 19963,
+        "output_tokens": 1583,
+        "searches": 0,
+        "active_ms": 21020
+      }
+    },
+    "frames": [
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 17:56:33.347841+00:00",
+          "data": {
+            "constraints_hash": "269e17563556a4fc23ab498cb66224963714f7f094f599e24d201d91477835a7"
+          },
+          "id": 119,
+          "kind": "admitted"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 17:56:33.383021+00:00",
+          "data": {
+            "applied": false,
+            "values": null,
+            "version": 0
+          },
+          "id": 120,
+          "kind": "preferences_loaded"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 17:56:33.468595+00:00",
+          "data": {
+            "chunks": [
+              {
+                "activity_id": "nyc-met",
+                "city": "NYC",
+                "distance": 0.31587,
+                "id": "nyc-met:overview",
+                "kind": "overview",
+                "source_id": "met",
+                "text": "Metropolitan Museum of Art is a museum option in NYC. Its catalog ID is nyc-met. The proposed visit lasts 120 minutes and includes an estimated 1800 meters of walking. This is a scoped group travel option, not a reservation or an accessible-route guarantee."
+              },
+              {
+                "activity_id": "nyc-met",
+                "city": "NYC",
+                "distance": 0.34758,
+                "id": "nyc-met:schedule",
+                "kind": "schedule",
+                "source_id": "met",
+                "text": "The planning window for Metropolitan Museum of Art in NYC is 10:00 to 17:00 America/New_York. Proposed duration is 120 minutes. Closed weekday indices are [2]. This conservative planning assumption still requires date and holiday checking; it does not guarantee entry or tickets."
+              },
+              {
+                "activity_id": "nyc-central-park",
+                "city": "NYC",
+                "distance": 0.35464,
+                "id": "nyc-central-park:overview",
+                "kind": "overview",
+                "source_id": "central-park",
+                "text": "Central Park walk is a park option in NYC. Its catalog ID is nyc-central-park. The proposed visit lasts 90 minutes and includes an estimated 2400 meters of walking. This is a scoped group travel option, not a reservation or an accessible-route guarantee."
+              },
+              {
+                "activity_id": "nyc-central-park",
+                "city": "NYC",
+                "distance": 0.36067,
+                "id": "nyc-central-park:schedule",
+                "kind": "schedule",
+                "source_id": "central-park",
+                "text": "The planning window for Central Park walk in NYC is 10:00 to 17:00 America/New_York. Proposed duration is 90 minutes. Closed weekday indices are []. This conservative planning assumption still requires date and holiday checking; it does not guarantee entry or tickets."
+              },
+              {
+                "activity_id": "nyc-high-line",
+                "city": "NYC",
+                "distance": 0.36536,
+                "id": "nyc-high-line:overview",
+                "kind": "overview",
+                "source_id": "high-line",
+                "text": "High Line gardens is a park option in NYC. Its catalog ID is nyc-high-line. The proposed visit lasts 60 minutes and includes an estimated 1800 meters of walking. This is a scoped group travel option, not a reservation or an accessible-route guarantee."
+              }
+            ],
+            "city": "NYC",
+            "query": "NYC group trip cultural activities",
+            "relevant": false,
+            "retrieval_hash": "89d33e24d7bd9c6a0ee0457348c72eb86102d3eccda3fc75598e691da2272568",
+            "round": 1,
+            "source_ids": [
+              "met",
+              "met",
+              "central-park",
+              "central-park",
+              "high-line"
+            ]
+          },
+          "id": 121,
+          "kind": "retrieval"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 17:56:33.474016+00:00",
+          "data": {
+            "fallback": false,
+            "input_hash": "fa04c64a365ea435e9c21fb4593d37fb39d65435442aabea4aee1a5896991961",
+            "model": "tripbudget-gemma4-e4b",
+            "provider": "local",
+            "reason": "short_structured_utility",
+            "task": "query_rewrite",
+            "usage_id": "0995ce99905c4d3dae1d9c2325863425"
+          },
+          "id": 122,
+          "kind": "model_request"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 17:56:41.228190+00:00",
+          "data": {
+            "input_tokens": 213,
+            "latency_ms": 7746,
+            "model": "tripbudget-gemma4-e4b",
+            "output_tokens": 45,
+            "provider": "local",
+            "result": {
+              "query": "NYC cultural activities admission costs and opening hours",
+              "reason": "The original query was too broad. This rewrite specifically targets 'admission costs' and 'opening hours' while retaining the 'NYC' city code."
+            },
+            "success": true,
+            "task": "query_rewrite",
+            "usage_id": "0995ce99905c4d3dae1d9c2325863425"
+          },
+          "id": 123,
+          "kind": "model_result"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 17:56:41.229142+00:00",
+          "data": {
+            "query": "NYC cultural activities admission costs and opening hours",
+            "reason": "The original query was too broad. This rewrite specifically targets 'admission costs' and 'opening hours' while retaining the 'NYC' city code."
+          },
+          "id": 124,
+          "kind": "query_rewritten"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 17:56:41.244337+00:00",
+          "data": {
+            "chunks": [
+              {
+                "activity_id": "nyc-met",
+                "city": "NYC",
+                "distance": 0.24299,
+                "id": "nyc-met:schedule",
+                "kind": "schedule",
+                "source_id": "met",
+                "text": "The planning window for Metropolitan Museum of Art in NYC is 10:00 to 17:00 America/New_York. Proposed duration is 120 minutes. Closed weekday indices are [2]. This conservative planning assumption still requires date and holiday checking; it does not guarantee entry or tickets."
+              },
+              {
+                "activity_id": "nyc-met",
+                "city": "NYC",
+                "distance": 0.24677,
+                "id": "nyc-met:price",
+                "kind": "price",
+                "source_id": "met",
+                "text": "Admission planning value for Metropolitan Museum of Art in NYC is 3000 USD cents per adult participant. Unless a reviewed fact explicitly marks it verified, this is a confirmed user estimate. The broker supplies this value by ID; a model cannot change it by citing different text."
+              },
+              {
+                "activity_id": "nyc-met",
+                "city": "NYC",
+                "distance": 0.28124,
+                "id": "nyc-met:overview",
+                "kind": "overview",
+                "source_id": "met",
+                "text": "Metropolitan Museum of Art is a museum option in NYC. Its catalog ID is nyc-met. The proposed visit lasts 120 minutes and includes an estimated 1800 meters of walking. This is a scoped group travel option, not a reservation or an accessible-route guarantee."
+              },
+              {
+                "activity_id": "nyc-central-park",
+                "city": "NYC",
+                "distance": 0.30367,
+                "id": "nyc-central-park:schedule",
+                "kind": "schedule",
+                "source_id": "central-park",
+                "text": "The planning window for Central Park walk in NYC is 10:00 to 17:00 America/New_York. Proposed duration is 90 minutes. Closed weekday indices are []. This conservative planning assumption still requires date and holiday checking; it does not guarantee entry or tickets."
+              },
+              {
+                "activity_id": "nyc-high-line",
+                "city": "NYC",
+                "distance": 0.30805,
+                "id": "nyc-high-line:price",
+                "kind": "price",
+                "source_id": "high-line",
+                "text": "Admission planning value for High Line gardens in NYC is 0 USD cents per adult participant. Unless a reviewed fact explicitly marks it verified, this is a confirmed user estimate. The broker supplies this value by ID; a model cannot change it by citing different text."
+              }
+            ],
+            "city": "NYC",
+            "query": "NYC cultural activities admission costs and opening hours",
+            "relevant": true,
+            "retrieval_hash": "75f94395dd6de54c7dba66ceb39215516006cd5dbdd539da28ef3e0296cd4cd5",
+            "round": 2,
+            "source_ids": [
+              "met",
+              "met",
+              "met",
+              "central-park",
+              "high-line"
+            ]
+          },
+          "id": 125,
+          "kind": "retrieval"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 17:56:41.251034+00:00",
+          "data": {
+            "chunks": [
+              {
+                "activity_id": "phl-pma",
+                "city": "PHL",
+                "distance": 0.28612,
+                "id": "phl-pma:overview",
+                "kind": "overview",
+                "source_id": "pma",
+                "text": "Philadelphia Museum of Art is a museum option in PHL. Its catalog ID is phl-pma. The proposed visit lasts 120 minutes and includes an estimated 1800 meters of walking. This is a scoped group travel option, not a reservation or an accessible-route guarantee."
+              },
+              {
+                "activity_id": "phl-visitor-center",
+                "city": "PHL",
+                "distance": 0.28727,
+                "id": "phl-visitor-center:overview",
+                "kind": "overview",
+                "source_id": "visitor-center",
+                "text": "Independence Visitor Center is a history option in PHL. Its catalog ID is phl-visitor-center. The proposed visit lasts 60 minutes and includes an estimated 600 meters of walking. This is a scoped group travel option, not a reservation or an accessible-route guarantee."
+              },
+              {
+                "activity_id": "phl-independence",
+                "city": "PHL",
+                "distance": 0.30106,
+                "id": "phl-independence:overview",
+                "kind": "overview",
+                "source_id": "independence",
+                "text": "Independence Hall exterior and grounds is a history option in PHL. Its catalog ID is phl-independence. The proposed visit lasts 60 minutes and includes an estimated 1000 meters of walking. This is a scoped group travel option, not a reservation or an accessible-route guarantee."
+              },
+              {
+                "activity_id": "phl-liberty-bell",
+                "city": "PHL",
+                "distance": 0.31622,
+                "id": "phl-liberty-bell:overview",
+                "kind": "overview",
+                "source_id": "liberty-bell",
+                "text": "Liberty Bell Center is a history option in PHL. Its catalog ID is phl-liberty-bell. The proposed visit lasts 60 minutes and includes an estimated 700 meters of walking. This is a scoped group travel option, not a reservation or an accessible-route guarantee."
+              },
+              {
+                "activity_id": "phl-pma",
+                "city": "PHL",
+                "distance": 0.35639,
+                "id": "phl-pma:schedule",
+                "kind": "schedule",
+                "source_id": "pma",
+                "text": "The planning window for Philadelphia Museum of Art in PHL is 10:00 to 17:00 America/New_York. Proposed duration is 120 minutes. Closed weekday indices are [1, 2]. This conservative planning assumption still requires date and holiday checking; it does not guarantee entry or tickets."
+              }
+            ],
+            "city": "PHL",
+            "query": "PHL group trip cultural activities",
+            "relevant": false,
+            "retrieval_hash": "c580450e217c198fd47c465b54738ad4482b9259c7796722da7f892b0fd4561d",
+            "round": 1,
+            "source_ids": [
+              "pma",
+              "visitor-center",
+              "independence",
+              "liberty-bell",
+              "pma"
+            ]
+          },
+          "id": 126,
+          "kind": "retrieval"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 17:56:41.254796+00:00",
+          "data": {
+            "fallback": false,
+            "input_hash": "67454bc27208b2facc01105a944d66896bbf94919d072f696b95d114d8bbf98a",
+            "model": "tripbudget-gemma4-e4b",
+            "provider": "local",
+            "reason": "short_structured_utility",
+            "task": "query_rewrite",
+            "usage_id": "af212b3c107c4839902f0fdcf269c241"
+          },
+          "id": 127,
+          "kind": "model_request"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 17:56:42.701374+00:00",
+          "data": {
+            "input_tokens": 215,
+            "latency_ms": 1443,
+            "model": "tripbudget-gemma4-e4b",
+            "output_tokens": 65,
+            "provider": "local",
+            "result": {
+              "query": "PHL admission costs and opening hours for cultural activities",
+              "reason": "The original query was too broad and did not specifically request price or hours. This rewrite focuses the search on the required details (costs and hours) while retaining the city code (PHL) and the topic (cultural activities)."
+            },
+            "success": true,
+            "task": "query_rewrite",
+            "usage_id": "af212b3c107c4839902f0fdcf269c241"
+          },
+          "id": 128,
+          "kind": "model_result"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 17:56:42.702092+00:00",
+          "data": {
+            "query": "PHL admission costs and opening hours for cultural activities",
+            "reason": "The original query was too broad and did not specifically request price or hours. This rewrite focuses the search on the required details (costs and hours) while retaining the city code (PHL) and the topic (cultural activities)."
+          },
+          "id": 129,
+          "kind": "query_rewritten"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 17:56:42.709151+00:00",
+          "data": {
+            "chunks": [
+              {
+                "activity_id": "phl-pma",
+                "city": "PHL",
+                "distance": 0.22691,
+                "id": "phl-pma:price",
+                "kind": "price",
+                "source_id": "pma",
+                "text": "Admission planning value for Philadelphia Museum of Art in PHL is 3000 USD cents per adult participant. Unless a reviewed fact explicitly marks it verified, this is a confirmed user estimate. The broker supplies this value by ID; a model cannot change it by citing different text."
+              },
+              {
+                "activity_id": "phl-independence",
+                "city": "PHL",
+                "distance": 0.2466,
+                "id": "phl-independence:price",
+                "kind": "price",
+                "source_id": "independence",
+                "text": "Admission planning value for Independence Hall exterior and grounds in PHL is 0 USD cents per adult participant. Unless a reviewed fact explicitly marks it verified, this is a confirmed user estimate. The broker supplies this value by ID; a model cannot change it by citing different text."
+              },
+              {
+                "activity_id": "phl-pma",
+                "city": "PHL",
+                "distance": 0.25255,
+                "id": "phl-pma:overview",
+                "kind": "overview",
+                "source_id": "pma",
+                "text": "Philadelphia Museum of Art is a museum option in PHL. Its catalog ID is phl-pma. The proposed visit lasts 120 minutes and includes an estimated 1800 meters of walking. This is a scoped group travel option, not a reservation or an accessible-route guarantee."
+              },
+              {
+                "activity_id": "phl-visitor-center",
+                "city": "PHL",
+                "distance": 0.26277,
+                "id": "phl-visitor-center:price",
+                "kind": "price",
+                "source_id": "visitor-center",
+                "text": "Admission planning value for Independence Visitor Center in PHL is 0 USD cents per adult participant. Unless a reviewed fact explicitly marks it verified, this is a confirmed user estimate. The broker supplies this value by ID; a model cannot change it by citing different text."
+              },
+              {
+                "activity_id": "phl-pma",
+                "city": "PHL",
+                "distance": 0.2677,
+                "id": "phl-pma:schedule",
+                "kind": "schedule",
+                "source_id": "pma",
+                "text": "The planning window for Philadelphia Museum of Art in PHL is 10:00 to 17:00 America/New_York. Proposed duration is 120 minutes. Closed weekday indices are [1, 2]. This conservative planning assumption still requires date and holiday checking; it does not guarantee entry or tickets."
+              }
+            ],
+            "city": "PHL",
+            "query": "PHL admission costs and opening hours for cultural activities",
+            "relevant": true,
+            "retrieval_hash": "130200e758cf8d7e666d42ae2bc972bbfb6dd60bddf37e23dbbcfdc89448efc2",
+            "round": 2,
+            "source_ids": [
+              "pma",
+              "independence",
+              "pma",
+              "visitor-center",
+              "pma"
+            ]
+          },
+          "id": 130,
+          "kind": "retrieval"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 17:56:42.714829+00:00",
+          "data": {
+            "chunks": [
+              {
+                "activity_id": "dc-american-history",
+                "city": "DC",
+                "distance": 0.29196,
+                "id": "dc-american-history:overview",
+                "kind": "overview",
+                "source_id": "american-history",
+                "text": "National Museum of American History is a history option in DC. Its catalog ID is dc-american-history. The proposed visit lasts 120 minutes and includes an estimated 1600 meters of walking. This is a scoped group travel option, not a reservation or an accessible-route guarantee."
+              },
+              {
+                "activity_id": "dc-national-gallery",
+                "city": "DC",
+                "distance": 0.30632,
+                "id": "dc-national-gallery:overview",
+                "kind": "overview",
+                "source_id": "national-gallery",
+                "text": "National Gallery of Art is a museum option in DC. Its catalog ID is dc-national-gallery. The proposed visit lasts 120 minutes and includes an estimated 1500 meters of walking. This is a scoped group travel option, not a reservation or an accessible-route guarantee."
+              },
+              {
+                "activity_id": "dc-natural-history",
+                "city": "DC",
+                "distance": 0.30977,
+                "id": "dc-natural-history:overview",
+                "kind": "overview",
+                "source_id": "natural-history",
+                "text": "National Museum of Natural History is a museum option in DC. Its catalog ID is dc-natural-history. The proposed visit lasts 120 minutes and includes an estimated 1800 meters of walking. This is a scoped group travel option, not a reservation or an accessible-route guarantee."
+              },
+              {
+                "activity_id": "dc-american-history",
+                "city": "DC",
+                "distance": 0.33256,
+                "id": "dc-american-history:schedule",
+                "kind": "schedule",
+                "source_id": "american-history",
+                "text": "The planning window for National Museum of American History in DC is 10:00 to 17:00 America/New_York. Proposed duration is 120 minutes. Closed weekday indices are []. This conservative planning assumption still requires date and holiday checking; it does not guarantee entry or tickets."
+              },
+              {
+                "activity_id": "dc-national-gallery",
+                "city": "DC",
+                "distance": 0.33511,
+                "id": "dc-national-gallery:schedule",
+                "kind": "schedule",
+                "source_id": "national-gallery",
+                "text": "The planning window for National Gallery of Art in DC is 10:00 to 17:00 America/New_York. Proposed duration is 120 minutes. Closed weekday indices are []. This conservative planning assumption still requires date and holiday checking; it does not guarantee entry or tickets."
+              }
+            ],
+            "city": "DC",
+            "query": "DC group trip cultural activities",
+            "relevant": false,
+            "retrieval_hash": "c28f5b202a82f805328a4db5b6734cb9d14cd621a6efce63a091cfcc53603b7b",
+            "round": 1,
+            "source_ids": [
+              "american-history",
+              "national-gallery",
+              "natural-history",
+              "american-history",
+              "national-gallery"
+            ]
+          },
+          "id": 131,
+          "kind": "retrieval"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 17:56:42.718357+00:00",
+          "data": {
+            "fallback": false,
+            "input_hash": "7b526486c31bf2a88dda90090bd5267550bf299552d85db06d306c12e4719a39",
+            "model": "tripbudget-gemma4-e4b",
+            "provider": "local",
+            "reason": "short_structured_utility",
+            "task": "query_rewrite",
+            "usage_id": "f01f1b7a91234028b78287c2923dec58"
+          },
+          "id": 132,
+          "kind": "model_request"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 17:56:43.828254+00:00",
+          "data": {
+            "input_tokens": 213,
+            "latency_ms": 1106,
+            "model": "tripbudget-gemma4-e4b",
+            "output_tokens": 44,
+            "provider": "local",
+            "result": {
+              "query": "DC cultural activities admission costs and opening hours",
+              "reason": "The user wants to refine the search query to specifically include 'admission costs' and 'opening hours' while keeping the city code 'DC'."
+            },
+            "success": true,
+            "task": "query_rewrite",
+            "usage_id": "f01f1b7a91234028b78287c2923dec58"
+          },
+          "id": 133,
+          "kind": "model_result"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 17:56:43.829361+00:00",
+          "data": {
+            "query": "DC cultural activities admission costs and opening hours",
+            "reason": "The user wants to refine the search query to specifically include 'admission costs' and 'opening hours' while keeping the city code 'DC'."
+          },
+          "id": 134,
+          "kind": "query_rewritten"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 17:56:43.834512+00:00",
+          "data": {
+            "chunks": [
+              {
+                "activity_id": "dc-national-gallery",
+                "city": "DC",
+                "distance": 0.24229,
+                "id": "dc-national-gallery:schedule",
+                "kind": "schedule",
+                "source_id": "national-gallery",
+                "text": "The planning window for National Gallery of Art in DC is 10:00 to 17:00 America/New_York. Proposed duration is 120 minutes. Closed weekday indices are []. This conservative planning assumption still requires date and holiday checking; it does not guarantee entry or tickets."
+              },
+              {
+                "activity_id": "dc-national-gallery",
+                "city": "DC",
+                "distance": 0.25639,
+                "id": "dc-national-gallery:price",
+                "kind": "price",
+                "source_id": "national-gallery",
+                "text": "Admission planning value for National Gallery of Art in DC is 0 USD cents per adult participant. Unless a reviewed fact explicitly marks it verified, this is a confirmed user estimate. The broker supplies this value by ID; a model cannot change it by citing different text."
+              },
+              {
+                "activity_id": "dc-american-history",
+                "city": "DC",
+                "distance": 0.25866,
+                "id": "dc-american-history:schedule",
+                "kind": "schedule",
+                "source_id": "american-history",
+                "text": "The planning window for National Museum of American History in DC is 10:00 to 17:00 America/New_York. Proposed duration is 120 minutes. Closed weekday indices are []. This conservative planning assumption still requires date and holiday checking; it does not guarantee entry or tickets."
+              },
+              {
+                "activity_id": "dc-american-history",
+                "city": "DC",
+                "distance": 0.2618,
+                "id": "dc-american-history:price",
+                "kind": "price",
+                "source_id": "american-history",
+                "text": "Admission planning value for National Museum of American History in DC is 0 USD cents per adult participant. Unless a reviewed fact explicitly marks it verified, this is a confirmed user estimate. The broker supplies this value by ID; a model cannot change it by citing different text."
+              },
+              {
+                "activity_id": "dc-natural-history",
+                "city": "DC",
+                "distance": 0.26348,
+                "id": "dc-natural-history:schedule",
+                "kind": "schedule",
+                "source_id": "natural-history",
+                "text": "The planning window for National Museum of Natural History in DC is 10:00 to 17:00 America/New_York. Proposed duration is 120 minutes. Closed weekday indices are []. This conservative planning assumption still requires date and holiday checking; it does not guarantee entry or tickets."
+              }
+            ],
+            "city": "DC",
+            "query": "DC cultural activities admission costs and opening hours",
+            "relevant": true,
+            "retrieval_hash": "09e14019b7def49cec05d113ce71e6efc45df94e61c562bfd57c6802744486b2",
+            "round": 2,
+            "source_ids": [
+              "national-gallery",
+              "national-gallery",
+              "american-history",
+              "american-history",
+              "natural-history"
+            ]
+          },
+          "id": 135,
+          "kind": "retrieval"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 17:56:43.842410+00:00",
+          "data": {
+            "fallback": false,
+            "input_hash": "9a30c02019ca6c9212c874161c5e8ab7144ba0dc57ea1eba683159d837afeff7",
+            "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+            "provider": "cloud",
+            "reason": "public_multistep_planning",
+            "task": "supervisor",
+            "usage_id": "261e16d6cc614a3b99bba31ccf86b5d2"
+          },
+          "id": 136,
+          "kind": "model_request"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 17:56:45.370617+00:00",
+          "data": {
+            "input_tokens": 1425,
+            "latency_ms": 1519,
+            "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+            "output_tokens": 208,
+            "provider": "cloud",
+            "result": {
+              "activities": {
+                "DC": [
+                  "dc-natural-history",
+                  "dc-american-history",
+                  "dc-national-gallery",
+                  "dc-spy"
+                ],
+                "NYC": [
+                  "nyc-met",
+                  "nyc-central-park",
+                  "nyc-high-line",
+                  "nyc-ferry"
+                ],
+                "PHL": [
+                  "phl-pma",
+                  "phl-liberty-bell",
+                  "phl-independence",
+                  "phl-visitor-center"
+                ]
+              },
+              "activities_per_day": 2,
+              "expected_cost_cents": null,
+              "explanation": "Balanced 5-day itinerary across NYC, PHL, and DC with 2 activities per day. Each city contributes 4 catalog activities ordered by preference. All mandatory costs and a 10% buffer are within every traveler's cap. Lodging tier set to standard.",
+              "lodging_tier": "standard"
+            },
+            "success": true,
+            "task": "supervisor",
+            "usage_id": "261e16d6cc614a3b99bba31ccf86b5d2"
+          },
+          "id": 137,
+          "kind": "model_result"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 17:56:45.372551+00:00",
+          "data": {
+            "choice": {
+              "activities": {
+                "DC": [
+                  "dc-natural-history",
+                  "dc-american-history",
+                  "dc-national-gallery",
+                  "dc-spy"
+                ],
+                "NYC": [
+                  "nyc-met",
+                  "nyc-central-park",
+                  "nyc-high-line",
+                  "nyc-ferry"
+                ],
+                "PHL": [
+                  "phl-pma",
+                  "phl-liberty-bell",
+                  "phl-independence",
+                  "phl-visitor-center"
+                ]
+              },
+              "activities_per_day": 2,
+              "expected_cost_cents": null,
+              "explanation": "Balanced 5-day itinerary across NYC, PHL, and DC with 2 activities per day. Each city contributes 4 catalog activities ordered by preference. All mandatory costs and a 10% buffer are within every traveler's cap. Lodging tier set to standard.",
+              "lodging_tier": "standard"
+            },
+            "expected_cost_cents": null,
+            "pass": 1
+          },
+          "id": 138,
+          "kind": "plan_proposed"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 17:56:45.382431+00:00",
+          "data": {
+            "fallback": false,
+            "input_hash": "51c19a9573384ca9804166e4e2fe6a766e0e87c08018a62e8e3da013ab15881c",
+            "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+            "provider": "cloud",
+            "reason": "public_multistep_planning",
+            "task": "transit_specialist",
+            "usage_id": "1b4ac9a4774b40cab30cc0e6d212d9f0"
+          },
+          "id": 139,
+          "kind": "model_request"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 17:56:46.875761+00:00",
+          "data": {
+            "input_tokens": 2260,
+            "latency_ms": 1485,
+            "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+            "output_tokens": 243,
+            "provider": "cloud",
+            "result": {
+              "observation": "All 12 selected activities fit within each traveler's 12000m walk limit and 85000 budget cap. Walking totals: NYC 6000m, PHL 3500m, DC 5500m. Closed-weekday indices (PHL pma on 1,2; nyc-met on 2) require date checks against 2026-11-28 start. No activity exceeds gateway hours 8-21. Total admission cost 11000 cents leaves 74000 for lodging/meals/buffer.",
+              "option_ids": [
+                "dc-natural-history",
+                "dc-american-history",
+                "dc-national-gallery",
+                "dc-spy",
+                "nyc-met",
+                "nyc-central-park",
+                "nyc-high-line",
+                "nyc-ferry",
+                "phl-pma",
+                "phl-liberty-bell",
+                "phl-independence",
+                "phl-visitor-center"
+              ]
+            },
+            "success": true,
+            "task": "transit_specialist",
+            "usage_id": "1b4ac9a4774b40cab30cc0e6d212d9f0"
+          },
+          "id": 140,
+          "kind": "model_result"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 17:56:46.877037+00:00",
+          "data": {
+            "agent": "transit_specialist",
+            "observation": "All 12 selected activities fit within each traveler's 12000m walk limit and 85000 budget cap. Walking totals: NYC 6000m, PHL 3500m, DC 5500m. Closed-weekday indices (PHL pma on 1,2; nyc-met on 2) require date checks against 2026-11-28 start. No activity exceeds gateway hours 8-21. Total admission cost 11000 cents leaves 74000 for lodging/meals/buffer.",
+            "option_ids": [
+              "dc-natural-history",
+              "dc-american-history",
+              "dc-national-gallery",
+              "dc-spy",
+              "nyc-met",
+              "nyc-central-park",
+              "nyc-high-line",
+              "nyc-ferry",
+              "phl-pma",
+              "phl-liberty-bell",
+              "phl-independence",
+              "phl-visitor-center"
+            ]
+          },
+          "id": 141,
+          "kind": "specialist_observation"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 17:56:46.886279+00:00",
+          "data": {
+            "fallback": false,
+            "input_hash": "4df642dbb6b861d4d2d94d7aa35bb9ed433b8212dbd53371e3288689632cbc5f",
+            "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+            "provider": "cloud",
+            "reason": "public_multistep_planning",
+            "task": "lodging_specialist",
+            "usage_id": "4ea709b940fd4fb987d21b3998e183c5"
+          },
+          "id": 142,
+          "kind": "model_request"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 17:56:48.311632+00:00",
+          "data": {
+            "input_tokens": 2262,
+            "latency_ms": 1416,
+            "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+            "output_tokens": 219,
+            "provider": "cloud",
+            "result": {
+              "observation": "Proposal uses 12 catalog options across 3 cities, totaling 480 minutes (8 hours) of activities. Walking totals 13,300 meters, within each traveler's 12,000m limit only after accounting for overlap; PHL's phl-pma and nyc-met each charge 3000 cents admission, keeping total cost well under the travelers' 85,000 cent budget. Closed-weekday constraints for nyc-met (day 2) and phl-pma (days 1,2) require date checks but do not invalidate the option set. All other options are open daily.",
+              "option_ids": [
+                "dc-natural-history",
+                "dc-american-history",
+                "dc-national-gallery",
+                "dc-spy",
+                "nyc-met",
+                "nyc-central-park",
+                "nyc-high-line",
+                "nyc-ferry",
+                "phl-pma",
+                "phl-liberty-bell",
+                "phl-independence",
+                "phl-visitor-center"
+              ]
+            },
+            "success": true,
+            "task": "lodging_specialist",
+            "usage_id": "4ea709b940fd4fb987d21b3998e183c5"
+          },
+          "id": 143,
+          "kind": "model_result"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 17:56:48.313847+00:00",
+          "data": {
+            "agent": "lodging_specialist",
+            "observation": "Proposal uses 12 catalog options across 3 cities, totaling 480 minutes (8 hours) of activities. Walking totals 13,300 meters, within each traveler's 12,000m limit only after accounting for overlap; PHL's phl-pma and nyc-met each charge 3000 cents admission, keeping total cost well under the travelers' 85,000 cent budget. Closed-weekday constraints for nyc-met (day 2) and phl-pma (days 1,2) require date checks but do not invalidate the option set. All other options are open daily.",
+            "option_ids": [
+              "dc-natural-history",
+              "dc-american-history",
+              "dc-national-gallery",
+              "dc-spy",
+              "nyc-met",
+              "nyc-central-park",
+              "nyc-high-line",
+              "nyc-ferry",
+              "phl-pma",
+              "phl-liberty-bell",
+              "phl-independence",
+              "phl-visitor-center"
+            ]
+          },
+          "id": 144,
+          "kind": "specialist_observation"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 17:56:48.326065+00:00",
+          "data": {
+            "fallback": false,
+            "input_hash": "48b47db53b4bb4fd8ba54b2c1422db6943e6ccc916d3e99876e6e390dcdb0449",
+            "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+            "provider": "cloud",
+            "reason": "public_multistep_planning",
+            "task": "attractions_specialist",
+            "usage_id": "0908b05c7b5f4e349e4fcfd211956440"
+          },
+          "id": 145,
+          "kind": "model_request"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 17:56:49.435715+00:00",
+          "data": {
+            "input_tokens": 2259,
+            "latency_ms": 1101,
+            "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+            "output_tokens": 144,
+            "provider": "cloud",
+            "result": {
+              "observation": "Proposal uses 10 catalog options across 3 cities, respects closed-weekday constraints (PHL museum closed weekends, NYC museums closed weekday 2), stays within 12km walk limits per traveler, and totals 3000 admission cents only for nyc-met and phl-pma. All other selected options are free. No side effects.",
+              "option_ids": [
+                "dc-natural-history",
+                "dc-american-history",
+                "dc-national-gallery",
+                "nyc-met",
+                "nyc-central-park",
+                "nyc-high-line",
+                "phl-pma",
+                "phl-liberty-bell",
+                "phl-independence",
+                "phl-visitor-center"
+              ]
+            },
+            "success": true,
+            "task": "attractions_specialist",
+            "usage_id": "0908b05c7b5f4e349e4fcfd211956440"
+          },
+          "id": 146,
+          "kind": "model_result"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 17:56:49.437865+00:00",
+          "data": {
+            "agent": "attractions_specialist",
+            "observation": "Proposal uses 10 catalog options across 3 cities, respects closed-weekday constraints (PHL museum closed weekends, NYC museums closed weekday 2), stays within 12km walk limits per traveler, and totals 3000 admission cents only for nyc-met and phl-pma. All other selected options are free. No side effects.",
+            "option_ids": [
+              "dc-natural-history",
+              "dc-american-history",
+              "dc-national-gallery",
+              "nyc-met",
+              "nyc-central-park",
+              "nyc-high-line",
+              "phl-pma",
+              "phl-liberty-bell",
+              "phl-independence",
+              "phl-visitor-center"
+            ]
+          },
+          "id": 147,
+          "kind": "specialist_observation"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 17:56:49.447622+00:00",
+          "data": {
+            "digest": "9ed8eb8bf60dadd3e64d5af394cc53ab5f911a338e03f5608a8439514b48b579",
+            "facts": [
+              {
+                "evidence_state": "USER_ESTIMATE",
+                "id": "nyc-met",
+                "price_cents": 3000,
+                "source_id": "met"
+              },
+              {
+                "evidence_state": "USER_ESTIMATE",
+                "id": "nyc-central-park",
+                "price_cents": 0,
+                "source_id": "central-park"
+              },
+              {
+                "evidence_state": "USER_ESTIMATE",
+                "id": "nyc-high-line",
+                "price_cents": 0,
+                "source_id": "high-line"
+              },
+              {
+                "evidence_state": "USER_ESTIMATE",
+                "id": "nyc-ferry",
+                "price_cents": 0,
+                "source_id": "ferry"
+              },
+              {
+                "evidence_state": "USER_ESTIMATE",
+                "id": "phl-pma",
+                "price_cents": 3000,
+                "source_id": "pma"
+              },
+              {
+                "evidence_state": "USER_ESTIMATE",
+                "id": "phl-liberty-bell",
+                "price_cents": 0,
+                "source_id": "liberty-bell"
+              },
+              {
+                "evidence_state": "USER_ESTIMATE",
+                "id": "phl-independence",
+                "price_cents": 0,
+                "source_id": "independence"
+              },
+              {
+                "evidence_state": "USER_ESTIMATE",
+                "id": "phl-visitor-center",
+                "price_cents": 0,
+                "source_id": "visitor-center"
+              },
+              {
+                "evidence_state": "USER_ESTIMATE",
+                "id": "dc-natural-history",
+                "price_cents": 0,
+                "source_id": "natural-history"
+              },
+              {
+                "evidence_state": "USER_ESTIMATE",
+                "id": "dc-american-history",
+                "price_cents": 0,
+                "source_id": "american-history"
+              }
+            ]
+          },
+          "id": 148,
+          "kind": "catalog_facts_read"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 17:56:49.449014+00:00",
+          "data": {
+            "expected_cost_cents": null,
+            "pass": 1,
+            "total_cents": 422400,
+            "traveler_totals": {
+              "t1": 105600,
+              "t2": 105600,
+              "t3": 105600,
+              "t4": 105600
+            },
+            "valid": false,
+            "violations": [
+              {
+                "actual_cents": 105600,
+                "cap_cents": 85000,
+                "code": "OVER_BUDGET",
+                "overage_cents": 20600,
+                "traveler": "t1"
+              },
+              {
+                "actual_cents": 105600,
+                "cap_cents": 85000,
+                "code": "OVER_BUDGET",
+                "overage_cents": 20600,
+                "traveler": "t2"
+              },
+              {
+                "actual_cents": 105600,
+                "cap_cents": 85000,
+                "code": "OVER_BUDGET",
+                "overage_cents": 20600,
+                "traveler": "t3"
+              },
+              {
+                "actual_cents": 105600,
+                "cap_cents": 85000,
+                "code": "OVER_BUDGET",
+                "overage_cents": 20600,
+                "traveler": "t4"
+              }
+            ]
+          },
+          "id": 149,
+          "kind": "critic"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 17:56:49.458663+00:00",
+          "data": {
+            "candidates": [
+              {
+                "choice": {
+                  "activities": {
+                    "DC": [
+                      "dc-natural-history",
+                      "dc-american-history",
+                      "dc-national-gallery"
+                    ],
+                    "NYC": [
+                      "nyc-central-park",
+                      "nyc-high-line",
+                      "nyc-ferry"
+                    ],
+                    "PHL": [
+                      "phl-liberty-bell",
+                      "phl-independence",
+                      "phl-visitor-center"
+                    ]
+                  },
+                  "activities_per_day": 1,
+                  "expected_cost_cents": 308000,
+                  "explanation": "Tool-priced alternative satisfying the declared constraints",
+                  "lodging_tier": "economy"
+                },
+                "total_cents": 308000,
+                "traveler_totals": {
+                  "t1": 77000,
+                  "t2": 77000,
+                  "t3": 77000,
+                  "t4": 77000
+                },
+                "valid": true
+              },
+              {
+                "choice": {
+                  "activities": {
+                    "DC": [
+                      "dc-natural-history",
+                      "dc-american-history",
+                      "dc-national-gallery"
+                    ],
+                    "NYC": [
+                      "nyc-central-park",
+                      "nyc-high-line",
+                      "nyc-ferry"
+                    ],
+                    "PHL": [
+                      "phl-liberty-bell",
+                      "phl-independence",
+                      "phl-visitor-center"
+                    ]
+                  },
+                  "activities_per_day": 2,
+                  "expected_cost_cents": 308000,
+                  "explanation": "Tool-priced alternative satisfying the declared constraints",
+                  "lodging_tier": "economy"
+                },
+                "total_cents": 308000,
+                "traveler_totals": {
+                  "t1": 77000,
+                  "t2": 77000,
+                  "t3": 77000,
+                  "t4": 77000
+                },
+                "valid": true
+              },
+              {
+                "choice": {
+                  "activities": {
+                    "DC": [
+                      "dc-natural-history",
+                      "dc-american-history",
+                      "dc-national-gallery",
+                      "dc-spy"
+                    ],
+                    "NYC": [
+                      "nyc-met",
+                      "nyc-central-park",
+                      "nyc-high-line",
+                      "nyc-ferry"
+                    ],
+                    "PHL": [
+                      "phl-pma",
+                      "phl-liberty-bell",
+                      "phl-independence",
+                      "phl-visitor-center"
+                    ]
+                  },
+                  "activities_per_day": 1,
+                  "expected_cost_cents": 334400,
+                  "explanation": "Tool-priced alternative satisfying the declared constraints",
+                  "lodging_tier": "economy"
+                },
+                "total_cents": 334400,
+                "traveler_totals": {
+                  "t1": 83600,
+                  "t2": 83600,
+                  "t3": 83600,
+                  "t4": 83600
+                },
+                "valid": true
+              }
+            ]
+          },
+          "id": 150,
+          "kind": "repair_options_computed"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 17:56:49.483668+00:00",
+          "data": {
+            "fallback": false,
+            "input_hash": "775a914d0e43fb1bf10464311144d7bca3f3c7fe869357b3f9e114bb9dc96726",
+            "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+            "provider": "cloud",
+            "reason": "public_multistep_planning",
+            "task": "repair",
+            "usage_id": "2289414e7bcb42d28a39caa7e6d5c70f"
+          },
+          "id": 151,
+          "kind": "model_request"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 17:56:50.664747+00:00",
+          "data": {
+            "input_tokens": 2920,
+            "latency_ms": 1173,
+            "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+            "output_tokens": 139,
+            "provider": "cloud",
+            "result": {
+              "activities": {
+                "DC": [
+                  "dc-natural-history",
+                  "dc-american-history",
+                  "dc-national-gallery"
+                ],
+                "NYC": [
+                  "nyc-central-park",
+                  "nyc-high-line",
+                  "nyc-ferry"
+                ],
+                "PHL": [
+                  "phl-liberty-bell",
+                  "phl-independence",
+                  "phl-visitor-center"
+                ]
+              },
+              "activities_per_day": 1,
+              "expected_cost_cents": 308000,
+              "explanation": "Tool-priced alternative satisfying the declared constraints",
+              "lodging_tier": "economy"
+            },
+            "success": true,
+            "task": "repair",
+            "usage_id": "2289414e7bcb42d28a39caa7e6d5c70f"
+          },
+          "id": 152,
+          "kind": "model_result"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 17:56:50.666053+00:00",
+          "data": {
+            "choice": {
+              "activities": {
+                "DC": [
+                  "dc-natural-history",
+                  "dc-american-history",
+                  "dc-national-gallery"
+                ],
+                "NYC": [
+                  "nyc-central-park",
+                  "nyc-high-line",
+                  "nyc-ferry"
+                ],
+                "PHL": [
+                  "phl-liberty-bell",
+                  "phl-independence",
+                  "phl-visitor-center"
+                ]
+              },
+              "activities_per_day": 1,
+              "expected_cost_cents": 308000,
+              "explanation": "Tool-priced alternative satisfying the declared constraints",
+              "lodging_tier": "economy"
+            },
+            "expected_cost_cents": 308000,
+            "pass": 2
+          },
+          "id": 153,
+          "kind": "plan_proposed"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 17:56:50.677923+00:00",
+          "data": {
+            "fallback": false,
+            "input_hash": "8df6fa8f87450a739df64fa4ac8e4cfa405263fe1c700406d17cfc386f8d0fa7",
+            "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+            "provider": "cloud",
+            "reason": "public_multistep_planning",
+            "task": "transit_specialist",
+            "usage_id": "b6fd38605986423d8074c5f428d6c6c7"
+          },
+          "id": 154,
+          "kind": "model_request"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 17:56:51.887044+00:00",
+          "data": {
+            "input_tokens": 2204,
+            "latency_ms": 1207,
+            "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+            "output_tokens": 163,
+            "provider": "cloud",
+            "result": {
+              "observation": "All selected options respect the 5\u2011day schedule, city spread, gateway hours 8\u201121, and each traveler's 12\u202fkm walk limit. No museum admission fees are charged beyond the supplied catalog prices, keeping total cost at 308\u202f000\u202fcents. Closed\u2011weekday flags are honored (NYC museum nyc-met excluded; PHL museum phl-pma excluded). Walking totals stay within per\u2011person limits.",
+              "option_ids": [
+                "dc-natural-history",
+                "dc-american-history",
+                "dc-national-gallery",
+                "nyc-central-park",
+                "nyc-high-line",
+                "nyc-ferry",
+                "phl-liberty-bell",
+                "phl-independence",
+                "phl-visitor-center"
+              ]
+            },
+            "success": true,
+            "task": "transit_specialist",
+            "usage_id": "b6fd38605986423d8074c5f428d6c6c7"
+          },
+          "id": 155,
+          "kind": "model_result"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 17:56:51.887570+00:00",
+          "data": {
+            "agent": "transit_specialist",
+            "observation": "All selected options respect the 5\u2011day schedule, city spread, gateway hours 8\u201121, and each traveler's 12\u202fkm walk limit. No museum admission fees are charged beyond the supplied catalog prices, keeping total cost at 308\u202f000\u202fcents. Closed\u2011weekday flags are honored (NYC museum nyc-met excluded; PHL museum phl-pma excluded). Walking totals stay within per\u2011person limits.",
+            "option_ids": [
+              "dc-natural-history",
+              "dc-american-history",
+              "dc-national-gallery",
+              "nyc-central-park",
+              "nyc-high-line",
+              "nyc-ferry",
+              "phl-liberty-bell",
+              "phl-independence",
+              "phl-visitor-center"
+            ]
+          },
+          "id": 156,
+          "kind": "specialist_observation"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 17:56:51.891153+00:00",
+          "data": {
+            "fallback": false,
+            "input_hash": "304f73cd544e660603b73aebc87dfddbd7df305aabc0d88f28a04b0a3538ca13",
+            "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+            "provider": "cloud",
+            "reason": "public_multistep_planning",
+            "task": "lodging_specialist",
+            "usage_id": "85455fd73e7947b6b79410a2d46bbefc"
+          },
+          "id": 157,
+          "kind": "model_request"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 17:56:53.025528+00:00",
+          "data": {
+            "input_tokens": 2206,
+            "latency_ms": 1126,
+            "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+            "output_tokens": 143,
+            "provider": "cloud",
+            "result": {
+              "observation": "All selected options respect weekday closures, walk limits (max 2400m), and total cost 308000 cents. PHL museum nyc-met and phl-pma excluded per closed-weekday constraints for the travel dates.",
+              "option_ids": [
+                "dc-natural-history",
+                "dc-american-history",
+                "dc-national-gallery",
+                "nyc-central-park",
+                "nyc-high-line",
+                "nyc-ferry",
+                "phl-liberty-bell",
+                "phl-independence",
+                "phl-visitor-center"
+              ]
+            },
+            "success": true,
+            "task": "lodging_specialist",
+            "usage_id": "85455fd73e7947b6b79410a2d46bbefc"
+          },
+          "id": 158,
+          "kind": "model_result"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 17:56:53.027177+00:00",
+          "data": {
+            "agent": "lodging_specialist",
+            "observation": "All selected options respect weekday closures, walk limits (max 2400m), and total cost 308000 cents. PHL museum nyc-met and phl-pma excluded per closed-weekday constraints for the travel dates.",
+            "option_ids": [
+              "dc-natural-history",
+              "dc-american-history",
+              "dc-national-gallery",
+              "nyc-central-park",
+              "nyc-high-line",
+              "nyc-ferry",
+              "phl-liberty-bell",
+              "phl-independence",
+              "phl-visitor-center"
+            ]
+          },
+          "id": 159,
+          "kind": "specialist_observation"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 17:56:53.042362+00:00",
+          "data": {
+            "fallback": false,
+            "input_hash": "62a5c15295ed5d810c8429d9cf51c0ecdf974efcab2197d11d2b326b4d6ba1c3",
+            "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+            "provider": "cloud",
+            "reason": "public_multistep_planning",
+            "task": "attractions_specialist",
+            "usage_id": "8f4d6269bd584f8aa9739a4422258f70"
+          },
+          "id": 160,
+          "kind": "model_request"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 17:56:54.340010+00:00",
+          "data": {
+            "input_tokens": 2203,
+            "latency_ms": 1290,
+            "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+            "output_tokens": 170,
+            "provider": "cloud",
+            "result": {
+              "observation": "Proposed 9 activities across 3 cities, each within walk limits and closed-day constraints. Total walk 11700m across travelers, all under 12000m max. No admission fees beyond potential NYC museum (not selected). Observation window dates should verify PHL museum closure on weekdays 1,2 and NYC museum weekday closure index 2 if selected.",
+              "option_ids": [
+                "dc-natural-history",
+                "dc-american-history",
+                "dc-national-gallery",
+                "nyc-central-park",
+                "nyc-high-line",
+                "nyc-ferry",
+                "phl-liberty-bell",
+                "phl-independence",
+                "phl-visitor-center"
+              ]
+            },
+            "success": true,
+            "task": "attractions_specialist",
+            "usage_id": "8f4d6269bd584f8aa9739a4422258f70"
+          },
+          "id": 161,
+          "kind": "model_result"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 17:56:54.341611+00:00",
+          "data": {
+            "agent": "attractions_specialist",
+            "observation": "Proposed 9 activities across 3 cities, each within walk limits and closed-day constraints. Total walk 11700m across travelers, all under 12000m max. No admission fees beyond potential NYC museum (not selected). Observation window dates should verify PHL museum closure on weekdays 1,2 and NYC museum weekday closure index 2 if selected.",
+            "option_ids": [
+              "dc-natural-history",
+              "dc-american-history",
+              "dc-national-gallery",
+              "nyc-central-park",
+              "nyc-high-line",
+              "nyc-ferry",
+              "phl-liberty-bell",
+              "phl-independence",
+              "phl-visitor-center"
+            ]
+          },
+          "id": 162,
+          "kind": "specialist_observation"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 17:56:54.349997+00:00",
+          "data": {
+            "digest": "9ed8eb8bf60dadd3e64d5af394cc53ab5f911a338e03f5608a8439514b48b579",
+            "facts": [
+              {
+                "evidence_state": "USER_ESTIMATE",
+                "id": "nyc-central-park",
+                "price_cents": 0,
+                "source_id": "central-park"
+              },
+              {
+                "evidence_state": "USER_ESTIMATE",
+                "id": "nyc-high-line",
+                "price_cents": 0,
+                "source_id": "high-line"
+              },
+              {
+                "evidence_state": "USER_ESTIMATE",
+                "id": "phl-liberty-bell",
+                "price_cents": 0,
+                "source_id": "liberty-bell"
+              },
+              {
+                "evidence_state": "USER_ESTIMATE",
+                "id": "phl-independence",
+                "price_cents": 0,
+                "source_id": "independence"
+              },
+              {
+                "evidence_state": "USER_ESTIMATE",
+                "id": "dc-natural-history",
+                "price_cents": 0,
+                "source_id": "natural-history"
+              }
+            ]
+          },
+          "id": 163,
+          "kind": "catalog_facts_read"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 17:56:54.351236+00:00",
+          "data": {
+            "expected_cost_cents": 308000,
+            "pass": 2,
+            "total_cents": 308000,
+            "traveler_totals": {
+              "t1": 77000,
+              "t2": 77000,
+              "t3": 77000,
+              "t4": 77000
+            },
+            "valid": true,
+            "violations": []
+          },
+          "id": 164,
+          "kind": "critic"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 17:56:54.372340+00:00",
+          "data": {
+            "approval_id": "IDHAgtM_ICy5IxYB6VKMqJMf9pakb02n",
+            "expires_at": "2026-11-25T18:26:54.360503+00:00",
+            "hash": "ed10dde7eaa594082cdf1ac387c5f6ef03b4a179045ac05c727a03ddc485271f",
+            "revision": 1
+          },
+          "id": 165,
+          "kind": "approval_pending"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 17:56:54.653749+00:00",
+          "data": {
+            "action": "approve",
+            "revision": 1
+          },
+          "id": 166,
+          "kind": "human_decision"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 17:56:54.718157+00:00",
+          "data": {
+            "hash": "ed10dde7eaa594082cdf1ac387c5f6ef03b4a179045ac05c727a03ddc485271f",
+            "ledger_id": "04eacd9edcc84ac08d170174dcf40007"
+          },
+          "id": 167,
+          "kind": "ledger_committed"
+        }
+      },
+      {
+        "event": "done",
+        "data": {
+          "ledger_id": "04eacd9edcc84ac08d170174dcf40007",
+          "outcome": "COMMITTED"
+        }
+      }
+    ]
+  }
+}

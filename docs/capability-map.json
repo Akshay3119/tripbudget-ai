@@ -1,0 +1,235 @@
+[
+  {
+    "category": "Advanced Feature 1",
+    "claim": "Long-term confirmed preference memory",
+    "references": [
+      {
+        "path": "src/tripbudget/persistence.py",
+        "symbol": "Store.save_preferences",
+        "start": 230,
+        "end": 245
+      },
+      {
+        "path": "src/tripbudget/graph.py",
+        "symbol": "Workflow.build_graph.load",
+        "start": 50,
+        "end": 72
+      }
+    ],
+    "notes": "Versioned owner/group scope; explicit confirmation; actual process replacement in video"
+  },
+  {
+    "category": "Advanced Feature 2",
+    "claim": "Planning and self-correction",
+    "references": [
+      {
+        "path": "src/tripbudget/graph.py",
+        "symbol": "Workflow.build_graph.supervisor",
+        "start": 90,
+        "end": 160
+      },
+      {
+        "path": "src/tripbudget/graph.py",
+        "symbol": "Workflow.build_graph.assemble",
+        "start": 211,
+        "end": 238
+      },
+      {
+        "path": "src/tripbudget/planning.py",
+        "symbol": "enumerate_repairs",
+        "start": 205,
+        "end": 245
+      }
+    ],
+    "notes": "Real model choice \u2192 deterministic critique \u2192 indexed tool-priced repair \u2192 recheck; at most two repairs"
+  },
+  {
+    "category": "Advanced Feature 3",
+    "claim": "Durable human-in-the-loop approval",
+    "references": [
+      {
+        "path": "src/tripbudget/graph.py",
+        "symbol": "Workflow.build_graph.approval",
+        "start": 287,
+        "end": 292
+      },
+      {
+        "path": "src/tripbudget/persistence.py",
+        "symbol": "Store.record_decision",
+        "start": 277,
+        "end": 308
+      },
+      {
+        "path": "src/tripbudget/persistence.py",
+        "symbol": "Store.commit_approved",
+        "start": 310,
+        "end": 350
+      }
+    ],
+    "notes": "Official interrupt/checkpoint; owner/hash/revision/expiry; one authorized ledger"
+  },
+  {
+    "category": "Advanced Feature 4",
+    "claim": "Iterative RAG and source verification",
+    "references": [
+      {
+        "path": "src/tripbudget/retrieval.py",
+        "symbol": "Corpus.retrieve_and_refine",
+        "start": 75,
+        "end": 115
+      },
+      {
+        "path": "src/tripbudget/evidence.py",
+        "symbol": "Catalog.option",
+        "start": 25,
+        "end": 41
+      }
+    ],
+    "notes": "Actual BGE/Chroma refinement; reviewed price snapshots separate from confirmed estimates"
+  },
+  {
+    "category": "Advanced Feature 5",
+    "claim": "Hybrid cloud/local inference",
+    "references": [
+      {
+        "path": "src/tripbudget/routing.py",
+        "symbol": "select_route",
+        "start": 12,
+        "end": 23
+      },
+      {
+        "path": "src/tripbudget/providers.py",
+        "symbol": "Providers.complete",
+        "start": 32,
+        "end": 189
+      }
+    ],
+    "notes": "Real NVIDIA + E4B local demo; private input cannot fall back externally; no cloud laptop bridge claimed"
+  },
+  {
+    "category": "Guardrail 1",
+    "claim": "Accounting, schedule and immutable evidence",
+    "references": [
+      {
+        "path": "src/tripbudget/budget.py",
+        "symbol": "financial_violations",
+        "start": 55,
+        "end": 76
+      },
+      {
+        "path": "src/tripbudget/planning.py",
+        "symbol": "validate_for_commit",
+        "start": 194,
+        "end": 202
+      },
+      {
+        "path": "src/tripbudget/schedule.py",
+        "symbol": "schedule_violations",
+        "start": 20,
+        "end": 62
+      }
+    ],
+    "notes": "Every cap/night/meal/room/transfer; integer cents; commit revalidation"
+  },
+  {
+    "category": "Guardrail 2",
+    "claim": "Owner and tool/egress permissions",
+    "references": [
+      {
+        "path": "src/tripbudget/auth.py",
+        "symbol": "principal",
+        "start": 37,
+        "end": 61
+      },
+      {
+        "path": "src/tripbudget/outbound.py",
+        "symbol": "validate_url",
+        "start": 27,
+        "end": 42
+      },
+      {
+        "path": "src/tripbudget/tools.py",
+        "symbol": "authorize_tool",
+        "start": 11,
+        "end": 13
+      }
+    ],
+    "notes": "Read-only capabilities; registered public HTTPS; owner predicates; no mail/shell/booking authority"
+  },
+  {
+    "category": "Guardrail 3",
+    "claim": "Persisted budgets and worker ownership",
+    "references": [
+      {
+        "path": "src/tripbudget/resources.py",
+        "symbol": "Budget.reserve",
+        "start": 22,
+        "end": 69
+      },
+      {
+        "path": "src/tripbudget/persistence.py",
+        "symbol": "Store.invocation",
+        "start": 169,
+        "end": 193
+      }
+    ],
+    "notes": "Session-bound advisory lock; call/token/time quotas and conservative unknown usage"
+  },
+  {
+    "category": "Adversarial Evals",
+    "claim": "Ten actual attack types, twice",
+    "references": [
+      {
+        "path": "evaluation/run_attacks.py",
+        "symbol": "main",
+        "start": 19,
+        "end": 190
+      }
+    ],
+    "notes": "20 attempts; exact model exposure, full real traces and mitigations in report"
+  },
+  {
+    "category": "Evaluation Harness",
+    "claim": "Custom paired tasks, metrics and independent audit",
+    "references": [
+      {
+        "path": "evaluation/run_eval.py",
+        "symbol": "execute",
+        "start": 51,
+        "end": 83
+      },
+      {
+        "path": "evaluation/oracle.py",
+        "symbol": "audit",
+        "start": 8,
+        "end": 110
+      },
+      {
+        "path": "evaluation/build_report.py",
+        "symbol": "main",
+        "start": 30,
+        "end": 372
+      }
+    ],
+    "notes": "154 logical evaluation units; fixtures separately labeled; tokens/session and weekly cost"
+  },
+  {
+    "category": "Deployment / Persistence",
+    "claim": "Cloud Run service alternative + external PostgreSQL",
+    "references": [
+      {
+        "path": "src/tripbudget/persistence.py",
+        "symbol": "Store.migrate",
+        "start": 138,
+        "end": 142
+      },
+      {
+        "path": "src/tripbudget/graph.py",
+        "symbol": "Workflow.build_graph",
+        "start": 49,
+        "end": 363
+      }
+    ],
+    "notes": "Dockerfile; infra/cloudrun.yaml; compose.yaml; official AsyncPostgresSaver; IAM-private deployed smoke"
+  }
+]

@@ -1,0 +1,8 @@
+{
+  "database": "a4-tripbudget",
+  "region": "us-central1",
+  "database_version": "POSTGRES_16",
+  "tier": "db-f1-micro",
+  "runtime_role": "DML on application and official checkpoint tables; no schema CREATE",
+  "secrets": "dedicated a4-tripbudget-*; never in source"
+}

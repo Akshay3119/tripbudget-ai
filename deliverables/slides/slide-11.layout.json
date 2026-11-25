@@ -1,0 +1,6 @@
+{"schema":"openai.presentation.layout/v5","unit":"px","slide":{"id":"sl/t6oumu","index":10,"layout":{"id":"ly/36xgzqx4","name":"Blank"},"backgroundColor":"rgba(246,247,240,1)","position":{"left":0,"top":0,"width":1280,"height":720}},
+"elements":[
+{"id":"sh/8vepc36t","kind":"textbox","position":{"left":66,"top":48,"width":1148,"height":100},"text":"Measured planning: repair changes completion","style":{"fontSize":43,"typeface":"Arial","color":"#123D34","bold":true,"alignment":"left"},"geometry":"rect"},
+{"id":"tb/gjq58r6l","kind":"table","position":{"left":68,"top":190,"width":1144,"height":254},"text":"Condition / sample\tFeasible\tInfeasible\tMissing data\nNo repair · 40 runs\t4/24 (16.7%)\t8/8\t8/8\nRepair enabled · 40\t22/24 (91.7%)\t8/8\t8/8\nPer-repeat feasible rate\t100% / 83.3%\tTwo repeats\tSame safety gates","rows":4,"cols":4},
+{"id":"sh/mtw7aton","kind":"textbox","position":{"left":70,"top":486,"width":1136,"height":140},"text":"18/18 initially invalid corrected cases repaired successfully. Two other feasible runs stopped on provider failures before a first critic. Independent audits: 26/26 emitted plans. Two repeats are a small sample.","style":{"fontSize":26,"typeface":"Arial","color":"#365148","alignment":"left"},"geometry":"rect"}
+]}

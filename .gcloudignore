@@ -1,0 +1,11 @@
+.gcloudignore
+.git
+.env
+.env.*
+.secrets
+.runtime
+.cache
+.venv
+data
+deliverables
+__pycache__

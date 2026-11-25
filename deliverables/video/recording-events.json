@@ -1,0 +1,81 @@
+{
+  "actual_runtime": true,
+  "captions": "editorial annotation only; no model/tool responses replaced",
+  "segments": [
+    {
+      "seconds": 0.89,
+      "title": "TripBudgetAI | Actual operating application",
+      "text": "Solo CSCI599 capstone. Five advanced features: durable memory, self-correction, human approval, iterative RAG and hybrid inference. No bookings or payments."
+    },
+    {
+      "seconds": 25.08,
+      "title": "1. Local-only structured preference extraction",
+      "text": "This synthetic note goes to Gemma 4 E4B on this Mac. It has no cloud fallback and cannot write memory. The candidate must be reviewed and confirmed."
+    },
+    {
+      "seconds": 65.15,
+      "title": "2. Explicitly confirmed long-term memory",
+      "text": "Only allowlisted diet, walking and category fields are saved. PostgreSQL versions the preference for this authenticated organizer and group. A process replacement comes next."
+    },
+    {
+      "seconds": 95.07,
+      "title": "3. Plan, observe, critique and revise",
+      "text": "Four travelers, five days, NYC\u2013PHL\u2013DC, $850 per person. The real model proposes options; Python computes every meal, room, transfer, admission and 10% contingency."
+    },
+    {
+      "seconds": 121.62,
+      "title": "Actual critique and repair trace",
+      "text": "Inspect the durable events: retrieval/query rewrite, cloud planning, exact cost violations, a model-selected tool-validated alternative, and a successful recheck. Advisory prose cannot alter prices."
+    },
+    {
+      "seconds": 170.09,
+      "title": "4. Durable human-in-the-loop pause",
+      "text": "This exact proposal is hash-bound, versioned and expiring. No ledger exists yet. The serving process will now terminate while this approval is pending."
+    },
+    {
+      "seconds": 195.13,
+      "title": "Serving process terminated",
+      "text": "The UI is showing its last rendered card. The process is stopped; proposal, checkpoint and confirmed preferences remain in PostgreSQL."
+    },
+    {
+      "seconds": 207.02,
+      "title": "Fresh process + fresh login; memory and approval restored",
+      "text": "The boot ID changed. The new login reloads the saved vegetarian / 6000m preference. The same pending proposal and hash return from external storage, without rerunning the models."
+    },
+    {
+      "seconds": 255.03,
+      "title": "Human approves the exact proposal",
+      "text": "Approval is an authenticated HTTP action. Commit reconstructs the plan and checks the hash, current revision, expiry and every hard constraint inside a database transaction."
+    },
+    {
+      "seconds": 285.04,
+      "title": "5. Evidence-aware iterative RAG and source verification",
+      "text": "BGE embeddings + Chroma retrieve actual source chunks; insufficient price/schedule coverage triggers a real query rewrite. Only reviewed source snapshots support verified prices. Lodging, meals and windows remain explicit estimates."
+    },
+    {
+      "seconds": 320.09,
+      "title": "Guardrail edge case: impossible cap + unauthorized approval",
+      "text": "A $50 per-person cap cannot cover five days of mandatory meals. The request also tries to override approval. Code enforces the lower bound; user prose cannot change money or grant authority."
+    },
+    {
+      "seconds": 365.02,
+      "title": "Observed outcome: PROVEN INFEASIBLE",
+      "text": "The mandatory-cost proof stops this request. No plan is certified and no ledger is committed. Separate real retrieved-document and private-note attacks are included with full traces in the evaluation report."
+    },
+    {
+      "seconds": 395.05,
+      "title": "Scope and remaining limitations",
+      "text": "Planning estimates are not ticket availability or accessibility guarantees. Real model/provider failures are retained in the report. The app does not book, pay, email or execute arbitrary code. Source, tests, traces and deployment recipe accompany this recording."
+    }
+  ],
+  "old_boot": "Release 1.0.0 \u00b7 local \u00b7 boot f3ee2c638f01e9b9",
+  "episode": "268c5558d33f4d81ab6d31e5b70911c8",
+  "terminated_at": 195.13,
+  "new_boot": "Release 1.0.0 \u00b7 local \u00b7 boot f08ca02ec7e0005e",
+  "restored_preferences": {
+    "diet": "vegetarian",
+    "walking": "6000"
+  },
+  "committed_at": 255.91,
+  "duration_recording_seconds": 425.0
+}

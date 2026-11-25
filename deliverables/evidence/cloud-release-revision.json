@@ -1,0 +1,40 @@
+{
+  "metadata": {
+    "name": "a4-tripbudget-00002-7tg"
+  },
+  "status": {
+    "conditions": [
+      {
+        "lastTransitionTime": "2026-11-25T18:39:34.582466Z",
+        "message": "Deploying revision succeeded in 31.31s.",
+        "status": "True",
+        "type": "Ready"
+      },
+      {
+        "lastTransitionTime": "2026-11-25T18:39:34.715919Z",
+        "severity": "Info",
+        "status": "True",
+        "type": "Active"
+      },
+      {
+        "lastTransitionTime": "2026-11-25T18:39:34.519587Z",
+        "message": "Containers became healthy in 13.31s.",
+        "status": "True",
+        "type": "ContainerHealthy"
+      },
+      {
+        "lastTransitionTime": "2026-11-25T18:39:19.198238Z",
+        "message": "Container image import completed in 15.29s.",
+        "status": "True",
+        "type": "ContainerReady"
+      },
+      {
+        "lastTransitionTime": "2026-11-25T18:39:20.858148Z",
+        "message": "Provisioning imported containers completed in 1.66s. Checking container health. This will wait for up to 4m for the configured startup probe, including an initial delay of 0s.",
+        "status": "True",
+        "type": "ResourcesAvailable"
+      }
+    ],
+    "imageDigest": "us-central1-docker.pkg.dev/csci599-a3-hermes-1029/a4-tripbudget/app@sha256:b4155d295e3232bd40c5d1664b4a1f421659d68a01cc2cee40bf14c9210cd4f8"
+  }
+}

@@ -1,0 +1,6 @@
+{"city": "NYC", "kind": "mcp_discovery", "at": "2026-11-25T18:16:23.004218+00:00", "episode": "79dfc525c52447bc84e944a49ab3e014", "actual_execution": true, "success": false, "error": "ExceptionGroup"}
+{"city": "NYC", "kind": "official_fetch", "at": "2026-11-25T18:16:23.901751+00:00", "episode": "79dfc525c52447bc84e944a49ab3e014", "actual_execution": true, "success": false, "error": "OUTBOUND_DENIED"}
+{"city": "PHL", "kind": "mcp_discovery", "at": "2026-11-25T18:16:23.931900+00:00", "episode": "30f8868ddca44dc0b4ba239480872e13", "actual_execution": true, "success": false, "error": "ExceptionGroup"}
+{"city": "PHL", "kind": "official_fetch", "at": "2026-11-25T18:16:24.890089+00:00", "episode": "30f8868ddca44dc0b4ba239480872e13", "actual_execution": true, "success": false, "error": "OUTBOUND_DENIED"}
+{"city": "DC", "kind": "mcp_discovery", "at": "2026-11-25T18:16:25.089453+00:00", "episode": "1ad61d28c262406882d2d07889119cc0", "actual_execution": true, "success": false, "error": "ExceptionGroup"}
+{"city": "DC", "kind": "official_fetch", "at": "2026-11-25T18:16:26.025444+00:00", "episode": "1ad61d28c262406882d2d07889119cc0", "actual_execution": true, "success": false, "error": "HTTPStatusError"}

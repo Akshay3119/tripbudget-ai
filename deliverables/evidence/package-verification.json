@@ -1,0 +1,12 @@
+{
+  "checks": [
+    "README five-field source map: every symbol and exact range verified",
+    "200\u2013300 word individual review draft present; student reflection not certified",
+    "Corpus digest and Python syntax verified",
+    "Publishable files exclude runtime/secrets/models and match no configured secret values",
+    "154 real evaluation units and 16-slide portable presentation present",
+    "MP4 H.264 duration and all five claim timestamp ranges verified"
+  ],
+  "source_only": false,
+  "passed": true
+}

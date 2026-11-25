@@ -1,0 +1,69 @@
+{
+  "origin": "Reviewed native editable Spaces presentation, rendered PNGs; PDF is a visual snapshot, not a PPTX export",
+  "slides": [
+    {
+      "file": "deliverables/slides/slide-1.png",
+      "sha256": "175672c86b9bb05151bcbc3d72ef08570017d1d49e1ee5d79882d6b1cb0ad81b"
+    },
+    {
+      "file": "deliverables/slides/slide-2.png",
+      "sha256": "088fa869d57975543fa02a173f670ea4fd785501c5383f5410f92b98a69bf0b1"
+    },
+    {
+      "file": "deliverables/slides/slide-3.png",
+      "sha256": "966ebd02bd14b8aadd4bf1d588caf30113a749f7815cb0755e00f7f4905ef114"
+    },
+    {
+      "file": "deliverables/slides/slide-4.png",
+      "sha256": "78c70911ad9dc1be80806ca3b11863edcaf69a87c9bc8787e2fbbd2761473493"
+    },
+    {
+      "file": "deliverables/slides/slide-5.png",
+      "sha256": "bc1ec4c0e7a09d102b086abeeecced5af09e0cd75cc3de3cb50e1519f7c94d81"
+    },
+    {
+      "file": "deliverables/slides/slide-6.png",
+      "sha256": "eb3819c05f23c1dc6bb45f2a27ecd8a951a0513222f1ed56971d079543cce5a6"
+    },
+    {
+      "file": "deliverables/slides/slide-7.png",
+      "sha256": "feed709b6714e95c7f9da5605b9c913ebdbbe5a3144dea3dd923d6beef9c42e8"
+    },
+    {
+      "file": "deliverables/slides/slide-8.png",
+      "sha256": "60f5aa972dce5f21f8f8279a361c9d6492be648515ca4ae1d4f554d27565cfc7"
+    },
+    {
+      "file": "deliverables/slides/slide-9.png",
+      "sha256": "583de0f64c0cf04fd76621614b2c25ad7b50b1c43edc5b1f65544901b97da3fa"
+    },
+    {
+      "file": "deliverables/slides/slide-10.png",
+      "sha256": "99654d3043f62169793b8b608d255b62663ad245cbbc19f34c6c39d8eda982df"
+    },
+    {
+      "file": "deliverables/slides/slide-11.png",
+      "sha256": "25f1d2392196a963bb29e0c3f865885bb2316d5edc5b859de12e9a5d289fbdb3"
+    },
+    {
+      "file": "deliverables/slides/slide-12.png",
+      "sha256": "f8755f4a0243cacba99091a2acf6746aea3b779b6c725af1b7583da683ef71a7"
+    },
+    {
+      "file": "deliverables/slides/slide-13.png",
+      "sha256": "88022434b430483ee2ee27c0daaeb5d908dbb56446b1d52371d20730a5ead17a"
+    },
+    {
+      "file": "deliverables/slides/slide-14.png",
+      "sha256": "26f594af0759f7926154cf1699a4215e72d093b68703255aa9d3341c13acc200"
+    },
+    {
+      "file": "deliverables/slides/slide-15.png",
+      "sha256": "7518e5ca4392d8b4c0babc1da9527031b59981e40cf116a43630780d270b9500"
+    },
+    {
+      "file": "deliverables/slides/slide-16.png",
+      "sha256": "972438a3490b02041daf061d309e30790690a781db927fc329797a8bbd2471be"
+    }
+  ]
+}

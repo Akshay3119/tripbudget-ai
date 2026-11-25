@@ -1,0 +1,31 @@
+{
+  "at": "2026-11-25T18:05:28.856937+00:00",
+  "release": {
+    "boot_id": "860aad4b0e6c1edb",
+    "revision": "local",
+    "version": "1.0.0",
+    "corpus_version": "20261125T174151Z-r2",
+    "auth_mode": "local",
+    "role": "evaluation",
+    "uid": "d3d19f3c18d2ea29970a3302d4f352bb",
+    "cloud_model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+    "local_model": "tripbudget-gemma4-e4b"
+  },
+  "source_manifest": {
+    "catalog_sha256": "8560a82ca1a997079c253c25463851b731cbc769d0a2afa3c63a6b9b2532bf64",
+    "version": "20261125T174151Z-r2",
+    "source_count": 24,
+    "chunk_count": 68,
+    "embedding_model": "BAAI/bge-small-en-v1.5",
+    "dimension": 384,
+    "reviewed_price_facts": [
+      "nyc-ferry",
+      "phl-pma",
+      "phl-liberty-bell",
+      "dc-natural-history",
+      "dc-american-history"
+    ]
+  },
+  "repeats": 2,
+  "method": "paired ablation; same input, evidence, model policy and safety; randomized condition order"
+}
