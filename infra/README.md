@@ -1,5 +1,7 @@
 # Deployment and operations
 
+The application source release is **1.0.1**. Consult the release-specific deployment status in [HANDOFF.md](../HANDOFF.md) before assuming the existing Cloud Run revision includes these fixes. An image build or local container check alone does not prove a cloud rollout.
+
 ## Measured deployment
 
 - Standard Cloud Run service `a4-tripbudget`, `us-central1`, 2 vCPU / 2 GiB, request timeout 300 s, concurrency 8, min 0 / max 2 instances.
@@ -33,6 +35,6 @@ Process replacement: restart Uvicorn/container, sign in, reload the episode and 
 
 Connection capacity: one bounded eight-connection semaphore per serving Store, two active graph invocations/process and max two instances (16 app connections steady state; allow 32 for revision overlap plus operator headroom). A long invocation uses one session shared by business/checkpoint calls with a reentrant async lock. Request concurrency does not grant extra model authority. This is not a multi-tenant high-throughput capacity certification.
 
-Observe health/readiness, HTTP error count/latency, `model_failure`, `terminal`, persisted usage reservations and approval age. `monitoring.yaml` is an operator dashboard/alert specification, not a claim that paid alert delivery was configured. Request logs omit bodies, headers, raw notes and secret values. Retain backups and test restoration before treating the demo tier as production infrastructure.
+Observe health/readiness, HTTP error count/latency, `model_failure`, `provider_skipped`, `worker_interrupted`, `terminal`, persisted usage reservations and approval age. Release 1.0.1 exposes a safe recoverable `EXECUTION_INTERRUPTED` state for unexpected worker exceptions; inspect the category, fix the underlying fault and explicitly resume using the existing checkpoint/counters. A local `LOCAL_BACKEND_UNSUPPORTED` requires the pinned GGUF alias, not routing private notes externally. `monitoring.yaml` is an operator dashboard/alert specification, not a claim that paid alert delivery was configured. Request logs omit bodies, headers, raw notes and secret values. Retain backups and test restoration before treating the demo tier as production infrastructure.
 
 Cost control: min instances zero; maximum instances two; SQL is billed while provisioned. The report estimates weekly deployment and usage costs without assuming credits. Stop/delete only dedicated A4 resources when the owner decides they are no longer needed; no deletion or cleanup of A3 is part of this project. Container registry storage/backups may remain billable after serving stops.

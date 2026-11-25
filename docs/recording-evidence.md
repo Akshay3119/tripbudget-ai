@@ -1,5 +1,7 @@
 # Recording evidence
 
+This is actual historical release 1.0.0 footage. Release 1.0.1 changes the model backend/structured-output adapter; its current real-run and restart/fallback evidence is in the [follow-up report](../deliverables/EVALUATION_FOLLOWUP_1.0.1.md). The five application capabilities and authority boundaries remain implemented.
+
 [Actual MP4](../deliverables/video/TripBudgetAI_Demo.mp4). Duration approximately7:05, H.264/AAC. The browser/OS/model actions are actual runtime captures. Captions and synthesized narration annotate them; no model/tool response is substituted. Idle time is retained.
 
 Recorded planning episode: `268c5558d33f4d81ab6d31e5b70911c8`. Raw [recorded run](../deliverables/evidence/recorded-run.json), [timed captions/boot IDs](../deliverables/video/recording-events.json).

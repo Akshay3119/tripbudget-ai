@@ -1,0 +1,3069 @@
+{
+  "at": "2026-11-25T21:22:10.007141+00:00",
+  "infrastructure": "Cloud Run IAM restricted + Cloud SQL PostgreSQL16",
+  "actual_execution": true,
+  "release": {
+    "boot_id": "2cbd7613e1256350",
+    "revision": "a4-tripbudget-00003-jh7",
+    "version": "1.0.1",
+    "corpus_version": "20261125T174151Z-r2",
+    "auth_mode": "local",
+    "role": "organizer",
+    "uid": "1bc026fe40244d0a9fe0eac6b412c823",
+    "cloud_model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+    "local_model": "tripbudget-gemma4-e4b-gguf"
+  },
+  "episode": "db1a939b5eef4012bbff5b6120fe6eb3",
+  "planning": {
+    "state": {
+      "id": "db1a939b5eef4012bbff5b6120fe6eb3",
+      "status": "PENDING_APPROVAL",
+      "revision": 1,
+      "request": {
+        "days": 3,
+        "cities": [
+          "PHL"
+        ],
+        "request": "A balanced trip with history, parks and museums.",
+        "group_id": "demo-group",
+        "wishlist": [],
+        "travelers": [
+          {
+            "id": "t1",
+            "diet": "unrestricted",
+            "budget_cents": 150000,
+            "maximum_walk_meters": 12000
+          },
+          {
+            "id": "t2",
+            "diet": "unrestricted",
+            "budget_cents": 150000,
+            "maximum_walk_meters": 12000
+          }
+        ],
+        "meal_cents": 1800,
+        "start_date": "2026-11-28",
+        "room_capacity": 2,
+        "gateway_end_hour": 21,
+        "gateway_start_hour": 8,
+        "group_budget_cents": null,
+        "estimates_confirmed": true,
+        "required_activities": [],
+        "lodging_economy_cents": 11000,
+        "use_saved_preferences": false,
+        "lodging_standard_cents": 21000
+      },
+      "proposal": {
+        "scope": "City gateway to gateway. Flights/home travel excluded. Planning ledger; no bookings.",
+        "valid": true,
+        "choice": {
+          "activities": {
+            "PHL": [
+              "phl-liberty-bell",
+              "phl-independence",
+              "phl-visitor-center"
+            ]
+          },
+          "explanation": "Candidate 0 provides activity coverage for all three days including day 2, meeting the NO_ACTIVITY_COVERAGE requirement. It stays within the group budget of 150000 cents per traveler with a total cost of 69740 cents. The itinerary includes PHL liberty bell, independence, and visitor center activities, matching the requested balanced history and parks theme while respecting the economy lodging tier at 11000 cents and meal budget of 1800 cents.",
+          "lodging_tier": "economy",
+          "activities_per_day": 1,
+          "expected_cost_cents": 69740
+        },
+        "revision": 1,
+        "schedule": [
+          {
+            "id": "activity-0-phl-liberty-bell",
+            "day": 0,
+            "end": "2026-11-28T11:00:00-05:00",
+            "city": "PHL",
+            "start": "2026-11-28T10:00:00-05:00",
+            "activity_id": "phl-liberty-bell",
+            "opening_end": "2026-11-28T17:00:00-05:00",
+            "walk_meters": 700,
+            "opening_start": "2026-11-28T10:00:00-05:00",
+            "buffer_minutes": 15,
+            "evidence_state": "USER_ESTIMATE",
+            "transfer_minutes": 30
+          },
+          {
+            "id": "activity-1-phl-independence",
+            "day": 1,
+            "end": "2026-11-29T11:00:00-05:00",
+            "city": "PHL",
+            "start": "2026-11-29T10:00:00-05:00",
+            "activity_id": "phl-independence",
+            "opening_end": "2026-11-29T17:00:00-05:00",
+            "walk_meters": 1000,
+            "opening_start": "2026-11-29T10:00:00-05:00",
+            "buffer_minutes": 15,
+            "evidence_state": "USER_ESTIMATE",
+            "transfer_minutes": 30
+          },
+          {
+            "id": "activity-2-phl-visitor-center",
+            "day": 2,
+            "end": "2026-11-30T11:00:00-05:00",
+            "city": "PHL",
+            "start": "2026-11-30T10:00:00-05:00",
+            "activity_id": "phl-visitor-center",
+            "opening_end": "2026-11-30T17:00:00-05:00",
+            "walk_meters": 600,
+            "opening_start": "2026-11-30T10:00:00-05:00",
+            "buffer_minutes": 15,
+            "evidence_state": "USER_ESTIMATE",
+            "transfer_minutes": 30
+          }
+        ],
+        "cost_items": [
+          {
+            "id": "meals-0",
+            "day": 0,
+            "city": "PHL",
+            "fact_id": null,
+            "category": "meals",
+            "quantity": 6,
+            "unit_cents": 1800,
+            "allocations": {
+              "t1": 5400,
+              "t2": 5400
+            },
+            "description": "Three all-in meal allowances per traveler",
+            "estimate_id": "meals-0",
+            "total_cents": 10800,
+            "beneficiaries": [
+              "t1",
+              "t2"
+            ],
+            "evidence_state": "USER_ESTIMATE",
+            "taxes_included": true
+          },
+          {
+            "id": "local-0",
+            "day": 0,
+            "city": "PHL",
+            "fact_id": null,
+            "category": "local_transit",
+            "quantity": 2,
+            "unit_cents": 1500,
+            "allocations": {
+              "t1": 1500,
+              "t2": 1500
+            },
+            "description": "Local transit/transfer planning allowance, taxes/fees included",
+            "estimate_id": "local-0",
+            "total_cents": 3000,
+            "beneficiaries": [
+              "t1",
+              "t2"
+            ],
+            "evidence_state": "USER_ESTIMATE",
+            "taxes_included": true
+          },
+          {
+            "id": "lodging-0",
+            "day": 0,
+            "city": "PHL",
+            "fact_id": null,
+            "category": "lodging",
+            "quantity": 1,
+            "unit_cents": 11000,
+            "allocations": {
+              "t1": 5500,
+              "t2": 5500
+            },
+            "description": "Economy lodging, all-in per room/night, capacity 2",
+            "estimate_id": "lodging-0",
+            "total_cents": 11000,
+            "beneficiaries": [
+              "t1",
+              "t2"
+            ],
+            "evidence_state": "USER_ESTIMATE",
+            "taxes_included": true
+          },
+          {
+            "id": "ticket-0-phl-liberty-bell",
+            "day": 0,
+            "city": "PHL",
+            "fact_id": "phl-liberty-bell",
+            "category": "activity",
+            "quantity": 2,
+            "unit_cents": 0,
+            "allocations": {
+              "t1": 0,
+              "t2": 0
+            },
+            "description": "Liberty Bell Center",
+            "estimate_id": null,
+            "total_cents": 0,
+            "beneficiaries": [
+              "t1",
+              "t2"
+            ],
+            "evidence_state": "VERIFIED_SNAPSHOT",
+            "taxes_included": true
+          },
+          {
+            "id": "meals-1",
+            "day": 1,
+            "city": "PHL",
+            "fact_id": null,
+            "category": "meals",
+            "quantity": 6,
+            "unit_cents": 1800,
+            "allocations": {
+              "t1": 5400,
+              "t2": 5400
+            },
+            "description": "Three all-in meal allowances per traveler",
+            "estimate_id": "meals-1",
+            "total_cents": 10800,
+            "beneficiaries": [
+              "t1",
+              "t2"
+            ],
+            "evidence_state": "USER_ESTIMATE",
+            "taxes_included": true
+          },
+          {
+            "id": "local-1",
+            "day": 1,
+            "city": "PHL",
+            "fact_id": null,
+            "category": "local_transit",
+            "quantity": 2,
+            "unit_cents": 1500,
+            "allocations": {
+              "t1": 1500,
+              "t2": 1500
+            },
+            "description": "Local transit/transfer planning allowance, taxes/fees included",
+            "estimate_id": "local-1",
+            "total_cents": 3000,
+            "beneficiaries": [
+              "t1",
+              "t2"
+            ],
+            "evidence_state": "USER_ESTIMATE",
+            "taxes_included": true
+          },
+          {
+            "id": "lodging-1",
+            "day": 1,
+            "city": "PHL",
+            "fact_id": null,
+            "category": "lodging",
+            "quantity": 1,
+            "unit_cents": 11000,
+            "allocations": {
+              "t1": 5500,
+              "t2": 5500
+            },
+            "description": "Economy lodging, all-in per room/night, capacity 2",
+            "estimate_id": "lodging-1",
+            "total_cents": 11000,
+            "beneficiaries": [
+              "t1",
+              "t2"
+            ],
+            "evidence_state": "USER_ESTIMATE",
+            "taxes_included": true
+          },
+          {
+            "id": "ticket-1-phl-independence",
+            "day": 1,
+            "city": "PHL",
+            "fact_id": "phl-independence",
+            "category": "activity",
+            "quantity": 2,
+            "unit_cents": 0,
+            "allocations": {
+              "t1": 0,
+              "t2": 0
+            },
+            "description": "Independence Hall exterior and grounds",
+            "estimate_id": null,
+            "total_cents": 0,
+            "beneficiaries": [
+              "t1",
+              "t2"
+            ],
+            "evidence_state": "USER_ESTIMATE",
+            "taxes_included": true
+          },
+          {
+            "id": "meals-2",
+            "day": 2,
+            "city": "PHL",
+            "fact_id": null,
+            "category": "meals",
+            "quantity": 6,
+            "unit_cents": 1800,
+            "allocations": {
+              "t1": 5400,
+              "t2": 5400
+            },
+            "description": "Three all-in meal allowances per traveler",
+            "estimate_id": "meals-2",
+            "total_cents": 10800,
+            "beneficiaries": [
+              "t1",
+              "t2"
+            ],
+            "evidence_state": "USER_ESTIMATE",
+            "taxes_included": true
+          },
+          {
+            "id": "local-2",
+            "day": 2,
+            "city": "PHL",
+            "fact_id": null,
+            "category": "local_transit",
+            "quantity": 2,
+            "unit_cents": 1500,
+            "allocations": {
+              "t1": 1500,
+              "t2": 1500
+            },
+            "description": "Local transit/transfer planning allowance, taxes/fees included",
+            "estimate_id": "local-2",
+            "total_cents": 3000,
+            "beneficiaries": [
+              "t1",
+              "t2"
+            ],
+            "evidence_state": "USER_ESTIMATE",
+            "taxes_included": true
+          },
+          {
+            "id": "ticket-2-phl-visitor-center",
+            "day": 2,
+            "city": "PHL",
+            "fact_id": "phl-visitor-center",
+            "category": "activity",
+            "quantity": 2,
+            "unit_cents": 0,
+            "allocations": {
+              "t1": 0,
+              "t2": 0
+            },
+            "description": "Independence Visitor Center",
+            "estimate_id": null,
+            "total_cents": 0,
+            "beneficiaries": [
+              "t1",
+              "t2"
+            ],
+            "evidence_state": "USER_ESTIMATE",
+            "taxes_included": true
+          }
+        ],
+        "facts_read": [
+          {
+            "id": "phl-liberty-bell",
+            "source_id": "liberty-bell",
+            "price_cents": 0,
+            "evidence_state": "VERIFIED_SNAPSHOT"
+          },
+          {
+            "id": "phl-independence",
+            "source_id": "independence",
+            "price_cents": 0,
+            "evidence_state": "USER_ESTIMATE"
+          },
+          {
+            "id": "phl-visitor-center",
+            "source_id": "visitor-center",
+            "price_cents": 0,
+            "evidence_state": "USER_ESTIMATE"
+          }
+        ],
+        "violations": [],
+        "assumptions": [
+          "All lodging, meals, local/intercity transit and route durations are confirmed planning estimates.",
+          "Activity windows and walking distances are planning assumptions; no real-time availability.",
+          "Three meals daily, room capacity enforced, 10% contingency, USD integer cents."
+        ],
+        "total_cents": 69740,
+        "buffer_cents": 6340,
+        "corpus_version": "20261125T174151Z-r2",
+        "subtotal_cents": 63400,
+        "evidence_digest": "8560a82ca1a997079c253c25463851b731cbc769d0a2afa3c63a6b9b2532bf64",
+        "traveler_totals": {
+          "t1": 34870,
+          "t2": 34870
+        },
+        "base_allocations": {
+          "t1": 31700,
+          "t2": 31700
+        },
+        "constraints_hash": "c8055efe4bf9b531f61ff20f846a2be43df4c36fc3a7d12c98cb755872029b6b",
+        "contingency_allocations": {
+          "t1": 3170,
+          "t2": 3170
+        }
+      },
+      "approval": {
+        "id": "8jmHV_WZC9GEjN3WLbUW31MU2tMAJeIP",
+        "episode": "db1a939b5eef4012bbff5b6120fe6eb3",
+        "revision": 1,
+        "uid": "1bc026fe40244d0a9fe0eac6b412c823",
+        "hash": "056dd9f49b3c42397b60182ffbe7bdd402c4f744e35ea26ff6ded0a5d83e2fad",
+        "status": "PENDING",
+        "decision": null,
+        "decision_key": null,
+        "expires_at": "2026-11-25T21:52:28.468733+00:00"
+      },
+      "ledger_id": null,
+      "resources": {
+        "calls": 9,
+        "attempts": 10,
+        "tokens": 11947,
+        "output_tokens": 1215,
+        "searches": 0,
+        "active_ms": 16994
+      }
+    },
+    "frames": [
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 21:22:10.466846+00:00",
+          "data": {
+            "constraints_hash": "c8055efe4bf9b531f61ff20f846a2be43df4c36fc3a7d12c98cb755872029b6b"
+          },
+          "id": 127,
+          "kind": "admitted"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 21:22:12.449748+00:00",
+          "data": {
+            "applied": false,
+            "values": null,
+            "version": 0
+          },
+          "id": 128,
+          "kind": "preferences_loaded"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 21:22:15.692310+00:00",
+          "data": {
+            "chunks": [
+              {
+                "activity_id": "phl-pma",
+                "city": "PHL",
+                "distance": 0.28611,
+                "id": "phl-pma:overview",
+                "kind": "overview",
+                "source_id": "pma",
+                "text": "Philadelphia Museum of Art is a museum option in PHL. Its catalog ID is phl-pma. The proposed visit lasts 120 minutes and includes an estimated 1800 meters of walking. This is a scoped group travel option, not a reservation or an accessible-route guarantee."
+              },
+              {
+                "activity_id": "phl-visitor-center",
+                "city": "PHL",
+                "distance": 0.28727,
+                "id": "phl-visitor-center:overview",
+                "kind": "overview",
+                "source_id": "visitor-center",
+                "text": "Independence Visitor Center is a history option in PHL. Its catalog ID is phl-visitor-center. The proposed visit lasts 60 minutes and includes an estimated 600 meters of walking. This is a scoped group travel option, not a reservation or an accessible-route guarantee."
+              },
+              {
+                "activity_id": "phl-independence",
+                "city": "PHL",
+                "distance": 0.30114,
+                "id": "phl-independence:overview",
+                "kind": "overview",
+                "source_id": "independence",
+                "text": "Independence Hall exterior and grounds is a history option in PHL. Its catalog ID is phl-independence. The proposed visit lasts 60 minutes and includes an estimated 1000 meters of walking. This is a scoped group travel option, not a reservation or an accessible-route guarantee."
+              },
+              {
+                "activity_id": "phl-liberty-bell",
+                "city": "PHL",
+                "distance": 0.31618,
+                "id": "phl-liberty-bell:overview",
+                "kind": "overview",
+                "source_id": "liberty-bell",
+                "text": "Liberty Bell Center is a history option in PHL. Its catalog ID is phl-liberty-bell. The proposed visit lasts 60 minutes and includes an estimated 700 meters of walking. This is a scoped group travel option, not a reservation or an accessible-route guarantee."
+              },
+              {
+                "activity_id": "phl-pma",
+                "city": "PHL",
+                "distance": 0.35642,
+                "id": "phl-pma:schedule",
+                "kind": "schedule",
+                "source_id": "pma",
+                "text": "The planning window for Philadelphia Museum of Art in PHL is 10:00 to 17:00 America/New_York. Proposed duration is 120 minutes. Closed weekday indices are [1, 2]. This conservative planning assumption still requires date and holiday checking; it does not guarantee entry or tickets."
+              }
+            ],
+            "city": "PHL",
+            "query": "PHL group trip cultural activities",
+            "relevant": false,
+            "retrieval_hash": "dfcb5196960c9a1df8b7c2eefc8f48946a44b01f67112eab3a931e567fd949b1",
+            "round": 1,
+            "source_ids": [
+              "pma",
+              "visitor-center",
+              "independence",
+              "liberty-bell",
+              "pma"
+            ]
+          },
+          "id": 129,
+          "kind": "retrieval"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 21:22:15.962203+00:00",
+          "data": {
+            "decoder_contract_hash": "a79bf592e32ebbfbdb8427ea02f21e1b31a6146631400b0bd629e77c08e4c508",
+            "fallback": false,
+            "input_bound": 1293,
+            "input_hash": "a6e6b316fa47f4e2f0f441591a070358a6d55b938a84b2471fe162096433637c",
+            "max_output": 384,
+            "model": "tripbudget-gemma4-e4b-gguf",
+            "output_contract_hash": "a79bf592e32ebbfbdb8427ea02f21e1b31a6146631400b0bd629e77c08e4c508",
+            "provider": "local",
+            "reason": "short_structured_utility",
+            "source_chunk_ids": [],
+            "structured_output": "ollama_json_schema",
+            "task": "query_rewrite",
+            "usage_id": "b52686d3c7a8479b93f7c4bbf60c6764"
+          },
+          "id": 130,
+          "kind": "model_request"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 21:22:16.227844+00:00",
+          "data": {
+            "error": "ConnectError",
+            "finish_reason": null,
+            "latency_ms": 38,
+            "model": "tripbudget-gemma4-e4b-gguf",
+            "provider": "local",
+            "success": false,
+            "task": "query_rewrite",
+            "usage_id": "b52686d3c7a8479b93f7c4bbf60c6764"
+          },
+          "id": 131,
+          "kind": "model_failure"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 21:22:16.952576+00:00",
+          "data": {
+            "decoder_contract_hash": "a79bf592e32ebbfbdb8427ea02f21e1b31a6146631400b0bd629e77c08e4c508",
+            "fallback": true,
+            "input_bound": 1293,
+            "input_hash": "a6e6b316fa47f4e2f0f441591a070358a6d55b938a84b2471fe162096433637c",
+            "max_output": 384,
+            "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+            "output_contract_hash": "a79bf592e32ebbfbdb8427ea02f21e1b31a6146631400b0bd629e77c08e4c508",
+            "provider": "cloud",
+            "reason": "short_structured_utility",
+            "source_chunk_ids": [],
+            "structured_output": "nvidia_json_schema",
+            "task": "query_rewrite",
+            "usage_id": "709b31e8ed2e42aa8df7e89d995a2c01"
+          },
+          "id": 132,
+          "kind": "model_request"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 21:22:17.698608+00:00",
+          "data": {
+            "finish_reason": "stop",
+            "input_tokens": 241,
+            "latency_ms": 504,
+            "local_backend": null,
+            "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+            "output_tokens": 39,
+            "provider": "cloud",
+            "result": {
+              "query": "PHL group trip cultural activities admission costs opening hours",
+              "reason": "Rewrite user query to include admission costs and opening hours as requested, preserving the city code PHL."
+            },
+            "success": true,
+            "task": "query_rewrite",
+            "usage_id": "709b31e8ed2e42aa8df7e89d995a2c01"
+          },
+          "id": 133,
+          "kind": "model_result"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 21:22:17.703733+00:00",
+          "data": {
+            "query": "PHL group trip cultural activities admission costs opening hours",
+            "reason": "Rewrite user query to include admission costs and opening hours as requested, preserving the city code PHL."
+          },
+          "id": 134,
+          "kind": "query_rewritten"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 21:22:17.736783+00:00",
+          "data": {
+            "chunks": [
+              {
+                "activity_id": "phl-pma",
+                "city": "PHL",
+                "distance": 0.27938,
+                "id": "phl-pma:overview",
+                "kind": "overview",
+                "source_id": "pma",
+                "text": "Philadelphia Museum of Art is a museum option in PHL. Its catalog ID is phl-pma. The proposed visit lasts 120 minutes and includes an estimated 1800 meters of walking. This is a scoped group travel option, not a reservation or an accessible-route guarantee."
+              },
+              {
+                "activity_id": "phl-visitor-center",
+                "city": "PHL",
+                "distance": 0.28369,
+                "id": "phl-visitor-center:overview",
+                "kind": "overview",
+                "source_id": "visitor-center",
+                "text": "Independence Visitor Center is a history option in PHL. Its catalog ID is phl-visitor-center. The proposed visit lasts 60 minutes and includes an estimated 600 meters of walking. This is a scoped group travel option, not a reservation or an accessible-route guarantee."
+              },
+              {
+                "activity_id": "phl-independence",
+                "city": "PHL",
+                "distance": 0.28486,
+                "id": "phl-independence:overview",
+                "kind": "overview",
+                "source_id": "independence",
+                "text": "Independence Hall exterior and grounds is a history option in PHL. Its catalog ID is phl-independence. The proposed visit lasts 60 minutes and includes an estimated 1000 meters of walking. This is a scoped group travel option, not a reservation or an accessible-route guarantee."
+              },
+              {
+                "activity_id": "phl-pma",
+                "city": "PHL",
+                "distance": 0.30118,
+                "id": "phl-pma:price",
+                "kind": "price",
+                "source_id": "pma",
+                "text": "Admission planning value for Philadelphia Museum of Art in PHL is 3000 USD cents per adult participant. Unless a reviewed fact explicitly marks it verified, this is a confirmed user estimate. The broker supplies this value by ID; a model cannot change it by citing different text."
+              },
+              {
+                "activity_id": "phl-pma",
+                "city": "PHL",
+                "distance": 0.30704,
+                "id": "phl-pma:schedule",
+                "kind": "schedule",
+                "source_id": "pma",
+                "text": "The planning window for Philadelphia Museum of Art in PHL is 10:00 to 17:00 America/New_York. Proposed duration is 120 minutes. Closed weekday indices are [1, 2]. This conservative planning assumption still requires date and holiday checking; it does not guarantee entry or tickets."
+              }
+            ],
+            "city": "PHL",
+            "query": "PHL group trip cultural activities admission costs opening hours",
+            "relevant": true,
+            "retrieval_hash": "5f2207bd206332db9067b1a837cef6825f9b928d61138e4b53f768c0813c2594",
+            "round": 2,
+            "source_ids": [
+              "pma",
+              "visitor-center",
+              "independence",
+              "pma",
+              "pma"
+            ]
+          },
+          "id": 135,
+          "kind": "retrieval"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 21:22:17.942195+00:00",
+          "data": {
+            "decoder_contract_hash": "4c96de819036db3247d2de8bac0f8925e3313628d58a89dfb8066e327ffa547d",
+            "fallback": false,
+            "input_bound": 3605,
+            "input_hash": "896699c54bbd083f9539517717935f2cfd40fba4d8e49fbac836b07db9e5ac9d",
+            "max_output": 2048,
+            "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+            "output_contract_hash": "702efbb281a38881e7123b8c5c3e3a6e61d34034e571b6faaeef5e8884d613ec",
+            "provider": "cloud",
+            "reason": "public_multistep_planning",
+            "source_chunk_ids": [],
+            "structured_output": "nvidia_json_schema",
+            "task": "supervisor",
+            "usage_id": "a9754ed909b6464a933eededa4c68c7d"
+          },
+          "id": 136,
+          "kind": "model_request"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 21:22:19.477925+00:00",
+          "data": {
+            "finish_reason": "stop",
+            "input_tokens": 896,
+            "latency_ms": 1678,
+            "local_backend": null,
+            "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+            "output_tokens": 202,
+            "provider": "cloud",
+            "result": {
+              "activities": {
+                "PHL": [
+                  "phl-liberty-bell",
+                  "phl-independence",
+                  "phl-visitor-center",
+                  "phl-pma"
+                ]
+              },
+              "activities_per_day": 2,
+              "expected_cost_cents": 21340,
+              "explanation": "2 activities/day across 3 days uses all 4 PHL IDs. Liberty Bell, Independence Hall exterior, Visitor Center are free; Museum costs 3000\u00a2. Total activity cost 3000\u00a2. Lodging economy 11000\u00a2. Meals 1800\u00a2 x 3 = 5400\u00a2. Subtotal 19400\u00a2 + 10% buffer 1940 = 21340\u00a2 within 21000\u00a2 standard cap. All walk distances under 12000\u00a2 max.",
+              "lodging_tier": "economy"
+            },
+            "success": true,
+            "task": "supervisor",
+            "usage_id": "a9754ed909b6464a933eededa4c68c7d"
+          },
+          "id": 137,
+          "kind": "model_result"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 21:22:19.482107+00:00",
+          "data": {
+            "choice": {
+              "activities": {
+                "PHL": [
+                  "phl-liberty-bell",
+                  "phl-independence",
+                  "phl-visitor-center",
+                  "phl-pma"
+                ]
+              },
+              "activities_per_day": 2,
+              "expected_cost_cents": 21340,
+              "explanation": "2 activities/day across 3 days uses all 4 PHL IDs. Liberty Bell, Independence Hall exterior, Visitor Center are free; Museum costs 3000\u00a2. Total activity cost 3000\u00a2. Lodging economy 11000\u00a2. Meals 1800\u00a2 x 3 = 5400\u00a2. Subtotal 19400\u00a2 + 10% buffer 1940 = 21340\u00a2 within 21000\u00a2 standard cap. All walk distances under 12000\u00a2 max.",
+              "lodging_tier": "economy"
+            },
+            "expected_cost_cents": 21340,
+            "pass": 1
+          },
+          "id": 138,
+          "kind": "plan_proposed"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 21:22:19.942453+00:00",
+          "data": {
+            "decoder_contract_hash": "ac7c74480e56900413d72fffb6981ae6d0aea8c8d8bb25f2bbc040362759cf23",
+            "fallback": false,
+            "input_bound": 4965,
+            "input_hash": "1af28d80ccc1f8b1e1601dc8fdd4cfdfc7d3484d41f3026b3474837c72944a9e",
+            "max_output": 1024,
+            "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+            "output_contract_hash": "ac7c74480e56900413d72fffb6981ae6d0aea8c8d8bb25f2bbc040362759cf23",
+            "provider": "cloud",
+            "reason": "public_multistep_planning",
+            "source_chunk_ids": [
+              "phl-pma:overview",
+              "phl-visitor-center:overview",
+              "phl-independence:overview",
+              "phl-liberty-bell:overview",
+              "phl-pma:schedule",
+              "phl-pma:price"
+            ],
+            "structured_output": "nvidia_json_schema",
+            "task": "transit_specialist",
+            "usage_id": "01a62a0c8fdf49a09d6e27449b9a72d3"
+          },
+          "id": 139,
+          "kind": "model_request"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 21:22:20.942936+00:00",
+          "data": {
+            "finish_reason": "stop",
+            "input_tokens": 1279,
+            "latency_ms": 989,
+            "local_backend": null,
+            "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+            "output_tokens": 110,
+            "provider": "cloud",
+            "result": {
+              "observation": "All 4 PHL catalog IDs included; walking distances 600-1000m under 12000m max; museum visit 120 min within 10:00-17:00 window; total activity cost 3000\u00a2 within 21000\u00a2 standard cap.",
+              "option_ids": [
+                "phl-liberty-bell",
+                "phl-independence",
+                "phl-visitor-center",
+                "phl-pma"
+              ]
+            },
+            "success": true,
+            "task": "transit_specialist",
+            "usage_id": "01a62a0c8fdf49a09d6e27449b9a72d3"
+          },
+          "id": 140,
+          "kind": "model_result"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 21:22:20.951174+00:00",
+          "data": {
+            "agent": "transit_specialist",
+            "observation": "All 4 PHL catalog IDs included; walking distances 600-1000m under 12000m max; museum visit 120 min within 10:00-17:00 window; total activity cost 3000\u00a2 within 21000\u00a2 standard cap.",
+            "option_ids": [
+              "phl-liberty-bell",
+              "phl-independence",
+              "phl-visitor-center",
+              "phl-pma"
+            ]
+          },
+          "id": 141,
+          "kind": "specialist_observation"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 21:22:20.991560+00:00",
+          "data": {
+            "decoder_contract_hash": "ac7c74480e56900413d72fffb6981ae6d0aea8c8d8bb25f2bbc040362759cf23",
+            "fallback": false,
+            "input_bound": 4967,
+            "input_hash": "359750475a8f8f83fece1020f57a15d3f10f11390b229739891a4f2b7c57b319",
+            "max_output": 1024,
+            "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+            "output_contract_hash": "ac7c74480e56900413d72fffb6981ae6d0aea8c8d8bb25f2bbc040362759cf23",
+            "provider": "cloud",
+            "reason": "public_multistep_planning",
+            "source_chunk_ids": [
+              "phl-pma:overview",
+              "phl-visitor-center:overview",
+              "phl-independence:overview",
+              "phl-liberty-bell:overview",
+              "phl-pma:schedule",
+              "phl-pma:price"
+            ],
+            "structured_output": "nvidia_json_schema",
+            "task": "lodging_specialist",
+            "usage_id": "4d93bc1a27444a1f992f86f0cdcae1b1"
+          },
+          "id": 142,
+          "kind": "model_request"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 21:22:22.219290+00:00",
+          "data": {
+            "finish_reason": "stop",
+            "input_tokens": 1281,
+            "latency_ms": 1210,
+            "local_backend": null,
+            "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+            "output_tokens": 88,
+            "provider": "cloud",
+            "result": {
+              "observation": "All 4 PHL catalog IDs are present in the proposal activities list. Liberty Bell, Independence Hall exterior, and Visitor Center are free; Museum costs 3000 cents. Walk distances and budget are within traveler limits. No invalid IDs detected.",
+              "option_ids": [
+                "phl-liberty-bell",
+                "phl-independence",
+                "phl-visitor-center",
+                "phl-pma"
+              ]
+            },
+            "success": true,
+            "task": "lodging_specialist",
+            "usage_id": "4d93bc1a27444a1f992f86f0cdcae1b1"
+          },
+          "id": 143,
+          "kind": "model_result"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 21:22:22.223386+00:00",
+          "data": {
+            "agent": "lodging_specialist",
+            "observation": "All 4 PHL catalog IDs are present in the proposal activities list. Liberty Bell, Independence Hall exterior, and Visitor Center are free; Museum costs 3000 cents. Walk distances and budget are within traveler limits. No invalid IDs detected.",
+            "option_ids": [
+              "phl-liberty-bell",
+              "phl-independence",
+              "phl-visitor-center",
+              "phl-pma"
+            ]
+          },
+          "id": 144,
+          "kind": "specialist_observation"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 21:22:22.468944+00:00",
+          "data": {
+            "decoder_contract_hash": "ac7c74480e56900413d72fffb6981ae6d0aea8c8d8bb25f2bbc040362759cf23",
+            "fallback": false,
+            "input_bound": 4957,
+            "input_hash": "fc97163cdb1fece822e8b35d29837a0789984dd7435e88da8f9dee6b3fcac0af",
+            "max_output": 1024,
+            "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+            "output_contract_hash": "ac7c74480e56900413d72fffb6981ae6d0aea8c8d8bb25f2bbc040362759cf23",
+            "provider": "cloud",
+            "reason": "public_multistep_planning",
+            "source_chunk_ids": [
+              "phl-pma:overview",
+              "phl-visitor-center:overview",
+              "phl-independence:overview",
+              "phl-liberty-bell:overview",
+              "phl-pma:schedule",
+              "phl-pma:price"
+            ],
+            "structured_output": "nvidia_json_schema",
+            "task": "attractions_specialist",
+            "usage_id": "8d9c5cb6b4714632965007309df3aa2b"
+          },
+          "id": 145,
+          "kind": "model_request"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 21:22:23.223800+00:00",
+          "data": {
+            "finish_reason": "stop",
+            "input_tokens": 1278,
+            "latency_ms": 735,
+            "local_backend": null,
+            "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+            "output_tokens": 85,
+            "provider": "cloud",
+            "result": {
+              "observation": "All 4 PHL catalog IDs are present in the proposal activities list. Liberty Bell, Independence Hall exterior, and Visitor Center are free; Museum costs 3000 cents. Walk distances are within traveler limits. No side effects.",
+              "option_ids": [
+                "phl-liberty-bell",
+                "phl-independence",
+                "phl-visitor-center",
+                "phl-pma"
+              ]
+            },
+            "success": true,
+            "task": "attractions_specialist",
+            "usage_id": "8d9c5cb6b4714632965007309df3aa2b"
+          },
+          "id": 146,
+          "kind": "model_result"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 21:22:23.227520+00:00",
+          "data": {
+            "agent": "attractions_specialist",
+            "observation": "All 4 PHL catalog IDs are present in the proposal activities list. Liberty Bell, Independence Hall exterior, and Visitor Center are free; Museum costs 3000 cents. Walk distances are within traveler limits. No side effects.",
+            "option_ids": [
+              "phl-liberty-bell",
+              "phl-independence",
+              "phl-visitor-center",
+              "phl-pma"
+            ]
+          },
+          "id": 147,
+          "kind": "specialist_observation"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 21:22:23.454570+00:00",
+          "data": {
+            "digest": "8560a82ca1a997079c253c25463851b731cbc769d0a2afa3c63a6b9b2532bf64",
+            "facts": [
+              {
+                "evidence_state": "VERIFIED_SNAPSHOT",
+                "id": "phl-liberty-bell",
+                "price_cents": 0,
+                "source_id": "liberty-bell"
+              },
+              {
+                "evidence_state": "USER_ESTIMATE",
+                "id": "phl-independence",
+                "price_cents": 0,
+                "source_id": "independence"
+              },
+              {
+                "evidence_state": "USER_ESTIMATE",
+                "id": "phl-visitor-center",
+                "price_cents": 0,
+                "source_id": "visitor-center"
+              },
+              {
+                "evidence_state": "VERIFIED_SNAPSHOT",
+                "id": "phl-pma",
+                "price_cents": 3000,
+                "source_id": "pma"
+              }
+            ]
+          },
+          "id": 148,
+          "kind": "catalog_facts_read"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 21:22:23.459098+00:00",
+          "data": {
+            "expected_cost_cents": 21340,
+            "pass": 1,
+            "total_cents": 76340,
+            "traveler_totals": {
+              "t1": 38170,
+              "t2": 38170
+            },
+            "valid": false,
+            "violations": [
+              {
+                "city": "PHL",
+                "code": "NO_ACTIVITY_COVERAGE",
+                "day": 2
+              }
+            ]
+          },
+          "id": 149,
+          "kind": "critic"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 21:22:23.468597+00:00",
+          "data": {
+            "candidates": [
+              {
+                "choice": {
+                  "activities": {
+                    "PHL": [
+                      "phl-liberty-bell",
+                      "phl-independence",
+                      "phl-visitor-center"
+                    ]
+                  },
+                  "activities_per_day": 1,
+                  "expected_cost_cents": 69740,
+                  "explanation": "Tool-priced alternative satisfying the declared constraints",
+                  "lodging_tier": "economy"
+                },
+                "total_cents": 69740,
+                "traveler_totals": {
+                  "t1": 34870,
+                  "t2": 34870
+                },
+                "valid": true
+              },
+              {
+                "choice": {
+                  "activities": {
+                    "PHL": [
+                      "phl-pma",
+                      "phl-liberty-bell",
+                      "phl-independence",
+                      "phl-visitor-center"
+                    ]
+                  },
+                  "activities_per_day": 1,
+                  "expected_cost_cents": 76340,
+                  "explanation": "Tool-priced alternative satisfying the declared constraints",
+                  "lodging_tier": "economy"
+                },
+                "total_cents": 76340,
+                "traveler_totals": {
+                  "t1": 38170,
+                  "t2": 38170
+                },
+                "valid": true
+              },
+              {
+                "choice": {
+                  "activities": {
+                    "PHL": [
+                      "phl-liberty-bell",
+                      "phl-independence",
+                      "phl-visitor-center"
+                    ]
+                  },
+                  "activities_per_day": 1,
+                  "expected_cost_cents": 91740,
+                  "explanation": "Tool-priced alternative satisfying the declared constraints",
+                  "lodging_tier": "standard"
+                },
+                "total_cents": 91740,
+                "traveler_totals": {
+                  "t1": 45870,
+                  "t2": 45870
+                },
+                "valid": true
+              }
+            ]
+          },
+          "id": 150,
+          "kind": "repair_options_computed"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 21:22:23.505807+00:00",
+          "data": {
+            "decoder_contract_hash": "3b15b0c798bcf9ca62098b2f01d280b0276bb57e50b35ba3a06f09dffee833d4",
+            "fallback": false,
+            "input_bound": 3144,
+            "input_hash": "73694847c5a8e82f1fdf594af9c086d2240b2d21936212844f4397c36cdf9e04",
+            "max_output": 2048,
+            "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+            "output_contract_hash": "3b15b0c798bcf9ca62098b2f01d280b0276bb57e50b35ba3a06f09dffee833d4",
+            "provider": "cloud",
+            "reason": "public_multistep_planning",
+            "source_chunk_ids": [],
+            "structured_output": "nvidia_json_schema",
+            "task": "repair",
+            "usage_id": "befb7517a969470994d23a332ff16bde"
+          },
+          "id": 151,
+          "kind": "model_request"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 21:22:24.704449+00:00",
+          "data": {
+            "finish_reason": "stop",
+            "input_tokens": 815,
+            "latency_ms": 1046,
+            "local_backend": null,
+            "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+            "output_tokens": 119,
+            "provider": "cloud",
+            "result": {
+              "candidate_index": 0,
+              "explanation": "Candidate 0 provides activity coverage for all three days including day 2, meeting the NO_ACTIVITY_COVERAGE requirement. It stays within the group budget of 150000 cents per traveler with a total cost of 69740 cents. The itinerary includes PHL liberty bell, independence, and visitor center activities, matching the requested balanced history and parks theme while respecting the economy lodging tier at 11000 cents and meal budget of 1800 cents."
+            },
+            "success": true,
+            "task": "repair",
+            "usage_id": "befb7517a969470994d23a332ff16bde"
+          },
+          "id": 152,
+          "kind": "model_result"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 21:22:24.710621+00:00",
+          "data": {
+            "candidate_index": 0,
+            "explanation": "Candidate 0 provides activity coverage for all three days including day 2, meeting the NO_ACTIVITY_COVERAGE requirement. It stays within the group budget of 150000 cents per traveler with a total cost of 69740 cents. The itinerary includes PHL liberty bell, independence, and visitor center activities, matching the requested balanced history and parks theme while respecting the economy lodging tier at 11000 cents and meal budget of 1800 cents."
+          },
+          "id": 153,
+          "kind": "repair_selected"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 21:22:24.714585+00:00",
+          "data": {
+            "choice": {
+              "activities": {
+                "PHL": [
+                  "phl-liberty-bell",
+                  "phl-independence",
+                  "phl-visitor-center"
+                ]
+              },
+              "activities_per_day": 1,
+              "expected_cost_cents": 69740,
+              "explanation": "Candidate 0 provides activity coverage for all three days including day 2, meeting the NO_ACTIVITY_COVERAGE requirement. It stays within the group budget of 150000 cents per traveler with a total cost of 69740 cents. The itinerary includes PHL liberty bell, independence, and visitor center activities, matching the requested balanced history and parks theme while respecting the economy lodging tier at 11000 cents and meal budget of 1800 cents.",
+              "lodging_tier": "economy"
+            },
+            "expected_cost_cents": 69740,
+            "pass": 2
+          },
+          "id": 154,
+          "kind": "plan_proposed"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 21:22:24.743770+00:00",
+          "data": {
+            "decoder_contract_hash": "ac7c74480e56900413d72fffb6981ae6d0aea8c8d8bb25f2bbc040362759cf23",
+            "fallback": false,
+            "input_bound": 5024,
+            "input_hash": "c7b0e33ca8fbf97312638480c5c63d8f7f9349069f669c6d22c02b6c449810e9",
+            "max_output": 1024,
+            "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+            "output_contract_hash": "ac7c74480e56900413d72fffb6981ae6d0aea8c8d8bb25f2bbc040362759cf23",
+            "provider": "cloud",
+            "reason": "public_multistep_planning",
+            "source_chunk_ids": [
+              "phl-pma:overview",
+              "phl-visitor-center:overview",
+              "phl-independence:overview",
+              "phl-liberty-bell:overview",
+              "phl-pma:schedule",
+              "phl-pma:price"
+            ],
+            "structured_output": "nvidia_json_schema",
+            "task": "transit_specialist",
+            "usage_id": "a9204454126c47c2958f93a42d91ef48"
+          },
+          "id": 155,
+          "kind": "model_request"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 21:22:25.475580+00:00",
+          "data": {
+            "finish_reason": "stop",
+            "input_tokens": 1216,
+            "latency_ms": 713,
+            "local_backend": null,
+            "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+            "output_tokens": 56,
+            "provider": "cloud",
+            "result": {
+              "observation": "All three IDs appear in the PHL catalog and match the proposed activities. No other catalog IDs are relevant to the activity set.",
+              "option_ids": [
+                "phl-liberty-bell",
+                "phl-independence",
+                "phl-visitor-center"
+              ]
+            },
+            "success": true,
+            "task": "transit_specialist",
+            "usage_id": "a9204454126c47c2958f93a42d91ef48"
+          },
+          "id": 156,
+          "kind": "model_result"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 21:22:25.479408+00:00",
+          "data": {
+            "agent": "transit_specialist",
+            "observation": "All three IDs appear in the PHL catalog and match the proposed activities. No other catalog IDs are relevant to the activity set.",
+            "option_ids": [
+              "phl-liberty-bell",
+              "phl-independence",
+              "phl-visitor-center"
+            ]
+          },
+          "id": 157,
+          "kind": "specialist_observation"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 21:22:25.744402+00:00",
+          "data": {
+            "decoder_contract_hash": "ac7c74480e56900413d72fffb6981ae6d0aea8c8d8bb25f2bbc040362759cf23",
+            "fallback": false,
+            "input_bound": 5026,
+            "input_hash": "b0ca261fbcfa17b0e23fd5a8446169c3c64174b0905e789e78cd7d63f0bce951",
+            "max_output": 1024,
+            "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+            "output_contract_hash": "ac7c74480e56900413d72fffb6981ae6d0aea8c8d8bb25f2bbc040362759cf23",
+            "provider": "cloud",
+            "reason": "public_multistep_planning",
+            "source_chunk_ids": [
+              "phl-pma:overview",
+              "phl-visitor-center:overview",
+              "phl-independence:overview",
+              "phl-liberty-bell:overview",
+              "phl-pma:schedule",
+              "phl-pma:price"
+            ],
+            "structured_output": "nvidia_json_schema",
+            "task": "lodging_specialist",
+            "usage_id": "d5dd97ac31774630bdb10f922061c21e"
+          },
+          "id": 158,
+          "kind": "model_request"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 21:22:26.716936+00:00",
+          "data": {
+            "finish_reason": "stop",
+            "input_tokens": 1218,
+            "latency_ms": 861,
+            "local_backend": null,
+            "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+            "output_tokens": 56,
+            "provider": "cloud",
+            "result": {
+              "observation": "All three IDs appear in the PHL catalog and match the proposed activities. No other catalog IDs are relevant to the activity set.",
+              "option_ids": [
+                "phl-liberty-bell",
+                "phl-independence",
+                "phl-visitor-center"
+              ]
+            },
+            "success": true,
+            "task": "lodging_specialist",
+            "usage_id": "d5dd97ac31774630bdb10f922061c21e"
+          },
+          "id": 159,
+          "kind": "model_result"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 21:22:26.728608+00:00",
+          "data": {
+            "agent": "lodging_specialist",
+            "observation": "All three IDs appear in the PHL catalog and match the proposed activities. No other catalog IDs are relevant to the activity set.",
+            "option_ids": [
+              "phl-liberty-bell",
+              "phl-independence",
+              "phl-visitor-center"
+            ]
+          },
+          "id": 160,
+          "kind": "specialist_observation"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 21:22:26.955574+00:00",
+          "data": {
+            "decoder_contract_hash": "ac7c74480e56900413d72fffb6981ae6d0aea8c8d8bb25f2bbc040362759cf23",
+            "fallback": false,
+            "input_bound": 5016,
+            "input_hash": "62a10652c3e8acae4fb8692b76e332f7cd2cec14854c10b1f4d802bb00a5c7b9",
+            "max_output": 1024,
+            "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+            "output_contract_hash": "ac7c74480e56900413d72fffb6981ae6d0aea8c8d8bb25f2bbc040362759cf23",
+            "provider": "cloud",
+            "reason": "public_multistep_planning",
+            "source_chunk_ids": [
+              "phl-pma:overview",
+              "phl-visitor-center:overview",
+              "phl-independence:overview",
+              "phl-liberty-bell:overview",
+              "phl-pma:schedule",
+              "phl-pma:price"
+            ],
+            "structured_output": "nvidia_json_schema",
+            "task": "attractions_specialist",
+            "usage_id": "3b872fc3a3f34373b59302f83f3a0d1a"
+          },
+          "id": 161,
+          "kind": "model_request"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 21:22:27.977565+00:00",
+          "data": {
+            "finish_reason": "stop",
+            "input_tokens": 1215,
+            "latency_ms": 834,
+            "local_backend": null,
+            "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+            "output_tokens": 76,
+            "provider": "cloud",
+            "result": {
+              "observation": "All three IDs appear in the catalog and were selected for the balanced history, parks and museums theme within the 3-day PHL itinerary. Walking distances and museum hours are within traveler limits. No activity coverage gaps remain.",
+              "option_ids": [
+                "phl-liberty-bell",
+                "phl-independence",
+                "phl-visitor-center"
+              ]
+            },
+            "success": true,
+            "task": "attractions_specialist",
+            "usage_id": "3b872fc3a3f34373b59302f83f3a0d1a"
+          },
+          "id": 162,
+          "kind": "model_result"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 21:22:27.981164+00:00",
+          "data": {
+            "agent": "attractions_specialist",
+            "observation": "All three IDs appear in the catalog and were selected for the balanced history, parks and museums theme within the 3-day PHL itinerary. Walking distances and museum hours are within traveler limits. No activity coverage gaps remain.",
+            "option_ids": [
+              "phl-liberty-bell",
+              "phl-independence",
+              "phl-visitor-center"
+            ]
+          },
+          "id": 163,
+          "kind": "specialist_observation"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 21:22:28.219685+00:00",
+          "data": {
+            "digest": "8560a82ca1a997079c253c25463851b731cbc769d0a2afa3c63a6b9b2532bf64",
+            "facts": [
+              {
+                "evidence_state": "VERIFIED_SNAPSHOT",
+                "id": "phl-liberty-bell",
+                "price_cents": 0,
+                "source_id": "liberty-bell"
+              },
+              {
+                "evidence_state": "USER_ESTIMATE",
+                "id": "phl-independence",
+                "price_cents": 0,
+                "source_id": "independence"
+              },
+              {
+                "evidence_state": "USER_ESTIMATE",
+                "id": "phl-visitor-center",
+                "price_cents": 0,
+                "source_id": "visitor-center"
+              }
+            ]
+          },
+          "id": 164,
+          "kind": "catalog_facts_read"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 21:22:28.231020+00:00",
+          "data": {
+            "expected_cost_cents": 69740,
+            "pass": 2,
+            "total_cents": 69740,
+            "traveler_totals": {
+              "t1": 34870,
+              "t2": 34870
+            },
+            "valid": true,
+            "violations": []
+          },
+          "id": 165,
+          "kind": "critic"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 21:22:28.725941+00:00",
+          "data": {
+            "approval_id": "8jmHV_WZC9GEjN3WLbUW31MU2tMAJeIP",
+            "expires_at": "2026-11-25T21:52:28.468733+00:00",
+            "hash": "056dd9f49b3c42397b60182ffbe7bdd402c4f744e35ea26ff6ded0a5d83e2fad",
+            "revision": 1
+          },
+          "id": 166,
+          "kind": "approval_pending"
+        }
+      },
+      {
+        "event": "done",
+        "data": {
+          "ledger_id": null,
+          "outcome": "PENDING_APPROVAL"
+        }
+      }
+    ]
+  },
+  "commit": {
+    "state": {
+      "id": "db1a939b5eef4012bbff5b6120fe6eb3",
+      "status": "COMMITTED",
+      "revision": 1,
+      "request": {
+        "days": 3,
+        "cities": [
+          "PHL"
+        ],
+        "request": "A balanced trip with history, parks and museums.",
+        "group_id": "demo-group",
+        "wishlist": [],
+        "travelers": [
+          {
+            "id": "t1",
+            "diet": "unrestricted",
+            "budget_cents": 150000,
+            "maximum_walk_meters": 12000
+          },
+          {
+            "id": "t2",
+            "diet": "unrestricted",
+            "budget_cents": 150000,
+            "maximum_walk_meters": 12000
+          }
+        ],
+        "meal_cents": 1800,
+        "start_date": "2026-11-28",
+        "room_capacity": 2,
+        "gateway_end_hour": 21,
+        "gateway_start_hour": 8,
+        "group_budget_cents": null,
+        "estimates_confirmed": true,
+        "required_activities": [],
+        "lodging_economy_cents": 11000,
+        "use_saved_preferences": false,
+        "lodging_standard_cents": 21000
+      },
+      "proposal": {
+        "scope": "City gateway to gateway. Flights/home travel excluded. Planning ledger; no bookings.",
+        "valid": true,
+        "choice": {
+          "activities": {
+            "PHL": [
+              "phl-liberty-bell",
+              "phl-independence",
+              "phl-visitor-center"
+            ]
+          },
+          "explanation": "Candidate 0 provides activity coverage for all three days including day 2, meeting the NO_ACTIVITY_COVERAGE requirement. It stays within the group budget of 150000 cents per traveler with a total cost of 69740 cents. The itinerary includes PHL liberty bell, independence, and visitor center activities, matching the requested balanced history and parks theme while respecting the economy lodging tier at 11000 cents and meal budget of 1800 cents.",
+          "lodging_tier": "economy",
+          "activities_per_day": 1,
+          "expected_cost_cents": 69740
+        },
+        "revision": 1,
+        "schedule": [
+          {
+            "id": "activity-0-phl-liberty-bell",
+            "day": 0,
+            "end": "2026-11-28T11:00:00-05:00",
+            "city": "PHL",
+            "start": "2026-11-28T10:00:00-05:00",
+            "activity_id": "phl-liberty-bell",
+            "opening_end": "2026-11-28T17:00:00-05:00",
+            "walk_meters": 700,
+            "opening_start": "2026-11-28T10:00:00-05:00",
+            "buffer_minutes": 15,
+            "evidence_state": "USER_ESTIMATE",
+            "transfer_minutes": 30
+          },
+          {
+            "id": "activity-1-phl-independence",
+            "day": 1,
+            "end": "2026-11-29T11:00:00-05:00",
+            "city": "PHL",
+            "start": "2026-11-29T10:00:00-05:00",
+            "activity_id": "phl-independence",
+            "opening_end": "2026-11-29T17:00:00-05:00",
+            "walk_meters": 1000,
+            "opening_start": "2026-11-29T10:00:00-05:00",
+            "buffer_minutes": 15,
+            "evidence_state": "USER_ESTIMATE",
+            "transfer_minutes": 30
+          },
+          {
+            "id": "activity-2-phl-visitor-center",
+            "day": 2,
+            "end": "2026-11-30T11:00:00-05:00",
+            "city": "PHL",
+            "start": "2026-11-30T10:00:00-05:00",
+            "activity_id": "phl-visitor-center",
+            "opening_end": "2026-11-30T17:00:00-05:00",
+            "walk_meters": 600,
+            "opening_start": "2026-11-30T10:00:00-05:00",
+            "buffer_minutes": 15,
+            "evidence_state": "USER_ESTIMATE",
+            "transfer_minutes": 30
+          }
+        ],
+        "cost_items": [
+          {
+            "id": "meals-0",
+            "day": 0,
+            "city": "PHL",
+            "fact_id": null,
+            "category": "meals",
+            "quantity": 6,
+            "unit_cents": 1800,
+            "allocations": {
+              "t1": 5400,
+              "t2": 5400
+            },
+            "description": "Three all-in meal allowances per traveler",
+            "estimate_id": "meals-0",
+            "total_cents": 10800,
+            "beneficiaries": [
+              "t1",
+              "t2"
+            ],
+            "evidence_state": "USER_ESTIMATE",
+            "taxes_included": true
+          },
+          {
+            "id": "local-0",
+            "day": 0,
+            "city": "PHL",
+            "fact_id": null,
+            "category": "local_transit",
+            "quantity": 2,
+            "unit_cents": 1500,
+            "allocations": {
+              "t1": 1500,
+              "t2": 1500
+            },
+            "description": "Local transit/transfer planning allowance, taxes/fees included",
+            "estimate_id": "local-0",
+            "total_cents": 3000,
+            "beneficiaries": [
+              "t1",
+              "t2"
+            ],
+            "evidence_state": "USER_ESTIMATE",
+            "taxes_included": true
+          },
+          {
+            "id": "lodging-0",
+            "day": 0,
+            "city": "PHL",
+            "fact_id": null,
+            "category": "lodging",
+            "quantity": 1,
+            "unit_cents": 11000,
+            "allocations": {
+              "t1": 5500,
+              "t2": 5500
+            },
+            "description": "Economy lodging, all-in per room/night, capacity 2",
+            "estimate_id": "lodging-0",
+            "total_cents": 11000,
+            "beneficiaries": [
+              "t1",
+              "t2"
+            ],
+            "evidence_state": "USER_ESTIMATE",
+            "taxes_included": true
+          },
+          {
+            "id": "ticket-0-phl-liberty-bell",
+            "day": 0,
+            "city": "PHL",
+            "fact_id": "phl-liberty-bell",
+            "category": "activity",
+            "quantity": 2,
+            "unit_cents": 0,
+            "allocations": {
+              "t1": 0,
+              "t2": 0
+            },
+            "description": "Liberty Bell Center",
+            "estimate_id": null,
+            "total_cents": 0,
+            "beneficiaries": [
+              "t1",
+              "t2"
+            ],
+            "evidence_state": "VERIFIED_SNAPSHOT",
+            "taxes_included": true
+          },
+          {
+            "id": "meals-1",
+            "day": 1,
+            "city": "PHL",
+            "fact_id": null,
+            "category": "meals",
+            "quantity": 6,
+            "unit_cents": 1800,
+            "allocations": {
+              "t1": 5400,
+              "t2": 5400
+            },
+            "description": "Three all-in meal allowances per traveler",
+            "estimate_id": "meals-1",
+            "total_cents": 10800,
+            "beneficiaries": [
+              "t1",
+              "t2"
+            ],
+            "evidence_state": "USER_ESTIMATE",
+            "taxes_included": true
+          },
+          {
+            "id": "local-1",
+            "day": 1,
+            "city": "PHL",
+            "fact_id": null,
+            "category": "local_transit",
+            "quantity": 2,
+            "unit_cents": 1500,
+            "allocations": {
+              "t1": 1500,
+              "t2": 1500
+            },
+            "description": "Local transit/transfer planning allowance, taxes/fees included",
+            "estimate_id": "local-1",
+            "total_cents": 3000,
+            "beneficiaries": [
+              "t1",
+              "t2"
+            ],
+            "evidence_state": "USER_ESTIMATE",
+            "taxes_included": true
+          },
+          {
+            "id": "lodging-1",
+            "day": 1,
+            "city": "PHL",
+            "fact_id": null,
+            "category": "lodging",
+            "quantity": 1,
+            "unit_cents": 11000,
+            "allocations": {
+              "t1": 5500,
+              "t2": 5500
+            },
+            "description": "Economy lodging, all-in per room/night, capacity 2",
+            "estimate_id": "lodging-1",
+            "total_cents": 11000,
+            "beneficiaries": [
+              "t1",
+              "t2"
+            ],
+            "evidence_state": "USER_ESTIMATE",
+            "taxes_included": true
+          },
+          {
+            "id": "ticket-1-phl-independence",
+            "day": 1,
+            "city": "PHL",
+            "fact_id": "phl-independence",
+            "category": "activity",
+            "quantity": 2,
+            "unit_cents": 0,
+            "allocations": {
+              "t1": 0,
+              "t2": 0
+            },
+            "description": "Independence Hall exterior and grounds",
+            "estimate_id": null,
+            "total_cents": 0,
+            "beneficiaries": [
+              "t1",
+              "t2"
+            ],
+            "evidence_state": "USER_ESTIMATE",
+            "taxes_included": true
+          },
+          {
+            "id": "meals-2",
+            "day": 2,
+            "city": "PHL",
+            "fact_id": null,
+            "category": "meals",
+            "quantity": 6,
+            "unit_cents": 1800,
+            "allocations": {
+              "t1": 5400,
+              "t2": 5400
+            },
+            "description": "Three all-in meal allowances per traveler",
+            "estimate_id": "meals-2",
+            "total_cents": 10800,
+            "beneficiaries": [
+              "t1",
+              "t2"
+            ],
+            "evidence_state": "USER_ESTIMATE",
+            "taxes_included": true
+          },
+          {
+            "id": "local-2",
+            "day": 2,
+            "city": "PHL",
+            "fact_id": null,
+            "category": "local_transit",
+            "quantity": 2,
+            "unit_cents": 1500,
+            "allocations": {
+              "t1": 1500,
+              "t2": 1500
+            },
+            "description": "Local transit/transfer planning allowance, taxes/fees included",
+            "estimate_id": "local-2",
+            "total_cents": 3000,
+            "beneficiaries": [
+              "t1",
+              "t2"
+            ],
+            "evidence_state": "USER_ESTIMATE",
+            "taxes_included": true
+          },
+          {
+            "id": "ticket-2-phl-visitor-center",
+            "day": 2,
+            "city": "PHL",
+            "fact_id": "phl-visitor-center",
+            "category": "activity",
+            "quantity": 2,
+            "unit_cents": 0,
+            "allocations": {
+              "t1": 0,
+              "t2": 0
+            },
+            "description": "Independence Visitor Center",
+            "estimate_id": null,
+            "total_cents": 0,
+            "beneficiaries": [
+              "t1",
+              "t2"
+            ],
+            "evidence_state": "USER_ESTIMATE",
+            "taxes_included": true
+          }
+        ],
+        "facts_read": [
+          {
+            "id": "phl-liberty-bell",
+            "source_id": "liberty-bell",
+            "price_cents": 0,
+            "evidence_state": "VERIFIED_SNAPSHOT"
+          },
+          {
+            "id": "phl-independence",
+            "source_id": "independence",
+            "price_cents": 0,
+            "evidence_state": "USER_ESTIMATE"
+          },
+          {
+            "id": "phl-visitor-center",
+            "source_id": "visitor-center",
+            "price_cents": 0,
+            "evidence_state": "USER_ESTIMATE"
+          }
+        ],
+        "violations": [],
+        "assumptions": [
+          "All lodging, meals, local/intercity transit and route durations are confirmed planning estimates.",
+          "Activity windows and walking distances are planning assumptions; no real-time availability.",
+          "Three meals daily, room capacity enforced, 10% contingency, USD integer cents."
+        ],
+        "total_cents": 69740,
+        "buffer_cents": 6340,
+        "corpus_version": "20261125T174151Z-r2",
+        "subtotal_cents": 63400,
+        "evidence_digest": "8560a82ca1a997079c253c25463851b731cbc769d0a2afa3c63a6b9b2532bf64",
+        "traveler_totals": {
+          "t1": 34870,
+          "t2": 34870
+        },
+        "base_allocations": {
+          "t1": 31700,
+          "t2": 31700
+        },
+        "constraints_hash": "c8055efe4bf9b531f61ff20f846a2be43df4c36fc3a7d12c98cb755872029b6b",
+        "contingency_allocations": {
+          "t1": 3170,
+          "t2": 3170
+        }
+      },
+      "approval": {
+        "id": "8jmHV_WZC9GEjN3WLbUW31MU2tMAJeIP",
+        "episode": "db1a939b5eef4012bbff5b6120fe6eb3",
+        "revision": 1,
+        "uid": "1bc026fe40244d0a9fe0eac6b412c823",
+        "hash": "056dd9f49b3c42397b60182ffbe7bdd402c4f744e35ea26ff6ded0a5d83e2fad",
+        "status": "CONSUMED",
+        "decision": {
+          "action": "approve",
+          "revision": 1,
+          "proposal_hash": "056dd9f49b3c42397b60182ffbe7bdd402c4f744e35ea26ff6ded0a5d83e2fad",
+          "new_budget_cents": null
+        },
+        "decision_key": "e1ad0f7d733c4cfc9602a8aea072b42f",
+        "expires_at": "2026-11-25T21:52:28.468733+00:00"
+      },
+      "ledger_id": "23affb77909a4204a481ae2d2c0e5512",
+      "resources": {
+        "calls": 9,
+        "attempts": 10,
+        "tokens": 11947,
+        "output_tokens": 1215,
+        "searches": 0,
+        "active_ms": 18993
+      }
+    },
+    "frames": [
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 21:22:10.466846+00:00",
+          "data": {
+            "constraints_hash": "c8055efe4bf9b531f61ff20f846a2be43df4c36fc3a7d12c98cb755872029b6b"
+          },
+          "id": 127,
+          "kind": "admitted"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 21:22:12.449748+00:00",
+          "data": {
+            "applied": false,
+            "values": null,
+            "version": 0
+          },
+          "id": 128,
+          "kind": "preferences_loaded"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 21:22:15.692310+00:00",
+          "data": {
+            "chunks": [
+              {
+                "activity_id": "phl-pma",
+                "city": "PHL",
+                "distance": 0.28611,
+                "id": "phl-pma:overview",
+                "kind": "overview",
+                "source_id": "pma",
+                "text": "Philadelphia Museum of Art is a museum option in PHL. Its catalog ID is phl-pma. The proposed visit lasts 120 minutes and includes an estimated 1800 meters of walking. This is a scoped group travel option, not a reservation or an accessible-route guarantee."
+              },
+              {
+                "activity_id": "phl-visitor-center",
+                "city": "PHL",
+                "distance": 0.28727,
+                "id": "phl-visitor-center:overview",
+                "kind": "overview",
+                "source_id": "visitor-center",
+                "text": "Independence Visitor Center is a history option in PHL. Its catalog ID is phl-visitor-center. The proposed visit lasts 60 minutes and includes an estimated 600 meters of walking. This is a scoped group travel option, not a reservation or an accessible-route guarantee."
+              },
+              {
+                "activity_id": "phl-independence",
+                "city": "PHL",
+                "distance": 0.30114,
+                "id": "phl-independence:overview",
+                "kind": "overview",
+                "source_id": "independence",
+                "text": "Independence Hall exterior and grounds is a history option in PHL. Its catalog ID is phl-independence. The proposed visit lasts 60 minutes and includes an estimated 1000 meters of walking. This is a scoped group travel option, not a reservation or an accessible-route guarantee."
+              },
+              {
+                "activity_id": "phl-liberty-bell",
+                "city": "PHL",
+                "distance": 0.31618,
+                "id": "phl-liberty-bell:overview",
+                "kind": "overview",
+                "source_id": "liberty-bell",
+                "text": "Liberty Bell Center is a history option in PHL. Its catalog ID is phl-liberty-bell. The proposed visit lasts 60 minutes and includes an estimated 700 meters of walking. This is a scoped group travel option, not a reservation or an accessible-route guarantee."
+              },
+              {
+                "activity_id": "phl-pma",
+                "city": "PHL",
+                "distance": 0.35642,
+                "id": "phl-pma:schedule",
+                "kind": "schedule",
+                "source_id": "pma",
+                "text": "The planning window for Philadelphia Museum of Art in PHL is 10:00 to 17:00 America/New_York. Proposed duration is 120 minutes. Closed weekday indices are [1, 2]. This conservative planning assumption still requires date and holiday checking; it does not guarantee entry or tickets."
+              }
+            ],
+            "city": "PHL",
+            "query": "PHL group trip cultural activities",
+            "relevant": false,
+            "retrieval_hash": "dfcb5196960c9a1df8b7c2eefc8f48946a44b01f67112eab3a931e567fd949b1",
+            "round": 1,
+            "source_ids": [
+              "pma",
+              "visitor-center",
+              "independence",
+              "liberty-bell",
+              "pma"
+            ]
+          },
+          "id": 129,
+          "kind": "retrieval"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 21:22:15.962203+00:00",
+          "data": {
+            "decoder_contract_hash": "a79bf592e32ebbfbdb8427ea02f21e1b31a6146631400b0bd629e77c08e4c508",
+            "fallback": false,
+            "input_bound": 1293,
+            "input_hash": "a6e6b316fa47f4e2f0f441591a070358a6d55b938a84b2471fe162096433637c",
+            "max_output": 384,
+            "model": "tripbudget-gemma4-e4b-gguf",
+            "output_contract_hash": "a79bf592e32ebbfbdb8427ea02f21e1b31a6146631400b0bd629e77c08e4c508",
+            "provider": "local",
+            "reason": "short_structured_utility",
+            "source_chunk_ids": [],
+            "structured_output": "ollama_json_schema",
+            "task": "query_rewrite",
+            "usage_id": "b52686d3c7a8479b93f7c4bbf60c6764"
+          },
+          "id": 130,
+          "kind": "model_request"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 21:22:16.227844+00:00",
+          "data": {
+            "error": "ConnectError",
+            "finish_reason": null,
+            "latency_ms": 38,
+            "model": "tripbudget-gemma4-e4b-gguf",
+            "provider": "local",
+            "success": false,
+            "task": "query_rewrite",
+            "usage_id": "b52686d3c7a8479b93f7c4bbf60c6764"
+          },
+          "id": 131,
+          "kind": "model_failure"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 21:22:16.952576+00:00",
+          "data": {
+            "decoder_contract_hash": "a79bf592e32ebbfbdb8427ea02f21e1b31a6146631400b0bd629e77c08e4c508",
+            "fallback": true,
+            "input_bound": 1293,
+            "input_hash": "a6e6b316fa47f4e2f0f441591a070358a6d55b938a84b2471fe162096433637c",
+            "max_output": 384,
+            "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+            "output_contract_hash": "a79bf592e32ebbfbdb8427ea02f21e1b31a6146631400b0bd629e77c08e4c508",
+            "provider": "cloud",
+            "reason": "short_structured_utility",
+            "source_chunk_ids": [],
+            "structured_output": "nvidia_json_schema",
+            "task": "query_rewrite",
+            "usage_id": "709b31e8ed2e42aa8df7e89d995a2c01"
+          },
+          "id": 132,
+          "kind": "model_request"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 21:22:17.698608+00:00",
+          "data": {
+            "finish_reason": "stop",
+            "input_tokens": 241,
+            "latency_ms": 504,
+            "local_backend": null,
+            "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+            "output_tokens": 39,
+            "provider": "cloud",
+            "result": {
+              "query": "PHL group trip cultural activities admission costs opening hours",
+              "reason": "Rewrite user query to include admission costs and opening hours as requested, preserving the city code PHL."
+            },
+            "success": true,
+            "task": "query_rewrite",
+            "usage_id": "709b31e8ed2e42aa8df7e89d995a2c01"
+          },
+          "id": 133,
+          "kind": "model_result"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 21:22:17.703733+00:00",
+          "data": {
+            "query": "PHL group trip cultural activities admission costs opening hours",
+            "reason": "Rewrite user query to include admission costs and opening hours as requested, preserving the city code PHL."
+          },
+          "id": 134,
+          "kind": "query_rewritten"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 21:22:17.736783+00:00",
+          "data": {
+            "chunks": [
+              {
+                "activity_id": "phl-pma",
+                "city": "PHL",
+                "distance": 0.27938,
+                "id": "phl-pma:overview",
+                "kind": "overview",
+                "source_id": "pma",
+                "text": "Philadelphia Museum of Art is a museum option in PHL. Its catalog ID is phl-pma. The proposed visit lasts 120 minutes and includes an estimated 1800 meters of walking. This is a scoped group travel option, not a reservation or an accessible-route guarantee."
+              },
+              {
+                "activity_id": "phl-visitor-center",
+                "city": "PHL",
+                "distance": 0.28369,
+                "id": "phl-visitor-center:overview",
+                "kind": "overview",
+                "source_id": "visitor-center",
+                "text": "Independence Visitor Center is a history option in PHL. Its catalog ID is phl-visitor-center. The proposed visit lasts 60 minutes and includes an estimated 600 meters of walking. This is a scoped group travel option, not a reservation or an accessible-route guarantee."
+              },
+              {
+                "activity_id": "phl-independence",
+                "city": "PHL",
+                "distance": 0.28486,
+                "id": "phl-independence:overview",
+                "kind": "overview",
+                "source_id": "independence",
+                "text": "Independence Hall exterior and grounds is a history option in PHL. Its catalog ID is phl-independence. The proposed visit lasts 60 minutes and includes an estimated 1000 meters of walking. This is a scoped group travel option, not a reservation or an accessible-route guarantee."
+              },
+              {
+                "activity_id": "phl-pma",
+                "city": "PHL",
+                "distance": 0.30118,
+                "id": "phl-pma:price",
+                "kind": "price",
+                "source_id": "pma",
+                "text": "Admission planning value for Philadelphia Museum of Art in PHL is 3000 USD cents per adult participant. Unless a reviewed fact explicitly marks it verified, this is a confirmed user estimate. The broker supplies this value by ID; a model cannot change it by citing different text."
+              },
+              {
+                "activity_id": "phl-pma",
+                "city": "PHL",
+                "distance": 0.30704,
+                "id": "phl-pma:schedule",
+                "kind": "schedule",
+                "source_id": "pma",
+                "text": "The planning window for Philadelphia Museum of Art in PHL is 10:00 to 17:00 America/New_York. Proposed duration is 120 minutes. Closed weekday indices are [1, 2]. This conservative planning assumption still requires date and holiday checking; it does not guarantee entry or tickets."
+              }
+            ],
+            "city": "PHL",
+            "query": "PHL group trip cultural activities admission costs opening hours",
+            "relevant": true,
+            "retrieval_hash": "5f2207bd206332db9067b1a837cef6825f9b928d61138e4b53f768c0813c2594",
+            "round": 2,
+            "source_ids": [
+              "pma",
+              "visitor-center",
+              "independence",
+              "pma",
+              "pma"
+            ]
+          },
+          "id": 135,
+          "kind": "retrieval"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 21:22:17.942195+00:00",
+          "data": {
+            "decoder_contract_hash": "4c96de819036db3247d2de8bac0f8925e3313628d58a89dfb8066e327ffa547d",
+            "fallback": false,
+            "input_bound": 3605,
+            "input_hash": "896699c54bbd083f9539517717935f2cfd40fba4d8e49fbac836b07db9e5ac9d",
+            "max_output": 2048,
+            "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+            "output_contract_hash": "702efbb281a38881e7123b8c5c3e3a6e61d34034e571b6faaeef5e8884d613ec",
+            "provider": "cloud",
+            "reason": "public_multistep_planning",
+            "source_chunk_ids": [],
+            "structured_output": "nvidia_json_schema",
+            "task": "supervisor",
+            "usage_id": "a9754ed909b6464a933eededa4c68c7d"
+          },
+          "id": 136,
+          "kind": "model_request"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 21:22:19.477925+00:00",
+          "data": {
+            "finish_reason": "stop",
+            "input_tokens": 896,
+            "latency_ms": 1678,
+            "local_backend": null,
+            "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+            "output_tokens": 202,
+            "provider": "cloud",
+            "result": {
+              "activities": {
+                "PHL": [
+                  "phl-liberty-bell",
+                  "phl-independence",
+                  "phl-visitor-center",
+                  "phl-pma"
+                ]
+              },
+              "activities_per_day": 2,
+              "expected_cost_cents": 21340,
+              "explanation": "2 activities/day across 3 days uses all 4 PHL IDs. Liberty Bell, Independence Hall exterior, Visitor Center are free; Museum costs 3000\u00a2. Total activity cost 3000\u00a2. Lodging economy 11000\u00a2. Meals 1800\u00a2 x 3 = 5400\u00a2. Subtotal 19400\u00a2 + 10% buffer 1940 = 21340\u00a2 within 21000\u00a2 standard cap. All walk distances under 12000\u00a2 max.",
+              "lodging_tier": "economy"
+            },
+            "success": true,
+            "task": "supervisor",
+            "usage_id": "a9754ed909b6464a933eededa4c68c7d"
+          },
+          "id": 137,
+          "kind": "model_result"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 21:22:19.482107+00:00",
+          "data": {
+            "choice": {
+              "activities": {
+                "PHL": [
+                  "phl-liberty-bell",
+                  "phl-independence",
+                  "phl-visitor-center",
+                  "phl-pma"
+                ]
+              },
+              "activities_per_day": 2,
+              "expected_cost_cents": 21340,
+              "explanation": "2 activities/day across 3 days uses all 4 PHL IDs. Liberty Bell, Independence Hall exterior, Visitor Center are free; Museum costs 3000\u00a2. Total activity cost 3000\u00a2. Lodging economy 11000\u00a2. Meals 1800\u00a2 x 3 = 5400\u00a2. Subtotal 19400\u00a2 + 10% buffer 1940 = 21340\u00a2 within 21000\u00a2 standard cap. All walk distances under 12000\u00a2 max.",
+              "lodging_tier": "economy"
+            },
+            "expected_cost_cents": 21340,
+            "pass": 1
+          },
+          "id": 138,
+          "kind": "plan_proposed"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 21:22:19.942453+00:00",
+          "data": {
+            "decoder_contract_hash": "ac7c74480e56900413d72fffb6981ae6d0aea8c8d8bb25f2bbc040362759cf23",
+            "fallback": false,
+            "input_bound": 4965,
+            "input_hash": "1af28d80ccc1f8b1e1601dc8fdd4cfdfc7d3484d41f3026b3474837c72944a9e",
+            "max_output": 1024,
+            "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+            "output_contract_hash": "ac7c74480e56900413d72fffb6981ae6d0aea8c8d8bb25f2bbc040362759cf23",
+            "provider": "cloud",
+            "reason": "public_multistep_planning",
+            "source_chunk_ids": [
+              "phl-pma:overview",
+              "phl-visitor-center:overview",
+              "phl-independence:overview",
+              "phl-liberty-bell:overview",
+              "phl-pma:schedule",
+              "phl-pma:price"
+            ],
+            "structured_output": "nvidia_json_schema",
+            "task": "transit_specialist",
+            "usage_id": "01a62a0c8fdf49a09d6e27449b9a72d3"
+          },
+          "id": 139,
+          "kind": "model_request"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 21:22:20.942936+00:00",
+          "data": {
+            "finish_reason": "stop",
+            "input_tokens": 1279,
+            "latency_ms": 989,
+            "local_backend": null,
+            "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+            "output_tokens": 110,
+            "provider": "cloud",
+            "result": {
+              "observation": "All 4 PHL catalog IDs included; walking distances 600-1000m under 12000m max; museum visit 120 min within 10:00-17:00 window; total activity cost 3000\u00a2 within 21000\u00a2 standard cap.",
+              "option_ids": [
+                "phl-liberty-bell",
+                "phl-independence",
+                "phl-visitor-center",
+                "phl-pma"
+              ]
+            },
+            "success": true,
+            "task": "transit_specialist",
+            "usage_id": "01a62a0c8fdf49a09d6e27449b9a72d3"
+          },
+          "id": 140,
+          "kind": "model_result"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 21:22:20.951174+00:00",
+          "data": {
+            "agent": "transit_specialist",
+            "observation": "All 4 PHL catalog IDs included; walking distances 600-1000m under 12000m max; museum visit 120 min within 10:00-17:00 window; total activity cost 3000\u00a2 within 21000\u00a2 standard cap.",
+            "option_ids": [
+              "phl-liberty-bell",
+              "phl-independence",
+              "phl-visitor-center",
+              "phl-pma"
+            ]
+          },
+          "id": 141,
+          "kind": "specialist_observation"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 21:22:20.991560+00:00",
+          "data": {
+            "decoder_contract_hash": "ac7c74480e56900413d72fffb6981ae6d0aea8c8d8bb25f2bbc040362759cf23",
+            "fallback": false,
+            "input_bound": 4967,
+            "input_hash": "359750475a8f8f83fece1020f57a15d3f10f11390b229739891a4f2b7c57b319",
+            "max_output": 1024,
+            "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+            "output_contract_hash": "ac7c74480e56900413d72fffb6981ae6d0aea8c8d8bb25f2bbc040362759cf23",
+            "provider": "cloud",
+            "reason": "public_multistep_planning",
+            "source_chunk_ids": [
+              "phl-pma:overview",
+              "phl-visitor-center:overview",
+              "phl-independence:overview",
+              "phl-liberty-bell:overview",
+              "phl-pma:schedule",
+              "phl-pma:price"
+            ],
+            "structured_output": "nvidia_json_schema",
+            "task": "lodging_specialist",
+            "usage_id": "4d93bc1a27444a1f992f86f0cdcae1b1"
+          },
+          "id": 142,
+          "kind": "model_request"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 21:22:22.219290+00:00",
+          "data": {
+            "finish_reason": "stop",
+            "input_tokens": 1281,
+            "latency_ms": 1210,
+            "local_backend": null,
+            "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+            "output_tokens": 88,
+            "provider": "cloud",
+            "result": {
+              "observation": "All 4 PHL catalog IDs are present in the proposal activities list. Liberty Bell, Independence Hall exterior, and Visitor Center are free; Museum costs 3000 cents. Walk distances and budget are within traveler limits. No invalid IDs detected.",
+              "option_ids": [
+                "phl-liberty-bell",
+                "phl-independence",
+                "phl-visitor-center",
+                "phl-pma"
+              ]
+            },
+            "success": true,
+            "task": "lodging_specialist",
+            "usage_id": "4d93bc1a27444a1f992f86f0cdcae1b1"
+          },
+          "id": 143,
+          "kind": "model_result"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 21:22:22.223386+00:00",
+          "data": {
+            "agent": "lodging_specialist",
+            "observation": "All 4 PHL catalog IDs are present in the proposal activities list. Liberty Bell, Independence Hall exterior, and Visitor Center are free; Museum costs 3000 cents. Walk distances and budget are within traveler limits. No invalid IDs detected.",
+            "option_ids": [
+              "phl-liberty-bell",
+              "phl-independence",
+              "phl-visitor-center",
+              "phl-pma"
+            ]
+          },
+          "id": 144,
+          "kind": "specialist_observation"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 21:22:22.468944+00:00",
+          "data": {
+            "decoder_contract_hash": "ac7c74480e56900413d72fffb6981ae6d0aea8c8d8bb25f2bbc040362759cf23",
+            "fallback": false,
+            "input_bound": 4957,
+            "input_hash": "fc97163cdb1fece822e8b35d29837a0789984dd7435e88da8f9dee6b3fcac0af",
+            "max_output": 1024,
+            "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+            "output_contract_hash": "ac7c74480e56900413d72fffb6981ae6d0aea8c8d8bb25f2bbc040362759cf23",
+            "provider": "cloud",
+            "reason": "public_multistep_planning",
+            "source_chunk_ids": [
+              "phl-pma:overview",
+              "phl-visitor-center:overview",
+              "phl-independence:overview",
+              "phl-liberty-bell:overview",
+              "phl-pma:schedule",
+              "phl-pma:price"
+            ],
+            "structured_output": "nvidia_json_schema",
+            "task": "attractions_specialist",
+            "usage_id": "8d9c5cb6b4714632965007309df3aa2b"
+          },
+          "id": 145,
+          "kind": "model_request"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 21:22:23.223800+00:00",
+          "data": {
+            "finish_reason": "stop",
+            "input_tokens": 1278,
+            "latency_ms": 735,
+            "local_backend": null,
+            "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+            "output_tokens": 85,
+            "provider": "cloud",
+            "result": {
+              "observation": "All 4 PHL catalog IDs are present in the proposal activities list. Liberty Bell, Independence Hall exterior, and Visitor Center are free; Museum costs 3000 cents. Walk distances are within traveler limits. No side effects.",
+              "option_ids": [
+                "phl-liberty-bell",
+                "phl-independence",
+                "phl-visitor-center",
+                "phl-pma"
+              ]
+            },
+            "success": true,
+            "task": "attractions_specialist",
+            "usage_id": "8d9c5cb6b4714632965007309df3aa2b"
+          },
+          "id": 146,
+          "kind": "model_result"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 21:22:23.227520+00:00",
+          "data": {
+            "agent": "attractions_specialist",
+            "observation": "All 4 PHL catalog IDs are present in the proposal activities list. Liberty Bell, Independence Hall exterior, and Visitor Center are free; Museum costs 3000 cents. Walk distances are within traveler limits. No side effects.",
+            "option_ids": [
+              "phl-liberty-bell",
+              "phl-independence",
+              "phl-visitor-center",
+              "phl-pma"
+            ]
+          },
+          "id": 147,
+          "kind": "specialist_observation"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 21:22:23.454570+00:00",
+          "data": {
+            "digest": "8560a82ca1a997079c253c25463851b731cbc769d0a2afa3c63a6b9b2532bf64",
+            "facts": [
+              {
+                "evidence_state": "VERIFIED_SNAPSHOT",
+                "id": "phl-liberty-bell",
+                "price_cents": 0,
+                "source_id": "liberty-bell"
+              },
+              {
+                "evidence_state": "USER_ESTIMATE",
+                "id": "phl-independence",
+                "price_cents": 0,
+                "source_id": "independence"
+              },
+              {
+                "evidence_state": "USER_ESTIMATE",
+                "id": "phl-visitor-center",
+                "price_cents": 0,
+                "source_id": "visitor-center"
+              },
+              {
+                "evidence_state": "VERIFIED_SNAPSHOT",
+                "id": "phl-pma",
+                "price_cents": 3000,
+                "source_id": "pma"
+              }
+            ]
+          },
+          "id": 148,
+          "kind": "catalog_facts_read"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 21:22:23.459098+00:00",
+          "data": {
+            "expected_cost_cents": 21340,
+            "pass": 1,
+            "total_cents": 76340,
+            "traveler_totals": {
+              "t1": 38170,
+              "t2": 38170
+            },
+            "valid": false,
+            "violations": [
+              {
+                "city": "PHL",
+                "code": "NO_ACTIVITY_COVERAGE",
+                "day": 2
+              }
+            ]
+          },
+          "id": 149,
+          "kind": "critic"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 21:22:23.468597+00:00",
+          "data": {
+            "candidates": [
+              {
+                "choice": {
+                  "activities": {
+                    "PHL": [
+                      "phl-liberty-bell",
+                      "phl-independence",
+                      "phl-visitor-center"
+                    ]
+                  },
+                  "activities_per_day": 1,
+                  "expected_cost_cents": 69740,
+                  "explanation": "Tool-priced alternative satisfying the declared constraints",
+                  "lodging_tier": "economy"
+                },
+                "total_cents": 69740,
+                "traveler_totals": {
+                  "t1": 34870,
+                  "t2": 34870
+                },
+                "valid": true
+              },
+              {
+                "choice": {
+                  "activities": {
+                    "PHL": [
+                      "phl-pma",
+                      "phl-liberty-bell",
+                      "phl-independence",
+                      "phl-visitor-center"
+                    ]
+                  },
+                  "activities_per_day": 1,
+                  "expected_cost_cents": 76340,
+                  "explanation": "Tool-priced alternative satisfying the declared constraints",
+                  "lodging_tier": "economy"
+                },
+                "total_cents": 76340,
+                "traveler_totals": {
+                  "t1": 38170,
+                  "t2": 38170
+                },
+                "valid": true
+              },
+              {
+                "choice": {
+                  "activities": {
+                    "PHL": [
+                      "phl-liberty-bell",
+                      "phl-independence",
+                      "phl-visitor-center"
+                    ]
+                  },
+                  "activities_per_day": 1,
+                  "expected_cost_cents": 91740,
+                  "explanation": "Tool-priced alternative satisfying the declared constraints",
+                  "lodging_tier": "standard"
+                },
+                "total_cents": 91740,
+                "traveler_totals": {
+                  "t1": 45870,
+                  "t2": 45870
+                },
+                "valid": true
+              }
+            ]
+          },
+          "id": 150,
+          "kind": "repair_options_computed"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 21:22:23.505807+00:00",
+          "data": {
+            "decoder_contract_hash": "3b15b0c798bcf9ca62098b2f01d280b0276bb57e50b35ba3a06f09dffee833d4",
+            "fallback": false,
+            "input_bound": 3144,
+            "input_hash": "73694847c5a8e82f1fdf594af9c086d2240b2d21936212844f4397c36cdf9e04",
+            "max_output": 2048,
+            "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+            "output_contract_hash": "3b15b0c798bcf9ca62098b2f01d280b0276bb57e50b35ba3a06f09dffee833d4",
+            "provider": "cloud",
+            "reason": "public_multistep_planning",
+            "source_chunk_ids": [],
+            "structured_output": "nvidia_json_schema",
+            "task": "repair",
+            "usage_id": "befb7517a969470994d23a332ff16bde"
+          },
+          "id": 151,
+          "kind": "model_request"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 21:22:24.704449+00:00",
+          "data": {
+            "finish_reason": "stop",
+            "input_tokens": 815,
+            "latency_ms": 1046,
+            "local_backend": null,
+            "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+            "output_tokens": 119,
+            "provider": "cloud",
+            "result": {
+              "candidate_index": 0,
+              "explanation": "Candidate 0 provides activity coverage for all three days including day 2, meeting the NO_ACTIVITY_COVERAGE requirement. It stays within the group budget of 150000 cents per traveler with a total cost of 69740 cents. The itinerary includes PHL liberty bell, independence, and visitor center activities, matching the requested balanced history and parks theme while respecting the economy lodging tier at 11000 cents and meal budget of 1800 cents."
+            },
+            "success": true,
+            "task": "repair",
+            "usage_id": "befb7517a969470994d23a332ff16bde"
+          },
+          "id": 152,
+          "kind": "model_result"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 21:22:24.710621+00:00",
+          "data": {
+            "candidate_index": 0,
+            "explanation": "Candidate 0 provides activity coverage for all three days including day 2, meeting the NO_ACTIVITY_COVERAGE requirement. It stays within the group budget of 150000 cents per traveler with a total cost of 69740 cents. The itinerary includes PHL liberty bell, independence, and visitor center activities, matching the requested balanced history and parks theme while respecting the economy lodging tier at 11000 cents and meal budget of 1800 cents."
+          },
+          "id": 153,
+          "kind": "repair_selected"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 21:22:24.714585+00:00",
+          "data": {
+            "choice": {
+              "activities": {
+                "PHL": [
+                  "phl-liberty-bell",
+                  "phl-independence",
+                  "phl-visitor-center"
+                ]
+              },
+              "activities_per_day": 1,
+              "expected_cost_cents": 69740,
+              "explanation": "Candidate 0 provides activity coverage for all three days including day 2, meeting the NO_ACTIVITY_COVERAGE requirement. It stays within the group budget of 150000 cents per traveler with a total cost of 69740 cents. The itinerary includes PHL liberty bell, independence, and visitor center activities, matching the requested balanced history and parks theme while respecting the economy lodging tier at 11000 cents and meal budget of 1800 cents.",
+              "lodging_tier": "economy"
+            },
+            "expected_cost_cents": 69740,
+            "pass": 2
+          },
+          "id": 154,
+          "kind": "plan_proposed"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 21:22:24.743770+00:00",
+          "data": {
+            "decoder_contract_hash": "ac7c74480e56900413d72fffb6981ae6d0aea8c8d8bb25f2bbc040362759cf23",
+            "fallback": false,
+            "input_bound": 5024,
+            "input_hash": "c7b0e33ca8fbf97312638480c5c63d8f7f9349069f669c6d22c02b6c449810e9",
+            "max_output": 1024,
+            "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+            "output_contract_hash": "ac7c74480e56900413d72fffb6981ae6d0aea8c8d8bb25f2bbc040362759cf23",
+            "provider": "cloud",
+            "reason": "public_multistep_planning",
+            "source_chunk_ids": [
+              "phl-pma:overview",
+              "phl-visitor-center:overview",
+              "phl-independence:overview",
+              "phl-liberty-bell:overview",
+              "phl-pma:schedule",
+              "phl-pma:price"
+            ],
+            "structured_output": "nvidia_json_schema",
+            "task": "transit_specialist",
+            "usage_id": "a9204454126c47c2958f93a42d91ef48"
+          },
+          "id": 155,
+          "kind": "model_request"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 21:22:25.475580+00:00",
+          "data": {
+            "finish_reason": "stop",
+            "input_tokens": 1216,
+            "latency_ms": 713,
+            "local_backend": null,
+            "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+            "output_tokens": 56,
+            "provider": "cloud",
+            "result": {
+              "observation": "All three IDs appear in the PHL catalog and match the proposed activities. No other catalog IDs are relevant to the activity set.",
+              "option_ids": [
+                "phl-liberty-bell",
+                "phl-independence",
+                "phl-visitor-center"
+              ]
+            },
+            "success": true,
+            "task": "transit_specialist",
+            "usage_id": "a9204454126c47c2958f93a42d91ef48"
+          },
+          "id": 156,
+          "kind": "model_result"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 21:22:25.479408+00:00",
+          "data": {
+            "agent": "transit_specialist",
+            "observation": "All three IDs appear in the PHL catalog and match the proposed activities. No other catalog IDs are relevant to the activity set.",
+            "option_ids": [
+              "phl-liberty-bell",
+              "phl-independence",
+              "phl-visitor-center"
+            ]
+          },
+          "id": 157,
+          "kind": "specialist_observation"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 21:22:25.744402+00:00",
+          "data": {
+            "decoder_contract_hash": "ac7c74480e56900413d72fffb6981ae6d0aea8c8d8bb25f2bbc040362759cf23",
+            "fallback": false,
+            "input_bound": 5026,
+            "input_hash": "b0ca261fbcfa17b0e23fd5a8446169c3c64174b0905e789e78cd7d63f0bce951",
+            "max_output": 1024,
+            "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+            "output_contract_hash": "ac7c74480e56900413d72fffb6981ae6d0aea8c8d8bb25f2bbc040362759cf23",
+            "provider": "cloud",
+            "reason": "public_multistep_planning",
+            "source_chunk_ids": [
+              "phl-pma:overview",
+              "phl-visitor-center:overview",
+              "phl-independence:overview",
+              "phl-liberty-bell:overview",
+              "phl-pma:schedule",
+              "phl-pma:price"
+            ],
+            "structured_output": "nvidia_json_schema",
+            "task": "lodging_specialist",
+            "usage_id": "d5dd97ac31774630bdb10f922061c21e"
+          },
+          "id": 158,
+          "kind": "model_request"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 21:22:26.716936+00:00",
+          "data": {
+            "finish_reason": "stop",
+            "input_tokens": 1218,
+            "latency_ms": 861,
+            "local_backend": null,
+            "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+            "output_tokens": 56,
+            "provider": "cloud",
+            "result": {
+              "observation": "All three IDs appear in the PHL catalog and match the proposed activities. No other catalog IDs are relevant to the activity set.",
+              "option_ids": [
+                "phl-liberty-bell",
+                "phl-independence",
+                "phl-visitor-center"
+              ]
+            },
+            "success": true,
+            "task": "lodging_specialist",
+            "usage_id": "d5dd97ac31774630bdb10f922061c21e"
+          },
+          "id": 159,
+          "kind": "model_result"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 21:22:26.728608+00:00",
+          "data": {
+            "agent": "lodging_specialist",
+            "observation": "All three IDs appear in the PHL catalog and match the proposed activities. No other catalog IDs are relevant to the activity set.",
+            "option_ids": [
+              "phl-liberty-bell",
+              "phl-independence",
+              "phl-visitor-center"
+            ]
+          },
+          "id": 160,
+          "kind": "specialist_observation"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 21:22:26.955574+00:00",
+          "data": {
+            "decoder_contract_hash": "ac7c74480e56900413d72fffb6981ae6d0aea8c8d8bb25f2bbc040362759cf23",
+            "fallback": false,
+            "input_bound": 5016,
+            "input_hash": "62a10652c3e8acae4fb8692b76e332f7cd2cec14854c10b1f4d802bb00a5c7b9",
+            "max_output": 1024,
+            "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+            "output_contract_hash": "ac7c74480e56900413d72fffb6981ae6d0aea8c8d8bb25f2bbc040362759cf23",
+            "provider": "cloud",
+            "reason": "public_multistep_planning",
+            "source_chunk_ids": [
+              "phl-pma:overview",
+              "phl-visitor-center:overview",
+              "phl-independence:overview",
+              "phl-liberty-bell:overview",
+              "phl-pma:schedule",
+              "phl-pma:price"
+            ],
+            "structured_output": "nvidia_json_schema",
+            "task": "attractions_specialist",
+            "usage_id": "3b872fc3a3f34373b59302f83f3a0d1a"
+          },
+          "id": 161,
+          "kind": "model_request"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 21:22:27.977565+00:00",
+          "data": {
+            "finish_reason": "stop",
+            "input_tokens": 1215,
+            "latency_ms": 834,
+            "local_backend": null,
+            "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+            "output_tokens": 76,
+            "provider": "cloud",
+            "result": {
+              "observation": "All three IDs appear in the catalog and were selected for the balanced history, parks and museums theme within the 3-day PHL itinerary. Walking distances and museum hours are within traveler limits. No activity coverage gaps remain.",
+              "option_ids": [
+                "phl-liberty-bell",
+                "phl-independence",
+                "phl-visitor-center"
+              ]
+            },
+            "success": true,
+            "task": "attractions_specialist",
+            "usage_id": "3b872fc3a3f34373b59302f83f3a0d1a"
+          },
+          "id": 162,
+          "kind": "model_result"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 21:22:27.981164+00:00",
+          "data": {
+            "agent": "attractions_specialist",
+            "observation": "All three IDs appear in the catalog and were selected for the balanced history, parks and museums theme within the 3-day PHL itinerary. Walking distances and museum hours are within traveler limits. No activity coverage gaps remain.",
+            "option_ids": [
+              "phl-liberty-bell",
+              "phl-independence",
+              "phl-visitor-center"
+            ]
+          },
+          "id": 163,
+          "kind": "specialist_observation"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 21:22:28.219685+00:00",
+          "data": {
+            "digest": "8560a82ca1a997079c253c25463851b731cbc769d0a2afa3c63a6b9b2532bf64",
+            "facts": [
+              {
+                "evidence_state": "VERIFIED_SNAPSHOT",
+                "id": "phl-liberty-bell",
+                "price_cents": 0,
+                "source_id": "liberty-bell"
+              },
+              {
+                "evidence_state": "USER_ESTIMATE",
+                "id": "phl-independence",
+                "price_cents": 0,
+                "source_id": "independence"
+              },
+              {
+                "evidence_state": "USER_ESTIMATE",
+                "id": "phl-visitor-center",
+                "price_cents": 0,
+                "source_id": "visitor-center"
+              }
+            ]
+          },
+          "id": 164,
+          "kind": "catalog_facts_read"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 21:22:28.231020+00:00",
+          "data": {
+            "expected_cost_cents": 69740,
+            "pass": 2,
+            "total_cents": 69740,
+            "traveler_totals": {
+              "t1": 34870,
+              "t2": 34870
+            },
+            "valid": true,
+            "violations": []
+          },
+          "id": 165,
+          "kind": "critic"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 21:22:28.725941+00:00",
+          "data": {
+            "approval_id": "8jmHV_WZC9GEjN3WLbUW31MU2tMAJeIP",
+            "expires_at": "2026-11-25T21:52:28.468733+00:00",
+            "hash": "056dd9f49b3c42397b60182ffbe7bdd402c4f744e35ea26ff6ded0a5d83e2fad",
+            "revision": 1
+          },
+          "id": 166,
+          "kind": "approval_pending"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 21:22:30.985164+00:00",
+          "data": {
+            "action": "approve",
+            "revision": 1
+          },
+          "id": 167,
+          "kind": "human_decision"
+        }
+      },
+      {
+        "event": "trace",
+        "data": {
+          "at": "2026-11-25 21:22:33.958472+00:00",
+          "data": {
+            "hash": "056dd9f49b3c42397b60182ffbe7bdd402c4f744e35ea26ff6ded0a5d83e2fad",
+            "ledger_id": "23affb77909a4204a481ae2d2c0e5512"
+          },
+          "id": 168,
+          "kind": "ledger_committed"
+        }
+      },
+      {
+        "event": "done",
+        "data": {
+          "ledger_id": "23affb77909a4204a481ae2d2c0e5512",
+          "outcome": "COMMITTED"
+        }
+      }
+    ]
+  },
+  "private_note_without_laptop": {
+    "status": 503,
+    "response": {
+      "error": "LOCAL_UNAVAILABLE",
+      "message": "No compatible model completed this task (ConnectError)"
+    }
+  },
+  "unauthenticated_direct_http_status": 404,
+  "success": true
+}

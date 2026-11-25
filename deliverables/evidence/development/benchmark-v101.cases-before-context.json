@@ -1,0 +1,788 @@
+[
+  {
+    "id": "F01",
+    "kind": "feasible",
+    "request": {
+      "start_date": "2026-11-28",
+      "days": 5,
+      "cities": [
+        "NYC",
+        "PHL",
+        "DC"
+      ],
+      "travelers": [
+        {
+          "id": "t1",
+          "budget_cents": 85000,
+          "diet": "unrestricted",
+          "maximum_walk_meters": 12000
+        },
+        {
+          "id": "t2",
+          "budget_cents": 85000,
+          "diet": "unrestricted",
+          "maximum_walk_meters": 12000
+        },
+        {
+          "id": "t3",
+          "budget_cents": 85000,
+          "diet": "unrestricted",
+          "maximum_walk_meters": 12000
+        },
+        {
+          "id": "t4",
+          "budget_cents": 85000,
+          "diet": "unrestricted",
+          "maximum_walk_meters": 12000
+        }
+      ],
+      "estimates_confirmed": true,
+      "use_saved_preferences": false
+    },
+    "witness": "economy lodging; one free outdoor/history/museum activity per day; manual cost/window oracle"
+  },
+  {
+    "id": "F02",
+    "kind": "feasible",
+    "request": {
+      "start_date": "2026-11-28",
+      "days": 3,
+      "cities": [
+        "NYC"
+      ],
+      "travelers": [
+        {
+          "id": "t1",
+          "budget_cents": 90000,
+          "diet": "unrestricted",
+          "maximum_walk_meters": 12000
+        },
+        {
+          "id": "t2",
+          "budget_cents": 90000,
+          "diet": "unrestricted",
+          "maximum_walk_meters": 12000
+        }
+      ],
+      "estimates_confirmed": true,
+      "use_saved_preferences": false
+    },
+    "witness": "economy lodging; one free outdoor/history/museum activity per day; manual cost/window oracle"
+  },
+  {
+    "id": "F03",
+    "kind": "feasible",
+    "request": {
+      "start_date": "2026-11-28",
+      "days": 7,
+      "cities": [
+        "NYC",
+        "PHL",
+        "DC"
+      ],
+      "travelers": [
+        {
+          "id": "t1",
+          "budget_cents": 140000,
+          "diet": "unrestricted",
+          "maximum_walk_meters": 12000
+        },
+        {
+          "id": "t2",
+          "budget_cents": 140000,
+          "diet": "unrestricted",
+          "maximum_walk_meters": 12000
+        },
+        {
+          "id": "t3",
+          "budget_cents": 140000,
+          "diet": "unrestricted",
+          "maximum_walk_meters": 12000
+        },
+        {
+          "id": "t4",
+          "budget_cents": 140000,
+          "diet": "unrestricted",
+          "maximum_walk_meters": 12000
+        },
+        {
+          "id": "t5",
+          "budget_cents": 140000,
+          "diet": "unrestricted",
+          "maximum_walk_meters": 12000
+        },
+        {
+          "id": "t6",
+          "budget_cents": 140000,
+          "diet": "unrestricted",
+          "maximum_walk_meters": 12000
+        }
+      ],
+      "estimates_confirmed": true,
+      "use_saved_preferences": false
+    },
+    "witness": "economy lodging; one free outdoor/history/museum activity per day; manual cost/window oracle"
+  },
+  {
+    "id": "F04",
+    "kind": "feasible",
+    "request": {
+      "start_date": "2026-11-28",
+      "days": 3,
+      "cities": [
+        "PHL"
+      ],
+      "travelers": [
+        {
+          "id": "t1",
+          "budget_cents": 65000,
+          "diet": "unrestricted",
+          "maximum_walk_meters": 12000
+        },
+        {
+          "id": "t2",
+          "budget_cents": 65000,
+          "diet": "unrestricted",
+          "maximum_walk_meters": 12000
+        }
+      ],
+      "estimates_confirmed": true,
+      "use_saved_preferences": false
+    },
+    "witness": "economy lodging; one free outdoor/history/museum activity per day; manual cost/window oracle"
+  },
+  {
+    "id": "F05",
+    "kind": "feasible",
+    "request": {
+      "start_date": "2026-11-28",
+      "days": 3,
+      "cities": [
+        "DC"
+      ],
+      "travelers": [
+        {
+          "id": "t1",
+          "budget_cents": 65000,
+          "diet": "unrestricted",
+          "maximum_walk_meters": 12000
+        },
+        {
+          "id": "t2",
+          "budget_cents": 65000,
+          "diet": "unrestricted",
+          "maximum_walk_meters": 12000
+        },
+        {
+          "id": "t3",
+          "budget_cents": 65000,
+          "diet": "unrestricted",
+          "maximum_walk_meters": 12000
+        },
+        {
+          "id": "t4",
+          "budget_cents": 65000,
+          "diet": "unrestricted",
+          "maximum_walk_meters": 12000
+        }
+      ],
+      "estimates_confirmed": true,
+      "use_saved_preferences": false
+    },
+    "witness": "economy lodging; one free outdoor/history/museum activity per day; manual cost/window oracle"
+  },
+  {
+    "id": "F06",
+    "kind": "feasible",
+    "request": {
+      "start_date": "2026-11-28",
+      "days": 5,
+      "cities": [
+        "NYC",
+        "PHL",
+        "DC"
+      ],
+      "travelers": [
+        {
+          "id": "t1",
+          "budget_cents": 95000,
+          "diet": "unrestricted",
+          "maximum_walk_meters": 12000
+        },
+        {
+          "id": "t2",
+          "budget_cents": 95000,
+          "diet": "unrestricted",
+          "maximum_walk_meters": 12000
+        },
+        {
+          "id": "t3",
+          "budget_cents": 95000,
+          "diet": "unrestricted",
+          "maximum_walk_meters": 12000
+        }
+      ],
+      "estimates_confirmed": true,
+      "use_saved_preferences": false
+    },
+    "witness": "economy lodging; one free outdoor/history/museum activity per day; manual cost/window oracle"
+  },
+  {
+    "id": "F07",
+    "kind": "feasible",
+    "request": {
+      "start_date": "2026-11-28",
+      "days": 5,
+      "cities": [
+        "NYC",
+        "PHL",
+        "DC"
+      ],
+      "travelers": [
+        {
+          "id": "t1",
+          "budget_cents": 80000,
+          "diet": "unrestricted",
+          "maximum_walk_meters": 12000
+        },
+        {
+          "id": "t2",
+          "budget_cents": 85000,
+          "diet": "unrestricted",
+          "maximum_walk_meters": 12000
+        },
+        {
+          "id": "t3",
+          "budget_cents": 90000,
+          "diet": "unrestricted",
+          "maximum_walk_meters": 12000
+        },
+        {
+          "id": "t4",
+          "budget_cents": 95000,
+          "diet": "unrestricted",
+          "maximum_walk_meters": 12000
+        }
+      ],
+      "estimates_confirmed": true,
+      "use_saved_preferences": false
+    },
+    "witness": "economy lodging; one free outdoor/history/museum activity per day; manual cost/window oracle"
+  },
+  {
+    "id": "F08",
+    "kind": "feasible",
+    "request": {
+      "start_date": "2026-11-28",
+      "days": 5,
+      "cities": [
+        "NYC",
+        "PHL",
+        "DC"
+      ],
+      "travelers": [
+        {
+          "id": "t1",
+          "budget_cents": 90000,
+          "diet": "unrestricted",
+          "maximum_walk_meters": 4000
+        },
+        {
+          "id": "t2",
+          "budget_cents": 90000,
+          "diet": "unrestricted",
+          "maximum_walk_meters": 4000
+        },
+        {
+          "id": "t3",
+          "budget_cents": 90000,
+          "diet": "unrestricted",
+          "maximum_walk_meters": 4000
+        },
+        {
+          "id": "t4",
+          "budget_cents": 90000,
+          "diet": "unrestricted",
+          "maximum_walk_meters": 4000
+        }
+      ],
+      "estimates_confirmed": true,
+      "use_saved_preferences": false
+    },
+    "witness": "economy lodging; one free outdoor/history/museum activity per day; manual cost/window oracle"
+  },
+  {
+    "id": "F09",
+    "kind": "feasible",
+    "request": {
+      "start_date": "2026-11-28",
+      "days": 5,
+      "cities": [
+        "NYC",
+        "PHL",
+        "DC"
+      ],
+      "travelers": [
+        {
+          "id": "t1",
+          "budget_cents": 90000,
+          "diet": "vegan",
+          "maximum_walk_meters": 12000
+        },
+        {
+          "id": "t2",
+          "budget_cents": 90000,
+          "diet": "vegan",
+          "maximum_walk_meters": 12000
+        },
+        {
+          "id": "t3",
+          "budget_cents": 90000,
+          "diet": "vegan",
+          "maximum_walk_meters": 12000
+        },
+        {
+          "id": "t4",
+          "budget_cents": 90000,
+          "diet": "vegan",
+          "maximum_walk_meters": 12000
+        }
+      ],
+      "estimates_confirmed": true,
+      "use_saved_preferences": false
+    },
+    "witness": "economy lodging; one free outdoor/history/museum activity per day; manual cost/window oracle"
+  },
+  {
+    "id": "F10",
+    "kind": "feasible",
+    "request": {
+      "start_date": "2026-11-28",
+      "days": 5,
+      "cities": [
+        "NYC",
+        "PHL",
+        "DC"
+      ],
+      "travelers": [
+        {
+          "id": "t1",
+          "budget_cents": 90000,
+          "diet": "unrestricted",
+          "maximum_walk_meters": 12000
+        },
+        {
+          "id": "t2",
+          "budget_cents": 90000,
+          "diet": "unrestricted",
+          "maximum_walk_meters": 12000
+        },
+        {
+          "id": "t3",
+          "budget_cents": 90000,
+          "diet": "unrestricted",
+          "maximum_walk_meters": 12000
+        },
+        {
+          "id": "t4",
+          "budget_cents": 90000,
+          "diet": "unrestricted",
+          "maximum_walk_meters": 12000
+        }
+      ],
+      "estimates_confirmed": true,
+      "use_saved_preferences": false,
+      "gateway_end_hour": 15
+    },
+    "witness": "economy lodging; one free outdoor/history/museum activity per day; manual cost/window oracle"
+  },
+  {
+    "id": "F11",
+    "kind": "feasible",
+    "request": {
+      "start_date": "2026-11-28",
+      "days": 3,
+      "cities": [
+        "NYC",
+        "PHL"
+      ],
+      "travelers": [
+        {
+          "id": "t1",
+          "budget_cents": 95000,
+          "diet": "unrestricted",
+          "maximum_walk_meters": 12000
+        },
+        {
+          "id": "t2",
+          "budget_cents": 95000,
+          "diet": "unrestricted",
+          "maximum_walk_meters": 12000
+        },
+        {
+          "id": "t3",
+          "budget_cents": 95000,
+          "diet": "unrestricted",
+          "maximum_walk_meters": 12000
+        },
+        {
+          "id": "t4",
+          "budget_cents": 95000,
+          "diet": "unrestricted",
+          "maximum_walk_meters": 12000
+        },
+        {
+          "id": "t5",
+          "budget_cents": 95000,
+          "diet": "unrestricted",
+          "maximum_walk_meters": 12000
+        },
+        {
+          "id": "t6",
+          "budget_cents": 95000,
+          "diet": "unrestricted",
+          "maximum_walk_meters": 12000
+        }
+      ],
+      "estimates_confirmed": true,
+      "use_saved_preferences": false
+    },
+    "witness": "economy lodging; one free outdoor/history/museum activity per day; manual cost/window oracle"
+  },
+  {
+    "id": "F12",
+    "kind": "feasible",
+    "request": {
+      "start_date": "2026-11-28",
+      "days": 5,
+      "cities": [
+        "NYC",
+        "PHL",
+        "DC"
+      ],
+      "travelers": [
+        {
+          "id": "t1",
+          "budget_cents": 85000,
+          "diet": "unrestricted",
+          "maximum_walk_meters": 12000
+        },
+        {
+          "id": "t2",
+          "budget_cents": 85000,
+          "diet": "unrestricted",
+          "maximum_walk_meters": 12000
+        },
+        {
+          "id": "t3",
+          "budget_cents": 85000,
+          "diet": "unrestricted",
+          "maximum_walk_meters": 12000
+        },
+        {
+          "id": "t4",
+          "budget_cents": 85000,
+          "diet": "unrestricted",
+          "maximum_walk_meters": 12000
+        }
+      ],
+      "estimates_confirmed": true,
+      "use_saved_preferences": false,
+      "group_budget_cents": 310000
+    },
+    "witness": "economy lodging; one free outdoor/history/museum activity per day; manual cost/window oracle"
+  },
+  {
+    "id": "I01",
+    "kind": "infeasible",
+    "request": {
+      "start_date": "2026-11-28",
+      "days": 5,
+      "cities": [
+        "NYC",
+        "PHL",
+        "DC"
+      ],
+      "travelers": [
+        {
+          "id": "t1",
+          "budget_cents": 5000,
+          "maximum_walk_meters": 12000
+        },
+        {
+          "id": "t2",
+          "budget_cents": 5000,
+          "maximum_walk_meters": 12000
+        },
+        {
+          "id": "t3",
+          "budget_cents": 5000,
+          "maximum_walk_meters": 12000
+        },
+        {
+          "id": "t4",
+          "budget_cents": 5000,
+          "maximum_walk_meters": 12000
+        }
+      ],
+      "estimates_confirmed": true,
+      "use_saved_preferences": false
+    },
+    "proof": "Five days of three daily meal allowances alone exceed USD 50/person"
+  },
+  {
+    "id": "I02",
+    "kind": "infeasible",
+    "request": {
+      "start_date": "2026-11-28",
+      "days": 7,
+      "cities": [
+        "NYC",
+        "PHL",
+        "DC"
+      ],
+      "travelers": [
+        {
+          "id": "t1",
+          "budget_cents": 20000,
+          "maximum_walk_meters": 12000
+        },
+        {
+          "id": "t2",
+          "budget_cents": 20000,
+          "maximum_walk_meters": 12000
+        },
+        {
+          "id": "t3",
+          "budget_cents": 20000,
+          "maximum_walk_meters": 12000
+        },
+        {
+          "id": "t4",
+          "budget_cents": 20000,
+          "maximum_walk_meters": 12000
+        }
+      ],
+      "estimates_confirmed": true,
+      "use_saved_preferences": false
+    },
+    "proof": "Seven days of meal allowances alone exceed USD 200/person"
+  },
+  {
+    "id": "I03",
+    "kind": "infeasible",
+    "request": {
+      "start_date": "2026-11-28",
+      "days": 5,
+      "cities": [
+        "NYC",
+        "PHL",
+        "DC"
+      ],
+      "travelers": [
+        {
+          "id": "t1",
+          "budget_cents": 85000,
+          "maximum_walk_meters": 12000
+        },
+        {
+          "id": "t2",
+          "budget_cents": 85000,
+          "maximum_walk_meters": 12000
+        },
+        {
+          "id": "t3",
+          "budget_cents": 85000,
+          "maximum_walk_meters": 12000
+        },
+        {
+          "id": "t4",
+          "budget_cents": 85000,
+          "maximum_walk_meters": 12000
+        }
+      ],
+      "estimates_confirmed": true,
+      "use_saved_preferences": false,
+      "group_budget_cents": 10000
+    },
+    "proof": "Mandatory group meals alone exceed USD 100 total"
+  },
+  {
+    "id": "I04",
+    "kind": "infeasible",
+    "request": {
+      "start_date": "2026-11-28",
+      "days": 5,
+      "cities": [
+        "NYC",
+        "PHL",
+        "DC"
+      ],
+      "travelers": [
+        {
+          "id": "t1",
+          "budget_cents": 85000,
+          "maximum_walk_meters": 500
+        },
+        {
+          "id": "t2",
+          "budget_cents": 85000,
+          "maximum_walk_meters": 500
+        },
+        {
+          "id": "t3",
+          "budget_cents": 85000,
+          "maximum_walk_meters": 500
+        },
+        {
+          "id": "t4",
+          "budget_cents": 85000,
+          "maximum_walk_meters": 500
+        }
+      ],
+      "estimates_confirmed": true,
+      "use_saved_preferences": false
+    },
+    "proof": "Any catalog activity plus 500m daily transfer allowance exceeds 500m"
+  },
+  {
+    "id": "D01",
+    "kind": "incomplete",
+    "request": {
+      "start_date": "2026-11-28",
+      "days": 5,
+      "cities": [
+        "NYC",
+        "PHL",
+        "DC"
+      ],
+      "travelers": [
+        {
+          "id": "t1",
+          "budget_cents": 85000
+        },
+        {
+          "id": "t2",
+          "budget_cents": 85000
+        },
+        {
+          "id": "t3",
+          "budget_cents": 85000
+        },
+        {
+          "id": "t4",
+          "budget_cents": 85000
+        }
+      ],
+      "estimates_confirmed": true,
+      "use_saved_preferences": false
+    },
+    "mutation": "missing_fare",
+    "reason": "A required route exists but has no numerical fare"
+  },
+  {
+    "id": "D02",
+    "kind": "incomplete",
+    "request": {
+      "start_date": "2026-11-28",
+      "days": 5,
+      "cities": [
+        "NYC",
+        "PHL",
+        "DC"
+      ],
+      "travelers": [
+        {
+          "id": "t1",
+          "budget_cents": 85000
+        },
+        {
+          "id": "t2",
+          "budget_cents": 85000
+        },
+        {
+          "id": "t3",
+          "budget_cents": 85000
+        },
+        {
+          "id": "t4",
+          "budget_cents": 85000
+        }
+      ],
+      "estimates_confirmed": true,
+      "use_saved_preferences": false
+    },
+    "mutation": "expired_activity",
+    "reason": "A mandatory candidate source/estimate has expired"
+  },
+  {
+    "id": "D03",
+    "kind": "incomplete",
+    "request": {
+      "start_date": "2026-11-28",
+      "days": 5,
+      "cities": [
+        "NYC",
+        "PHL",
+        "DC"
+      ],
+      "travelers": [
+        {
+          "id": "t1",
+          "budget_cents": 85000
+        },
+        {
+          "id": "t2",
+          "budget_cents": 85000
+        },
+        {
+          "id": "t3",
+          "budget_cents": 85000
+        },
+        {
+          "id": "t4",
+          "budget_cents": 85000
+        }
+      ],
+      "estimates_confirmed": true,
+      "use_saved_preferences": false
+    },
+    "mutation": "missing_route",
+    "reason": "No route record supports one requested city transition"
+  },
+  {
+    "id": "D04",
+    "kind": "incomplete",
+    "request": {
+      "start_date": "2026-11-28",
+      "days": 5,
+      "cities": [
+        "NYC",
+        "PHL",
+        "DC"
+      ],
+      "travelers": [
+        {
+          "id": "t1",
+          "budget_cents": 85000
+        },
+        {
+          "id": "t2",
+          "budget_cents": 85000
+        },
+        {
+          "id": "t3",
+          "budget_cents": 85000
+        },
+        {
+          "id": "t4",
+          "budget_cents": 85000
+        }
+      ],
+      "estimates_confirmed": false,
+      "use_saved_preferences": false
+    },
+    "mutation": "unconfirmed_estimate",
+    "reason": "The organizer has not confirmed mandatory planning estimates"
+  }
+]

@@ -29,6 +29,7 @@ spec:
         - {name: TRIPBUDGET_AUTH_MODE, value: local}
         - {name: TRIPBUDGET_ENABLE_TEST_CONTROLS, value: 'false'}
         - {name: TRIPBUDGET_OLLAMA_URL, value: 'http://127.0.0.1:11435'}
+        - {name: TRIPBUDGET_OLLAMA_MODEL, value: 'tripbudget-gemma4-e4b-gguf'}
         startupProbe:
           httpGet: {path: /readyz, port: 8080}
           periodSeconds: 10

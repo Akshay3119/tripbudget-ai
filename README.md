@@ -2,9 +2,11 @@
 
 **New contributor:** start with the [project handoff](HANDOFF.md) for implementation context, access/setup, evidence, limitations and contribution tasks.
 
+**Current release: 1.0.1.** Provider reliability fixes, fresh evaluation results and remaining limits are documented in the [follow-up report](deliverables/EVALUATION_FOLLOWUP_1.0.1.md). The original 1.0.0 measurements and recorded demo remain preserved as historical evidence.
+
 An original CSCI599 Assignment 4 capstone by Akshay Mathur: evidence-aware, budget-constrained group travel planning with durable human approval. Built from scratch for this assignment. It does not extend the Assignment 3 assistant.
 
-![Trip planning studio](deliverables/evidence/ui/desktop-pending.png)
+![Trip planning studio — release 1.0.1](deliverables/evidence/ui-v101/desktop-pending.png)
 
 ## What runs
 
@@ -41,11 +43,11 @@ Open `http://127.0.0.1:8084`. Your generated account credentials are in `.secret
 For local inference install Ollama, start a **separate loopback-only** server with `OLLAMA_HOST=127.0.0.1:11435 OLLAMA_MODELS=$PWD/.runtime/models OLLAMA_NO_CLOUD=1 ollama serve`, then in another shell:
 
 ```sh
-OLLAMA_HOST=127.0.0.1:11435 ollama pull gemma4:e4b
-OLLAMA_HOST=127.0.0.1:11435 ollama create tripbudget-gemma4-e4b -f config/ollama.Modelfile
+OLLAMA_HOST=127.0.0.1:11435 ollama pull gemma4:e4b-it-q4_K_M
+OLLAMA_HOST=127.0.0.1:11435 ollama create tripbudget-gemma4-e4b-gguf -f config/ollama.Modelfile
 ```
 
-The measured release used E4B MLX weights on Apple Silicon and an 8192-token context. Weights are not shipped. Other variants/hardware can change quality and latency; use the same public schema comparison before drawing performance conclusions. Public tasks can fall back to NVIDIA when Ollama is unavailable. Restricted notes always fail closed. Set `TRIPBUDGET_ENABLE_TEST_CONTROLS=true` only on isolated evaluation infrastructure; ordinary organizer accounts cannot enable fault/ablation controls. Evaluation accounts are created with `scripts.manage create-user --role evaluation`.
+Release 1.0.1 uses explicit E4B GGUF Q4_K_M weights and an 8192-token context. The automatic e4b tag can select MLX on Apple Silicon; that historical backend produced the original failures and is now rejected before structured prompts are sent. Weights are not shipped. Other variants/hardware can change quality and latency; use the same public schema comparison before drawing performance conclusions. Public tasks can fall back to NVIDIA when Ollama is unavailable. Restricted notes always fail closed. Set `TRIPBUDGET_ENABLE_TEST_CONTROLS=true` only on isolated evaluation infrastructure; ordinary organizer accounts cannot enable fault/ablation controls. Evaluation accounts are created with `scripts.manage create-user --role evaluation`.
 
 A source refresh is an explicit operator action: `uv run python -m scripts.build_corpus` then `uv run python -m scripts.review_facts`. Inspect the changes and rebuild Chroma. This changes the evidence version and may invalidate pending approvals. Do not refresh a frozen evaluation mid-run. Expired facts require a new reviewed corpus and a new plan/approval.
 
@@ -66,6 +68,8 @@ flowchart TD
 
 This uses a standard **Cloud Run service + external PostgreSQL**, a permitted alternative to the handout's named Hermes/OpenClaw deployment path. A bounded HTTP planning workflow benefits from request-scoped execution, resumable checkpoints and scale-to-zero. PostgreSQL is the authority for application state, approvals, counters and official `AsyncPostgresSaver` checkpoints. Ephemeral container disk holds only the reproducible public retrieval index. No background planner is expected to survive container suspension. A disconnected stream cancels its worker; a later explicit run resumes saved state.
 
+Release 1.0.1 is deployed as IAM-private revision `a4-tripbudget-00003-jh7`. Actual Cloud Run/Cloud SQL planning, human approval and ledger commit passed; [release identity and smoke evidence](HANDOFF.md#8-cloud-deployment-and-operations-context) link the uploaded index to the deployed linux/amd64 digest.
+
 The full hybrid demonstration runs locally with the same database-backed application. The deployed Cloud Run release provides cloud public planning and durable approval. It has **no laptop bridge configured**: private notes fail closed, and public utility tasks fall back to cloud. Source supports an explicitly configured HTTP/SOCKS proxy, but no Tailscale security grant was broadened and no cloud-to-laptop hybrid claim is made. See [deployment operations](infra/README.md).
 
 ## Guardrails and limits
@@ -84,7 +88,7 @@ Outbound tools expose only read capabilities, registered HTTPS publisher hosts a
 uv run ruff check src scripts evaluation tests
 uv run pytest -q
 uv run python -m scripts.audit_witnesses
-uv run python -m scripts.browser_check
+uv run python -m scripts.browser_check --output deliverables/evidence/ui-your-run
 uv run python -m scripts.verify_package
 ```
 
@@ -93,23 +97,22 @@ Tests require PostgreSQL and migrated schema. Fast unit/integration tests use ex
 ```sh
 uv run python -m evaluation.run_eval --output deliverables/evidence/new-benchmark.jsonl
 uv run python -m evaluation.run_attacks --output deliverables/evidence/new-attacks.jsonl
-uv run python -m evaluation.compare_models
-uv run python -m evaluation.operations
-uv run python -m evaluation.live_sources
-uv run python -m evaluation.build_report
+uv run python -m evaluation.compare_models --output deliverables/evidence/new-providers.jsonl
+uv run python -m evaluation.operations --output deliverables/evidence/new-operations.jsonl
+uv run python -m evaluation.fallback_regression --output deliverables/evidence/new-fallback.jsonl
 ```
 
-Runners refuse to overwrite evidence; the matched-provider runner resumes only unexecuted `(case,provider,repeat)` keys. Adjust output paths for a new full evaluation. The report names the exact final dataset files. Earlier partial development runs are retained with their actual failures and excluded from final denominators. [Independent oracle](evaluation/oracle.py) checks complete proposals without importing production cost/schedule/validation functions; [witnesses](evaluation/witnesses.json) establish that all twelve feasible inputs have an independently audited plan. Two repeats are a small sample, not a reliability guarantee.
+Runners refuse to overwrite evidence; the matched-provider runner resumes unexecuted `(case,provider,repeat)` keys only with explicit `--resume`. Operations, provider comparison and browser checks accept new output paths. New case snapshots are written beside their output rather than over the frozen definitions. Adjust output paths for a new full evaluation. The original and follow-up report builders each name their own exact final datasets; they are not generic report builders for arbitrary new suffixes. `live_sources.py` still has a fixed historical path and needs an isolated copy/new output support for a fresh source experiment. See the handoff for release reproduction details. Earlier partial development runs are retained with their actual failures and excluded from final denominators. [Independent oracle](evaluation/oracle.py) checks complete proposals without importing production cost/schedule/validation functions; [witnesses](evaluation/witnesses.json) establish that all twelve feasible inputs have an independently audited plan. Two repeats are a small sample, not a reliability guarantee.
 
 ## Submission artifacts
 
 - Source and this Capability-to-Code Map; setup, deployment and evaluation code.
 - [Recorded MP4](deliverables/video/TripBudgetAI_Demo.mp4), [feature timestamps](docs/recording-evidence.md) and raw episode evidence.
 - [Technical presentation](deliverables/TECHNICAL_PRESENTATION.md) with a saved editable Spaces deck and a portable PDF snapshot.
-- [Evaluation report](deliverables/EVALUATION_REPORT.md), raw JSON/JSONL traces and metrics.
+- [Current provider-fix evaluation](deliverables/EVALUATION_FOLLOWUP_1.0.1.md), [historical baseline report](deliverables/EVALUATION_REPORT.md), raw JSON/JSONL traces and metrics.
 - [Individual process-log draft](PROCESS_LOG.md), 200–300 words. Akshay must review the draft and replace its final reflection with his own learning before submitting. No claim of student-authored reflection or Brightspace upload is made.
 
-The GitHub repository is private. Give graders read access or upload the source ZIP/artifacts to Brightspace. The video/source evidence is self-contained; no live application URL is required by the new handout. A local check cannot verify Brightspace submission or access for an unidentified grader.
+The GitHub repository was public when checked for release 1.0.1 (the original release was private); visibility was preserved as found. Verify grader access to restricted artifacts or upload the source ZIP/artifacts to Brightspace. The video/source evidence is self-contained; no live application URL is required by the new handout. A local check cannot verify Brightspace submission or access for an unidentified grader.
 
 <!-- CAPABILITY_MAP -->
 
@@ -118,16 +121,17 @@ The GitHub repository is private. Give graders read access or upload the source 
 | Category | Claimed Feature / Guardrail / Eval | Source File(s) & Line Numbers | Key Class / Function | Notes / Scope |
 |---|---|---|---|---|
 | Advanced Feature 1 | Long-term confirmed preference memory | [src/tripbudget/persistence.py L230–L245](src/tripbudget/persistence.py#L230-L245)<br>[src/tripbudget/graph.py L50–L72](src/tripbudget/graph.py#L50-L72) | `Store.save_preferences`<br>`Workflow.build_graph.load` | Versioned owner/group scope; explicit confirmation; actual process replacement in video |
-| Advanced Feature 2 | Planning and self-correction | [src/tripbudget/graph.py L90–L160](src/tripbudget/graph.py#L90-L160)<br>[src/tripbudget/graph.py L211–L238](src/tripbudget/graph.py#L211-L238)<br>[src/tripbudget/planning.py L205–L245](src/tripbudget/planning.py#L205-L245) | `Workflow.build_graph.supervisor`<br>`Workflow.build_graph.assemble`<br>`enumerate_repairs` | Real model choice → deterministic critique → indexed tool-priced repair → recheck; at most two repairs |
-| Advanced Feature 3 | Durable human-in-the-loop approval | [src/tripbudget/graph.py L287–L292](src/tripbudget/graph.py#L287-L292)<br>[src/tripbudget/persistence.py L277–L308](src/tripbudget/persistence.py#L277-L308)<br>[src/tripbudget/persistence.py L310–L350](src/tripbudget/persistence.py#L310-L350) | `Workflow.build_graph.approval`<br>`Store.record_decision`<br>`Store.commit_approved` | Official interrupt/checkpoint; owner/hash/revision/expiry; one authorized ledger |
+| Advanced Feature 2 | Planning and self-correction | [src/tripbudget/graph.py L90–L149](src/tripbudget/graph.py#L90-L149)<br>[src/tripbudget/graph.py L200–L227](src/tripbudget/graph.py#L200-L227)<br>[src/tripbudget/planning.py L205–L245](src/tripbudget/planning.py#L205-L245)<br>[src/tripbudget/schemas.py L150–L167](src/tripbudget/schemas.py#L150-L167) | `Workflow.build_graph.supervisor`<br>`Workflow.build_graph.assemble`<br>`enumerate_repairs`<br>`plan_choice_schema` | Real model choice → deterministic critique → indexed tool-priced repair → recheck; at most two repairs |
+| Advanced Feature 3 | Durable human-in-the-loop approval | [src/tripbudget/graph.py L276–L281](src/tripbudget/graph.py#L276-L281)<br>[src/tripbudget/persistence.py L277–L308](src/tripbudget/persistence.py#L277-L308)<br>[src/tripbudget/persistence.py L310–L350](src/tripbudget/persistence.py#L310-L350) | `Workflow.build_graph.approval`<br>`Store.record_decision`<br>`Store.commit_approved` | Official interrupt/checkpoint; owner/hash/revision/expiry; one authorized ledger |
 | Advanced Feature 4 | Iterative RAG and source verification | [src/tripbudget/retrieval.py L75–L115](src/tripbudget/retrieval.py#L75-L115)<br>[src/tripbudget/evidence.py L25–L41](src/tripbudget/evidence.py#L25-L41) | `Corpus.retrieve_and_refine`<br>`Catalog.option` | Actual BGE/Chroma refinement; reviewed price snapshots separate from confirmed estimates |
-| Advanced Feature 5 | Hybrid cloud/local inference | [src/tripbudget/routing.py L12–L23](src/tripbudget/routing.py#L12-L23)<br>[src/tripbudget/providers.py L32–L189](src/tripbudget/providers.py#L32-L189) | `select_route`<br>`Providers.complete` | Real NVIDIA + E4B local demo; private input cannot fall back externally; no cloud laptop bridge claimed |
+| Advanced Feature 5 | Hybrid cloud/local inference | [src/tripbudget/routing.py L12–L23](src/tripbudget/routing.py#L12-L23)<br>[src/tripbudget/providers.py L109–L323](src/tripbudget/providers.py#L109-L323) | `select_route`<br>`Providers.complete` | Real NVIDIA + E4B local demo; private input cannot fall back externally; no cloud laptop bridge claimed |
 | Guardrail 1 | Accounting, schedule and immutable evidence | [src/tripbudget/budget.py L55–L76](src/tripbudget/budget.py#L55-L76)<br>[src/tripbudget/planning.py L194–L202](src/tripbudget/planning.py#L194-L202)<br>[src/tripbudget/schedule.py L20–L62](src/tripbudget/schedule.py#L20-L62) | `financial_violations`<br>`validate_for_commit`<br>`schedule_violations` | Every cap/night/meal/room/transfer; integer cents; commit revalidation |
 | Guardrail 2 | Owner and tool/egress permissions | [src/tripbudget/auth.py L37–L61](src/tripbudget/auth.py#L37-L61)<br>[src/tripbudget/outbound.py L27–L42](src/tripbudget/outbound.py#L27-L42)<br>[src/tripbudget/tools.py L11–L13](src/tripbudget/tools.py#L11-L13) | `principal`<br>`validate_url`<br>`authorize_tool` | Read-only capabilities; registered public HTTPS; owner predicates; no mail/shell/booking authority |
 | Guardrail 3 | Persisted budgets and worker ownership | [src/tripbudget/resources.py L22–L69](src/tripbudget/resources.py#L22-L69)<br>[src/tripbudget/persistence.py L169–L193](src/tripbudget/persistence.py#L169-L193) | `Budget.reserve`<br>`Store.invocation` | Session-bound advisory lock; call/token/time quotas and conservative unknown usage |
-| Adversarial Evals | Ten actual attack types, twice | [evaluation/run_attacks.py L19–L190](evaluation/run_attacks.py#L19-L190) | `main` | 20 attempts; exact model exposure, full real traces and mitigations in report |
-| Evaluation Harness | Custom paired tasks, metrics and independent audit | [evaluation/run_eval.py L51–L83](evaluation/run_eval.py#L51-L83)<br>[evaluation/oracle.py L8–L110](evaluation/oracle.py#L8-L110)<br>[evaluation/build_report.py L30–L372](evaluation/build_report.py#L30-L372) | `execute`<br>`audit`<br>`main` | 154 logical evaluation units; fixtures separately labeled; tokens/session and weekly cost |
-| Deployment / Persistence | Cloud Run service alternative + external PostgreSQL | [src/tripbudget/persistence.py L138–L142](src/tripbudget/persistence.py#L138-L142)<br>[src/tripbudget/graph.py L49–L363](src/tripbudget/graph.py#L49-L363) | `Store.migrate`<br>`Workflow.build_graph` | Dockerfile; infra/cloudrun.yaml; compose.yaml; official AsyncPostgresSaver; IAM-private deployed smoke |
+| Guardrail 4 | Native output contract, complete candidate pools and supported local backend | [src/tripbudget/providers.py L80–L85](src/tripbudget/providers.py#L80-L85)<br>[src/tripbudget/providers.py L96–L107](src/tripbudget/providers.py#L96-L107)<br>[src/tripbudget/schemas.py L150–L167](src/tripbudget/schemas.py#L150-L167) | `validate_output`<br>`Providers.check_local_backend`<br>`plan_choice_schema` | GGUF preflight; no silent defaults/truncated JSON; full client uniqueness validation despite native grammar projection |
+| Adversarial Evals | Ten actual attack types, twice | [evaluation/run_attacks.py L19–L199](evaluation/run_attacks.py#L19-L199) | `main` | 20 attempts; exact model exposure, full real traces and mitigations in report |
+| Evaluation Harness | Custom paired tasks, metrics and independent audit | [evaluation/run_eval.py L51–L83](evaluation/run_eval.py#L51-L83)<br>[evaluation/oracle.py L8–L110](evaluation/oracle.py#L8-L110)<br>[evaluation/build_report.py L30–L372](evaluation/build_report.py#L30-L372)<br>[evaluation/build_followup_report.py L23–L308](evaluation/build_followup_report.py#L23-L308) | `execute`<br>`audit`<br>`main`<br>`main` | 154 historical units + 151 fresh release units; real providers/outage/operations; fixtures separate; measured tokens/session |
+| Deployment / Persistence | Cloud Run service alternative + external PostgreSQL | [src/tripbudget/persistence.py L138–L142](src/tripbudget/persistence.py#L138-L142)<br>[src/tripbudget/graph.py L49–L352](src/tripbudget/graph.py#L49-L352) | `Store.migrate`<br>`Workflow.build_graph` | Official AsyncPostgresSaver; historical IAM-private cloud smoke and current local container check; see handoff for rollout status |
 
 Deployment configuration: [Dockerfile](Dockerfile), [Cloud Run spec](infra/cloudrun.yaml), [operations and runtime modes](infra/README.md). All five claimed capabilities are tied to actual video segments and raw trace IDs in [recording evidence](docs/recording-evidence.md). Source and artifact SHA-256 inventories are in the release manifest.
 

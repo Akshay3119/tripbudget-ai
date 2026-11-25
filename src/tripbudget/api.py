@@ -53,7 +53,7 @@ def create_app(settings=None, corpus=None, providers=None):
 
     app = FastAPI(
         title="TripBudgetAI",
-        version="1.0.0",
+        version="1.0.1",
         lifespan=lifespan,
         docs_url=None,
         redoc_url=None,
@@ -132,7 +132,7 @@ def create_app(settings=None, corpus=None, providers=None):
         return {
             "boot_id": app.state.boot_id,
             "revision": os.getenv("K_REVISION", "local"),
-            "version": "1.0.0",
+            "version": "1.0.1",
             "corpus_version": app.state.catalog.version,
             "auth_mode": s.auth_mode,
             "role": user["role"],

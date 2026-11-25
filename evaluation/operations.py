@@ -1,6 +1,8 @@
 """Actual operating-system/API/DB fault tests on an isolated development serving process."""
 
 import asyncio
+import argparse
+import json
 import os
 import signal
 import sys
@@ -19,7 +21,12 @@ from .run_eval import append_record, wait_ready
 
 
 async def main():
-    out = Path("deliverables/evidence/operations.jsonl")
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--output", default="deliverables/evidence/operations-new.jsonl")
+    parser.add_argument("--only", default="")
+    args = parser.parse_args()
+    out = Path(args.output)
+    out.parent.mkdir(parents=True, exist_ok=True)
     if out.exists():
         raise SystemExit("Refusing overwrite")
     s = Settings()
@@ -27,6 +34,7 @@ async def main():
     process = None
     log = None
     client = None
+    diagnostic = {}
 
     async def start():
         nonlocal process, log, client
@@ -62,7 +70,9 @@ async def main():
             **changes,
         )
         ep = (await client.post("/api/episodes", req))["id"]
+        diagnostic["episode"] = ep
         result = await client.run(ep)
+        diagnostic["planning_run"] = result
         assert result["state"]["status"] == "PENDING_APPROVAL", result["state"]["status"]
         return ep, result
 
@@ -75,6 +85,7 @@ async def main():
         )
 
     async def check(identifier, function):
+        diagnostic.clear()
         record = {
             "id": identifier,
             "at": utcnow().isoformat(),
@@ -89,6 +100,7 @@ async def main():
                 success=False,
                 error=getattr(exc, "code", type(exc).__name__),
                 detail=str(exc)[:140] if isinstance(exc, AssertionError) else "See isolated operation trace",
+                diagnostic=dict(diagnostic),
             )
         append_record(out, record)
         print(identifier, record["success"], flush=True)
@@ -96,6 +108,9 @@ async def main():
     await start()
     uid = (await client.get("/api/meta"))["uid"]
     saved = {}
+    from .metadata import release_metadata
+
+    out.with_suffix(".metadata.json").write_text(json.dumps(await release_metadata(client, s), indent=2))
 
     async def o01():
         ep, r = await plan()
@@ -120,6 +135,7 @@ async def main():
         }
 
     async def o02():
+        assert "state" in saved, "O02 requires O01 to establish an approved proposal"
         await decision(saved["state"], key=saved["key"])
         await client.run(saved["ep"])
         row = await store.one("SELECT count(*) AS n FROM ledgers WHERE episode=%s", (saved["ep"],))
@@ -188,6 +204,7 @@ async def main():
             e["kind"] == "model_failure" and e["data"].get("error") == "CLOUD_429_SIMULATED" for e in events
         )
         assert any(e["kind"] == "model_result" and e["data"].get("provider") == "local" for e in events)
+        assert r["state"]["status"] == "PENDING_APPROVAL"
         return {
             "episode": ep,
             "fault": "authenticated explicitly simulated 429; actual local completion",
@@ -247,6 +264,7 @@ async def main():
         before = await client.get("/api/episodes/" + ep + "/events")
         recovered = await client.run(ep)
         assert before and not recovered["state"]["ledger_id"]
+        assert recovered["state"]["status"] == "PENDING_APPROVAL"
         return {
             "episode": ep,
             "durable_events_before_reconnect": len(before),
@@ -281,6 +299,7 @@ async def main():
         }
 
     async def o11():
+        assert "ep" in saved and "ledger" in saved, "O11 requires O01 to establish its owned ledger"
         other = await AppClient("http://127.0.0.1:8088", "evaluator").login()
         try:
             codes = [
@@ -307,6 +326,18 @@ async def main():
         await stop()
         await start()
         new = await client.get("/api/meta")
+        restored = await client.get("/api/preferences?group_id=" + group)
+        diagnostic["memory_restart"] = {
+            "old_boot": old["boot_id"],
+            "new_boot": new["boot_id"],
+            "preferences": restored,
+        }
+        assert old["boot_id"] != new["boot_id"]
+        assert (
+            restored["version"] == 1
+            and restored["data"]["diet"] == "vegetarian"
+            and restored["data"]["maximum_walk_meters"] == 6000
+        )
         ep, r = await plan(group_id=group, use_saved_preferences=True)
         assert old["boot_id"] != new["boot_id"] and all(
             t["diet"] == "vegetarian" and t["maximum_walk_meters"] == 6000
@@ -317,12 +348,24 @@ async def main():
             "old_boot": old["boot_id"],
             "new_boot": new["boot_id"],
             "later_request": r["state"]["request"],
+            "restored_preferences": restored,
+            "checks": {
+                "process_replaced": True,
+                "fresh_login": True,
+                "preferences_restored": True,
+                "preferences_applied": True,
+                "valid_planning_completed": r["state"]["proposal"]["valid"],
+            },
+            "planning_run": r,
             "outcome": r["state"]["status"],
         }
 
     try:
         for i, f in enumerate([o01, o02, o03, o04, o05, o06, o07, o08, o09, o10, o11, o12], 1):
-            await check(f"O{i:02}", f)
+            identifier = f"O{i:02}"
+            if args.only and identifier not in args.only.split(","):
+                continue
+            await check(identifier, f)
     finally:
         await stop()
 

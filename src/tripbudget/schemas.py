@@ -2,7 +2,7 @@ import re
 from datetime import date, datetime, timedelta, timezone
 from typing import Literal
 
-from pydantic import BaseModel, ConfigDict, Field, field_validator, model_validator
+from pydantic import BaseModel, ConfigDict, Field, create_model, field_validator, model_validator
 
 CITY = Literal["NYC", "PHL", "DC"]
 DIETS = Literal["vegetarian", "vegan", "unrestricted"]
@@ -135,11 +135,36 @@ class RunOptions(StrictModel):
 class PlanChoice(StrictModel):
     lodging_tier: Literal["standard", "economy"] = "standard"
     activities_per_day: Literal[1, 2] = 2
-    activities: dict[str, list[str]]
+    activities: dict[str, list[str]] = Field(
+        description="Ordered candidate pool per city, not a daily schedule. Include all supplied catalog IDs; cadence is a separate field."
+    )
     explanation: str = Field(max_length=1800)
     expected_cost_cents: int | None = Field(
-        default=None, ge=0, description="Expected GROUP total in integer USD cents, including contingency"
+        default=None,
+        ge=0,
+        le=100_000_000,
+        description="Advisory GROUP estimate in USD cents (not authoritative); use null if unknown",
     )
+
+
+def plan_choice_schema(cities, options):
+    """Shared production/evaluation contract for a complete ranked catalog candidate pool."""
+    fields = {}
+    for city in cities:
+        identifiers = tuple(o["id"] for o in options if o["city"] == city)
+        if not identifiers:
+            raise ValueError("A requested city has no catalog options")
+        fields[city] = (
+            list[Literal[identifiers]],
+            Field(
+                min_length=len(identifiers),
+                max_length=len(identifiers),
+                json_schema_extra={"uniqueItems": True},
+                description="Rank every supplied ID once. These are candidates; activities_per_day controls scheduling.",
+            ),
+        )
+    activity_schema = create_model("CityActivities", __base__=StrictModel, **fields)
+    return create_model("ContextualPlanChoice", __base__=PlanChoice, activities=(activity_schema, ...))
 
 
 class RepairSelection(StrictModel):

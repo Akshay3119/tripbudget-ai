@@ -1,0 +1,198 @@
+[
+  {
+    "case": "F01",
+    "condition": "corrected",
+    "repeat": 1,
+    "episode": "e60c928d25e045288b8ad3d51c4ce045",
+    "errors": []
+  },
+  {
+    "case": "F01",
+    "condition": "corrected",
+    "repeat": 2,
+    "episode": "70f612085ea24daebf0b36b6fe2d7f0a",
+    "errors": []
+  },
+  {
+    "case": "F02",
+    "condition": "corrected",
+    "repeat": 1,
+    "episode": "3a77468c5f054f09a510c44fe7500c43",
+    "errors": []
+  },
+  {
+    "case": "F02",
+    "condition": "baseline",
+    "repeat": 1,
+    "episode": "641e7d92ab444d4db318fe17bd59f2c1",
+    "errors": []
+  },
+  {
+    "case": "F02",
+    "condition": "baseline",
+    "repeat": 2,
+    "episode": "febbd03c3ae34cb1bed52f3ccd5dc282",
+    "errors": []
+  },
+  {
+    "case": "F02",
+    "condition": "corrected",
+    "repeat": 2,
+    "episode": "c1791eaa43b7442f97c9327505b98aa5",
+    "errors": []
+  },
+  {
+    "case": "F03",
+    "condition": "corrected",
+    "repeat": 1,
+    "episode": "2b307f737aa749238295ec81e6204a8a",
+    "errors": []
+  },
+  {
+    "case": "F03",
+    "condition": "corrected",
+    "repeat": 2,
+    "episode": "0b5d659f4cd144f8b4153ccfb1cef514",
+    "errors": []
+  },
+  {
+    "case": "F04",
+    "condition": "corrected",
+    "repeat": 1,
+    "episode": "81acc3887dc94947a97127f95ba8638f",
+    "errors": []
+  },
+  {
+    "case": "F04",
+    "condition": "corrected",
+    "repeat": 2,
+    "episode": "c5af933cce524963ba74b2fdf9484afd",
+    "errors": []
+  },
+  {
+    "case": "F05",
+    "condition": "corrected",
+    "repeat": 1,
+    "episode": "b7cb4844b51a495585c0d4a3dd3749e4",
+    "errors": []
+  },
+  {
+    "case": "F05",
+    "condition": "corrected",
+    "repeat": 2,
+    "episode": "956965af4eb740ba831969c58ee93caf",
+    "errors": []
+  },
+  {
+    "case": "F06",
+    "condition": "corrected",
+    "repeat": 1,
+    "episode": "ca912ae807fc40df92640796e1dde973",
+    "errors": []
+  },
+  {
+    "case": "F06",
+    "condition": "corrected",
+    "repeat": 2,
+    "episode": "b6396b7dcf134cb980359235e2bb29b5",
+    "errors": []
+  },
+  {
+    "case": "F07",
+    "condition": "corrected",
+    "repeat": 1,
+    "episode": "9ed6c344a72843fca2c7e1ac96d638eb",
+    "errors": []
+  },
+  {
+    "case": "F07",
+    "condition": "corrected",
+    "repeat": 2,
+    "episode": "8ba1a553ba9b435cbe0af282b65d345e",
+    "errors": []
+  },
+  {
+    "case": "F08",
+    "condition": "corrected",
+    "repeat": 1,
+    "episode": "c6ce661296d44e50b94986ca5693a37f",
+    "errors": []
+  },
+  {
+    "case": "F08",
+    "condition": "corrected",
+    "repeat": 2,
+    "episode": "1ebf5deda5f4469ea196ead3421ad12d",
+    "errors": []
+  },
+  {
+    "case": "F09",
+    "condition": "corrected",
+    "repeat": 1,
+    "episode": "9eb1944c26a74ed180dca61616880179",
+    "errors": []
+  },
+  {
+    "case": "F09",
+    "condition": "corrected",
+    "repeat": 2,
+    "episode": "1290fc2746694c94b37d39ab5b3c8b1b",
+    "errors": []
+  },
+  {
+    "case": "F10",
+    "condition": "corrected",
+    "repeat": 1,
+    "episode": "5cc65a95c12d44c99eb30fd1f93dfd55",
+    "errors": []
+  },
+  {
+    "case": "F10",
+    "condition": "corrected",
+    "repeat": 2,
+    "episode": "1d16ec1e7d3144329254fc29487f430c",
+    "errors": []
+  },
+  {
+    "case": "F11",
+    "condition": "corrected",
+    "repeat": 1,
+    "episode": "0b7f4d6fd5654db7a88a1c2cc94a503a",
+    "errors": []
+  },
+  {
+    "case": "F11",
+    "condition": "baseline",
+    "repeat": 1,
+    "episode": "5088e81ba10442499c168167dff6a90e",
+    "errors": []
+  },
+  {
+    "case": "F11",
+    "condition": "baseline",
+    "repeat": 2,
+    "episode": "14002d36f1484251805a65ffb93e059e",
+    "errors": []
+  },
+  {
+    "case": "F11",
+    "condition": "corrected",
+    "repeat": 2,
+    "episode": "69368d00cbfa46e8a65630073fd9a2d7",
+    "errors": []
+  },
+  {
+    "case": "F12",
+    "condition": "corrected",
+    "repeat": 1,
+    "episode": "87480e89605840eaa32f7e9f0e3e4a8d",
+    "errors": []
+  },
+  {
+    "case": "F12",
+    "condition": "corrected",
+    "repeat": 2,
+    "episode": "cef314ef03484dfb9c9b1d395a1a1ef9",
+    "errors": []
+  }
+]

@@ -1,0 +1,15 @@
+{
+  "checked_at": "2026-11-25T21:21:00.908608+00:00",
+  "source_release": "1.0.1",
+  "local_container_verified": true,
+  "registry_upload_performed": true,
+  "new_cloud_revision_deployed": true,
+  "revision": "a4-tripbudget-00003-jh7",
+  "iam_private": true,
+  "user_explicitly_authorized": true,
+  "initial_automatic_review_rejection_resolved": true,
+  "end_to_end_smoke": "passed: actual plan, human approval, one ledger, no-bridge private-note refusal, anonymous denial",
+  "release_evidence": "cloud-release-v101.json",
+  "smoke_evidence": "cloud-smoke-v101.json",
+  "success": true
+}

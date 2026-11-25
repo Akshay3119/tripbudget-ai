@@ -189,3 +189,22 @@ async def test_admission_replay_still_matches_original_input_after_saved_prefere
     assert all(t["diet"] == "vegetarian" for t in state["request"]["travelers"])
     replay = await client.post("/api/episodes", json=request, headers=headers)
     assert replay.status_code == 200 and replay.json()["id"] == first.json()["id"]
+
+
+async def test_unexpected_worker_error_has_recoverable_status_and_does_not_echo_exception(service):
+    app, client, uid = service
+    original = app.state.workflow.providers
+
+    class InterruptedProvider:
+        async def complete(self, *args, **kwargs):
+            raise TypeError("UNEXPECTED_SECRET_CANARY")
+
+    app.state.workflow.providers = InterruptedProvider()
+    identifier = await episode(client)
+    state = await run(client, identifier)
+    assert state["status"] == "EXECUTION_INTERRUPTED" and state["ledger_id"] is None
+    events = (await client.get(f"/api/episodes/{identifier}/events")).json()
+    assert "UNEXPECTED_SECRET_CANARY" not in str(events)
+    app.state.workflow.providers = original
+    recovered = await run(client, identifier)
+    assert recovered["status"] == "PENDING_APPROVAL"

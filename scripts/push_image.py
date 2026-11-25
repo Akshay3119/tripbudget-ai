@@ -1,9 +1,16 @@
 """Authenticate Docker with an isolated config. Never puts an access token in command arguments."""
 
 import os
+import argparse
 import subprocess
 from pathlib import Path
 
+parser = argparse.ArgumentParser()
+parser.add_argument("--tag", default="v1")
+parser.add_argument("--local-image", default="tripbudget-ai:verification")
+args = parser.parse_args()
+if not __import__("re").fullmatch(r"[A-Za-z0-9][A-Za-z0-9_.-]{0,127}", args.tag):
+    raise SystemExit("Invalid image tag")
 env = dict(
     os.environ,
     CLOUDSDK_CONFIG=str(Path(".runtime/gcloud").resolve()),
@@ -22,6 +29,6 @@ subprocess.run(
     stderr=subprocess.DEVNULL,
     check=True,
 )
-image = "us-central1-docker.pkg.dev/csci599-a3-hermes-1029/a4-tripbudget/app:v1"
-subprocess.run(["docker", "tag", "tripbudget-ai:verification", image], env=env, check=True)
+image = "us-central1-docker.pkg.dev/csci599-a3-hermes-1029/a4-tripbudget/app:" + args.tag
+subprocess.run(["docker", "tag", args.local_image, image], env=env, check=True)
 subprocess.run(["docker", "push", image], env=env, check=True)

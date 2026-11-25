@@ -94,9 +94,12 @@ async def main():
     if out.exists():
         raise SystemExit("Refusing to overwrite raw evaluation evidence; choose another output")
     cases = scenarios()
-    Path("evaluation/scenarios.json").write_text(json.dumps(cases, indent=2))
+    out.with_suffix(".cases.json").write_text(json.dumps(cases, indent=2))
     client = await AppClient(username="benchmark").login()
-    metadata = await client.get("/api/meta")
+    from .metadata import release_metadata
+    from tripbudget.settings import Settings
+
+    metadata = await release_metadata(client, Settings())
     out.with_suffix(".metadata.json").write_text(
         json.dumps(
             {

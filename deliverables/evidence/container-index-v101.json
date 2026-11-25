@@ -1,0 +1,27 @@
+{
+  "requested_image_index": "us-central1-docker.pkg.dev/csci599-a3-hermes-1029/a4-tripbudget/app@sha256:8dcebc069df573d48df653a53afe1aaa906145ba8eddd8e049825c024af4468e",
+  "registry_manifest": {
+    "schemaVersion": 2,
+    "mediaType": "application/vnd.oci.image.index.v1+json",
+    "manifests": [
+      {
+        "mediaType": "application/vnd.oci.image.manifest.v1+json",
+        "size": 2966,
+        "digest": "sha256:d29c2419243f11bc10d9f42ee4f8c841fe5fd38f392a59f0aa89b4911ba4820e",
+        "platform": {
+          "architecture": "amd64",
+          "os": "linux"
+        }
+      },
+      {
+        "mediaType": "application/vnd.oci.image.manifest.v1+json",
+        "size": 564,
+        "digest": "sha256:11b67c019486aa2a056aaea555a2a33f17a118b0ad319db72b2df96ca8a9a17c",
+        "platform": {
+          "architecture": "unknown",
+          "os": "unknown"
+        }
+      }
+    ]
+  }
+}

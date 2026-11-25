@@ -1,6 +1,7 @@
 """Matched public task comparison. Uses real endpoints and measured token usage; no private notes."""
 
 import asyncio
+import argparse
 import json
 import random
 import time
@@ -10,7 +11,7 @@ from tripbudget.evidence import Catalog
 from tripbudget.persistence import Store, digest
 from tripbudget.providers import Providers
 from tripbudget.resources import Budget
-from tripbudget.schemas import ModelPreferences, PlanChoice, QueryRewrite, utcnow
+from tripbudget.schemas import ModelPreferences, QueryRewrite, plan_choice_schema, utcnow
 from tripbudget.settings import Settings
 
 from .client import AppClient, default_request
@@ -18,7 +19,14 @@ from .run_eval import append_record
 
 
 async def main():
-    out = Path("deliverables/evidence/provider-comparison.jsonl")
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--output", default="deliverables/evidence/provider-comparison-new.jsonl")
+    parser.add_argument("--resume", action="store_true")
+    args = parser.parse_args()
+    out = Path(args.output)
+    out.parent.mkdir(parents=True, exist_ok=True)
+    if out.exists() and not args.resume:
+        raise SystemExit("Refusing to overwrite evidence; --resume skips only recorded keys")
     completed = (
         {
             (r["id"], r["provider"], r["repeat"])
@@ -35,6 +43,12 @@ async def main():
     )
     client = await AppClient(username="evaluator").login()
     identity = await client.get("/api/meta")
+    from .metadata import release_metadata
+
+    if not args.resume:
+        out.with_suffix(".metadata.json").write_text(
+            json.dumps(await release_metadata(client, settings), indent=2)
+        )
     cases = []
     for city in ["NYC", "PHL", "DC"]:
         ids = [x["id"] for x in catalog.activities.values() if x["city"] == city]
@@ -42,7 +56,7 @@ async def main():
             (
                 "select-" + city,
                 "supervisor",
-                PlanChoice,
+                plan_choice_schema([city], catalog.compact([city], utcnow())),
                 {
                     "instruction": "Select economy lodging, one activity per day, and include all supplied IDs under the exact city code.",
                     "constraints": {"cities": [city]},
@@ -77,7 +91,7 @@ async def main():
                 {"diet": diet, "maximum_walk_meters": walk},
             )
         )
-    Path("evaluation/provider-cases.json").write_text(
+    out.with_suffix(".cases.json").write_text(
         json.dumps(
             [
                 {"id": i, "task": t, "schema": s.model_json_schema(), "payload": p, "oracle": o}

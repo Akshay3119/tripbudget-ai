@@ -1,0 +1,27 @@
+{
+  "at": "2026-11-25T20:51:51.696050+00:00",
+  "image": "tripbudget-ai:v1.0.1",
+  "actual_container": true,
+  "model_calls": 0,
+  "/healthz": {
+    "http_status": 200,
+    "body": {
+      "status": "ok",
+      "application": "TripBudgetAI"
+    }
+  },
+  "/readyz": {
+    "http_status": 200,
+    "body": {
+      "status": "ready"
+    }
+  },
+  "/api/meta": {
+    "http_status": 401,
+    "body": {
+      "error": "UNAUTHENTICATED",
+      "message": "Sign in to continue"
+    }
+  },
+  "success": true
+}

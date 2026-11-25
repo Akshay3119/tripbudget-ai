@@ -3,6 +3,7 @@
 import hashlib
 import json
 import subprocess
+import tomllib
 from pathlib import Path
 
 
@@ -31,7 +32,7 @@ def main():
         or r["path"] in {"Dockerfile", "pyproject.toml", "uv.lock"}
     ]
     value = {
-        "version": "1.0.0",
+        "version": tomllib.loads(Path("pyproject.toml").read_text())["project"]["version"],
         "date": "2026-11-25",
         "source_revision": "The Git commit containing this manifest identifies the release; a content inventory avoids self-referential hashes. Evaluation release IDs and cloud image digests are recorded separately.",
         "code_inventory_sha256": hashlib.sha256(json.dumps(code, sort_keys=True).encode()).hexdigest(),

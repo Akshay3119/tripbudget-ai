@@ -1,5 +1,7 @@
 # TripBudgetAI — Evaluation report
 
+> Historical release 1.0.0 results. See the [release 1.0.1 follow-up](EVALUATION_FOLLOWUP_1.0.1.md) for provider fixes and fresh evaluations. Original raw records and scores below remain preserved.
+
 **Evaluation date:** 25 November 2026. **Release:** 1.0.0, corpus `20261125T174151Z-r2`. All five final suites below executed with real model/tool responses. Fixture-based pytest tests are a separate verification layer.
 
 ## Scope, methodology and ground truth

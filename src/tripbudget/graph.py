@@ -1,7 +1,7 @@
 import asyncio
 import time
 from datetime import timedelta
-from typing import Literal, TypedDict
+from typing import TypedDict
 
 from pydantic import Field, create_model
 
@@ -14,7 +14,7 @@ from .budget import infeasibility_reason, mandatory_lower_bound
 from .errors import DomainError
 from .planning import build_proposal, enumerate_repairs, validate_for_commit
 from .resources import Budget
-from .schemas import PlanChoice, RepairSelection, SpecialistResult, StrictModel, TripRequest, utcnow
+from .schemas import PlanChoice, RepairSelection, SpecialistResult, TripRequest, plan_choice_schema, utcnow
 
 
 class State(TypedDict, total=False):
@@ -116,18 +116,7 @@ class Workflow:
                 choice.explanation = selection.explanation
                 await self.store.event(state["episode"], "repair_selected", selection.model_dump())
             else:
-                # Fixed properties and per-city ID enums close the open-dictionary ambiguity.
-                fields = {}
-                for city in request["cities"]:
-                    identifiers = tuple(o["id"] for o in options if o["city"] == city)
-                    fields[city] = (
-                        list[Literal[identifiers]],
-                        Field(min_length=1, max_length=len(identifiers)),
-                    )
-                activity_schema = create_model("CityActivities", __base__=StrictModel, **fields)
-                choice_schema = create_model(
-                    "ContextualPlanChoice", __base__=PlanChoice, activities=(activity_schema, ...)
-                )
+                choice_schema = plan_choice_schema(request["cities"], options)
                 answer = await self.providers.complete(
                     task,
                     choice_schema,
@@ -417,6 +406,17 @@ class Workflow:
                     "UPDATE episodes SET status='RESOURCE_LIMIT' WHERE id=%s", (episode,)
                 )
                 raise DomainError("RESOURCE_LIMIT", "Active execution deadline reached") from None
+            except Exception as exc:
+                # Do not reconnect after ownership loss. If the owning session is alive, expose a
+                # recoverable status rather than leaving a completed/failed worker marked RUNNING.
+                if not conn.closed:
+                    await self.store.execute(
+                        "UPDATE episodes SET status='EXECUTION_INTERRUPTED' WHERE id=%s", (episode,)
+                    )
+                    await self.store.event(episode, "worker_interrupted", {"category": type(exc).__name__})
+                raise DomainError(
+                    "EXECUTION_INTERRUPTED", "Worker interrupted; retry from the saved checkpoint", 503
+                ) from None
             finally:
                 elapsed = int((time.monotonic() - started) * 1000)
                 if not conn.closed:

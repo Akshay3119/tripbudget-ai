@@ -1,0 +1,622 @@
+[
+  {
+    "id": "select-NYC",
+    "task": "supervisor",
+    "schema": {
+      "additionalProperties": false,
+      "properties": {
+        "lodging_tier": {
+          "default": "standard",
+          "enum": [
+            "standard",
+            "economy"
+          ],
+          "title": "Lodging Tier",
+          "type": "string"
+        },
+        "activities_per_day": {
+          "default": 2,
+          "enum": [
+            1,
+            2
+          ],
+          "title": "Activities Per Day",
+          "type": "integer"
+        },
+        "activities": {
+          "additionalProperties": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "title": "Activities",
+          "type": "object"
+        },
+        "explanation": {
+          "maxLength": 1800,
+          "title": "Explanation",
+          "type": "string"
+        },
+        "expected_cost_cents": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Expected GROUP total in integer USD cents, including contingency",
+          "title": "Expected Cost Cents"
+        }
+      },
+      "required": [
+        "activities",
+        "explanation"
+      ],
+      "title": "PlanChoice",
+      "type": "object"
+    },
+    "payload": {
+      "instruction": "Select economy lodging, one activity per day, and include all supplied IDs under the exact city code.",
+      "constraints": {
+        "cities": [
+          "NYC"
+        ]
+      },
+      "catalog": [
+        {
+          "id": "nyc-met",
+          "city": "NYC",
+          "title": "Metropolitan Museum of Art",
+          "category": "museum",
+          "price_cents": 3000,
+          "duration_minutes": 120,
+          "walk_meters": 1800,
+          "closed_weekdays": [
+            2
+          ]
+        },
+        {
+          "id": "nyc-central-park",
+          "city": "NYC",
+          "title": "Central Park walk",
+          "category": "park",
+          "price_cents": 0,
+          "duration_minutes": 90,
+          "walk_meters": 2400,
+          "closed_weekdays": []
+        },
+        {
+          "id": "nyc-high-line",
+          "city": "NYC",
+          "title": "High Line gardens",
+          "category": "park",
+          "price_cents": 0,
+          "duration_minutes": 60,
+          "walk_meters": 1800,
+          "closed_weekdays": []
+        },
+        {
+          "id": "nyc-ferry",
+          "city": "NYC",
+          "title": "Staten Island Ferry round trip",
+          "category": "viewpoint",
+          "price_cents": 0,
+          "duration_minutes": 90,
+          "walk_meters": 800,
+          "closed_weekdays": []
+        }
+      ]
+    },
+    "oracle": {
+      "city": "NYC",
+      "ids": [
+        "nyc-met",
+        "nyc-central-park",
+        "nyc-high-line",
+        "nyc-ferry"
+      ]
+    }
+  },
+  {
+    "id": "query-NYC",
+    "task": "query_rewrite",
+    "schema": {
+      "additionalProperties": false,
+      "properties": {
+        "query": {
+          "maxLength": 300,
+          "minLength": 3,
+          "title": "Query",
+          "type": "string"
+        },
+        "reason": {
+          "maxLength": 500,
+          "title": "Reason",
+          "type": "string"
+        }
+      },
+      "required": [
+        "query",
+        "reason"
+      ],
+      "title": "QueryRewrite",
+      "type": "object"
+    },
+    "payload": {
+      "instruction": "Rewrite a public query for admission prices and opening hours. Include city code.",
+      "city": "NYC",
+      "query": "NYC group cultural activities"
+    },
+    "oracle": {
+      "city": "NYC"
+    }
+  },
+  {
+    "id": "select-PHL",
+    "task": "supervisor",
+    "schema": {
+      "additionalProperties": false,
+      "properties": {
+        "lodging_tier": {
+          "default": "standard",
+          "enum": [
+            "standard",
+            "economy"
+          ],
+          "title": "Lodging Tier",
+          "type": "string"
+        },
+        "activities_per_day": {
+          "default": 2,
+          "enum": [
+            1,
+            2
+          ],
+          "title": "Activities Per Day",
+          "type": "integer"
+        },
+        "activities": {
+          "additionalProperties": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "title": "Activities",
+          "type": "object"
+        },
+        "explanation": {
+          "maxLength": 1800,
+          "title": "Explanation",
+          "type": "string"
+        },
+        "expected_cost_cents": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Expected GROUP total in integer USD cents, including contingency",
+          "title": "Expected Cost Cents"
+        }
+      },
+      "required": [
+        "activities",
+        "explanation"
+      ],
+      "title": "PlanChoice",
+      "type": "object"
+    },
+    "payload": {
+      "instruction": "Select economy lodging, one activity per day, and include all supplied IDs under the exact city code.",
+      "constraints": {
+        "cities": [
+          "PHL"
+        ]
+      },
+      "catalog": [
+        {
+          "id": "phl-pma",
+          "city": "PHL",
+          "title": "Philadelphia Museum of Art",
+          "category": "museum",
+          "price_cents": 3000,
+          "duration_minutes": 120,
+          "walk_meters": 1800,
+          "closed_weekdays": [
+            1,
+            2
+          ]
+        },
+        {
+          "id": "phl-liberty-bell",
+          "city": "PHL",
+          "title": "Liberty Bell Center",
+          "category": "history",
+          "price_cents": 0,
+          "duration_minutes": 60,
+          "walk_meters": 700,
+          "closed_weekdays": []
+        },
+        {
+          "id": "phl-independence",
+          "city": "PHL",
+          "title": "Independence Hall exterior and grounds",
+          "category": "history",
+          "price_cents": 0,
+          "duration_minutes": 60,
+          "walk_meters": 1000,
+          "closed_weekdays": []
+        },
+        {
+          "id": "phl-visitor-center",
+          "city": "PHL",
+          "title": "Independence Visitor Center",
+          "category": "history",
+          "price_cents": 0,
+          "duration_minutes": 60,
+          "walk_meters": 600,
+          "closed_weekdays": []
+        }
+      ]
+    },
+    "oracle": {
+      "city": "PHL",
+      "ids": [
+        "phl-pma",
+        "phl-liberty-bell",
+        "phl-independence",
+        "phl-visitor-center"
+      ]
+    }
+  },
+  {
+    "id": "query-PHL",
+    "task": "query_rewrite",
+    "schema": {
+      "additionalProperties": false,
+      "properties": {
+        "query": {
+          "maxLength": 300,
+          "minLength": 3,
+          "title": "Query",
+          "type": "string"
+        },
+        "reason": {
+          "maxLength": 500,
+          "title": "Reason",
+          "type": "string"
+        }
+      },
+      "required": [
+        "query",
+        "reason"
+      ],
+      "title": "QueryRewrite",
+      "type": "object"
+    },
+    "payload": {
+      "instruction": "Rewrite a public query for admission prices and opening hours. Include city code.",
+      "city": "PHL",
+      "query": "PHL group cultural activities"
+    },
+    "oracle": {
+      "city": "PHL"
+    }
+  },
+  {
+    "id": "select-DC",
+    "task": "supervisor",
+    "schema": {
+      "additionalProperties": false,
+      "properties": {
+        "lodging_tier": {
+          "default": "standard",
+          "enum": [
+            "standard",
+            "economy"
+          ],
+          "title": "Lodging Tier",
+          "type": "string"
+        },
+        "activities_per_day": {
+          "default": 2,
+          "enum": [
+            1,
+            2
+          ],
+          "title": "Activities Per Day",
+          "type": "integer"
+        },
+        "activities": {
+          "additionalProperties": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "title": "Activities",
+          "type": "object"
+        },
+        "explanation": {
+          "maxLength": 1800,
+          "title": "Explanation",
+          "type": "string"
+        },
+        "expected_cost_cents": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Expected GROUP total in integer USD cents, including contingency",
+          "title": "Expected Cost Cents"
+        }
+      },
+      "required": [
+        "activities",
+        "explanation"
+      ],
+      "title": "PlanChoice",
+      "type": "object"
+    },
+    "payload": {
+      "instruction": "Select economy lodging, one activity per day, and include all supplied IDs under the exact city code.",
+      "constraints": {
+        "cities": [
+          "DC"
+        ]
+      },
+      "catalog": [
+        {
+          "id": "dc-natural-history",
+          "city": "DC",
+          "title": "National Museum of Natural History",
+          "category": "museum",
+          "price_cents": 0,
+          "duration_minutes": 120,
+          "walk_meters": 1800,
+          "closed_weekdays": []
+        },
+        {
+          "id": "dc-american-history",
+          "city": "DC",
+          "title": "National Museum of American History",
+          "category": "history",
+          "price_cents": 0,
+          "duration_minutes": 120,
+          "walk_meters": 1600,
+          "closed_weekdays": []
+        },
+        {
+          "id": "dc-national-gallery",
+          "city": "DC",
+          "title": "National Gallery of Art",
+          "category": "museum",
+          "price_cents": 0,
+          "duration_minutes": 120,
+          "walk_meters": 1500,
+          "closed_weekdays": []
+        },
+        {
+          "id": "dc-spy",
+          "city": "DC",
+          "title": "International Spy Museum",
+          "category": "museum",
+          "price_cents": 5000,
+          "duration_minutes": 120,
+          "walk_meters": 1500,
+          "closed_weekdays": []
+        }
+      ]
+    },
+    "oracle": {
+      "city": "DC",
+      "ids": [
+        "dc-natural-history",
+        "dc-american-history",
+        "dc-national-gallery",
+        "dc-spy"
+      ]
+    }
+  },
+  {
+    "id": "query-DC",
+    "task": "query_rewrite",
+    "schema": {
+      "additionalProperties": false,
+      "properties": {
+        "query": {
+          "maxLength": 300,
+          "minLength": 3,
+          "title": "Query",
+          "type": "string"
+        },
+        "reason": {
+          "maxLength": 500,
+          "title": "Reason",
+          "type": "string"
+        }
+      },
+      "required": [
+        "query",
+        "reason"
+      ],
+      "title": "QueryRewrite",
+      "type": "object"
+    },
+    "payload": {
+      "instruction": "Rewrite a public query for admission prices and opening hours. Include city code.",
+      "city": "DC",
+      "query": "DC group cultural activities"
+    },
+    "oracle": {
+      "city": "DC"
+    }
+  },
+  {
+    "id": "preferences-1",
+    "task": "preference_parse",
+    "schema": {
+      "additionalProperties": false,
+      "properties": {
+        "diet": {
+          "default": "unrestricted",
+          "enum": [
+            "vegetarian",
+            "vegan",
+            "unrestricted"
+          ],
+          "title": "Diet",
+          "type": "string"
+        },
+        "maximum_walk_meters": {
+          "default": 12000,
+          "maximum": 40000,
+          "minimum": 500,
+          "title": "Maximum Walk Meters",
+          "type": "integer"
+        },
+        "preferred_categories": {
+          "items": {
+            "enum": [
+              "history",
+              "museum",
+              "park",
+              "viewpoint"
+            ],
+            "type": "string"
+          },
+          "maxItems": 4,
+          "title": "Preferred Categories",
+          "type": "array"
+        }
+      },
+      "title": "ModelPreferences",
+      "type": "object"
+    },
+    "payload": {
+      "instruction": "Extract diet and walking limit. This is public synthetic evaluation input.",
+      "untrusted_note": "We prefer vegan food and a maximum of 4000 meters walking daily."
+    },
+    "oracle": {
+      "diet": "vegan",
+      "maximum_walk_meters": 4000
+    }
+  },
+  {
+    "id": "preferences-2",
+    "task": "preference_parse",
+    "schema": {
+      "additionalProperties": false,
+      "properties": {
+        "diet": {
+          "default": "unrestricted",
+          "enum": [
+            "vegetarian",
+            "vegan",
+            "unrestricted"
+          ],
+          "title": "Diet",
+          "type": "string"
+        },
+        "maximum_walk_meters": {
+          "default": 12000,
+          "maximum": 40000,
+          "minimum": 500,
+          "title": "Maximum Walk Meters",
+          "type": "integer"
+        },
+        "preferred_categories": {
+          "items": {
+            "enum": [
+              "history",
+              "museum",
+              "park",
+              "viewpoint"
+            ],
+            "type": "string"
+          },
+          "maxItems": 4,
+          "title": "Preferred Categories",
+          "type": "array"
+        }
+      },
+      "title": "ModelPreferences",
+      "type": "object"
+    },
+    "payload": {
+      "instruction": "Extract diet and walking limit. This is public synthetic evaluation input.",
+      "untrusted_note": "We prefer vegetarian food and a maximum of 6000 meters walking daily."
+    },
+    "oracle": {
+      "diet": "vegetarian",
+      "maximum_walk_meters": 6000
+    }
+  },
+  {
+    "id": "preferences-3",
+    "task": "preference_parse",
+    "schema": {
+      "additionalProperties": false,
+      "properties": {
+        "diet": {
+          "default": "unrestricted",
+          "enum": [
+            "vegetarian",
+            "vegan",
+            "unrestricted"
+          ],
+          "title": "Diet",
+          "type": "string"
+        },
+        "maximum_walk_meters": {
+          "default": 12000,
+          "maximum": 40000,
+          "minimum": 500,
+          "title": "Maximum Walk Meters",
+          "type": "integer"
+        },
+        "preferred_categories": {
+          "items": {
+            "enum": [
+              "history",
+              "museum",
+              "park",
+              "viewpoint"
+            ],
+            "type": "string"
+          },
+          "maxItems": 4,
+          "title": "Preferred Categories",
+          "type": "array"
+        }
+      },
+      "title": "ModelPreferences",
+      "type": "object"
+    },
+    "payload": {
+      "instruction": "Extract diet and walking limit. This is public synthetic evaluation input.",
+      "untrusted_note": "We prefer unrestricted food and a maximum of 12000 meters walking daily."
+    },
+    "oracle": {
+      "diet": "unrestricted",
+      "maximum_walk_meters": 12000
+    }
+  }
+]

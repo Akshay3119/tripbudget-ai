@@ -1,0 +1,65 @@
+{
+  "release": "1.0.1",
+  "checked_at": "2026-11-25T21:21:00.908608+00:00",
+  "service": "a4-tripbudget",
+  "project": "csci599-a3-hermes-1029",
+  "region": "us-central1",
+  "revision": "a4-tripbudget-00003-jh7",
+  "created": "2026-11-25T21:17:55.868300Z",
+  "uploaded_image_index": "us-central1-docker.pkg.dev/csci599-a3-hermes-1029/a4-tripbudget/app@sha256:8dcebc069df573d48df653a53afe1aaa906145ba8eddd8e049825c024af4468e",
+  "resolved_image_digest": "us-central1-docker.pkg.dev/csci599-a3-hermes-1029/a4-tripbudget/app@sha256:d29c2419243f11bc10d9f42ee4f8c841fe5fd38f392a59f0aa89b4911ba4820e",
+  "index_platform_link_verified": true,
+  "ready_conditions": [
+    {
+      "lastTransitionTime": "2026-11-25T21:18:33.435350Z",
+      "message": "Deploying revision succeeded in 37.57s.",
+      "status": "True",
+      "type": "Ready"
+    },
+    {
+      "lastTransitionTime": "2026-11-25T21:18:33.563454Z",
+      "severity": "Info",
+      "status": "True",
+      "type": "Active"
+    },
+    {
+      "lastTransitionTime": "2026-11-25T21:18:33.370874Z",
+      "message": "Containers became healthy in 19.29s.",
+      "status": "True",
+      "type": "ContainerHealthy"
+    },
+    {
+      "lastTransitionTime": "2026-11-25T21:18:12.079411Z",
+      "message": "Container image import completed in 15.68s.",
+      "status": "True",
+      "type": "ContainerReady"
+    },
+    {
+      "lastTransitionTime": "2026-11-25T21:18:13.636455Z",
+      "message": "Provisioning imported containers completed in 1.56s. Checking container health. This will wait for up to 4m for the configured startup probe, including an initial delay of 0s.",
+      "status": "True",
+      "type": "ResourcesAvailable"
+    }
+  ],
+  "traffic": [
+    {
+      "latestRevision": true,
+      "percent": 100,
+      "revisionName": "a4-tripbudget-00003-jh7"
+    }
+  ],
+  "url": "https://a4-tripbudget-yfvxnchjvq-uc.a.run.app",
+  "public_invoker_binding": false,
+  "invoker_iam_disabled": false,
+  "limits": {
+    "resources": {
+      "limits": {
+        "cpu": "2",
+        "memory": "2Gi"
+      }
+    },
+    "concurrency": 8,
+    "timeout_seconds": 300
+  },
+  "app_source_identity": "container-image-v101.json"
+}

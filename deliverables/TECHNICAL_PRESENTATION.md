@@ -1,5 +1,7 @@
 # Technical presentation
 
+This deck records the original 1.0.0 implementation/evaluation. Current provider-fix results are in the [1.0.1 follow-up](EVALUATION_FOLLOWUP_1.0.1.md); the historical slide scores are not silently replaced.
+
 [Portable 16-slide PDF](TripBudgetAI_Technical_Presentation.pdf). It is a visual snapshot of the reviewed, native editable Spaces presentation. [Individual slide renders and layout data](slides/) are included for offline inspection.
 
 Editable Spaces presentation: `page://page_ccdf44dc1ec48191a8a7250aec73463f` (page ID `page_ccdf44dc1ec48191a8a7250aec73463f`). Open the saved deck in Codex/Spaces to edit or export a PowerPoint copy. The portable PDF does not depend on access to that private workspace page.

@@ -16,7 +16,7 @@ class Settings(BaseSettings):
     nvidia_model: str = "nvidia/nemotron-3.5-lightning-30b-a3b"
     nvidia_url: str = "https://integrate.api.nvidia.com/v1"
     ollama_url: str = "http://127.0.0.1:11435"
-    ollama_model: str = "tripbudget-gemma4-e4b"
+    ollama_model: str = "tripbudget-gemma4-e4b-gguf"
     tailscale_proxy: str = ""
     tavily_api_key: SecretStr = SecretStr("")
     data_dir: Path = ROOT / "data"

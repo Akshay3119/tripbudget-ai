@@ -1,0 +1,75 @@
+{
+  "at": "2026-11-25T20:18:37.755753+00:00",
+  "release": {
+    "at": "2026-11-25T20:18:37.683968+00:00",
+    "release": {
+      "boot_id": "de5df173ad521086",
+      "revision": "local",
+      "version": "1.0.1",
+      "corpus_version": "20261125T174151Z-r2",
+      "auth_mode": "local",
+      "role": "evaluation",
+      "uid": "d3d19f3c18d2ea29970a3302d4f352bb",
+      "cloud_model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+      "local_model": "tripbudget-gemma4-e4b-gguf"
+    },
+    "source_files": {
+      "src/tripbudget/__init__.py": "4514285c49563871c2ddc6f01472024cad27ea15a13513f647916dc3a9a45460",
+      "src/tripbudget/api.py": "86c4f4f332c1ab65af324be0f22d052c820f9b9dcdc3ee8bf77fe0e8c0650c2d",
+      "src/tripbudget/auth.py": "2b8d0fd4d42c7bbeba5ef1a1b4f4149aa51362a8f13521a1345ec678fcbbb2cc",
+      "src/tripbudget/budget.py": "4d9ab9b881e936dfb8f62e64c13608ab8cfcf3eb50af841e424efee50451ddbd",
+      "src/tripbudget/errors.py": "c3e6acf4739da9e355338bcdd48ff499a61a410fe67b1498c13248e58eceb336",
+      "src/tripbudget/evidence.py": "8b8bd371cc3bae67519cb628bd27030d95eb93dd781556715727a2b2bd033246",
+      "src/tripbudget/graph.py": "6282500a8f2ed3032f2adf7d25a228ba64eda51701809009f588ea3cd74bca89",
+      "src/tripbudget/outbound.py": "7bbfae32c52e5454283ab58f84bcb4260a9f50c64565c7839dc239cb285abd5b",
+      "src/tripbudget/persistence.py": "46de067c5006d40612467880a35f90e59508190aff17a13051bbe5d3a31b1ddf",
+      "src/tripbudget/planning.py": "b96ee863e267774c5732546063c058406b99887841e38e1d1b903489f8c1d53f",
+      "src/tripbudget/providers.py": "5d351ebbf482973888395dd94589d902471a13920a077e5a62b5cbe182ebe4d7",
+      "src/tripbudget/resources.py": "e32a05e98b8697aaeaa8aba7e3c4982714546fc8a188198d34e9fe3f63a30728",
+      "src/tripbudget/retrieval.py": "ca0cc85215bbfb79784dcab1707e0be6cf67e53692d3876ce803b2db998c14d1",
+      "src/tripbudget/routing.py": "363b05c301ed09b181631fc1ee23f87db1570f2fc0d55c2baf00c1468459736f",
+      "src/tripbudget/schedule.py": "89176a499e8acf42f55c960c22c562eb456cb26670ee07016ba1d9b9953380ae",
+      "src/tripbudget/schemas.py": "36a19b15aea0898541cef5b6f37547b5fd68e36d874aaaa5e850013671270c7d",
+      "src/tripbudget/settings.py": "7de40689e339908bc2b4a9b675154a47df64de63b3375c5bd024e9dcf9ddfe37",
+      "src/tripbudget/tools.py": "d5e9d989a7ee64f867a94a3859c3d18a76fcbcecc5ffce331c1ddc277277c30d",
+      "pyproject.toml": "1a3fa61cd96abb37d3f7339a5d3c7864d2023458c92118351107dd97ae33fb47",
+      "uv.lock": "1ac830eeb38077e78b001bbaf07651d3f09019e2886c594910948ca77ee6b39c"
+    },
+    "method": "real endpoints, unchanged graders; isolated sequential suites, not concurrent provider load",
+    "local_model": {
+      "name": "tripbudget-gemma4-e4b-gguf",
+      "details": {
+        "parent_model": "gemma4:e4b-it-q4_K_M",
+        "format": "gguf",
+        "family": "gemma4",
+        "families": [
+          "gemma4"
+        ],
+        "parameter_size": "7.5B",
+        "quantization_level": "Q4_K_M",
+        "runner": "llamacpp"
+      },
+      "digest": "650f8143c5c60e3c3a33ee66baa40fc09cf4ae686f733ccf12d22dded1784ed2",
+      "ollama": {
+        "version": "0.40.13"
+      }
+    }
+  },
+  "source_manifest": {
+    "catalog_sha256": "8560a82ca1a997079c253c25463851b731cbc769d0a2afa3c63a6b9b2532bf64",
+    "version": "20261125T174151Z-r2",
+    "source_count": 24,
+    "chunk_count": 68,
+    "embedding_model": "BAAI/bge-small-en-v1.5",
+    "dimension": 384,
+    "reviewed_price_facts": [
+      "nyc-ferry",
+      "phl-pma",
+      "phl-liberty-bell",
+      "dc-natural-history",
+      "dc-american-history"
+    ]
+  },
+  "repeats": 2,
+  "method": "paired ablation; same input, evidence, model policy and safety; randomized condition order"
+}

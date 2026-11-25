@@ -2569,7 +2569,7 @@ wheels = [
 
 [[package]]
 name = "tripbudget-ai"
-version = "1.0.0"
+version = "1.0.1"
 source = { editable = "." }
 dependencies = [
     { name = "argon2-cffi" },
@@ -2579,6 +2579,7 @@ dependencies = [
     { name = "fastembed" },
     { name = "firebase-admin" },
     { name = "httpx", extra = ["socks"] },
+    { name = "jsonschema" },
     { name = "langgraph" },
     { name = "langgraph-checkpoint-postgres" },
     { name = "mcp" },
@@ -2607,6 +2608,7 @@ requires-dist = [
     { name = "fastembed", specifier = ">=0.7,<1" },
     { name = "firebase-admin", specifier = ">=6.6,<8" },
     { name = "httpx", extras = ["socks"], specifier = ">=0.28,<1" },
+    { name = "jsonschema", specifier = ">=4.23,<5" },
     { name = "langgraph", specifier = ">=1.0,<2" },
     { name = "langgraph-checkpoint-postgres", specifier = ">=2.0,<4" },
     { name = "mcp", specifier = ">=1.20,<2" },

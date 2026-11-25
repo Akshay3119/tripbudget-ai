@@ -6,6 +6,7 @@ import hashlib
 import json
 import re
 import subprocess
+import tomllib
 from pathlib import Path
 
 from pypdf import PdfReader
@@ -89,6 +90,50 @@ def main():
     assert metrics["independent_audits"]["count"] == metrics["independent_audits"]["passed"]
     assert len(PdfReader("deliverables/TripBudgetAI_Technical_Presentation.pdf").pages) >= 10
     checks.append("154 real evaluation units and 16-slide portable presentation present")
+    version = tomllib.loads(Path("pyproject.toml").read_text())["project"]["version"]
+    if version == "1.0.1":
+        followup = json.loads(Path("deliverables/metrics-v101.json").read_text())
+        assert followup["new_logical_units"] == 151
+        assert followup["providers"]["cloud"]["passed"] == 18
+        assert followup["providers"]["local"]["passed"] == 18
+        assert followup["operations"] == {"passed": 12, "n": 12}
+        assert followup["fallback"] == {"passed": 3, "n": 3}
+        assert followup["planning"]["corrected"]["feasible"] == {"passed": 24, "n": 24}
+        assert followup["attacks"]["protected_state_unchanged"] == 20
+        assert followup["independent_audits"]["passed"] == followup["independent_audits"]["n"]
+        for name, n in [
+            ("benchmark-v101", 80),
+            ("provider-comparison-v101", 36),
+            ("operations-v101", 12),
+            ("fallback-v101", 3),
+            ("attacks-v101", 20),
+        ]:
+            assert len(Path(f"deliverables/evidence/{name}.jsonl").read_text().splitlines()) == n
+        for path, expected in followup["baseline_evidence_sha256"].items():
+            assert hashlib.sha256(Path(path).read_bytes()).hexdigest() == expected
+        for path, expected in followup["evaluated_source_files"].items():
+            assert hashlib.sha256(Path(path).read_bytes()).hexdigest() == expected, path
+        image = json.loads(Path("deliverables/evidence/container-image-v101.json").read_text())
+        assert image["source_files"] == followup["evaluated_source_files"]
+        assert image["architecture"] == "amd64"
+        assert json.loads(Path("deliverables/evidence/container-startup-v101.json").read_text())["success"]
+        browser = json.loads(Path("deliverables/evidence/ui-v101/browser-results.json").read_text())
+        assert browser["actual_browser_run"] and browser["end_state"] == "COMMITTED"
+        assert not browser["javascript_errors"] and not browser["mobile_horizontal_overflow"]
+        assert browser["infeasible_new_request_clears_previous_result"]
+        cloud = json.loads(Path("deliverables/evidence/cloud-smoke-v101.json").read_text())
+        release = json.loads(Path("deliverables/evidence/cloud-release-v101.json").read_text())
+        assert cloud["success"] and cloud["release"]["version"] == "1.0.1"
+        assert cloud["release"]["revision"] == release["revision"]
+        assert not release["public_invoker_binding"] and not release["invoker_iam_disabled"]
+        assert release["index_platform_link_verified"]
+        checks.append(
+            "Measured source matches package/container; actual browser and private Cloud Run approval/ledger flows pass"
+        )
+        checks.append(
+            "Release1.0.1:151 fresh units, corrected planning24/24, providers36/36, operations12/12, real fallback3/3; original raw evidence unchanged"
+        )
+
     if not args.source_only:
         video = Path("deliverables/video/TripBudgetAI_Demo.mp4")
         assert video.exists()

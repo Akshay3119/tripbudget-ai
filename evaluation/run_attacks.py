@@ -26,10 +26,19 @@ async def main():
     out.parent.mkdir(parents=True, exist_ok=True)
     if out.exists():
         raise SystemExit("Refusing to overwrite actual attack evidence")
-    Path("evaluation/attacks.json").write_text(json.dumps(ATTACKS, indent=2))
+    out.with_suffix(".cases.json").write_text(json.dumps(ATTACKS, indent=2))
     settings = Settings()
     store = Store(settings)
     all_docs = json.loads((settings.corpus_dir / "catalog.json").read_text())["documents"]
+    from .metadata import release_metadata
+
+    metadata_client = await AppClient(username="adversary").login()
+    try:
+        out.with_suffix(".metadata.json").write_text(
+            json.dumps(await release_metadata(metadata_client, settings), indent=2)
+        )
+    finally:
+        await metadata_client.close()
     for attack in ATTACKS:
         if args.only and attack["id"] not in args.only.split(","):
             continue

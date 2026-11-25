@@ -14,7 +14,7 @@ The current Assignment 4 description and five-field map template control assignm
 | Authentication | Evaluated Argon2 + hashed durable session adapter; cloud additionally requires IAM. Firebase ID-token verification is optional code support, not a tested deployed integration. |
 | Deployment alternative | Standard request-driven Cloud Run service + PostgreSQL, justified in README/slides/source/video. Public unauthenticated ingress was rejected by automatic review; the safer IAM-restricted service was deployed and tested. No handout requirement for public uptime. |
 | Guardrails | Enforceable input/schema/catalog checks, permission/egress scope, exact budget reconstruction, immutable human decisions and persisted resource caps; prompt-only claims are not counted. |
-| Evaluation | All 154 planned logical units completed. 80 paired runs, 20 real attacks, 36 provider tasks, 12 operational faults and six current-source checks. Real failures retained; small sample acknowledged. |
+| Evaluation | Original 154 logical units preserved: 80 paired runs, 20 real attacks, 36 provider tasks, 12 operational faults and six current-source checks. Release 1.0.1 adds separately labeled reruns and outage regression; see the follow-up report for actual new rates. Real failures retained; small sample acknowledged. |
 | Source/map | README includes all five required map fields, actual source bounds and symbols; package verifier resolves them against the final source. |
 | Video | Actual 5–10 minute MP4 with all five features and an engaged guardrail; caption/narration annotations do not replace runtime responses. |
 | Slides | 16-slide editable Spaces deck plus portable PDF snapshot covering all five required topics. |
@@ -22,3 +22,7 @@ The current Assignment 4 description and five-field map template control assignm
 | Individual log | 258-word AI-assistance/process/verification draft. Student must review personal learning and understanding; no invented claim of completed student reflection. |
 
 The deployed micro SQL tier is an economical capstone demonstration, not a claim of HA/SLA production operations. Monitoring signals are specified; no external alert recipient was configured. No live booking, ticket availability, accessibility certification, internet-scale load certification or Brightspace submission is claimed.
+
+## Release 1.0.1 scope
+
+Provider/operational fixes retain all five features, the same requests/scorers/catalog, enforceable approval/privacy/accounting checks, and existing resource caps. Native structured output plus independent validation, a separately pinned GGUF backend, contextual candidate pools, annotation-only prompt compaction, bounded advisory integers and explicit interrupted-run recovery address the recorded provider/O12 failures. Historical video/slides remain labeled 1.0.0 evidence; current results are in `deliverables/EVALUATION_FOLLOWUP_1.0.1.md`. No new feature, public application uptime, cloud/laptop bridge or submission claim is introduced. GitHub source visibility was found public at the 1.0.1 check and preserved as found; Cloud Run remains IAM restricted.

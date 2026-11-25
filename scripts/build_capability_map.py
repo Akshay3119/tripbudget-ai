@@ -21,6 +21,7 @@ ROWS = [
             ("src/tripbudget/graph.py", "Workflow.build_graph.supervisor"),
             ("src/tripbudget/graph.py", "Workflow.build_graph.assemble"),
             ("src/tripbudget/planning.py", "enumerate_repairs"),
+            ("src/tripbudget/schemas.py", "plan_choice_schema"),
         ],
         "Real model choice → deterministic critique → indexed tool-priced repair → recheck; at most two repairs",
     ),
@@ -82,6 +83,16 @@ ROWS = [
         "Session-bound advisory lock; call/token/time quotas and conservative unknown usage",
     ),
     (
+        "Guardrail 4",
+        "Native output contract, complete candidate pools and supported local backend",
+        [
+            ("src/tripbudget/providers.py", "validate_output"),
+            ("src/tripbudget/providers.py", "Providers.check_local_backend"),
+            ("src/tripbudget/schemas.py", "plan_choice_schema"),
+        ],
+        "GGUF preflight; no silent defaults/truncated JSON; full client uniqueness validation despite native grammar projection",
+    ),
+    (
         "Adversarial Evals",
         "Ten actual attack types, twice",
         [("evaluation/run_attacks.py", "main")],
@@ -94,8 +105,9 @@ ROWS = [
             ("evaluation/run_eval.py", "execute"),
             ("evaluation/oracle.py", "audit"),
             ("evaluation/build_report.py", "main"),
+            ("evaluation/build_followup_report.py", "main"),
         ],
-        "154 logical evaluation units; fixtures separately labeled; tokens/session and weekly cost",
+        "154 historical units + 151 fresh release units; real providers/outage/operations; fixtures separate; measured tokens/session",
     ),
     (
         "Deployment / Persistence",
@@ -104,7 +116,7 @@ ROWS = [
             ("src/tripbudget/persistence.py", "Store.migrate"),
             ("src/tripbudget/graph.py", "Workflow.build_graph"),
         ],
-        "Dockerfile; infra/cloudrun.yaml; compose.yaml; official AsyncPostgresSaver; IAM-private deployed smoke",
+        "Official AsyncPostgresSaver; historical IAM-private cloud smoke and current local container check; see handoff for rollout status",
     ),
 ]
 

@@ -1,5 +1,26 @@
 # Release verification
 
+Current provider/operational release: **1.0.1**. See [the separately measured follow-up](../deliverables/EVALUATION_FOLLOWUP_1.0.1.md) and [contributor handoff](../HANDOFF.md). Original failures below remain historical evidence.
+
+## Current 1.0.1 checks
+
+| Layer | Observed result | Evidence |
+|---|---|---|
+| Static / fast regressions | Ruff passed; **92 tests passed** | `deliverables/evidence/lint-v101.txt`, `pytest-v101.txt` |
+| Paired planning | 80 executions; corrected feasible **24/24** vs baseline **4/24**; infeasible/missing data **8/8 each per condition**; zero unapproved commits | `deliverables/evidence/benchmark-v101.jsonl` |
+| Matched providers | **36/36**, cloud/local **18/18 each** | `deliverables/evidence/provider-comparison-v101.jsonl` |
+| Operational faults | **12/12**, including actual completion after preferences survive replacement | `deliverables/evidence/operations-v101.jsonl` |
+| Forced cloud outage / real local model | **3/3**, original failing shapes and tight walking, independent oracle accepts all | `deliverables/evidence/fallback-v101.jsonl` |
+| Independent proposals | **28/28** emitted plans pass separate accounting/window audits | `deliverables/evidence/independent-audits-v101.json` |
+| Real attack rerun | **20/20** protected state, **20/20** legitimate completion, **14** model-exposed attempts | `deliverables/evidence/attacks-v101.jsonl` |
+| Actual browser | Plan → approval → ledger, desktop/mobile visual check, no JS errors or overflow; new infeasible input clears prior result | `deliverables/evidence/ui-v101/browser-results.json` |
+| Built container | Evaluated application/lock hashes match linux/amd64 image; local health/readiness/auth checks pass | `container-image-v101.json`, `container-startup-v101.json` |
+| Cloud rollout | IAM-private 1.0.1 revision `a4-tripbudget-00003-jh7`; actual plan → approval → ledger; private notes 503 / anonymous 404 | `deliverables/evidence/cloud-release-v101.json`, `cloud-smoke-v101.json` |
+
+The 1.0.1 results supplement the original release. Video/slide metrics remain explicitly historical. The current report records all attack rerun and independent-audit denominators separately.
+
+## Historical 1.0.0 checks
+
 25 November 2026. These observations are backed by the linked local evidence; they are not claims about every possible input/provider condition.
 
 | Layer | Observed result | Evidence |

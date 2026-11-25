@@ -1,4 +1,5 @@
 import asyncio
+import argparse
 import json
 from pathlib import Path
 
@@ -6,7 +7,12 @@ from playwright.async_api import async_playwright, expect
 
 
 async def main():
-    out = Path("deliverables/evidence/ui")
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--output", default="deliverables/evidence/ui-new")
+    args = parser.parse_args()
+    out = Path(args.output)
+    if out.exists() and any(out.iterdir()):
+        raise SystemExit("Refusing to overwrite browser evidence; choose a new directory")
     out.mkdir(parents=True, exist_ok=True)
     values = dict(line.split("=", 1) for line in Path(".secrets/organizer.txt").read_text().splitlines())
     errors = []
