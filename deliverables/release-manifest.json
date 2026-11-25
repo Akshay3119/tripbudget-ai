@@ -11,13 +11,18 @@
     },
     {
       "path": ".env.example",
-      "bytes": 484,
-      "sha256": "b57ba6dc0964d3a808dbc06c81855f7a91955d8411fd5df529d2f8264f10a060"
+      "bytes": 483,
+      "sha256": "6dde6fb394437bc0baf6f99cf9bdd66fd698dc472471a1f0e00a8022b8ee636b"
     },
     {
       "path": ".gcloudignore",
       "bytes": 92,
       "sha256": "9904c11dbf760813fc7580cabbbb451e09d2bff5ace1f6d323e2e28519da25a7"
+    },
+    {
+      "path": ".gitattributes",
+      "bytes": 53,
+      "sha256": "2d8f6f6884188b1b5c973b2ae831857761f01af0214c9f2d569856f80ff4d525"
     },
     {
       "path": ".github/workflows/ci.yml",
@@ -26,8 +31,8 @@
     },
     {
       "path": ".gitignore",
-      "bytes": 188,
-      "sha256": "6c8d0da3efb1425f69aa0505e904e200d2a7c6a33230215903f41ae079348b4d"
+      "bytes": 187,
+      "sha256": "458e974c0c81b7a7c9a0ad00ccfbbaa11133d3cbb319e855b8b0055e1a1e8a7a"
     },
     {
       "path": "Dockerfile",
@@ -51,8 +56,8 @@
     },
     {
       "path": "compose.yaml",
-      "bytes": 467,
-      "sha256": "b86b98b4605f13cde65081a86c864736cc2776ce4d485abf2e14bca24fe5c436"
+      "bytes": 466,
+      "sha256": "b3425c541e76f74ec3889610069486999e693a656f4411907cbd5db8bbdc2a80"
     },
     {
       "path": "config/ollama.Modelfile",
